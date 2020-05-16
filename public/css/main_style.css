@@ -1,0 +1,157 @@
+@charset "UTF-8";
+
+*
+{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.row{
+    margin: 0;
+    padding: 0;
+}
+/* Start info */
+.info{
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+.info img{
+    width: 100%;
+    height: 75px;
+}
+@media (max-width:767px){
+    .info img{
+        width: 80px;
+        margin-bottom: 10px;
+    }  
+}
+@media(max-width:991px){
+    .info .text_info{
+        font-size: 15px;
+    }
+}
+.info a{
+    color: black;
+    font-weight: bold;
+}
+.info .btn_info{
+    background-color: #c3b093 !important;
+}
+
+/* End info */
+/* Start video */
+
+.video
+{
+    background: url(/images/fashion-photography-of-woman-hands-on-chin-with-glitter-1081685.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -mozt-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 300px;
+
+}
+.video .data
+{
+    background-color: rgba(2,2,2,0.8);
+    min-height: 300px;
+    color:#a29a9a;
+    padding-bottom: 40px;
+    padding-top: 70px;
+}
+.video .stats_video
+{
+    -webkit-transition:all 0.5s ease-in-out;
+    -moz-transition:all 0.5s ease-in-out;
+    -o-transition:all 0.5s ease-in-out;
+    transition:all 0.5s ease-in-out;
+    width: 90%;
+    margin-left: -100px;
+}
+@media (max-width:767px){
+    .video .stats_video{
+        margin-left: 0;
+    }
+}
+.video .stats_video img{
+    width: 100%;
+}
+.video .h1{margin-bottom: 60px;color: #d1cbcb;}
+
+.video p
+{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 0;
+    color: #d1cbcb;
+}
+@media(max-width:676px){
+    .video p
+    {
+        font-size: 22px;
+    }
+}
+.video .text{
+    margin-top: 30px;
+}
+.video .text::before{
+    font-family: FontAwesome;
+    content: "\f10e";
+    display: inline-block;
+    padding-right: 10px;
+    vertical-align: middle;
+    font-size: 30px;
+    color: #ffb407;
+}
+.icon-wrapper{
+    position: relative;
+    width: 180px;
+    height: 180px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgba(255, 255, 255, 0.8);
+    border-radius: 160px;
+    left: 74%;
+    bottom: 248px;
+    outline: none;
+}
+@media (max-width:767px){
+    .icon-wrapper{
+        width: 160px;
+        height: 160px;
+        border-radius: 140px;
+       left: 70%;
+    }
+}
+.icon-wrapper .icon{
+    background-image: url(/images/8.jpg);
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    display: block;
+    width: 140px;
+    height: 140px;
+    margin: auto;
+    border-radius: 120px;
+}
+@media (max-width:767px){
+    .icon-wrapper .icon{
+        width: 120px;
+        height: 120px;
+        border-radius: 100px;
+    }
+}
+.icon-wrapper .icon i{
+    position: absolute;
+    left: 47%;
+    top: 45%;
+    font-size: 32px;
+    color: black;
+}
+/* End vide */

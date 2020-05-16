@@ -1,23 +1,10 @@
-@extends('layouts.app')
+@extends('layouts.navbar')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
+    @component('components.state')
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+    @endcomponent
+    @component('components.video')
 
-                    You are logged in!
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+    @endcomponent
 @endsection
