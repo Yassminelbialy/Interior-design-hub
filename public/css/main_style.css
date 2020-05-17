@@ -1789,9 +1789,10 @@ nav.closed footer button {
     width: 90%;
     margin-left: -100px;
 }
-@media (max-width: 767px) {
+@media (max-width: 919px) {
     .video .stats_video {
-        margin-left: 0;
+        margin:0;
+        width: 70%;
     }
 }
 .video .stats_video img {
@@ -1801,7 +1802,13 @@ nav.closed footer button {
     margin-bottom: 60px;
     color: #d1cbcb;
 }
-
+@media (max-width: 676px) {
+    .video .h1 {
+        margin-bottom:30px;
+        margin-top: 0;
+        text-align: center;
+    }
+}
 .video p {
     font-size: 25px;
     font-weight: 600;
@@ -1811,6 +1818,7 @@ nav.closed footer button {
 @media (max-width: 676px) {
     .video p {
         font-size: 22px;
+        text-align: center;
     }
 }
 .video .text {
@@ -1873,3 +1881,112 @@ nav.closed footer button {
     color: black;
 }
 /* End vide */
+/* Start Details */
+.details
+{
+    background: linear-gradient(rgba(34, 27, 25, 0.8), rgba(34, 27, 25, 0.8)), rgba(34, 27, 25, 0.8) url(../images/accueil-photographe-sdg-media-terrebonne.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 400px;
+    background-position: center;
+    position: relative;
+    margin-bottom: 100px;
+}
+/* End Details */
+/* Start Social */
+.social .h1{
+    margin-bottom: 0;
+    color: orange;
+}
+.social hr{
+    width: 64%;
+    height: 1px;
+    background-color: orange;
+    margin: 0;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+.social .stats i{
+    font-size: 30px;
+    padding: 10px;
+    display: block;
+}
+.social .stats i span{
+    margin-left: 10px;
+}
+.social .stats .phone i{
+    display: inline;
+    font-size: 17px;
+    padding: 5px;
+}
+@media(max-width:991px){
+    .social .stats{
+        text-align: center;
+    }
+    .social hr{
+        margin: 0 auto;
+        margin-bottom: 20px;
+        margin-top: 30px;
+        width: 54%;
+    }
+}
+.social .stats .social-icon{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    min-width: 0px;
+    margin-right: 5px;
+    margin-left: 5px;
+    display: inline-block;
+    opacity: 0.8;
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+    background-color: orange;
+    border-radius: 50%;
+    color: aliceblue;
+    font-weight: bold;
+    text-decoration: none;
+}
+.social .stats .social-icon i{
+    display: inline;
+    padding: 0;
+    position: relative;
+    left: 10px;
+    top: 9px;
+}
+@media(max-width:991px){
+    .social .stats .social-icon i{
+        left: 3px;
+    }
+}
+.social .stats .social-icon:hover{
+    background-color: aliceblue;
+    color: orange;
+}
+.social .btn_info{
+    width: 50%;
+    margin: auto;
+    margin-top: 30px;
+    background-color: orange;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+.social .btn_info:hover{
+    background-color: rgb(184, 129, 27);
+}
+@media(min-width:992px){
+    .social .btn_info{
+        width: 70%;
+        margin: 0;
+        margin-top: 30px;
+    }
+}
+/* End Social */
