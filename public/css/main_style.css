@@ -53,6 +53,7 @@
     -o-background-size: cover;
     background-size: cover;
     min-height: 300px;
+    margin-bottom: 100px;
 
 }
 .video .data
@@ -155,3 +156,17 @@
     color: black;
 }
 /* End vide */
+/* Start Details */
+.details
+{
+    background: linear-gradient(rgba(34, 27, 25, 0.8), rgba(34, 27, 25, 0.8)), rgba(34, 27, 25, 0.8) url(../images/accueil-photographe-sdg-media-terrebonne.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 400px;
+    background-position: center;
+    position: relative;
+    margin-bottom: 100px;
+}
+/* End Details */
