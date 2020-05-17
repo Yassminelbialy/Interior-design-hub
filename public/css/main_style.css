@@ -918,12 +918,23 @@ a.btn_up {
 
 /* start statitics */
 .statitics {
-    padding: 10px;
+    padding: 400px 0 10px ;
     color: white;
     background-color: white;
     background-attachment: fixed;
     position: relative;
 }
+.statitics .triangle {
+    position: absolute;
+    top: 0;
+    left: -9%;
+    z-index: 999;
+    border-top: 350px var(--colorWhiteBlack) solid;
+    border-left: 800px transparent solid;
+    border-right: 800px transparent solid;
+}
+
+
 
 /* .statitics .overlay_statitics {
     position: absolute;
@@ -977,7 +988,7 @@ a.btn_up {
 
 .projects {
     position: relative;
-    padding: 100px 0;
+    padding: 100px 0 50px;
     background-color: var(--colorWhiteBlack);
 }
 .projects h1 {
@@ -1051,7 +1062,20 @@ a.btn_up {
 
 .services {
     position: relative;
+    padding: 60px 0px 0;
 }
+
+/* .services .triangle{
+    position: absolute;
+    top: 0;
+    left: -9%;
+    z-index: 999;
+    border-top: 380px white solid;
+    border-left: 800px transparent solid;
+    border-right: 800px transparent solid;
+} */
+
+
 .services_content {
     padding: 80px;
     display: flex;
@@ -1075,7 +1099,7 @@ a.btn_up {
     background-color: #fff;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
     border-radius: 20px;
-    margin: 80px auto;
+    margin: 30px auto;
     box-sizing: border-box;
     overflow: hidden;
     text-align: center;
@@ -1451,7 +1475,7 @@ nav.closed footer button {
     color: var(--colorYellow);
 }
 
-.triangle {
+.allProjects .triangle {
     position: absolute;
     top: 100px;
     left: 48%;
@@ -1460,6 +1484,7 @@ nav.closed footer button {
     border-left: 50px transparent solid;
     border-right: 50px transparent solid;
 }
+
 
 /* start info */
 

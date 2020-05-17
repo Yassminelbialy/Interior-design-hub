@@ -1,10 +1,11 @@
   <!-- start services -->
   <section class="services text-center">
+      <div class="triangle"></div>
       <h1 class="mt-5">Our Services</h1>
       <div class="services_content">
         <div class="service_box">
           <div class="box" data-aos="fade-down" data-aos-offset="0" data-aos-duration="1000">
-            <div class="icon">o1</div>
+            <div class="icon">01</div>
             <div class="content">
               <h3>Service</h3>
               <p>

@@ -1,6 +1,8 @@
     <!-- start statitics -->
 
     <section class="statitics text-center">
+    <div class="triangle"></div>
+    <div class="rotate_div"></div>
       <div class="overlay_statitics"></div>
 
       <h1>Statitics</h1>
