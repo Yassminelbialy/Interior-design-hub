@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Alexandrainfo;
+use App\Contact;
 use Illuminate\Http\Request;
 
 class AlexandrainfoController extends Controller
@@ -14,7 +15,10 @@ class AlexandrainfoController extends Controller
      */
     public function index()
     {
-        //
+        $ceoInfo= Alexandrainfo::all();
+        $contactInfo= Contact::all();
+
+        return view('Admin/alexandraInfo',["ceoArray"=>$ceoInfo,"contactArray"=>$contactInfo]);
     }
 
     /**
