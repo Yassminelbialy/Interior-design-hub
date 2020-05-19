@@ -1877,8 +1877,8 @@ nav.closed footer button {
 }
 .icon-wrapper .icon i {
     position: absolute;
-    left: 47%;
-    top: 45%;
+    left: 45%;
+    top: 41%;
     font-size: 32px;
     color: black;
 }
@@ -2088,6 +2088,7 @@ opacity:1;
     position: absolute;
 }
 i{
+
     cursor: pointer;
 }
 /* End Section */
