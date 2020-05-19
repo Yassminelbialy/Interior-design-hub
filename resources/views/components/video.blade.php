@@ -8,9 +8,7 @@
                         <img src="/images/fashion-photography-of-woman-hands-on-chin-with-glitter-1081685.jpg" alt="" />
                         <div class="icon-wrapper">
                             <div class="icon">
-                                <button type="button"  data-toggle="modal" data-target="#myModal">
-                                    <i class="fa fa-play"></i>
-                                </button>
+                                <i class="fa fa-play" data-toggle="modal" data-target="#myModal"></i>
                                 
                                 <!-- Modal -->
                                 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

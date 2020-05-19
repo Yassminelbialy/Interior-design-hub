@@ -1742,7 +1742,7 @@ nav.closed footer button {
 }
 
 .info a {
-    background-color: var(--colorYellow);
+    background-color:#b98f51;
     color: var(--colorWhiteBlack);
 }
 @media (max-width: 767px) {
@@ -1761,7 +1761,7 @@ nav.closed footer button {
     font-weight: bold;
 }
 .info .btn_info {
-    background-color: #c3b093 !important;
+    background-color: #b98f51 !important;
 }
 
 /* End info */
@@ -2066,5 +2066,28 @@ opacity:1;
 }
 .world_video .btn_info:hover{
     background-color: #bd8024;
+}
+.world_video .stats_video{
+    width: 100%;
+    position: relative;
+}
+.world_video .stats_video img{
+    width: 100%;
+    height: 350px;
+}
+.world_video .stats_video .icon-wrapper{
+   
+    left: 32%;
+    z-index: 3;
+}
+.world_video .overlay{
+    width: 100%;
+    z-index: 2;
+    background-color: rgba(43, 42, 42, 0.8);
+    height: 350px;
+    position: absolute;
+}
+i{
+    cursor: pointer;
 }
 /* End Section */
