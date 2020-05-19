@@ -28,6 +28,8 @@
 
     @component('components.details')
     @endcomponent
+    @component('components.worldWide')
+    @endcomponent
 
     @component('components.testimonials')
     @endcomponent
