@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use Illuminate\Http\Request;
+use Uuid;
 
 class CategoryController extends Controller
 {
@@ -14,6 +15,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
+        return view('manager.categoryindex',['data'=>Category::all()]);
         //
     }
 
@@ -24,7 +26,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        //
+        return view('manager.fff');
     }
 
     /**
@@ -35,7 +37,25 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        // dd(Uuid::generate()->string);
+        $path ='';
+
+        // dd($category);
+        if ($files = $request->file('image'))
+        {
+                        $uuid =Uuid::generate()->string;
+                        $path=$uuid.".".$request->file('image')->getClientOriginalExtension();
+                        $desti='categoryimages/';
+                        $files->move($desti,$path);
+                        // dd('dd');
+        }
+        $req=$request->all();
+        $req['image']=$path;
+        $category = Category::create($req);
+
+        return redirect(route('manager.category.index'));
+
     }
 
     /**
@@ -46,7 +66,7 @@ class CategoryController extends Controller
      */
     public function show(Category $category)
     {
-        //
+        return view('manager.fff');
     }
 
     /**

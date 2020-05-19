@@ -20,3 +20,14 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+// ->middleware('can:manage-users')
+Route::prefix('manager')->name('manager.')->group(function(){
+
+    Route::resource('project', 'ProjectController');
+    Route::resource('category', 'CategoryController');
+    // Route::resource('project', 'ProjectController');
+
+});
+
