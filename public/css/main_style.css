@@ -987,6 +987,7 @@ a.btn_up {
 /* start projects */
 
 .projects {
+    
     position: relative;
     padding: 100px 0 50px;
     background-color: var(--colorWhiteBlack);
@@ -1448,6 +1449,7 @@ nav.closed footer button {
 /* start all projects */
 
 .allProjects {
+    
     padding: 30px 0;
     position: relative;
 }
@@ -1831,7 +1833,7 @@ nav.closed footer button {
     padding-right: 10px;
     vertical-align: middle;
     font-size: 30px;
-    color: #ffb407;
+    color: #b98f51;
 }
 .icon-wrapper {
     position: relative;
@@ -1898,12 +1900,12 @@ nav.closed footer button {
 /* Start Social */
 .social .h1{
     margin-bottom: 0;
-    color: orange;
+    color: #b98f51;
 }
 .social hr{
     width: 64%;
     height: 1px;
-    background-color: orange;
+    background-color: #b98f51;
     margin: 0;
     margin-bottom: 30px;
     margin-top: 20px;
@@ -1946,7 +1948,7 @@ nav.closed footer button {
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: 50px 50px;
-    background-color: orange;
+    background-color: #b98f51;
     border-radius: 50%;
     color: aliceblue;
     font-weight: bold;
@@ -1966,13 +1968,13 @@ nav.closed footer button {
 }
 .social .stats .social-icon:hover{
     background-color: aliceblue;
-    color: orange;
+    color: #b98f51;
 }
 .social .btn_info{
     width: 50%;
     margin: auto;
     margin-top: 30px;
-    background-color: orange;
+    background-color: #b98f51;
     color: black;
     font-size: 20px;
     font-weight: bold;
@@ -1990,3 +1992,79 @@ nav.closed footer button {
     }
 }
 /* End Social */
+/* Modal Video */
+.modal-dialog {
+    max-width: 800px;
+    margin: 30px auto;
+}
+
+
+
+.modal-body {
+position:relative;
+padding:0px;
+}
+.close {
+position:absolute;
+right:-30px;
+top:0;
+z-index:999;
+font-size:2rem;
+font-weight: normal;
+color:#fff;
+opacity:1;
+}
+/* End Model */
+/* Start Section */
+.world_video{
+    background: linear-gradient(rgba(34, 27, 25, 0.8), rgba(34, 27, 25, 0.8)), rgba(34, 27, 25, 0.8) url(../images/accueil-photographe-sdg-media-terrebonne.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 300px;
+    background-position: center;
+    position: relative;
+    margin-bottom: 100px;
+    color: aliceblue;
+    text-align: center;
+    padding-top: 70px;
+
+}
+.world_video h1{
+    margin-bottom: 30px;
+    font-weight: bolder;
+}
+@media(max-width:991px){
+    .world_video h1{
+        font-size: 27px;
+    }
+}
+.world_video .text{
+    font-size: 25px;
+}
+@media(max-width:991px){
+    .world_video .text{
+        font-size: 20px;
+    }
+}
+.world_video .btn_info{
+    width: 50%;
+    margin: auto;
+    margin-top: 30px;
+    background-color: #b98f51;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+@media(max-width:991px){
+    .world_video .btn_info{
+        margin-bottom: 20px;
+    }
+}
+.world_video .btn_info:hover{
+    background-color: #bd8024;
+}
+/* End Section */
