@@ -1753,7 +1753,7 @@ nav.closed footer button {
 }
 
 .info a {
-    background-color:#b98f51;
+    background-color:#aa8f63;
     color: var(--colorWhiteBlack);
 }
 @media (max-width: 767px) {
@@ -1772,7 +1772,7 @@ nav.closed footer button {
     font-weight: bold;
 }
 .info .btn_info {
-    background-color: #b98f51 !important;
+    background-color: #aa8f63 !important;
 }
 
 /* End info */
@@ -1807,10 +1807,14 @@ nav.closed footer button {
     .video .stats_video {
         margin:0;
         width: 70%;
+        min-height: 200px;
     }
 }
 .video .stats_video img {
     width: 100%;
+    position: relative;
+    bottom: 70px;
+
 }
 .video .h1 {
     margin-bottom: 60px;
@@ -1845,7 +1849,7 @@ nav.closed footer button {
     padding-right: 10px;
     vertical-align: middle;
     font-size: 30px;
-    color: #b98f51;
+    color: #aa8f63;
 }
 .icon-wrapper {
     position: relative;
@@ -1855,8 +1859,8 @@ nav.closed footer button {
     border-width: 2px;
     border-color: rgba(255, 255, 255, 0.8);
     border-radius: 160px;
-    left: 74%;
-    bottom: 248px;
+    left: 69%;
+    bottom: 328px;
     outline: none;
 }
 @media (max-width: 767px) {
@@ -1922,12 +1926,12 @@ nav.closed footer button {
 }
 .social .h1{
     margin-bottom: 0;
-    color: #b98f51;
+    color: #aa8f63;
 }
 .social hr{
     width: 64%;
     height: 1px;
-    background-color: #b98f51;
+    background-color: #aa8f63;
     margin: 0;
     margin-bottom: 30px;
     margin-top: 20px;
@@ -1990,13 +1994,13 @@ nav.closed footer button {
 }
 .social .stats .social-icon:hover{
     background-color: aliceblue;
-    color: #b98f51;
+    color: #aa8f63;
 }
 .social .btn_info{
     width: 50%;
     margin: auto;
     margin-top: 30px;
-    background-color: #b98f51;
+    background-color: #aa8f63;
     color: black;
     font-size: 20px;
     font-weight: bold;
@@ -2074,20 +2078,22 @@ opacity:1;
     width: 50%;
     margin: auto;
     margin-top: 30px;
-    background-color: #b98f51;
+    background-color: #aa8f63;
     color: black;
     font-size: 20px;
     font-weight: bold;
+    display: block;
     -webkit-transition: all 500ms ease;
     transition: all 500ms ease;
 }
+
 @media(max-width:991px){
     .world_video .btn_info{
         margin-bottom: 20px;
     }
 }
 .world_video .btn_info:hover{
-    background-color: #bd8024;
+    background-color: #aa8f63;
 }
 .world_video .stats_video{
     width: 100%;
@@ -2101,6 +2107,7 @@ opacity:1;
    
     left: 32%;
     z-index: 3;
+    bottom: 248px;
 }
 .world_video .overlay{
     width: 100%;

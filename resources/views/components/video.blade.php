@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-sm-12 col-lg-6 ">
                     <div class="stats_video">
-                        <img src="/images/DSC05124.jpg" alt="" />
+                        <img src="/images/DSC05123.png" alt="" />
                         <div class="icon-wrapper">
                             <div class="icon">
                                 <i class="fa fa-play" data-toggle="modal" data-target="#myModal"></i>
