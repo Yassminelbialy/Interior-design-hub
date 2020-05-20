@@ -1733,8 +1733,19 @@ nav.closed footer button {
 /* Start info */
 .info {
     margin: 0 auto;
-    background-color: white;
+    background-color:rgb(20, 20, 20);
+    color: cornsilk;
     padding: 40px;
+}
+.info .state{
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    padding: 10px;
+}
+.info .state:hover{
+    border: 1px solid #b98f51;
 }
 .info img {
     width: 100%;
@@ -1768,13 +1779,14 @@ nav.closed footer button {
 /* Start video */
 
 .video {
-    background: url(/images/fashion-photography-of-woman-hands-on-chin-with-glitter-1081685.jpg)
+    background: url(/images/1.jpeg)
         no-repeat center center fixed;
     -webkit-background-size: cover;
     -mozt-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     min-height: 300px;
+    margin-bottom: 80px;
 }
 .video .data {
     background-color: rgba(2, 2, 2, 0.8);
@@ -1886,7 +1898,7 @@ nav.closed footer button {
 /* Start Details */
 .details
 {
-    background: linear-gradient(rgba(34, 27, 25, 0.8), rgba(34, 27, 25, 0.8)), rgba(34, 27, 25, 0.8) url(../images/accueil-photographe-sdg-media-terrebonne.jpg) no-repeat center center fixed;
+    background: linear-gradient(rgba(34, 27, 25, 0.8), rgba(34, 27, 25, 0.8)), rgba(34, 27, 25, 0.8) url(../images/1.jpeg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -1898,6 +1910,16 @@ nav.closed footer button {
 }
 /* End Details */
 /* Start Social */
+.social {
+    background: url(/images/0000.jpg)
+        no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -mozt-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 300px;
+    margin-bottom: 80px;
+}
 .social .h1{
     margin-bottom: 0;
     color: #b98f51;
@@ -2017,7 +2039,7 @@ opacity:1;
 /* End Model */
 /* Start Section */
 .world_video{
-    background: linear-gradient(rgba(34, 27, 25, 0.8), rgba(34, 27, 25, 0.8)), rgba(34, 27, 25, 0.8) url(../images/accueil-photographe-sdg-media-terrebonne.jpg) no-repeat center center fixed;
+    background: linear-gradient(rgba(34, 27, 25, 0.8), rgba(34, 27, 25, 0.8)), rgba(34, 27, 25, 0.8) url(../images/airplane-over-world-map-on-blackboard-3769118.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

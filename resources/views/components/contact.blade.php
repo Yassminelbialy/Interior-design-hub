@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="col-sm-12 col-lg-6 ">
                     <div class="stats_video">
-                        <img src="/images/fashion-photography-of-woman-hands-on-chin-with-glitter-1081685.jpg" alt="" />
+                        <img src="/images/DSC05124.jpg" alt="" />
                         <div class="icon-wrapper">
                             <div class="icon">
                                 <i class="fa fa-play" data-toggle="modal" data-target="#myModal"></i>
