@@ -6,6 +6,7 @@ use App\Project;
 use App\Category;
 use App\ProjectImage;
 use Illuminate\Http\Request;
+use Ramsey\Uuid\Rfc4122\UuidV1;
 use Uuid ;
 
 class ProjectController extends Controller
@@ -17,8 +18,9 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        //
-        return view('manager.projectindex',['data'=>Project::all()]);
+        // dd(Uuid::generate()->string);
+        return view('manager.myindex',['data'=>Project::all()]);
+        // return view('manager.projectindex',['data'=>Project::all()]);
 
     }
 
