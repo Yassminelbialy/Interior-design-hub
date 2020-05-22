@@ -30,4 +30,5 @@ Route::prefix('manager')->name('manager.')->group(function(){
     // Route::resource('project', 'ProjectController');
 
 });
+Route::resource('project.images', 'ProjectImageController');
 
