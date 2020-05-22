@@ -5,6 +5,10 @@
     --secondColor: #e0c89c;
   }
 
+
+  body{
+      overflow-x: hidden;
+  }
   /* start nav */
   nav {
     background-color: var(--mainColor);
@@ -956,7 +960,11 @@
 
 
 
-
+/* start div data */
+.data img{
+    width: 100%;
+    height: auto;
+}
 
 
 /* Start video */
