@@ -1,9 +1,40 @@
 $(function () {
 
+    // strat progress
+
+
+
+        function activeNavQuisez(willclick){
+
+        willclick.click(function(){
+
+        let countActive =$(this).data('value')
+
+        $(".number_of_quiz").text(countActive)
+
+        for(var i =0; i<countActive; i++){
+            navQuizes.eq(i).addClass('active_nav')
+        }
+
+        for(var i =countActive; i<=5; i++){
+            navQuizes.eq(i).removeClass('active_nav')
+        }
+    })
+}
+
+
+let navQuizes =$(".nav-pills li a ")
+activeNavQuisez(navQuizes);
+let btnNext=$(".btn_next")
+activeNavQuisez(btnNext);
+
+
+
+
        // start pop up
        setTimeout(()=>{
       $(".open_pop_up").click()
-      },45000)
+      },100)
 
       // start next step
       $(".next_step").click(function () {

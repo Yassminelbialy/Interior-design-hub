@@ -162,7 +162,7 @@
             <div class="container all_quizes">
               <div class="row">
                 <div class="col-md-9 all_quiz_content text-center">
-                  <h2 class="modal-title">Bonpoc 1 n3 5</h2>
+                  <h2 class="modal-title">Bonpoc <span class="number_of_quiz">1</span> n3 5</h2>
 
                   <section class="tabs text-center">
                     <ul
@@ -171,26 +171,26 @@
                       role="tablist"
                     >
                       <li class="nav-item">
-                        <a class="nav-link active" id="pills-quiz1-tab" data-toggle="pill" href="#pills-quiz1" role="tab" aria-controls="pills-quiz1" aria-selected="true"></a>
+                        <a  data-value="1" class="nav-link active" id="pills-quiz1-tab" data-toggle="pill" href="#pills-quiz1" role="tab" aria-controls="pills-quiz1" aria-selected="true"></a>
                       </li>
 
-                      <li class="nav-item">
-                        <a class="nav-link " id="pills-quiz2-tab" data-toggle="pill" href="#pills-quiz2" role="tab" aria-controls="pills-quiz2" aria-selected="false"></a>
-                      </li>
-
-
-                      <li class="nav-item">
-                        <a class="nav-link" id="pills-quiz3-tab" data-toggle="pill" href="#pills-quiz3" role="tab" aria-controls="pills-quiz3" aria-selected="false"></a>
+                      <li  class="nav-item">
+                        <a  data-value="2" class="nav-link " id="pills-quiz2-tab" data-toggle="pill" href="#pills-quiz2" role="tab" aria-controls="pills-quiz2" aria-selected="false"></a>
                       </li>
 
 
-                      <li class="nav-item">
-                        <a class="nav-link" id="pills-quiz4-tab" data-toggle="pill" href="#pills-quiz4" role="tab" aria-controls="pills-quiz4" aria-selected="false"></a>
+                      <li  class="nav-item">
+                        <a  data-value="3" class="nav-link" id="pills-quiz3-tab" data-toggle="pill" href="#pills-quiz3" role="tab" aria-controls="pills-quiz3" aria-selected="false"></a>
                       </li>
 
 
-                      <li class="nav-item">
-                        <a class="nav-link" id="pills-quiz5-tab" data-toggle="pill" href="#pills-quiz5" role="tab" aria-controls="pills-quiz5" aria-selected="false"></a>
+                      <li  class="nav-item">
+                        <a  data-value="4" class="nav-link" id="pills-quiz4-tab" data-toggle="pill" href="#pills-quiz4" role="tab" aria-controls="pills-quiz4" aria-selected="false"></a>
+                      </li>
+
+
+                      <li  class="nav-item">
+                        <a  data-value="5" class="nav-link" id="pills-quiz5-tab" data-toggle="pill" href="#pills-quiz5" role="tab" aria-controls="pills-quiz5" aria-selected="false"></a>
                       </li>
 
                       <!-- <li class="nav-item">
@@ -290,7 +290,7 @@
 
                               </div>
                               <div class="btn_content text-center mt-3 w-100">
-                                <a class="btn btn_next" id="pills-quiz2-tab" data-toggle="pill" href="#pills-quiz2" role="tab" aria-controls="pills-quiz2" aria-selected="false">next</a>
+                                <a data-value="2" class="btn btn_next" id="pills-quiz2-tab" data-toggle="pill" href="#pills-quiz2" role="tab" aria-controls="pills-quiz2" aria-selected="false">next</a>
                               </div>
                             </div>
                           </div>
@@ -339,7 +339,7 @@
 
                             </div>
                             <div class="btn_content text-center mt-3 w-100">
-                               <a class="btn btn_next " id="pills-quiz3-tab" data-toggle="pill" href="#pills-quiz3" role="tab" aria-controls="pills-quiz3" aria-selected="false">next</a>
+                               <a data-value="3" class="btn btn_next " id="pills-quiz3-tab" data-toggle="pill" href="#pills-quiz3" role="tab" aria-controls="pills-quiz3" aria-selected="false">next</a>
                             </div>
                           </div>
                         </div>
@@ -463,7 +463,7 @@
                                   </div>
                                 </div>
                                 <div class="btn_content text-center mt-3 w-100">
-                                  <a class="btn btn_next" id="pills-quiz4-tab" data-toggle="pill" href="#pills-quiz4" role="tab" aria-controls="pills-quiz4" aria-selected="false">next</a>
+                                  <a data-value="4" class="btn btn_next" id="pills-quiz4-tab" data-toggle="pill" href="#pills-quiz4" role="tab" aria-controls="pills-quiz4" aria-selected="false">next</a>
                                 </div>
                               </li>
                               </div>
@@ -518,7 +518,7 @@
 
                           </div>
                           <div class="btn_content text-center mt-3 w-100">
-                            <a class="btn btn_next" id="pills-quiz5-tab" data-toggle="pill" href="#pills-quiz5" role="tab" aria-controls="pills-quiz5" aria-selected="false">next</a>
+                            <a data-value="5" class="btn btn_next" id="pills-quiz5-tab" data-toggle="pill" href="#pills-quiz5" role="tab" aria-controls="pills-quiz5" aria-selected="false">next</a>
                           </div>
                         </div>
                       </div>
@@ -569,7 +569,7 @@
                           </div>
                         </div>
                         <div class="btn_content text-center mt-3 w-100">
-                            <a class="btn btn_next" id="pills-quiz6-tab" data-toggle="pill" href="#pills-quiz6" role="tab" aria-controls="pills-quiz6" aria-selected="false">next</a>
+                            <a data-value="6" class="btn btn_next" id="pills-quiz6-tab" data-toggle="pill" href="#pills-quiz6" role="tab" aria-controls="pills-quiz6" aria-selected="false">next</a>
                         </div>
                       </div>
                     </div>
