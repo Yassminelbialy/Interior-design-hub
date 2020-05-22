@@ -45,6 +45,9 @@
     @component('components.contact')
     @endcomponent
 
+    @component('components.map')
+
+    @endcomponent
 
     @component('components.footer')
     @endcomponent
