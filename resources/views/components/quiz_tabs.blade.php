@@ -1,4 +1,35 @@
-<div class="pop_up">
+
+    <!-- Button trigger modal -->
+     <button class="open_pop_up" style="display: none"
+      type="button"
+      class="btn btn-primary"
+      data-toggle="modal"
+      data-target="#modal_quiz"
+    >
+      Launch demo modal
+    </button> -->
+    <div
+      class="modal modal_quizes fade"
+      id="modal_quiz"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="text-center modal-head">
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+              <div class="pop_up">
       <div class="container calls_container">
         <div class="row">
           <div class="left text-center col-md-5">
@@ -113,8 +144,6 @@
               </div>
             </div>
             <button
-            data-toggle="modal"
-            data-target="#modal_quiz"
             class="btn_next open_quiz">
             no3bohNTe MHe
           </button>
@@ -129,42 +158,8 @@
           </div>
         </div>
       </div>
-    </div>
-
-
-    <!-- Button trigger modal -->
-    <!-- <button
-      type="button"
-      class="btn btn-primary"
-      data-toggle="modal"
-      data-target="#modal_quiz"
-    >
-      Launch demo modal
-    </button> -->
-
-    <!-- Modal -->
-    <div
-      class="modal fade"
-      id="modal_quiz"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="text-center modal-head">
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <div class="container">
+      </div>
+            <div class="container all_quizes">
               <div class="row">
                 <div class="col-md-9 all_quiz_content text-center">
                   <h2 class="modal-title">Bonpoc 1 n3 5</h2>
@@ -197,9 +192,10 @@
                       <li class="nav-item">
                         <a class="nav-link" id="pills-quiz5-tab" data-toggle="pill" href="#pills-quiz5" role="tab" aria-controls="pills-quiz5" aria-selected="false"></a>
                       </li>
-                      <li class="nav-item">
+
+                      <!-- <li class="nav-item">
                         <a class="nav-link" id="pills-quiz5-tab" data-toggle="pill" href="#pills-quiz6" role="tab" aria-controls="pills-quiz5" aria-selected="false"></a>
-                      </li>
+                      </li> -->
                     </ul>
                     <div class="tab-content" id="pills-tabContent">
                       <div
@@ -571,9 +567,10 @@
                           </label>
                               <p>Cpongu, kaskak  Cpongu, kaskak  </p>
                           </div>
-
                         </div>
-                        <!-- <a class="btn btn_next" id="pills-quiz5-tab" data-toggle="pill" href="#quiz5" role="tab" aria-controls="pills-quiz5" aria-selected="false">done</a> -->
+                        <div class="btn_content text-center mt-3 w-100">
+                            <a class="btn btn_next" id="pills-quiz6-tab" data-toggle="pill" href="#pills-quiz6" role="tab" aria-controls="pills-quiz6" aria-selected="false">next</a>
+                        </div>
                       </div>
                     </div>
                   </section>
@@ -641,7 +638,7 @@
                               <input type="text" placeholder="Bawe UmR*">
                               <input type="text" placeholder="Teneqoh Qar CbR3u*">
 
-                              <button class="btn_next">nonyNTb PE3ynbTAT</button>
+                              <button class="btn_next done">nonyNTb PE3ynbTAT</button>
 
                               <div class="check_it text-left">
                                 <label class="checkbox_container2">

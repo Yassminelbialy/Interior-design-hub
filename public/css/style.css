@@ -84,7 +84,7 @@
     border-radius: 240px;
     left: 64%;
     bottom: 12%;
-    outline: none; 
+    outline: none;
 }
 @media (max-width: 767px) {
     .wrapper {
@@ -356,7 +356,7 @@ i{
 
 /* Modal Video */
 .modal-dialog {
-    max-width: 800px;
+    /* max-width: 800px; */
     margin: 30px auto;
 }
 

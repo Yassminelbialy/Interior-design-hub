@@ -1,12 +1,9 @@
 $(function () {
 
-
        // start pop up
        setTimeout(()=>{
-        $(".pop_up").css({
-          transform:"scale(1)"
-        })
-      },1000)
+      $(".open_pop_up").click()
+      },45000)
 
       // start next step
       $(".next_step").click(function () {
@@ -14,8 +11,14 @@ $(function () {
       $(".right2").show();
     });
 
+    // start quizes
     $(".open_quiz").click(function(){
+      $(".all_quizes").show()
       $(".pop_up").hide()
+    })
+
+    $(".quiz6 .done").click(function(){
+        $(".open_pop_up").click()
     })
 
 

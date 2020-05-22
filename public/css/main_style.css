@@ -403,22 +403,19 @@
   /* start tabs */
 
 
-  .pop_up {
-    position: absolute;
-    height: 86vh;
-    width: 70%;
-    margin: 10px auto;
-    box-shadow: 10px 10px 10px black, -10px -10px 10px black;
-    background-color: white;
-    transform: scale(0);
-    transition: all 1s;
-    left: 20%;
-    z-index: 10;
+
+
+.all_quizes{
     display: none;
+    padding: 40px;
+
 }
 
-  .calls_container {
-  }
+.pop_up{
+    min-height:80vh ;
+    padding: 60px;
+}
+
 
   .pop_up .left {
     padding: 10px 0 0;
