@@ -1,6 +1,7 @@
-<section class="video">
+<section class="our_video">
     <div class="data">
         <div class="container">
+
             <div class="row">
                 <div class="col-sm-12 col-lg-6 ">
                     <div class="stats_video">
@@ -10,7 +11,7 @@
                                 <i class="fa fa-play" data-toggle="modal" data-target="#myModal"></i>
 
                                 <!-- Modal -->
-                                <div class="modal modal_video  fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
                                             <div class="modal-body">

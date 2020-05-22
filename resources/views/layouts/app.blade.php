@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="css/owl.theme.default.css">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/main_style.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 
 </head>
 <body>

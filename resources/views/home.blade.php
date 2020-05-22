@@ -2,6 +2,7 @@
 
 @section('content')
 
+
     @component('components.header')
     @endcomponent
 
@@ -44,9 +45,9 @@
     @component('components.contact')
     @endcomponent
 
+
     @component('components.footer')
     @endcomponent
-
 
 
 @endsection
