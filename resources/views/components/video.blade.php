@@ -20,7 +20,8 @@
                                                     <span aria-hidden="true">&times;</span>
                                                 </button>
                                                 <div class="embed-responsive embed-responsive-16by9">
-                                                    <iframe class="embed-responsive-item" src="images/1.mp4" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
+                                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/cZn8nu4-2f0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                                                    {{$x}}
+                                                     {{-- <iframe class="embed-responsive-item" src="images/1.mp4" id="video"  allowscriptaccess="always" allow="autoplay"></iframe> --}}
                                                 </div>
 
                                             </div>

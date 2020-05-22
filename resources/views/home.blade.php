@@ -33,7 +33,7 @@
     @component('components.state')
     @endcomponent
 
-    @component('components.video')
+    @component('components.video',['x'=>`xx`])
     @endcomponent
 
     @component('components.details')
