@@ -52,7 +52,7 @@
                 </div>
               </div>
               <div class="col-md-4">
-                <div class="callme">
+                <div class="callme whatsapp">
                   <span>Whatsapp</span>
                   <img
                     class="whatsapp_image"
@@ -313,19 +313,20 @@
                               <div class="text_for_rang1">
                                 <span class="mr-2">yandix ysad kqwey yandix ysad </span> <span>5000</span> <span>M<sup>2</sup></span>
                               </div>
-                              <div class="text_for_rang2" >
-                                <div>
-                                  <span>20 M<sup>2</sup> </span>
-                                  <span>5000 M<sup>2</sup></span>
-                                </div>
 
-                                <div class="range">
+                              <div class="range">
                                   <div class="slidecontainer">
-                                    <input type="range" min="1" max="100" value="60" id="myrange" class="slider_range" >
-                                    <p> value: <span id="rangevalue"></span> </p>
+                                      <div class="text_for_rang2" >
+                                        <span class="value_changing">
+                                            <span id="rangevalue">20 </span>
+                                            M<sup>2</sup>
+                                        </span>
+                                         <span class="maximum">5000 M<sup>2</sup></span>
+                                      </div>
+                                      <input type="range" min="1" max="100" value="60" id="myrange" class="slider_range" >
+
+                                     </div>
                                 </div>
-                                </div>
-                              </div>
                               <p>yandix ysad kqwey yandix ysad yandix ysad kqwey yandix </p>
                               <div class="input-group text-center">
                                 <div class="custom-file">

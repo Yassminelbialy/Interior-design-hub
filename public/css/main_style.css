@@ -141,7 +141,7 @@ nav .contact_us i {
 }
 .information .buttons_call .tri {
     padding: 4px 12px;
-    margin-left: 10px;
+    margin-left: 7px;
     margin-top: 10px;
 }
 
@@ -403,7 +403,7 @@ nav .contact_us i {
 
 .pop_up {
     min-height: 80vh;
-    padding: 60px;
+    padding: 30px;
 }
 
 .pop_up .left {
@@ -414,18 +414,18 @@ nav .contact_us i {
     padding: 20px 0;
     position: relative;
     left: 22%;
-    height: 300px;
+    height: 350px;
     width: 100%;
 }
 .pop_up .left .decoration_content .decoration1 {
-    left: 15%;
-    top: 39px;
-    border: 1px solid black;
+    left: 9%;
+    top: 36px;
+    border: 1px solid #c1c1c1;
 }
 
 .pop_up .left .decoration_content .decoration2 {
     top: 100px;
-    left: 3%;
+    left: -10%;
     border: 1px solid black;
     background-color: var(--mainColor);
 }
@@ -434,12 +434,12 @@ nav .contact_us i {
 .left .decoration_content .decoration1,
 .left .decoration_content .decoration2 {
     position: absolute;
-    height: 89%;
-    width: 51%;
+    height: 90%;
+    width: 65%;
 }
 
 .pop_up .left .decoration_content img {
-    left: 10%;
+    left: 1%;
     top: 61px;
 }
 
@@ -659,8 +659,12 @@ nav .contact_us i {
     top: -12px;
 }
 
-.modal-dialog {
-    max-width: 80%;
+.modal_quizes  .modal-dialog {
+    min-width: 70%;
+}
+
+.right .whatsapp{
+    padding:17px 0 !important
 }
 
 /*
@@ -694,13 +698,13 @@ nav .contact_us i {
 }
 
 .quiz2 .custom-file-label::after {
-    background: var(--secondColor);
+    background: linear-gradient(to left,#f1e4c4,#f9f5ea 30%,#f1e4c4);
     padding: 9px 42px;
     height: 43px;
     border: 0;
 }
 .quiz2 .custom-file {
-    margin: 13%;
+    margin: 12px 45px;
 }
 .quiz2 .custom-file-label {
     height: 44px;
@@ -721,9 +725,29 @@ nav .contact_us i {
     margin-bottom: 40px;
 }
 
+.quiz2 .range {
+    position: relative;
+}
+
+.quiz2 .range .value_changing , .quiz2 .range .maximum {
+    position: absolute;
+    top: 0;
+    top: -17px;
+    font-weight: bolder;
+}
+.quiz2 .range .value_changing{
+    left: 10%;
+}
+
+.quiz2 .range .maximum {
+    right: 60px;
+}
+
+
 .slidecontainer {
     width: 75%;
     margin-top: 30px;
+    margin: 0 auto;
 }
 .slider_range {
     -webkit-appearance: none;
@@ -764,9 +788,9 @@ nav .contact_us i {
     margin-top: 50px;
     opacity: 0.7;
 }
-.slider_range::after {
+/* .slider_range::before {
     content: "100";
-    color: white;
+    color: black;
     font-size: 20px;
     position: absolute;
     left: 80%;
@@ -774,12 +798,12 @@ nav .contact_us i {
 }
 .slider_range::after {
     content: "0";
-    color: white;
+    color: black;
     font-size: 20px;
     position: absolute;
     left: 14%;
     top: 26%;
-}
+} */
 
 /* start quiz4  */
 
@@ -836,8 +860,8 @@ nav .contact_us i {
     background-color: #eee;
 }
 .quiz6 .checkbox_container2 input:checked + .checkmark:after {
-    top: 25%;
-    left: 5%;
+    top: 24%;
+    left: 6%;
     height: 6px;
     width: 10px;
     border-left: 2px solid var(--secondColor);

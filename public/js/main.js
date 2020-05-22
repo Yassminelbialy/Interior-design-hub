@@ -34,7 +34,7 @@ activeNavQuisez(btnNext);
        // start pop up
        setTimeout(()=>{
       $(".open_pop_up").click()
-      },100)
+      },2000)
 
       // start next step
       $(".next_step").click(function () {
@@ -46,6 +46,7 @@ activeNavQuisez(btnNext);
     $(".open_quiz").click(function(){
       $(".all_quizes").show()
       $(".pop_up").hide()
+      $(".modal_quizes  .modal-dialog").css("min-width","80%")
     })
 
     $(".quiz6 .done").click(function(){
