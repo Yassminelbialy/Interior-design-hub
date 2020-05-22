@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Project;
+use App\Category;
+use App\ProjectImage;
 use Illuminate\Http\Request;
+use Uuid ;
 
 class ProjectController extends Controller
 {
@@ -15,6 +18,8 @@ class ProjectController extends Controller
     public function index()
     {
         //
+        return view('manager.projectindex',['data'=>Project::all()]);
+
     }
 
     /**
@@ -25,6 +30,9 @@ class ProjectController extends Controller
     public function create()
     {
         //
+        $categories = Category::all()->pluck('name','id')->toArray();
+// dd($categories);
+        return view('manager.projectformadd',['category'=>$categories]);
     }
 
     /**
@@ -35,7 +43,20 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
+
+    if ($files = $request->file('mainimage'))
+    {
+                    $uuid =Uuid::generate()->string;
+                    $path=$uuid.".".$request->file('mainimage')->getClientOriginalExtension();
+                    $desti='projectimages/';
+                    $files->move($desti,$path);
+                    // dd('dd');
+    }
+    $req=$request->all();
+    $req['mainimage']=$path;
+    $project = Project::create($req);
         //
+        dd($project);
     }
 
     /**
@@ -69,6 +90,8 @@ class ProjectController extends Controller
      */
     public function update(Request $request, Project $project)
     {
+        $categories = Category::all()->pluck('name','id')->toArray();
+
         //
     }
 
