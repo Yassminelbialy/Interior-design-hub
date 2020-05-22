@@ -1,38 +1,47 @@
-     <!-- start clients -->
-     <section class="clients text-center">
-       <h1>Our Clients</h1>
+    <!-- start clients -->
+    <section class="clients text-center">
+      <div class="custom_border">
+        <h2>Our Clients</h2>
+      </div>
+
       <div class="container">
         <div class="row">
-            <div class="col-md-2 col-sm-3 col-4">
-              <img
-                src="images/etisalat.png"
-                alt="etisalat"
-              />
-            </div>
-            <div class="col-md-2 col-sm-3 col-4">
-              <img class="" src="images/cnn.png" alt="cnn" />
-            </div>
-            <div class="col-md-2 col-sm-3 col-4">
-              <img
-                src="images/google.png"
-                alt="google"
-              />
-            </div>
-            <div class="col-md-2 col-sm-3 col-4">
-              <img
-                src="images/vodafone.jfif"
-                alt="vodafone"
-              />
-            </div>
-            <div class="col-md-2 col-sm-3 col-4">
-              <img class="" src="images/we.png" alt="we.png" />
-            </div>
-            <div class="col-md-2 col-sm-3 col-4">
-              <img
-                src="images/adidas.jpg"
-                alt="adidas.jpg"
-              />
-            </div>
+          <div class="col-md-2 col-sm-3 col-4">
+            <img src="images/client1.PNG" alt="etisalat" />
+          </div>
+          <div class="col-md-2 col-sm-3 col-4">
+            <img class="" src="images/client2.PNG" alt="cnn" />
+          </div>
+          <div class="col-md-2 col-sm-3 col-4">
+            <img src="images/client3.PNG" alt="google" />
+          </div>
+          <div class="col-md-2 col-sm-3 col-4">
+            <img src="images/client4.PNG" alt="vodafone" />
+          </div>
+          <div class="col-md-2 col-sm-3 col-4">
+            <img class="" src="images/client5.PNG" alt="we.png" />
+          </div>
+          <div class="col-md-2 col-sm-3 col-4">
+            <img src="images/client6.PNG" alt="adidas.jpg" />
+          </div>
+          <div class="col-md-2 col-sm-3 col-4">
+            <img src="images/client7.PNG" alt="etisalat" />
+          </div>
+          <div class="col-md-2 col-sm-3 col-4">
+            <img class="" src="images/client8.PNG" alt="cnn" />
+          </div>
+          <div class="col-md-2 col-sm-3 col-4">
+            <img src="images/client9.PNG" alt="google" />
+          </div>
+          <div class="col-md-2 col-sm-3 col-4">
+            <img src="images/client1.PNG" alt="vodafone" />
+          </div>
+          <div class="col-md-2 col-sm-3 col-4">
+            <img class="" src="images/client2.PNG" alt="we.png" />
+          </div>
+          <div class="col-md-2 col-sm-3 col-4">
+            <img src="images/client3.PNG" alt="adidas.jpg" />
+          </div>
         </div>
       </div>
     </section>

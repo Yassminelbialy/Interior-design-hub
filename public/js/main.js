@@ -1,339 +1,117 @@
 $(function () {
 
 
+       // start pop up
+       setTimeout(()=>{
+        $(".pop_up").css({
+          transform:"scale(1)"
+        })
+      },1000)
 
-    // start nav
-
-    var $els = $('.menu a, .menu header');
-    var count = $els.length;
-    var grouplength = Math.ceil(count/3);
-    var groupNumber = 0;
-    var i = 1;
-    $('.menu').css('--count',count+'');
-    $els.each(function(j){
-        if ( i > grouplength ) {
-            groupNumber++;
-            i=1;
-        }
-        $(this).attr('data-group',groupNumber);
-        i++;
+      // start next step
+      $(".next_step").click(function () {
+      $(".right").hide();
+      $(".right2").show();
     });
 
-    $('.menu footer button').on('click',function(e){
-        e.preventDefault();
-        $els.each(function(j){
-            $(this).css('--top',$(this)[0].getBoundingClientRect().top + ($(this).attr('data-group') * -15) - 20);
-            $(this).css('--delay-in',j*.1+'s');
-            $(this).css('--delay-out',(count-j)*.1+'s');
-        });
-        $('.menu').toggleClass('closed');
-        e.stopPropagation();
-    });
+    $(".open_quiz").click(function(){
+      $(".pop_up").hide()
+    })
 
 
+      $(".quiz1  .checkbox_container input[type='radio'] , .quiz2 .checkbox_container input[type='radio'] ,.quiz3  .checkbox_container input[type='radio'] ").on("change", function () {
+        let refrenceCheckBtn = $(this);
 
-  //start loading
-$(window).on('load',function(){
-    $('.loading_overlay').fadeOut(2000);
-  });
-  //end loading
+          refrenceCheckBtn.parent().siblings("img").css("opacity", "1");
 
-      // start slide
-      var win = $(window).height();
-      var nav = $(".nav_container").innerHeight();
-      $("#main-slider,.carousel-item").height(win - nav);
+          refrenceCheckBtn.parent().parent().parent().siblings().children().find('img').css("opacity", ".7");
 
+      });
 
-      // start carousel option
-      $('.carousel').carousel({
-        interval: 12000,
-        hover:false
+      $(".quiz4  .checkbox_container input[type='radio']").change(function(){
+
+        let refrenceCheckBtn = $(this);
+
+        refrenceCheckBtn.parents(".choose_multi").addClass("selected")
+
+        refrenceCheckBtn.parents(".choose_multi").siblings(".choose_multi").removeClass("selected")
+
       })
 
-      // start all features
-      $(".allFeatures ul li").on("click", function () {
-        $(this).addClass("active").siblings().removeClass("active");
-        if ($(this).data("class") == "all") {
-          $(".img").css("opacity", "1");
+      $(".quiz5 .checkbox_container input[type='checkbox'] , .quiz6 .checkbox_container input[type='checkbox'] ").on("click",function(){
+
+        let refrenceCheckBtn = $(this);
+        if (refrenceCheckBtn.prop("checked")) {
+          refrenceCheckBtn.parent().parent().addClass("selected")
         } else {
-          $(".shuffle-images .img ").css("opacity", ".1");
-
-          $($(this).data("class")).parent().css("opacity", "1");
+          refrenceCheckBtn.parent().parent().removeClass("selected")
         }
-      });
+      })
 
-      // start option box
+      $(".quiz6 .checkbox_container input[type='checkbox'] ").on("click",function(){
 
-      $(".fa-gear").click(function () {
-        $(".option-box").toggleClass("active ");
-        if ($(".option-box").hasClass("active")) {
-          $(".option-box").animate({
-            left: "0",
-          });
-        } else {
-          $(".option-box").animate({
-            left: "-270px",
-          });
-        }
-      });
-
-      // change mode seasons
-
-      $("input[name=mode_season]").change(function () {
-        var v = $(this).val();
-
-
-        if (v == "summer") {
-          $(".pop_up p").text("sun mode");
-          $(".pop_up")
-            .css({
-              display: "block",
-              transform:
-                "scale(1) rotate(360deg)  rotate(360deg)   rotate(360deg)   rotate(360deg)   rotate(360deg)   rotate(360deg)   rotate(360deg)   rotate(360deg)   rotate(360deg)  rotate(360deg)  rotate(360deg)   ",
-              transition: "1s",
-            })
-            .delay(1000)
-
-            setTimeout(function(){
-              $(".pop_up")
-              .css({
-                display: "block",
-                transform:
-                  "scale(0)  ",
-                transition: "1s",
-              })
-              $(".center_sun").show(1000);
-              $(".center_sun").siblings().hide(1000);
-
-            },3000)
-
-        } else if (v == "winter") {
-          $(".pop_up p").text("winter mode");
-          $(".pop_up")
-            .css({
-              display: "block",
-              transform:
-                   "scale(1) rotate(360deg)  rotate(360deg)   rotate(360deg)   rotate(360deg)   rotate(360deg)   rotate(360deg)   rotate(360deg)   rotate(360deg)   rotate(360deg)  rotate(360deg)  rotate(360deg)   ",
-              transition: "1s",
-            })
-            .delay(1000)
-
-            setTimeout(function(){
-              $(".pop_up")
-              .css({
-                display: "block",
-                transform:
-                  "scale(0) ",
-                transition: "1s",
-              })
-              $(".rain").show(1000);
-              $(".rain").siblings().hide(1000);
-
-            },3000)
-
-
-        } else if (v == "spring") {
-          $(".pop_up p").text("spring mode");
-          $(".pop_up")
-            .css({
-              display: "block",
-              transform:
-                   "scale(1) rotate(360deg)  rotate(360deg)   rotate(360deg)   rotate(360deg)   rotate(360deg)   rotate(360deg)   rotate(360deg)   rotate(360deg)   rotate(360deg)  rotate(360deg)  rotate(360deg)   ",
-              transition: "1s",
-            })
-            .delay(1000)
-            setTimeout(function(){
-              $(".pop_up")
-              .css({
-                display: "block",
-                transform:
-                  "scale(0)  ",
-                transition: "1s",
-              })
-              $(".spring").show(1000);
-              $(".spring").siblings().hide(1000);
-            },3000)
-
-        } else if (v == "snow") {
-          $(".pop_up p").text("snow mode");
-          $(".pop_up")
-            .css({
-              display: "block",
-              transform:
-              "scale(1) rotate(360deg)  rotate(360deg)   rotate(360deg)   rotate(360deg)   rotate(360deg)   rotate(360deg)   rotate(360deg)   rotate(360deg)   rotate(360deg)  rotate(360deg)  rotate(360deg)   ",          transition: "1s",
-            })
-            .delay(1000)
-
-            setTimeout(function(){
-              $(".pop_up")
-              .css({
-                display: "block",
-                transform:
-                  "scale(0) ",
-                transition: "1s",
-              })
-              $(".snow").show(1000);
-              $(".snow").siblings().hide(1000);
-
-            },3000)
-        }
-      });
-
-
-      // start change fonts
-      $("select[name=fonts]").change(function () {
-        let font_value =$(this).val()
-        $("*").css("fontFamily",font_value)
-      });
-
-      //   start scroll
-      $(window).scroll(function () {
-        if ($(this).scrollTop() > 600) {
-          $("a.btn_up").show(1000);
-        } else {
-          $("a.btn_up").hide(1000);
-        }
-      });
-
-      $("a.btn_up").click(function (e) {
-        e.preventDefault();
-        console.log("asda");
-        $("body , html ").animate(
-          {
-            scrollTop: 0,
-          },
-          1000
-        );
-      });
-
-      $(".navbar ul li  a").click(function () {
-        $("html , body").animate(
-          {
-            scrollTop: $("#" + $(this).data("scroll")).offset().top + 1,
-          },
-          1000
-        );
-      });
-
-      $(".navbar  li a").click(function () {
-        $(".navbar  a").removeClass("active");
-
-        $(this).addClass("active");
-      });
-
-      var scrolltotoptop = $(".scroll-to-top");
-
-      $(window).scroll(function () {
-        $(".section").each(function () {
-          if ($(window).scrollTop() > $(this).offset().top) {
-            var secion_id = $(this).attr("id");
-
-            $(".navbar  a").removeClass("active");
-
-            $(".navbar ul li a[data-scroll='" + secion_id + "']").addClass(
-              "active"
-            );
+          let refrenceCheckBtn = $(this);
+          if (refrenceCheckBtn.prop("checked")) {
+            refrenceCheckBtn.parent().parent().addClass("selected")
+          } else {
+            refrenceCheckBtn.parent().parent().removeClass("selected")
           }
-        });
+    })
 
-        if ($(window).scrollTop() > 1000) {
-          scrolltotoptop.fadeIn();
-        } else {
-          scrolltotoptop.fadeOut();
-        }
-      });
-
-      scrolltotoptop.click(function (e) {
-        e.preventDefault();
-
-        $("html , body ").animate(
-          {
-            scrollTop: 0,
-          },
-          1000
-        );
-      });
-
-      AOS.init();
+            // start range slider
+        slider=$("#myrange")
+        let output =$("#rangevalue")
+        output.html(slider.val())
 
 
-      // start counter up
+        slider.mousemove(function(){
+            output.html($(this).val())
+            let sliderValue =slider.val();
+            let color = `linear-gradient(90deg , #e0c89c ${sliderValue}% ,rgb(214,214,214)  ${sliderValue}% ) `
+            $(this).css("background",color)
+        })
 
-      let nCount = (selector) => {
-        $(selector).each(function () {
-          $(this).animate(
-            {
-              Counter: $(this).text(),
-            },
-            {
-              // A string or number determining how long the animation will run.
-              duration: 4000,
-              // A string indicating which easing function to use for the transition.
-              easing: "swing",
-              /**
-             A function to be called for each animated property of each animated element.
-              This function provides an opportunity to
-               modify the Tween object to change the value of the property before it is set.
-             */
-              step: function (value) {
-                $(this).text(Math.ceil(value));
-              },
-            }
-          );
-        });
-      };
-
-      let a = 0;
-      $(window).scroll(function () {
-        // The .offset() method allows us to retrieve the current position of an element  relative to the document
-        let oTop = $(".numbers").offset().top - window.innerHeight;
-        if (a == 0 && $(window).scrollTop() >= oTop) {
-          a++;
-          nCount(".rect > h1");
-        }
-      });
-
-
-      // start testimonials
-
-      var swiper = new Swiper('.swiper-container', {
-        effect: 'coverflow',
-        grabCursor: true,
-        centeredSlides: true,
-        slidesPerView: 'auto',
-        coverflowEffect: {
-          rotate: 60,
-          stretch: 0,
-          depth: 600,
-          modifier: 1,
-          slideShadows : true,
+    // start testimonial
+    $(".owl-carousel").owlCarousel({
+        slideSpeed: 10,
+        autoplay: 10,
+        loop: true,
+        margin: 15,
+        responsive: {
+          0: { items: 2 },
+          600: { items: 3 },
+          1000: { items: 5 },
         },
-        pagination: {
-          el: '.swiper-pagination',
-        },
+        nav: true,
+
       });
 
-      var $videoSrc;  
+
+
+
+    //   start video screen
+
+      var $videoSrc;
       $('.video-btn').click(function() {
           $videoSrc = $(this).data( "src" );
       });
       console.log($videoSrc);
-      
-        
-        
-      // when the modal is opened autoplay it  
+
+
+
+      // when the modal is opened autoplay it
       $('#myModal').on('shown.bs.modal', function (e) {
-          
+
       // set the video src to autoplay and not to show related video. Youtube related video is like a box of chocolates... you never know what you're gonna get
-      $("#video").attr('src',$videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0" ); 
+      $("#video").attr('src',$videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0" );
       })
-        
-      
-      
+
+
+
       // stop playing the youtube video when I close the modal
       $('#myModal').on('hide.bs.modal', function (e) {
           // a poor man's stop video
-          $("#video").attr('src',''); 
-      }) 
-          
+          $("#video").attr('src','');
+      })
+
     });
