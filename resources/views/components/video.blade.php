@@ -1,39 +1,37 @@
-<section class="video">
+<section class="our_video">
     <div class="data">
         <div class="container">
-            
+
             <div class="row">
                 <div class="col-sm-12 col-lg-6 ">
                     <div class="stats_video">
-                        <img src="/images/fashion-photography-of-woman-hands-on-chin-with-glitter-1081685.jpg" alt="" />
+                        <img src="/images/DSC05123.png" alt="" />
                         <div class="icon-wrapper">
                             <div class="icon">
-                                <button type="button"  data-toggle="modal" data-target="#myModal">
-                                    <i class="fa fa-play"></i>
-                                </button>
-                                
+                                <i class="fa fa-play" data-toggle="modal" data-target="#myModal"></i>
+
                                 <!-- Modal -->
                                 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
                                             <div class="modal-body">
-                                
+
                                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                     <span aria-hidden="true">&times;</span>
-                                                </button>        
+                                                </button>
                                                 <div class="embed-responsive embed-responsive-16by9">
                                                     <iframe class="embed-responsive-item" src="images/1.mp4" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
                                                 </div>
-                                        
+
                                             </div>
-                                
+
                                         </div>
                                     </div>
-                                </div> 
+                                </div>
                             </div>
                         </div>
                     </div>
-                
+
                 </div>
                 <div class="col-sm-12 col-lg-6 ">
                     <div class="stats">
@@ -47,7 +45,7 @@
                             Even the all-powerful Pointing has no control.
                         </p>
                     </div>
-                
+
                 </div>
             </div>
         </div>

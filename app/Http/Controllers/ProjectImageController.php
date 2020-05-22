@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\ProjectImage;
+use App\Project;
 use Illuminate\Http\Request;
-
+use Uuid ;
 class ProjectImageController extends Controller
 {
     /**
@@ -12,9 +13,9 @@ class ProjectImageController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request,$id)
     {
-        //
+        dd($id);
     }
 
     /**
@@ -22,9 +23,10 @@ class ProjectImageController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
-        //
+        // dd($id);
+        return view('manager.projectimages');
     }
 
     /**
@@ -33,9 +35,24 @@ class ProjectImageController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request,$id)
     {
-        //
+        // dd(Project::find($id));
+        $project=Project::find($id);
+        if ($files = $request->file('image'))
+        {
+                        $uuid =Uuid::generate()->string;
+                        $path=$uuid.".".$request->file('image')->getClientOriginalExtension();
+                        $desti='projectimages/';
+                        $files->move($desti,$path);
+                        // dd('dd');
+        }
+        $req=$request->all();
+        $req['image']=$path;
+        $image = $project->images()->create($req);
+        //     //
+            dd($image);
+
     }
 
     /**
@@ -44,9 +61,10 @@ class ProjectImageController extends Controller
      * @param  \App\ProjectImage  $projectImage
      * @return \Illuminate\Http\Response
      */
-    public function show(ProjectImage $projectImage)
+    public function show(ProjectImage $projectImage,$id,$iid)
     {
-        //
+        dd($id,$iid);
+
     }
 
     /**
@@ -78,8 +96,9 @@ class ProjectImageController extends Controller
      * @param  \App\ProjectImage  $projectImage
      * @return \Illuminate\Http\Response
      */
-    public function destroy(ProjectImage $projectImage)
+    public function destroy(ProjectImage $projectImage,$id,$iid)
     {
+        dd($id,$iid);
         //
     }
 }

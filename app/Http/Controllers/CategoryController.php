@@ -26,7 +26,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view('manager.fff');
+        return view('manager.categoryformadd');
     }
 
     /**

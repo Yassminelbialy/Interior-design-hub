@@ -9,9 +9,35 @@
                 </p>
             </div>
             <div class="col-md-7">
-                <video class="p-4" id="videoBG"  preload="none" width="600px" autoplay="false" muted loop>
-                    <source src="images/1.mp4" type="video/mp4">
-                </video>
+                <div class="stats_video">
+                    <div class="overlay"></div>
+                    <img src="../images/7.jpg" alt="" />
+                    <div class="wrapper">
+                        <div class="icon-wrapper">
+                            <div class="icon">
+                                <i class="fa fa-play" data-toggle="modal" data-target="#myModal"></i>
+                                <!-- Modal -->
+                                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-body">
+                                
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>        
+                                                <div class="embed-responsive embed-responsive-16by9">
+                                                    <iframe class="embed-responsive-item" src="/1.mp4" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
+                                                </div>
+                                        
+                                            </div>
+                                
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
