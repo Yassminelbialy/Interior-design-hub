@@ -11,8 +11,8 @@
 
         ymaps.ready(function () {
     var myMap = new ymaps.Map('map404', {
-            center: [55.751574, 37.573856],
-            zoom: 14,
+            center: [29.9773, 31.1325],
+            zoom: 16,
             type: 'yandex#satellite'
         }, {
             searchControlProvider: 'yandex#search'
@@ -44,7 +44,7 @@
             iconImageOffset: [-5, -38]
         }),
 
-        myPlacemarkWithContent = new ymaps.Placemark([55.661574, 37.573856], {
+        myPlacemarkWithContent = new ymaps.Placemark([29.1773, 31.9325], {
             hintContent: 'A custom placemark icon with contents',
             balloonContent: 'This one — for Christmas',
             iconContent: '12'
@@ -72,7 +72,7 @@
         ////
 
 
-        myPlacemarkWithContent2 = new ymaps.Placemark([55.6614, 37.5736], {
+        myPlacemarkWithContent2 = new ymaps.Placemark([29.9753, 31.1345], {
             hintContent: 'A custom placemark icon with contents',
             balloonContent: 'This one — for Christmas',
             iconContent: '12'
