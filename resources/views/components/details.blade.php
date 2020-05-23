@@ -41,8 +41,9 @@
     </div>
 
     <div class="text-center">
-    <a href="" class="btn btn-info btn-rounded mt-4" style="position: relative;top: 172px;" data-toggle="modal" data-target="#modalLoginForm">Launch
-        Modal Login Form</a>
+        <bottom class="btn btn_info mt-4" style="position: relative;top: 172px;" data-toggle="modal" data-target="#modalLoginForm">Launch
+            Modal Contact Form
+        </bottom>
     </div>
 </div>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

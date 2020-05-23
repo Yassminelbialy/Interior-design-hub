@@ -1,6 +1,6 @@
 </header>
     <nav class="navbar navbar-expand-lg text-center">
-      <a class="navbar-brand" href="#"><span>A</span>8</a>
+      <a class="navbar-brand" href="#"><img src="images/company_logo.PNG" alt="logo image"> </a>
       <button
         class="navbar-toggler"
         type="button"
@@ -34,9 +34,9 @@
 
       <div class="contact_us">
         <i class="fas ml-3 fa-mobile-alt"></i>
-        <span class="ml-2">010-677-706-40 </span>
+        <span class="ml-2">8(911)9256652</span>
         <i class="far ml-3 fa-envelope"></i>
-        <span class="ml-2">AhmedSaid12@gmail.com</span>
+        <span class="ml-2">info@design8.ru</span>
       </div>
       <div class="social_media">
         <i class="fab fa-wikipedia-w ml-2"></i>

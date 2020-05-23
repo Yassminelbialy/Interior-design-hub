@@ -4,7 +4,7 @@
       <p class="mb-4">Bbi Moketo Ehbbed Ay Btngan</p>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
-        ducimus eum aliquam et id?<span>Eaque itaque officia.</span>
+        ducimus eum aliquam et id?<span class="open_quizes">Eaque itaque officia.</span>
       </p>
     </section>
 
