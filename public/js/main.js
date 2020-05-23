@@ -103,6 +103,19 @@ $(function () {
         }
     );
 
+
+
+    // start modal thanks
+
+    $(".quiz6 .done").click(function(){
+
+            $(".open_quizes_modal").click()
+            $(".open_thanks_modal").click()
+
+
+
+    })
+
     // start range slider
     slider = $("#myrange");
     let output = $("#rangevalue");
@@ -110,7 +123,7 @@ $(function () {
 
     slider.mousemove(function () {
         output.html($(this).val());
-        let sliderValue = slider.val();
+        let sliderValue = slider.val()/50;
         let color = `linear-gradient(90deg , #e0c89c ${sliderValue}% ,rgb(214,214,214)  ${sliderValue}% ) `;
         $(this).css("background", color);
     });

@@ -447,7 +447,7 @@ nav .contact_us i {
     min-width: 70%;
 }
 
-.contact_modal .close{
+.contact_modal .close ,#thanksModal .close {
     right: 10px;
     top: 10px;
     color: var(--secondColor);
@@ -1075,4 +1075,50 @@ footer h2 {
 footer ul li a {
     color: white;
     text-decoration: underline;
+}
+
+
+/* start thanksModal */
+#thanksModal .modal-dialog{
+min-width: 45%;
+}
+#thanksModal .modal-body{
+    padding-top: 40px ;
+
+}
+#thanksModal .modal-body  h2{
+    font-size: 30px;
+}
+#thanksModal .modal-body p{
+    padding: 0 14%;
+    font-size: 20px;
+}
+
+#thanksModal .custom_border {
+    width: 30%;
+    border-top: 2px solid var(--secondColor);
+    margin: 30px auto;
+
+}
+
+#thanksModal .btn_next{
+    padding:10px 30px;
+    margin-top: 100px;
+}
+#thanksModal .wiki i{
+    font-size: 20px;
+    margin-right: 5px;
+
+}
+
+#thanksModal .wiki{
+    color: var(--secondColor);
+    margin-top: 30px;
+}
+
+#thanksModal .wiki a{
+
+color: var(--secondColor);
+text-decoration:underline var(--secondColor)!important;
+font-size: 20px;
 }

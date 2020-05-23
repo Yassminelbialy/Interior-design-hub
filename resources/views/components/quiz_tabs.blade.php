@@ -8,7 +8,6 @@
       Launch quizes modal
     </button> -->
 
-
     <div
       class="modal modal_quizes fade"
       id="modal_quiz"
@@ -195,7 +194,7 @@
                                         </span>
                                          <span class="maximum">5000 M<sup>2</sup></span>
                                       </div>
-                                      <input type="range" min="1" max="100" value="60" id="myrange" class="slider_range" >
+                                      <input type="range" min="1" max="5000" value="3000" id="myrange" class="slider_range" >
 
                                      </div>
                                 </div>
@@ -508,7 +507,8 @@
                               <h2>
                                 Bbeante Bawe Ankue Bawe Ankue Bbeante Bawe Ankue Bbeante
                               </h2>
-                              <input type="text" placeholder="Bawe UmR*">
+                              <input  type="text" placeholder="Bawe UmR*">
+
                               <input type="text" placeholder="Teneqoh Qar CbR3u*">
 
                               <button class="btn_next done">nonyNTb PE3ynbTAT</button>
@@ -518,11 +518,8 @@
                                     <input type="checkbox">
                                     <span class="checkmark"></span>
                                 </label>
-                                  Bbi contawerecb c <a href="#">nonmtmnkon Kohqnma9hoctnmAohqnma9hoctnmA</a>
+                                  Bbi contawerecb c <a  href="#">nonmtmnkon Kohqnma9hoctnmAohqnma9hoctnmA</a>
                                 </div>
-
-
-
                         </div>
                         </div>
 
@@ -730,6 +727,47 @@
             </div>
         </div>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Button trigger modal -->
+<button type="button" class="btn open_thanks_modal btn-primary" data-toggle="modal" data-target="#thanksModal" style="display: none">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal  fade" id="thanksModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+
+      <div class="modal-body">
+          <div class="container text-center">
+              <h2>Thanks for You to Choice us </h2>
+              <div class="custom_border"></div>
+              <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus quos quisquam hic, odit vel eum laudantium fuga nesciunt. Porro quod sequi voluptates temporibus ad totam.
+              </p>
+              <div class="row">
+                  <div class="col-md-6 col-sm-12">
+                      <img src="/images/instgram_phone.PNG" alt="mobile image">
+                  </div>
+                  <div class="col-md-6 col-sm-12">
+                      <button class="btn_next">nepentn HA Instgram</button>
+                      <div class="wiki">
+                      <i class="fas fa-globe"></i> <a href="">BepHYTbCr Ha CaNT</a>
+                      </div>
+                  </div>
+              </div>
+
+          </div>
+
       </div>
     </div>
   </div>
