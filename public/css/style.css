@@ -4,7 +4,6 @@
     background-color:rgb(20, 20, 20);
     color: rgb(252, 252, 252);
     padding: 40px;
-    margin-bottom: 80px;
 }
 .info .state{
     -webkit-transition: all 0.5s ease-in-out;
@@ -60,60 +59,60 @@
     background-position: center;
     position: relative;
     color: white;
-    margin-bottom: 80px;
 }
 .our_video .img{
-    width: 70%;
+    width: 50%;
 }
 .our_video .img img{
     width: 100%;
-    margin-left: 140px;
+    position: relative;
+    left: 89%;
 }
 @media(max-width:991px){
     .our_video .img img{
-        margin-left: 10px;
+        left: 20%;
     }
 }
 .wrapper{
     position: absolute;
-    width: 260px;
-    height: 260px;
+    width: 220px;
+    height: 220px;
     border-style: solid;
     border-width: 2px;
     border-color: rgba(150, 141, 141, 0.8);
-    border-radius: 240px;
-    left: 64%;
-    bottom: 12%;
+    border-radius: 200px;
+    left: 78%;
+    bottom: 10%;
     outline: none;
 }
 @media (max-width: 767px) {
     .wrapper {
-        width: 180px;
-        height: 180px;
-        border-radius: 160px;
-        left: 50%;
+        width: 140px;
+        height: 140px;
+        border-radius: 120px;
+        left: 45%;
         bottom: 10%;
     }
 }
 .icon-wrapper {
     position: absolute;
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     border-style: solid;
     border-width: 2px;
     border-color: rgba(218, 217, 217, 0.8);
-    border-radius: 180px;
-    left: 10%;
-    bottom: 10%;
+    border-radius: 160px;
+    left: 8%;
+    bottom: 8%;
     outline: none;
 }
 @media (max-width: 767px) {
     .icon-wrapper {
-        width: 140px;
-        height: 140px;
-        border-radius: 120px;
-        left: 9%;
-        bottom: 10%;
+        width: 120px;
+        height: 120px;
+        border-radius: 100px;
+        left: 6%;
+        bottom: 6%;
     }
 }
 .icon-wrapper .icon {
@@ -138,14 +137,13 @@
 }
 .icon-wrapper .icon i {
     position: absolute;
-    left: 43%;
-    top: 41%;
-    font-size: 32px;
+    left: 41%;
+    top: 40%;
+    font-size: 30px;
     color: black;
 }
 .our_video .stats{
-    margin-top: 100px;
-    padding: 10px;
+    margin-top: 80px;
     margin-left: 66px;
 }
 @media(max-width:991px){
@@ -193,7 +191,7 @@
 /* Start Details */
 .details
 {
-    background: linear-gradient(rgba(34, 27, 25, 0.8), rgba(34, 27, 25, 0.8)), rgba(34, 27, 25, 0.8) url(../images/1.jpeg) no-repeat center center fixed;
+    background: linear-gradient(rgba(34, 27, 25, 0.8), rgba(34, 27, 25, 0.8)), rgba(34, 27, 25, 0.8) url(../images/1.jpg) no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -201,12 +199,26 @@
     height: 400px;
     background-position: center;
     position: relative;
-    margin-bottom: 80px;
+}
+.details .btn_info{
+    background-color: #ad833e;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+.details .btn_info:hover{
+    background-color: #aa8f63;
+
 }
 /* End Details */
 /* Start Section */
 .world_video{
-    background: linear-gradient(rgba(34, 27, 25, 0.8), rgba(34, 27, 25, 0.8)), rgba(34, 27, 25, 0.8) url(../images/airplane-over-world-map-on-blackboard-3769118.jpg) no-repeat center center fixed;
+    background: linear-gradient(rgba(34, 27, 25, 0.8), rgba(34, 27, 25, 0.8)), rgba(34, 27, 25, 0.8) url(../images/airplane-over-world-map-on-blackboard-3769118.jpg) no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -214,7 +226,6 @@
     min-height: 300px;
     background-position: center;
     position: relative;
-    margin-bottom: 80px;
     color: aliceblue;
     text-align: center;
     padding-top: 70px;
@@ -291,10 +302,10 @@
 }
 @media (max-width: 767px) {
     .world_video .stats_video .wrapper {
-        width: 170px;
-        height: 170px;
-        border-radius: 150px;
-        left: 30%;
+        width: 140px;
+        height: 140px;
+        border-radius: 120px;
+        left: 32%;
         bottom: 25%;
     }
 }
@@ -312,11 +323,11 @@
 }
 @media (max-width: 767px) {
     .world_video .stats_video .icon-wrapper {
-        width: 130px;
-        height: 130px;
-        border-radius: 110px;
-        left: 11%;
-        bottom: 11%;
+        width: 120px;
+        height: 120px;
+        border-radius: 100px;
+        left: 6%;
+        bottom: 7%;
     }
 }
 .world_video .stats_video .icon-wrapper .icon {
@@ -379,31 +390,31 @@ opacity:1;
 /* Start Social */
 
 .social {
-    background: linear-gradient(rgba(34, 27, 25, 0.8), rgba(34, 27, 25, 0.8)), rgba(34, 27, 25, 0.8) url(../images/0000.jpeg) no-repeat center center fixed;
+    background: linear-gradient(rgba(34, 27, 25, 0.8), rgba(34, 27, 25, 0.8)), rgba(34, 27, 25, 0.8) url(../images/0000.jpg) no-repeat center center;
     -webkit-background-size: cover;
     -mozt-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     position: relative;
-    margin-bottom: 80px;
     color: white;
 
 }
 .social .img{
-    width: 70%;
+    width: 50%;
 }
 .social .img img{
     width: 100%;
-    margin-left: 140px;
+    position: relative;
+    left: 89%;
 }
 @media(max-width:991px){
     .social .img img{
-        margin-left: 10px;
+        left:20%;
     }
 }
 .social .h1{
     margin-bottom: 0;
-    color: #aa8f63;
+    color: #c19e70;
 }
 @media(max-width:761px){
     .social .social_video{
@@ -426,8 +437,7 @@ opacity:1;
     margin-top: 20px;
 }
 .social .stats{
-    margin-top: 100px;
-    padding: 10px;
+    margin-top: 80px;
     margin-left: 66px;
 }
 @media(max-width:991px){
@@ -497,7 +507,7 @@ opacity:1;
 }
 .social .stats .social-icon:hover{
     background-color: aliceblue;
-    color: #aa8f63;
+    color: #c19e70;
 }
 .social .btn_info{
     width: 50%;
@@ -521,6 +531,13 @@ opacity:1;
         width: 70%;
         margin: 0;
         margin-top: 30px;
+        
+    }
+}
+@media(max-width:991px){
+    .social .btn_info{
+        margin-bottom: 10px;
+        
     }
 }
 /* End Social */

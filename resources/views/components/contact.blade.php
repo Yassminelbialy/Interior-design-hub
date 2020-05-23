@@ -23,9 +23,7 @@
                                         <div class="embed-responsive embed-responsive-16by9">
                                             <iframe class="embed-responsive-item" src="images/1.mp4" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
                                         </div>
-                                
                                     </div>
-                        
                                 </div>
                             </div>
                         </div> 
@@ -43,13 +41,11 @@
                 <hr/>
                 <div class="phone ml-3 mb-1">
                     <h4>Contact US: </h4>
-                    <button class="btn btn-light">viber<i class='fa fa-phone text-info'></i></button>
+                    <button class="btn btn-light">viber<img class="viber_image ml-1" src="images/viber.png" alt="" /></button>
                     <button class="btn btn-light ml-3">whatsapp<i class="fa fa-whatsapp text-success"></i></button>
                     <button class="btn btn-light ml-3">telegram<i class="fa fa-telegram text-primary"></i></button>
-
                 </div>
                 <hr/>
-            
                 <h4 class="ml-3">Our Social Media</h4>
                 <a class="social-icon" target="_blank" href="#" title="youtube"><i class="fa fa-youtube"></i></a>
                 <a class="social-icon" target="_blank" href="#" title="instagram"><i class="fa fa-instagram"></i></a>

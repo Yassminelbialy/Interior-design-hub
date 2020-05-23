@@ -27,13 +27,10 @@
     @component('components.clients')
     @endcomponent
 
-    @component('components.testimonial')
-    @endcomponent
-
     @component('components.state')
     @endcomponent
 
-    @component('components.video')
+    @component('components.video',['x'=>`xx`])
     @endcomponent
 
     @component('components.details')
@@ -42,9 +39,15 @@
     @component('components.worldWide')
     @endcomponent
 
+    @component('components.testimonial')
+    @endcomponent
+
     @component('components.contact')
     @endcomponent
 
+    @component('components.map')
+
+    @endcomponent
 
     @component('components.footer')
     @endcomponent

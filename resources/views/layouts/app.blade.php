@@ -47,6 +47,9 @@
     <script src="js/owl.carousel.min.js"></script>
 
     <script src="{{ asset('js/main.js') }}" ></script>
+    {{-- <script src="https://api-maps.yandex.ru/2.1/?apikey=45185f8a-5595-4dca-a730-067482a1af71&lang=ru_RU" type="text/javascript"> </script> --}}
+    <script src="https://api-maps.yandex.ru/2.1/?lang=en_RU&amp;apikey=45185f8a-5595-4dca-a730-067482a1af71" type="text/javascript"></script>
+
 
 </body>
 </html>

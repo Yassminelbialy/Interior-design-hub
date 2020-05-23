@@ -1,10 +1,9 @@
   <!-- start information plus-->
   <section class="information_plus text-center">
-      <h5 class="mb-4">Lorem ipsum dolor, sit amet consectetur adip</h5>
-      <p class="mb-4">Bbi Moketo Ehbbed Ay Btngan</p>
+      <h5 class="my-2">Lorem ipsum dolor sit amet </h5>
+      <p class="mb-2">Bbi Moketo Ehbbed Ay Btngan</p>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
-        ducimus eum aliquam et id?<span>Eaque itaque officia.</span>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit ? <span class="open_quizes">Eaque itaque officia.</span>
       </p>
     </section>
 
