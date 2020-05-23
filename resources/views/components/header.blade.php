@@ -47,7 +47,7 @@
     </nav>
     <!-- start information -->
 
-    <div style="background: url(images/decore1.jpeg);" class="information">
+    <div style="background-image: url(images/pictures_projects/3.jpeg);" class="information">
       <div class="overlayer"></div>
       <div class="border_box"></div>
       <div class="information_content text-center">

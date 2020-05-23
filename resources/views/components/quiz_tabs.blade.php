@@ -549,14 +549,14 @@
                   </p>
                   <h3 class="mb-3">B Koue tecta Bbi nonyuta:</h3>
                   <div class="row other_info">
-                    <div class="col-sm-4  ">
+                    <div class="col-sm-4 ">
                       <img class="h-75" src="images/quiz1.1.PNG" alt="image quiz">
                     </div>
                     <div class="text-left col-sm-8">
                       <p>ipsum dolor sit ametLorem ipsum dolor</p>
                     </div>
                     <div class="col-sm-4 mt-2">
-                      <img class="" src="images/quiz1.2.PNG" alt="image quiz">
+                      <img class="handle" src="images/quiz1.2.PNG" alt="image quiz">
                     </div>
                     <div class="text-left col-sm-8 mt-2">
                       <p>ipsum dolor sit ametLorem ipsum dolor</p>

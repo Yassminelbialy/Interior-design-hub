@@ -5,7 +5,15 @@
     --secondColor: #c19e70;
 
 }
+
+@font-face{
+    src: url(fonts/circe/circe.otf);
+    font-family: circe;
+}
 /* #c19e70 */
+*{
+    font-family: circe;
+}
 
 body {
     overflow-x: hidden;
@@ -74,6 +82,7 @@ nav .contact_us i {
     width: 100%;
     position: relative;
     color: white;
+    background-size: cover;
 }
 .information .information_content {
     position: absolute;
@@ -222,6 +231,7 @@ nav .contact_us i {
 .projects .project_content {
     position: relative;
     height: 450px;
+    background-size: cover;
 }
 
 .projects .project_content .overlayer {
@@ -242,12 +252,17 @@ nav .contact_us i {
     z-index: 2;
 }
 
+.projects .project_content div:last-of-type p {
+    margin-bottom: 6px !important;
+}
+
+
 .projects .project_content .custom_border {
     width: 46px;
     border-top: 1px solid#4d4d4b;
     position: relative;
     z-index: 4;
-    top: 305px;
+    top: 298px;
     left: -4px;
 }
 
@@ -368,17 +383,24 @@ nav .contact_us i {
     font-size: 22px;
     padding: 10px;
 }
+.information_plus{
+
+}
+
 .information_plus p:first-of-type {
     font-size: 35px;
 }
 
 .information_plus p:last-of-type {
     margin: 0 auto;
-    width: 50%;
     font-size: 18px;
+    padding: 0 473px;
+    margin-bottom: 10px;
+
 }
 .information_plus p:last-of-type span {
     color: #bc9b4e;
+    cursor: pointer;
 }
 
 /* start clients */
@@ -521,6 +543,7 @@ nav .contact_us i {
         var(--secondColor)
     );
     padding: 18px 22px;
+    cursor: pointer;
 }
 .pop_up .right .hello div:last-of-type {
     display: inline-block;
@@ -677,9 +700,10 @@ nav .contact_us i {
 
 .all_quiz_content .nav-item .nav-link {
     background-color: #bababa;
-    margin: 16px 22px;
+    margin: 16px 14px;
     padding: 6px 49px;
     border-radius: 0;
+
 }
 
 .all_quiz_content .nav-item .nav-link.active {
@@ -965,8 +989,15 @@ nav .contact_us i {
 }
 
 .static_column .container .other_info div:first-of-type img {
-    width: 190%;
+    width: 160%;
     height: 100%;
+}
+.static_column .container .other_info div:nth-of-type(2) p {
+    position: relative;
+    top: 10px;
+}
+.static_column .handle{
+    width: 140%;
 }
 
 /* shared style */
