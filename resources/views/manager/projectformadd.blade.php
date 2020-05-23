@@ -11,7 +11,6 @@
 
 
 <link rel="stylesheet" type="text/css" href="{{ asset('css/styles.css') }}" >
-{{-- <script type="text/javascript" src="{{ asset('css/scribt.js') }}"></script> --}}
 
 
 
