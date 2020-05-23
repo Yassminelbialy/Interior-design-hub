@@ -1,6 +1,6 @@
 </header>
     <nav class="navbar navbar-expand-lg text-center">
-      <a class="navbar-brand" href="#"><img src="images/company_logo.PNG" alt="logo image"> </a>
+      <a class="navbar-brand" href="#"><img src="   " alt="logo image"> </a>
       <button
         class="navbar-toggler"
         type="button"
