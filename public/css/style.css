@@ -532,6 +532,13 @@ opacity:1;
         width: 70%;
         margin: 0;
         margin-top: 30px;
+        
+    }
+}
+@media(max-width:991px){
+    .social .btn_info{
+        margin-bottom: 10px;
+        
     }
 }
 /* End Social */

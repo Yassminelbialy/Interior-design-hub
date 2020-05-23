@@ -33,7 +33,7 @@
     @component('components.state')
     @endcomponent
 
-    @component('components.video')
+    @component('components.video',['x'=>`xx`])
     @endcomponent
 
     @component('components.details')
@@ -45,6 +45,9 @@
     @component('components.contact')
     @endcomponent
 
+    @component('components.map')
+
+    @endcomponent
 
     @component('components.footer')
     @endcomponent
