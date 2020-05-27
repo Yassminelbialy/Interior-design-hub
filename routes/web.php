@@ -28,7 +28,9 @@ Route::get('/ceo','AlexandrainfoController@index');
 
 // ->middleware('can:manage-users')
 Route::prefix('manager')->name('manager.')->group(function(){
-
+    Route::any('/', function () {
+        return view('admin.base');
+    });
     Route::resource('project', 'ProjectController');
     Route::resource('category', 'CategoryController');
     // Route::resource('project', 'ProjectController');

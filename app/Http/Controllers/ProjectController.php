@@ -19,8 +19,8 @@ class ProjectController extends Controller
     public function index()
     {
         // dd(Uuid::generate()->string);
-        return view('manager.myindex',['data'=>Project::all()]);
-        // return view('manager.projectindex',['data'=>Project::all()]);
+        // return view('manager.myindex',['data'=>Project::all()]);
+        return view('manager.projectindex',['data'=>Project::all()]);
 
     }
 
@@ -80,7 +80,8 @@ class ProjectController extends Controller
      */
     public function edit(Project $project)
     {
-        //
+        // dd(Category::all()->pluck('name','id')->toArray());
+        return view('manager.projectformedit',['data'=>$project,'category'=>Category::all()->pluck('name','id')->toArray()]);
     }
 
     /**
@@ -105,6 +106,7 @@ class ProjectController extends Controller
      */
     public function destroy(Project $project)
     {
-        //
+        $project->delete();
+        return redirect(route('manager.project.index'));
     }
 }

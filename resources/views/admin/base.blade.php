@@ -36,7 +36,7 @@
                 <div class="input-group">
                     <input class="form-control" type="text" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2" />
                     <div class="input-group-append">
-                        <button class="btn btn-primary" type="button"><i class="fas fa-search"></i></button>
+                        <button class="btn btn-success" type="button"><i class="fas fa-search "></i></button>
                     </div>
                 </div>
             </form>
@@ -69,7 +69,28 @@
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div
                             ></a>
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
-                                <nav class="sb-sidenav-menu-nested nav"><a class="nav-link" href="/manager/project">LAB YYY GDED</a><a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a></nav>
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="/manager/project">projects</a>
+                                    {{-- <a class="nav-link" href="/manager/project">images of project</a> --}}
+
+                                    <a class="nav-link" href="/manager/project">category of projects</a>
+                                    <a class="nav-link" href="/manager/user">users</a>
+                                    <a class="nav-link" href="/manager/logo">logos</a>
+                                    <a class="nav-link" href="/manager/review">reviews</a>
+                                    <a class="nav-link" href="/manager/alexandra">alexandra info</a>
+                                    <a class="nav-link" href="/manager/project">categories</a>
+                                    <a class="nav-link" href="/manager/user">users</a>
+                                    <a class="nav-link" href="/manager/logo">logos</a>
+                                    <a class="nav-link" href="/manager/review">reviews</a>
+                                    <a class="nav-link" href="/manager/alexandra">alexandra info</a>
+
+                                    <a class="nav-link" href="/manager/project">category of projects</a>
+                                    <a class="nav-link" href="/manager/user">users</a>
+                                    <a class="nav-link" href="/manager/logo">logos</a>
+                                    <a class="nav-link" href="/manager/review">reviews</a>
+                                    <a class="nav-link" href="/manager/alexandra">alexandra info</a>
+                                    {{-- <a class="nav-link" href="/manager/project">projects</a>
+                                    <a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a></nav> --}}
                             </div>
                             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages"
                                 ><div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>

@@ -16,7 +16,7 @@
 
 
 
-{{ Form::open(['route' => 'manager.project.store','enctype' => 'multipart/form-data','method'=>'post'])}}
+{{ Form::model($data,['route' => 'manager.project.store','enctype' => 'multipart/form-data','method'=>'post'])}}
 
 	<div class="row">
 		<div class="col-md-3">
@@ -78,7 +78,7 @@
 				<div class="form-group">
 				  <div class="col-sm-offset-2 col-sm-10">
 
-                    {!! Form::submit('ADD project', ['class'=>'btn btn-default btn btn-outline-secondary']) !!}
+                    {!! Form::submit('Edit project', ['class'=>'btn btn-default btn btn-outline-secondary']) !!}
 
 				  </div>
 				</div>
