@@ -13,6 +13,11 @@ class Project extends Model
     {
         return $this->hasMany('App\ProjectImage','project_id');
     }
+
+    public function category()
+    {
+        return $this->hasOne('App\Category','id','category_id');
+    }
     protected $guarded = [];
 
 }
