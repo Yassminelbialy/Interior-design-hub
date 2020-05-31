@@ -21,6 +21,9 @@
     @component('components.quiz_tabs')
     @endcomponent
 
+    @component('components.lastPost')
+    @endcomponent
+
     @component('components.information_plus')
     @endcomponent
 
