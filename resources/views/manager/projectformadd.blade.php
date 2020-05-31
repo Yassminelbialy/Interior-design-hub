@@ -11,7 +11,6 @@
 
 
 <link rel="stylesheet" type="text/css" href="{{ asset('css/styles.css') }}" >
-{{-- <script type="text/javascript" src="{{ asset('css/scribt.js') }}"></script> --}}
 
 
 
@@ -79,7 +78,7 @@
 				<div class="form-group">
 				  <div class="col-sm-offset-2 col-sm-10">
 
-                    {!! Form::submit('ADD Book', ['class'=>'btn btn-default btn btn-outline-secondary']) !!}
+                    {!! Form::submit('ADD project', ['class'=>'btn btn-default btn btn-outline-secondary']) !!}
 
 				  </div>
 				</div>

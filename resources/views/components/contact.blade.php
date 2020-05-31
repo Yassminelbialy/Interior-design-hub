@@ -54,7 +54,7 @@
                 <a class="social-icon" target="_blank" href="#" title="whatsapp"><i class="fa fa-vk"></i></a>
                 
             </div>
-            <button class="btn btn_info btn-block">Go somewhere</button>                                                                 
+            <button class="btn mb-3 btn_info btn-block">Go somewhere</button>                                                                 
         </div>
     </div>
 </section>

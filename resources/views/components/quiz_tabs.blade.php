@@ -1,19 +1,19 @@
-
     <!-- Button trigger modal -->
-     <button class="open_pop_up" style="display: none"
+     <button class="open_quizes_modal" style="display: none"
       type="button"
       class="btn btn-primary"
       data-toggle="modal"
       data-target="#modal_quiz"
     >
-      Launch demo modal
+      Launch quizes modal
     </button> -->
+
     <div
       class="modal modal_quizes fade"
       id="modal_quiz"
       tabindex="-1"
       role="dialog"
-      aria-labelledby="exampleModalLabel"
+      aria-labelledby="quizModalLabel"
       aria-hidden="true"
     >
       <div class="modal-dialog" role="document">
@@ -29,136 +29,7 @@
             </button>
           </div>
           <div class="modal-body">
-              <div class="pop_up">
-      <div class="container calls_container">
-        <div class="row">
-          <div class="left text-center col-md-5">
-            <div class="decoration_content">
-              <div class="decoration1"></div>
-              <div class="decoration2"></div>
-              <img src="images/alexandra2_quiz.PNG.jpg" alt="image alexandra" />
-            </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-          </div>
-          <div class="right text-center col-md-7">
-            <h2>Aabeante o6cynm Aetanm bawero npoetkta?</h2>
-            <div class="custom_border"></div>
-            <p>MoxHo cpa3y B YAo6Hom ANr Bac Yate:</p>
-            <div class="row">
-              <div class="col-md-4">
-                <div class="callme">
-                  <span>viber</span>
-                  <img class="viber_image" src="images/viber.png" alt="" />
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="callme whatsapp">
-                  <span>Whatsapp</span>
-                  <img
-                    class="whatsapp_image"
-                    src="images/whatsapp1.png"
-                    alt=""
-                  />
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="callme">
-                  <span>Telegram</span> <i class="fab fa-telegram-plane"></i>
-                </div>
-              </div>
-            </div>
-            <h2>
-              Bbi Mokete Octabnb Homep N Mbi nepe3BoHNM Bam Te4ehne 5 MnhyT
-            </h2>
-            <div class="row hello">
-              <div class="col-md-6 mt-2">
-                <p>+375-(91)-114-80-24</p>
-              </div>
-              <div class="col-md-6 mt-2">
-                <p class="next_step">Bbi6Patb Aaty NBpemR</p>
-              </div>
-              <div class="check_it">
-                <label class="checkbox_container">
-                  <input type="checkbox" />
-                  <span class="checkmark"></span>
-                </label>
-                Bbi contawerecb c
-                <a href="#">nonmtmnkon Kohqnma9hoctnmAohqnma9hoctnmA</a>
-              </div>
-            </div>
-          </div>
-          <div class="right2 text-center col-md-7">
-            <h2>Aabeante o6cynm Aetanm bawero npoetkta?</h2>
-            <div class="custom_border"></div>
-            <div class="row mt-4 custom_design">
-              <div class="col-md-6">
-                <p>Kak Bac 3oByT?</p>
-                <p class="text-left">Bawe NMR</p>
-              </div>
-              <div class="col-md-6">
-                <p>Kak Bac 3oByT?</p>
-                <div class="text-left">
-                  <span>AA.MM.rrrr</span>
-                  <select name="time">
-                    <option>
-                      1:00
-                    </option>
-                    <option>
-                      2:00
-                    </option>
-                    <option>
-                      3:00
-                    </option>
-                    <option>
-                      3:00
-                    </option>
-                    <option>
-                      4:00
-                    </option>
-                    <option>
-                      5:00
-                    </option>
-                    <option>
-                      6:00
-                    </option>
-                    <option>
-                      7:00
-                    </option>
-                    <option>
-                      8:00
-                    </option>
-                    <option selected>
-                      9:00
-                    </option>
-                    <option>
-                      10:00
-                    </option>
-                    <option>
-                      11:00
-                    </option>
-                    <option>
-                      12:00
-                    </option>
-                  </select>
-                </div>
-              </div>
-            </div>
-            <button
-            class="btn_next open_quiz">
-            no3bohNTe MHe
-          </button>
-            <div class="check_it">
-              <label class="checkbox_container">
-                <input type="checkbox" />
-                <span class="checkmark"></span>
-              </label>
-              Bbi contawerecb c
-              <a href="#">nonmtmnkon Kohqnma9hoctnmAohqnma9hoctnmA</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      </div>
+
             <div class="container all_quizes">
               <div class="row">
                 <div class="col-md-9 all_quiz_content text-center">
@@ -323,7 +194,7 @@
                                         </span>
                                          <span class="maximum">5000 M<sup>2</sup></span>
                                       </div>
-                                      <input type="range" min="1" max="100" value="60" id="myrange" class="slider_range" >
+                                      <input type="range" min="1" max="5000" value="3000" id="myrange" class="slider_range" >
 
                                      </div>
                                 </div>
@@ -570,7 +441,7 @@
                           </div>
                         </div>
                         <div class="btn_content text-center mt-3 w-100">
-                            <a data-value="6" class="btn btn_next" id="pills-quiz6-tab" data-toggle="pill" href="#pills-quiz6" role="tab" aria-controls="pills-quiz6" aria-selected="false">next</a>
+                            <a data-value="5" class="btn btn_next" id="pills-quiz6-tab" data-toggle="pill" href="#pills-quiz6" role="tab" aria-controls="pills-quiz6" aria-selected="false">next</a>
                         </div>
                       </div>
                     </div>
@@ -636,7 +507,8 @@
                               <h2>
                                 Bbeante Bawe Ankue Bawe Ankue Bbeante Bawe Ankue Bbeante
                               </h2>
-                              <input type="text" placeholder="Bawe UmR*">
+                              <input  type="text" placeholder="Bawe UmR*">
+
                               <input type="text" placeholder="Teneqoh Qar CbR3u*">
 
                               <button class="btn_next done">nonyNTb PE3ynbTAT</button>
@@ -646,11 +518,8 @@
                                     <input type="checkbox">
                                     <span class="checkmark"></span>
                                 </label>
-                                  Bbi contawerecb c <a href="#">nonmtmnkon Kohqnma9hoctnmAohqnma9hoctnmA</a>
+                                  Bbi contawerecb c <a  href="#">nonmtmnkon Kohqnma9hoctnmAohqnma9hoctnmA</a>
                                 </div>
-
-
-
                         </div>
                         </div>
 
@@ -677,14 +546,14 @@
                   </p>
                   <h3 class="mb-3">B Koue tecta Bbi nonyuta:</h3>
                   <div class="row other_info">
-                    <div class="col-sm-4  ">
+                    <div class="col-sm-4 ">
                       <img class="h-75" src="images/quiz1.1.PNG" alt="image quiz">
                     </div>
                     <div class="text-left col-sm-8">
                       <p>ipsum dolor sit ametLorem ipsum dolor</p>
                     </div>
                     <div class="col-sm-4 mt-2">
-                      <img class="" src="images/quiz1.2.PNG" alt="image quiz">
+                      <img class="handle" src="images/quiz1.2.PNG" alt="image quiz">
                     </div>
                     <div class="text-left col-sm-8 mt-2">
                       <p>ipsum dolor sit ametLorem ipsum dolor</p>
@@ -710,3 +579,196 @@
       </div>
     </div>
   </div>
+
+
+
+
+
+    <!-- Button trigger modal -->
+<button class="open_contact_modal" type="button" class="btn btn-primary" data-toggle="modal" data-target="#contactModal" style="display: none">
+  Launch contact modal
+</button>
+
+<!-- Modal -->
+<div class="modal contact_modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      <div class="modal-body">
+        <div class="pop_up">
+        <div class="container calls_container">
+            <div class="row">
+            <div class="left text-center col-md-5">
+                <div class="decoration_content">
+                <div class="decoration1"></div>
+                <div class="decoration2"></div>
+                <img src="images/alexandra2_quiz.PNG.jpg" alt="image alexandra" />
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+            </div>
+            <div class="right text-center col-md-7">
+                <h2>Aabeante o6cynm Aetanm bawero npoetkta?</h2>
+                <div class="custom_border"></div>
+                <p>MoxHo cpa3y B YAo6Hom ANr Bac Yate:</p>
+                <div class="row">
+                <div class="col-md-4">
+                    <div class="callme">
+                    <span>viber</span>
+                    <img class="viber_image" src="images/viber.png" alt="" />
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="callme whatsapp">
+                    <span>Whatsapp</span>
+                    <img
+                        class="whatsapp_image"
+                        src="images/whatsapp1.png"
+                        alt=""
+                    />
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="callme">
+                    <span>Telegram</span> <i class="fab fa-telegram-plane"></i>
+                    </div>
+                </div>
+                </div>
+                <h2>
+                Bbi Mokete Octabnb Homep N Mbi nepe3BoHNM Bam Te4ehne 5 MnhyT
+                </h2>
+                <div class="row hello">
+                <div class="col-md-6 mt-2">
+                    <p>+375-(91)-114-80-24</p>
+                </div>
+                <div class="col-md-6 mt-2">
+                    <p class="next_step">Bbi6Patb Aaty NBpemR</p>
+                </div>
+                <div class="check_it">
+                    <label class="checkbox_container">
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                    </label>
+                    Bbi contawerecb c
+                    <a href="#">nonmtmnkon Kohqnma9hoctnmAohqnma9hoctnmA</a>
+                </div>
+                </div>
+            </div>
+            <div class="right2 text-center col-md-7">
+                <h2>Aabeante o6cynm Aetanm bawero npoetkta?</h2>
+                <div class="custom_border"></div>
+                <div class="row mt-4 custom_design">
+                <div class="col-md-6">
+                    <p>Kak Bac 3oByT?</p>
+                    <p class="text-left">Bawe NMR</p>
+                </div>
+                <div class="col-md-6">
+                    <p>Kak Bac 3oByT?</p>
+                    <div class="text-left">
+                    <span>AA.MM.rrrr</span>
+                    <select name="time">
+                        <option>
+                        1:00
+                        </option>
+                        <option>
+                        2:00
+                        </option>
+                        <option>
+                        3:00
+                        </option>
+                        <option>
+                        3:00
+                        </option>
+                        <option>
+                        4:00
+                        </option>
+                        <option>
+                        5:00
+                        </option>
+                        <option>
+                        6:00
+                        </option>
+                        <option>
+                        7:00
+                        </option>
+                        <option>
+                        8:00
+                        </option>
+                        <option selected>
+                        9:00
+                        </option>
+                        <option>
+                        10:00
+                        </option>
+                        <option>
+                        11:00
+                        </option>
+                        <option>
+                        12:00
+                        </option>
+                    </select>
+                    </div>
+                </div>
+                </div>
+                <button
+                class="btn_next open_quiz">
+                no3bohNTe MHe
+            </button>
+                <div class="check_it">
+                <label class="checkbox_container">
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                </label>
+                Bbi contawerecb c
+                <a href="#">nonmtmnkon Kohqnma9hoctnmAohqnma9hoctnmA</a>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Button trigger modal -->
+<button type="button" class="btn open_thanks_modal btn-primary" data-toggle="modal" data-target="#thanksModal" style="display: none">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal  fade" id="thanksModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+
+      <div class="modal-body">
+          <div class="container text-center">
+              <h2>Thanks for You to Choice us </h2>
+              <div class="custom_border"></div>
+              <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus quos quisquam hic, odit vel eum laudantium fuga nesciunt. Porro quod sequi voluptates temporibus ad totam.
+              </p>
+              <div class="row">
+                  <div class="col-md-6 col-sm-12">
+                      <img src="/images/instgram_phone.PNG" alt="mobile image">
+                  </div>
+                  <div class="col-md-6 col-sm-12">
+                      <button class="btn_next">nepentn HA Instgram</button>
+                      <div class="wiki">
+                      <i class="fas fa-globe"></i> <a href="">BepHYTbCr Ha CaNT</a>
+                      </div>
+                  </div>
+              </div>
+
+          </div>
+
+      </div>
+    </div>
+  </div>
+</div>

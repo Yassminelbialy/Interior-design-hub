@@ -30,9 +30,6 @@
     @component('components.clients')
     @endcomponent
 
-    @component('components.testimonial')
-    @endcomponent
-
     @component('components.state')
     @endcomponent
 
@@ -43,6 +40,9 @@
     @endcomponent
 
     @component('components.worldWide')
+    @endcomponent
+
+    @component('components.testimonial')
     @endcomponent
 
     @component('components.contact')

@@ -2,11 +2,22 @@
 
 :root {
     --mainColor: #141414;
-    --secondColor: #e0c89c;
+    --secondColor: #c19e70;
+
+}
+
+@font-face{
+    src: url(fonts/circe/circe.otf);
+    font-family: circe;
+}
+/* #c19e70 */
+*{
+    font-family: circe;
 }
 
 body {
     overflow-x: hidden;
+    background-color: white;
 }
 /* start nav */
 nav {
@@ -27,6 +38,12 @@ nav .navbar-brand span {
     color: var(--secondColor);
 }
 
+nav .navbar-brand img {
+    width: 55px;
+    height: auto;
+}
+
+
 nav .navbar-nav {
     margin-left: 30px;
 }
@@ -37,15 +54,23 @@ nav .nav-item a {
 
 nav .contact_us {
     margin-left: 40px;
+
 }
 
 nav .contact_us span {
     color: white;
+    line-height: 10px;
+    position: relative;
+    top:-5px;
+
 }
 
 nav .contact_us i {
     color: var(--secondColor);
+    font-size: 24px;
 }
+
+
 
 .social_media {
     color: white;
@@ -57,6 +82,7 @@ nav .contact_us i {
     width: 100%;
     position: relative;
     color: white;
+    background-size: cover;
 }
 .information .information_content {
     position: absolute;
@@ -121,7 +147,7 @@ nav .contact_us i {
 }
 
 .information .buttons_call {
-    position: absolute;
+    position: fixed;
     top: 75%;
     right: 2%;
     z-index: 9;
@@ -133,7 +159,7 @@ nav .contact_us i {
     background-color: var(--secondColor);
     border: 1px solid var(--secondColor);
     color: white;
-    transition: all 1s;
+    transition: all .5s;
 }
 .information .buttons_call .phone {
     padding: 6px 15px;
@@ -146,10 +172,10 @@ nav .contact_us i {
 }
 
 .information .buttons_call .call_me:hover {
-    background-color: var(--secondColor);
-    color: var(--mainColor);
+    background-color: white;
+    color: var(--secondColor);
     border: 1px solid var(--mainColor);
-    transform: scale(1.1);
+
 }
 
 /* start statitics  */
@@ -205,6 +231,7 @@ nav .contact_us i {
 .projects .project_content {
     position: relative;
     height: 450px;
+    background-size: cover;
 }
 
 .projects .project_content .overlayer {
@@ -225,12 +252,17 @@ nav .contact_us i {
     z-index: 2;
 }
 
+.projects .project_content div:last-of-type p {
+    margin-bottom: 6px !important;
+}
+
+
 .projects .project_content .custom_border {
     width: 46px;
     border-top: 1px solid#4d4d4b;
     position: relative;
     z-index: 4;
-    top: 305px;
+    top: 298px;
     left: -4px;
 }
 
@@ -351,17 +383,24 @@ nav .contact_us i {
     font-size: 22px;
     padding: 10px;
 }
+.information_plus{
+
+}
+
 .information_plus p:first-of-type {
     font-size: 35px;
 }
 
 .information_plus p:last-of-type {
     margin: 0 auto;
-    width: 50%;
     font-size: 18px;
+    padding: 0 473px;
+    margin-bottom: 10px;
+
 }
 .information_plus p:last-of-type span {
     color: #bc9b4e;
+    cursor: pointer;
 }
 
 /* start clients */
@@ -389,17 +428,35 @@ nav .contact_us i {
     width: 211px;
     left: 40%;
 }
+
+
 .clients img {
     margin-top: 20px;
     margin-bottom: 20px;
+
 }
 
 /* start tabs */
 
 .all_quizes {
-    display: none;
     padding: 40px;
 }
+
+
+.contact_modal .modal-dialog{
+    min-width: 70%;
+}
+
+.contact_modal .close ,#thanksModal .close {
+    right: 10px;
+    top: 10px;
+    color: var(--secondColor);
+    font-size: 3rem;
+    font-weight: 1;
+
+  /* font-size: 20px; */
+}
+
 
 .pop_up {
     min-height: 80vh;
@@ -461,7 +518,9 @@ nav .contact_us i {
 .pop_up .right .custom_border,
 .pop_up .right2 .custom_border {
     border-top: 1px solid #e9e9e9;
-    width: 20%;
+    position: relative;
+    width: 29%;
+    top: -15px;
     display: inline-block;
 }
 
@@ -484,6 +543,7 @@ nav .contact_us i {
         var(--secondColor)
     );
     padding: 18px 22px;
+    cursor: pointer;
 }
 .pop_up .right .hello div:last-of-type {
     display: inline-block;
@@ -586,6 +646,8 @@ nav .contact_us i {
     background-color: var(--secondColor);
 }
 
+
+
 .checkbox_container input:checked + .checkmark:after {
     content: "";
     position: absolute;
@@ -597,6 +659,7 @@ nav .contact_us i {
     left: 3%;
     transform: rotate(-45deg) translate(50%, 50%);
 }
+
 
 .right .checkbox_container .checkmark,
 .right2 .checkbox_container .checkmark {
@@ -621,6 +684,13 @@ nav .contact_us i {
     top: 41%;
     left: -16%;
 }
+
+
+
+
+
+
+
 /* start modal */
 .modal-title {
     font-size: 16px;
@@ -630,9 +700,10 @@ nav .contact_us i {
 
 .all_quiz_content .nav-item .nav-link {
     background-color: #bababa;
-    margin: 16px 22px;
+    margin: 16px 14px;
     padding: 6px 49px;
     border-radius: 0;
+
 }
 
 .all_quiz_content .nav-item .nav-link.active {
@@ -660,8 +731,17 @@ nav .contact_us i {
 }
 
 .modal_quizes  .modal-dialog {
-    min-width: 70%;
+    min-width: 80%;
 }
+
+.modal_quizes .close{
+    right: 10px;
+    top: 10px;
+    font-size: 2rem;
+    font-weight: 1;
+    color: black;
+}
+
 
 .right .whatsapp{
     padding:17px 0 !important
@@ -884,7 +964,7 @@ nav .contact_us i {
     font-size: 18px;
 }
 .static_column {
-    padding: 10px 30px;
+    padding: 10px;
     border: 4px solid var(--secondColor);
     font-size: 14px;
     line-height: 16px;
@@ -898,9 +978,10 @@ nav .contact_us i {
 }
 
 .static_column .container div:first-of-type img {
-    margin: 10px 0;
-    width: 80%;
-    height: 100%;
+    margin: 10px 0 20px 0;
+    width: 67%;
+    height: 106%;
+
 }
 
 .static_column .container .other_info div:first-of-type {
@@ -908,8 +989,15 @@ nav .contact_us i {
 }
 
 .static_column .container .other_info div:first-of-type img {
-    width: 100%;
+    width: 160%;
     height: 100%;
+}
+.static_column .container .other_info div:nth-of-type(2) p {
+    position: relative;
+    top: 10px;
+}
+.static_column .handle{
+    width: 140%;
 }
 
 /* shared style */
@@ -940,7 +1028,7 @@ button {
 .owl-nav .owl-next {
     top: -5px;
     position: absolute;
-    color: #4c57a7 !important;
+    color: var(--secondColor) !important;
     width: 19.1%;
     font-size: 150px !important;
     background-color: rgba(0, 0, 0, 0.8) !important;
@@ -963,6 +1051,7 @@ button {
 
 .testimonial_slider .slider_image {
     height: 300px;
+    border: 1px solid black;
 }
 
 /* start div data */
@@ -986,4 +1075,50 @@ footer h2 {
 footer ul li a {
     color: white;
     text-decoration: underline;
+}
+
+
+/* start thanksModal */
+#thanksModal .modal-dialog{
+min-width: 45%;
+}
+#thanksModal .modal-body{
+    padding-top: 40px ;
+
+}
+#thanksModal .modal-body  h2{
+    font-size: 30px;
+}
+#thanksModal .modal-body p{
+    padding: 0 14%;
+    font-size: 20px;
+}
+
+#thanksModal .custom_border {
+    width: 30%;
+    border-top: 2px solid var(--secondColor);
+    margin: 30px auto;
+
+}
+
+#thanksModal .btn_next{
+    padding:10px 30px;
+    margin-top: 100px;
+}
+#thanksModal .wiki i{
+    font-size: 20px;
+    margin-right: 5px;
+
+}
+
+#thanksModal .wiki{
+    color: var(--secondColor);
+    margin-top: 30px;
+}
+
+#thanksModal .wiki a{
+
+color: var(--secondColor);
+text-decoration:underline var(--secondColor)!important;
+font-size: 20px;
 }

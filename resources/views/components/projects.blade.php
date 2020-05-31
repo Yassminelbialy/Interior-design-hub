@@ -4,7 +4,7 @@
       <div class="container-fluid">
         <div class="row">
           <div
-            style="background: url(images/decore1.jpeg);"
+            style="background-image: url(images/pictures_projects/2.jpeg);"
             class="project_content col-md-4 col-sm-6 pb-3"
           >
             <div class="overlayer"></div>
@@ -19,7 +19,7 @@
             </div>
           </div>
           <div
-            style="background: url(images/decore1.jpeg);"
+            style="background-image: url(images/pictures_projects/5.jpeg);"
             class="project_content col-md-4 col-sm-6"
           >
             <div class="overlayer"></div>
@@ -34,7 +34,7 @@
             </div>
           </div>
           <div
-            style="background: url(images/decore1.jpeg);"
+            style="background-image: url(images/pictures_projects/1.jpg);"
             class="project_content col-md-4 col-sm-6"
           >
             <div class="overlayer"></div>
@@ -53,7 +53,7 @@
 
 
           <div
-            style="background: url(images/decore1.jpeg);"
+            style="background-image: url(images/pictures_projects/7.jpg);"
             class="project_content col-md-4 col-sm-6"
           >
             <div class="overlayer"></div>
@@ -68,7 +68,7 @@
             </div>
           </div>
           <div
-            style="background: url(images/decore1.jpeg);"
+            style="background-image: url(images/pictures_projects/15.jpg);"
             class="project_content col-md-4 col-sm-6"
           >
             <div class="overlayer"></div>
@@ -83,7 +83,7 @@
             </div>
           </div>
           <div
-            style="background: url(images/decore1.jpeg);"
+            style="background-image: url(images/pictures_projects/3.jpeg);"
             class="project_content col-md-4 col-sm-6"
           >
             <div class="overlayer"></div>
