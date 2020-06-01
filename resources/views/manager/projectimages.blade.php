@@ -1,69 +1,54 @@
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
-{{ Form::open(['route' => ['project.images.store','2'],'enctype' => 'multipart/form-data','method'=>'post'])}}
 
+@extends('admin.base')
 
-<div class="form-group">
-  <label class="control-label col-sm-4" for="lname">Image Description:</label>
-  <div class="col-sm-10">
-    {!! Form::text('description', null, ['required'=>'true','class'=>"form-control",'placeholder'=>"Project Hint",'aria-label'=>"Book Author Nmae",'id'=>"lname"]) !!}
-  </div>
+@section('adminbase')
 
+<div class="text-center">
+    <table class="table table-hover table-info">
+        <thead>
+            <tr>
+            <td colspan="6"><a href="{{route('manager.project.images.create',$id)}}"><i class="fas fa-plus fa-4x" style="color: blue"></i></a></td>
+            </tr>
+          <tr class="table-dark">
+            <th scope="col">#</th>
 
-  <label class="control-label col-sm-4" for="lname">Image Keywordes:</label>
-  <div class="col-sm-10">
-    {!! Form::text('keyWords', null, ['required'=>'true','class'=>"form-control",'placeholder'=>"Write LIKE [xxxx-xxxx-xxxx-....]",'aria-label'=>"Book Author Nmae",'id'=>"lname"]) !!}
-  </div>
+            <th scope="col">image   </th>
+            <th scope="col">description</th>
+            <th scope="col">keywords</th>
+            <th scope="col">actions</th>
 
-  <div class="form-group">
-    <label class="control-label col-sm-4" for="lname">Main Image:</label>
-<br>
-    <div class="custom-file form-control  " style="width: 50%">
-        <br>
-        {!! Form::file('image', ['class'=>'custom-file-input form-control','id'=>"validatedCustomFile", 'required','onchange'=>'showimage(this)']) !!}                    <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
-      <div class="invalid-feedback">Example invalid custom file feedback</div>
-    </div>
-    <div class="col-sm-offset-2 col-sm-10">
+          </tr>
+        </thead>
+        <tbody>
+            @forelse ($data as $item)
+            <tr>
+                    <th scope="row">{{$item->id}}</th>
+                    <td><img src="/projectimages/{{$item->image}}"style="    display: inline-block; height: 100px ; width:100px ; background-color:red;"></img></td>
+                    <td>{{$item->description}}</td>
+                    <td>{{$item->keyWords}}</td>
+                <td>
+                              &ensp;
+                              {{-- <a href="{{route('manager.project.images.index',$item->id)}}"> <i class="fas fa-binoculars fa-2x" style="color: green"></i></a> --}}
 
-        {!! Form::submit('ADD Image To Project', ['class'=>'btn btn-default btn btn-outline-secondary']) !!}
+                            &ensp;
 
-      </div>
-{{ Form::close() }}
+                            <a href="{{ route('manager.project.images.edit',[$id,$item->id]) }}"> <i class="fas fa-edit fa-2x" style="color: blue"></i></a>
 
-<table class="table table-hover">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">First</th>
-        <th scope="col">Last</th>
-        <th scope="col">Handle</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td colspan="2">Larry the Bird</td>
-        <td>@twitter</td>
-      </tr>
-    </tbody>
-  </table>
+                            &ensp;
+                            {!!Form::open(['route'=>[ 'manager.project.images.destroy' ,$id,$item->id],'method'=>'delete','style'=>'    display: inline-block '])!!}
+                            {{ Form::button('<i style="color:red"class="fa fa-trash fa-2x"></i>', ['type' => 'submit'] )  }}
+
+                            {!! Form::close() !!}
+                 </td>
+
+            </tr>
+            @empty
+
+            @endforelse
 
 
 
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        </tbody>
+      </table>
+</div>
+@endsection

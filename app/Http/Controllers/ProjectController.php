@@ -97,24 +97,24 @@ class ProjectController extends Controller
     {
         // $categories = Category::all()->pluck('name','id')->toArray();
 
-        dd($project);
+        // dd($project,'s');
 
-        //     $req=$request->all();
+            $req=$request->all();
 
-        //     if ($files = $request->file('mainimage'))
-        //     {
-        //                     $uuid =Uuid::generate()->string;
-        //                     $path=$uuid.".".$request->file('mainimage')->getClientOriginalExtension();
-        //                     $desti='projectimages/';
-        //                     $files->move($desti,$path);
-        //                     $req['mainimage']=$path;
-        //                     // dd('dd');
-        //     }
+            if ($files = $request->file('mainimage'))
+            {
+                            $uuid =Uuid::generate()->string;
+                            $path=$uuid.".".$request->file('mainimage')->getClientOriginalExtension();
+                            $desti='projectimages/';
+                            $files->move($desti,$path);
+                            $req['mainimage']=$path;
+                            // dd('dd');
+            }
 
-        //     $project = Project::create($req);
-        //         //
-        //         // dd($project);
-        //         return redirect(route('manager.project.index'));
+            $project = $project->update($req);
+                //
+                // dd($project);
+                return redirect(route('manager.project.index'));
 
         // //
     }
@@ -127,7 +127,8 @@ class ProjectController extends Controller
      */
     public function destroy(Project $project)
     {
-        $project->delete();
+        // $project->delete();
+        dd($project);
         return redirect(route('manager.project.index'));
     }
 }
