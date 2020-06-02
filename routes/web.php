@@ -37,4 +37,9 @@ Route::prefix('manager')->name('manager.')->group(function(){
 
 });
 Route::resource('project.images', 'ProjectImageController');
+Route::get('instagram', 'InastgramController@index');
+//Route::get('/instagram', 'InstagramController@redirectToInstagramProvider');
+
+Route::get('/instagram/callback', 'InstagramController@handleProviderInstagramCallback');
+
 
