@@ -30,7 +30,7 @@
     @component('components.state')
     @endcomponent
 
-    @component('components.video',['x'=>`xx`])
+    @component('components.video',['ceoInfo' => $ceoInfo])
     @endcomponent
 
     @component('components.details')

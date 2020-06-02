@@ -34,8 +34,8 @@ Route::prefix('manager')->name('manager.')->group(function(){
     Route::resource('project', 'ProjectController');
     Route::resource('category', 'CategoryController');
     Route::resource('project.images', 'ProjectImageController');
-
+    Route::resource('alexandra', 'AlexandrainfoController');
     // Route::resource('project', 'ProjectController');
 
 });
-
+Route::get('/','VideoController@index');
