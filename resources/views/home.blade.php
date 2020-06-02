@@ -9,7 +9,7 @@
     @component('components.statitics')
     @endcomponent
 
-    @component('components.projects')
+    @component('components.projects',['projects'=>$projects])
     @endcomponent
 
     @component('components.all_projects')
