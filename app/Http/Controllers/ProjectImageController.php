@@ -15,7 +15,10 @@ class ProjectImageController extends Controller
      */
     public function index(Request $request,$id)
     {
-        dd($id);
+        // dd($id);
+        $projectImages=Project::find($id)->images;
+        // dd($projectImages);
+    return view('manager.projectimages',['id'=>$id,'data'=>$projectImages]) ;
     }
 
     /**
@@ -26,7 +29,7 @@ class ProjectImageController extends Controller
     public function create($id)
     {
         // dd($id);
-        return view('manager.projectimages');
+        return view('manager.projectimagesadd',['id'=>$id]);
     }
 
     /**
@@ -39,19 +42,21 @@ class ProjectImageController extends Controller
     {
         // dd(Project::find($id));
         $project=Project::find($id);
+        $req=$request->all();
+
         if ($files = $request->file('image'))
         {
                         $uuid =Uuid::generate()->string;
                         $path=$uuid.".".$request->file('image')->getClientOriginalExtension();
                         $desti='projectimages/';
                         $files->move($desti,$path);
+                        $req['image']=$path;
+
                         // dd('dd');
         }
-        $req=$request->all();
-        $req['image']=$path;
         $image = $project->images()->create($req);
         //     //
-            dd($image);
+        return redirect(route('manager.project.images.index',$id));
 
     }
 
@@ -73,9 +78,12 @@ class ProjectImageController extends Controller
      * @param  \App\ProjectImage  $projectImage
      * @return \Illuminate\Http\Response
      */
-    public function edit(ProjectImage $projectImage)
+    public function edit(ProjectImage $projectImage,$id,$iid)
     {
-        //
+        // dd($projectImage,$id,$iid);
+
+
+        return view('manager.projectimagesedit',['data'=> ProjectImage::find($iid),'id'=>$id        ]);
     }
 
     /**
@@ -85,9 +93,27 @@ class ProjectImageController extends Controller
      * @param  \App\ProjectImage  $projectImage
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, ProjectImage $projectImage)
+    public function update(Request $request, ProjectImage $projectImage,$id,$iid)
     {
-        //
+
+        // dd($projectImage,$id,$iid);
+        $req=$request->all();
+        if ($files = $request->file('image'))
+        {
+                        $uuid =Uuid::generate()->string;
+                        $path=$uuid.".".$request->file('image')->getClientOriginalExtension();
+                        $desti='projectimages/';
+                        $files->move($desti,$path);
+                        $req['image']=$path;
+
+                        // dd('dd');
+        }
+
+
+        ProjectImage::find($iid)->update($req);
+
+        return redirect(route('manager.project.images.index',$id));
+
     }
 
     /**
@@ -98,7 +124,10 @@ class ProjectImageController extends Controller
      */
     public function destroy(ProjectImage $projectImage,$id,$iid)
     {
-        dd($id,$iid);
+
+        ProjectImage::find($iid)->delete();
+        return redirect(route('manager.project.images.index',$id));
+
         //
     }
 }
