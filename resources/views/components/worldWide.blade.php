@@ -26,7 +26,7 @@
                                                     <span aria-hidden="true">&times;</span>
                                                 </button>        
                                                 <div class="embed-responsive embed-responsive-16by9">
-                                                    <iframe class="embed-responsive-item" src="/1.mp4" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
+                                                    <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
                                                 </div>
                                         
                                             </div>
