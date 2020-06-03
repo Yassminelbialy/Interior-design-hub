@@ -7,25 +7,21 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Interior Design</title>
 
     <!-- Scripts -->
     <script
       src="https://kit.fontawesome.com/5c57781684.js"
       crossorigin="anonymous"
     ></script>
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
     <!-- Styles -->
     <link rel="stylesheet" href="css/owl.carousel.css">
     <link rel="stylesheet" href="css/owl.theme.default.css">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <!-- <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet"> -->
+    <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/main_style.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-
+@stack('token')
 </head>
 <body>
 
@@ -46,10 +42,13 @@
       crossorigin="anonymous"
     ></script>
     <script src="js/owl.carousel.min.js"></script>
-
+    <script src="{{ asset('js/lazyLoading.js') }}"></script>
     <script src="{{ asset('js/main.js') }}" ></script>
+  
     {{-- <script src="https://api-maps.yandex.ru/2.1/?apikey=45185f8a-5595-4dca-a730-067482a1af71&lang=ru_RU" type="text/javascript"> </script> --}}
     <script src="https://api-maps.yandex.ru/2.1/?lang=en_RU&amp;apikey=45185f8a-5595-4dca-a730-067482a1af71" type="text/javascript"></script>
+
+    @stack('quizscript')
 
 
 </body>

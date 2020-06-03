@@ -35,10 +35,16 @@ Route::prefix('manager')->name('manager.')->group(function(){
     Route::resource('alexandra', 'AlexandrainfoController');
     // Route::resource('project', 'ProjectController');
 
-});
+});//manager routes
+
+Route::resource('quiz', 'QuizController');
+
+
 Route::resource('project.images', 'ProjectImageController');
 Route::post('/contact','ContactController@send');
 
 
 
 Route::get('/','UserController@index');
+Route::get('view/{id}', 'UserController@view')->name('project.view');
+
