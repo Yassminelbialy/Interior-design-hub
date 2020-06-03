@@ -38,4 +38,4 @@ Route::prefix('manager')->name('manager.')->group(function(){
     // Route::resource('project', 'ProjectController');
 
 });
-Route::get('/','VideoController@index');
+Route::get('/','UserController@index');

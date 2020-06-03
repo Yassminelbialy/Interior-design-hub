@@ -20,11 +20,11 @@
                                             <span aria-hidden="true" >&times;</span>
                                         </button>
                                         <div class="embed-responsive embed-responsive-16by9">
-                                            {{-- <iframe class="embed-responsive-item" src="{{$ceo->video}}" id="video"  allowscriptaccess="always" allow="autoplay"></iframe> --}}
                                             <video  controls class="embed-responsive-item" allowscriptaccess="always" allow="autoplay">
                                                 <source src="{{$ceo->video}}" type="video/mp4" >
                                               Your browser does not support the video tag.
                                           </video>
+
                                         </div>
 
                                     </div>
