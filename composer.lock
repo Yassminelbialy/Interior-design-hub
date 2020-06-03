@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "14eec1ba53c837e808750e1ea701a979",
+    "content-hash": "738c146a22ef4ff727a26fc5b9fe483e",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -804,16 +804,16 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "6.5.3",
+            "version": "6.5.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "aab4ebd862aa7d04f01a4b51849d657db56d882e"
+                "reference": "a4a1b6930528a8f7ee03518e6442ec7a44155d9d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/aab4ebd862aa7d04f01a4b51849d657db56d882e",
-                "reference": "aab4ebd862aa7d04f01a4b51849d657db56d882e",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/a4a1b6930528a8f7ee03518e6442ec7a44155d9d",
+                "reference": "a4a1b6930528a8f7ee03518e6442ec7a44155d9d",
                 "shasum": ""
             },
             "require": {
@@ -821,7 +821,7 @@
                 "guzzlehttp/promises": "^1.0",
                 "guzzlehttp/psr7": "^1.6.1",
                 "php": ">=5.5",
-                "symfony/polyfill-intl-idn": "^1.11"
+                "symfony/polyfill-intl-idn": "1.17.0"
             },
             "require-dev": {
                 "ext-curl": "*",
@@ -867,7 +867,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2020-04-18T10:38:46+00:00"
+            "time": "2020-05-25T19:35:05+00:00"
         },
         {
             "name": "guzzlehttp/promises",
@@ -1142,6 +1142,70 @@
                 "laravel"
             ],
             "time": "2020-05-12T14:42:24+00:00"
+        },
+        {
+            "name": "laravel/socialite",
+            "version": "v4.3.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/socialite.git",
+                "reference": "4bd66ee416fea04398dee5b8c32d65719a075db4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/socialite/zipball/4bd66ee416fea04398dee5b8c32d65719a075db4",
+                "reference": "4bd66ee416fea04398dee5b8c32d65719a075db4",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "guzzlehttp/guzzle": "~6.0",
+                "illuminate/http": "~5.7.0|~5.8.0|^6.0|^7.0",
+                "illuminate/support": "~5.7.0|~5.8.0|^6.0|^7.0",
+                "league/oauth1-client": "~1.0",
+                "php": "^7.1.3"
+            },
+            "require-dev": {
+                "illuminate/contracts": "~5.7.0|~5.8.0|^6.0|^7.0",
+                "mockery/mockery": "^1.0",
+                "phpunit/phpunit": "^7.0|^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.x-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Laravel\\Socialite\\SocialiteServiceProvider"
+                    ],
+                    "aliases": {
+                        "Socialite": "Laravel\\Socialite\\Facades\\Socialite"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Laravel\\Socialite\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                }
+            ],
+            "description": "Laravel wrapper around OAuth 1 & OAuth 2 libraries.",
+            "homepage": "https://laravel.com",
+            "keywords": [
+                "laravel",
+                "oauth"
+            ],
+            "time": "2020-02-04T15:30:01+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -1519,6 +1583,69 @@
                 }
             ],
             "time": "2020-05-12T20:33:44+00:00"
+        },
+        {
+            "name": "league/oauth1-client",
+            "version": "1.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/oauth1-client.git",
+                "reference": "fca5f160650cb74d23fc11aa570dd61f86dcf647"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/oauth1-client/zipball/fca5f160650cb74d23fc11aa570dd61f86dcf647",
+                "reference": "fca5f160650cb74d23fc11aa570dd61f86dcf647",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^6.0",
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^0.9",
+                "phpunit/phpunit": "^4.0",
+                "squizlabs/php_codesniffer": "^2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "League\\OAuth1\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ben Corlett",
+                    "email": "bencorlett@me.com",
+                    "homepage": "http://www.webcomm.com.au",
+                    "role": "Developer"
+                }
+            ],
+            "description": "OAuth 1.0 Client Library",
+            "keywords": [
+                "Authentication",
+                "SSO",
+                "authorization",
+                "bitbucket",
+                "identity",
+                "idp",
+                "oauth",
+                "oauth1",
+                "single sign on",
+                "trello",
+                "tumblr",
+                "twitter"
+            ],
+            "time": "2016-08-17T00:36:58+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -2351,6 +2478,100 @@
                 }
             ],
             "time": "2020-03-29T20:13:32+00:00"
+        },
+        {
+            "name": "socialiteproviders/instagram",
+            "version": "v3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SocialiteProviders/Instagram.git",
+                "reference": "054dc7c8d2e4cf80e94321ee6fe316d0ef78a7f6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SocialiteProviders/Instagram/zipball/054dc7c8d2e4cf80e94321ee6fe316d0ef78a7f6",
+                "reference": "054dc7c8d2e4cf80e94321ee6fe316d0ef78a7f6",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.6 || ^7.0",
+                "socialiteproviders/manager": "~3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "SocialiteProviders\\Instagram\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Brian Faust",
+                    "email": "hello@brianfaust.de"
+                }
+            ],
+            "description": "Instagram OAuth2 Provider for Laravel Socialite",
+            "time": "2017-01-25T09:48:29+00:00"
+        },
+        {
+            "name": "socialiteproviders/manager",
+            "version": "v3.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SocialiteProviders/Manager.git",
+                "reference": "7a5872d9e4b22bb26ecd0c69ea9ddbaad8c0f570"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SocialiteProviders/Manager/zipball/7a5872d9e4b22bb26ecd0c69ea9ddbaad8c0f570",
+                "reference": "7a5872d9e4b22bb26ecd0c69ea9ddbaad8c0f570",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~5.4|~5.7.0|~5.8.0|^6.0|^7.0",
+                "laravel/socialite": "~3.0|~4.0",
+                "php": "^5.6 || ^7.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^0.9.4",
+                "phpunit/phpunit": "^5.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "SocialiteProviders\\Manager\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "SocialiteProviders\\Manager\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andy Wendt",
+                    "email": "andy@awendt.com"
+                },
+                {
+                    "name": "Anton Komarev",
+                    "email": "a.komarev@cybercog.su"
+                },
+                {
+                    "name": "Miguel Piedrafita",
+                    "email": "soy@miguelpiedrafita.com"
+                }
+            ],
+            "description": "Easily add new or override built-in providers in Laravel Socialite.",
+            "time": "2020-03-08T16:54:44+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",

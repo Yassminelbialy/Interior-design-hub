@@ -11,7 +11,7 @@
             <div class="col-md-7">
                 <div class="stats_video">
                     <div class="overlay"></div>
-                    <img src="../images/7.jpg" alt="" />
+                    <img data-src="../images/7.jpg" alt="" />
                     <div class="wrapper">
                         <div class="icon-wrapper">
                             <div class="icon">
@@ -26,7 +26,7 @@
                                                     <span aria-hidden="true">&times;</span>
                                                 </button>        
                                                 <div class="embed-responsive embed-responsive-16by9">
-                                                    <iframe class="embed-responsive-item" src="/1.mp4" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
+                                                    <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
                                                 </div>
                                         
                                             </div>
