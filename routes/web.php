@@ -37,4 +37,7 @@ Route::prefix('manager')->name('manager.')->group(function(){
 
 });
 Route::resource('project.images', 'ProjectImageController');
+Route::post('/contact','ContactController@send');
+
+
 

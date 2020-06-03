@@ -10,21 +10,41 @@
                 <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form action="" method="">
+            
+
+            @if(count($errors) > 0)
+
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+
+            @endif
+
+            @if($msg = Session::get('success'))
+                <div class="alert alert-success">{{$msg}}</div>
+            @endif
+            <form action="{{ url('/contact') }}" method="post">
+
+                    @csrf
+
                 <div class="modal-body mx-3">
                     <div class="md-form mb-2">
                         <i class="fa fa-user"></i>
-                        <input type="email" id="defaultForm-email" class="form-control validate">
+                        <input type="text"  class="form-control validate" name="username">
                         <label data-error="wrong" data-success="right" for="defaultForm-email">Your Name</label>
                     </div>
                     <div class="md-form mb-2">
                         <i class="fa fa-phone"></i>
-                        <input type="password" id="defaultForm-pass" class="form-control validate">
+                        <input type="text" name="phone" class="form-control validate">
                         <label data-error="wrong" data-success="right" for="defaultForm-pass">Your Phone</label>
                     </div>
                     <div class="form-group">
                         <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
-                            <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker1"/>
+                            <input type="text" class="form-control datetimepicker-input" name="date" data-target="#datetimepicker1"/>
                             <div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
                                 <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                             </div>
