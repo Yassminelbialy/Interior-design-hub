@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+
+=======
+>>>>>>> 761874a3b30c55d08c0e1a08a7c89b0a809d5e50
 <!DOCTYPE html>
 <html lang="en">
     <head>

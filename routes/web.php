@@ -20,9 +20,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/control', function () {
-    return view('Admin.sideNavBar');
-});
+
 Route::get('/ceo','AlexandrainfoController@index');
 
 
@@ -38,6 +36,11 @@ Route::prefix('manager')->name('manager.')->group(function(){
     // Route::resource('project', 'ProjectController');
 
 });
+Route::resource('project.images', 'ProjectImageController');
+Route::post('/contact','ContactController@send');
+
+
+
 Route::get('/','UserController@index');
 Route::get('view/{id}', 'UserController@view')->name('project.view');
 

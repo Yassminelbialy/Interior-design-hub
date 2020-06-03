@@ -1,23 +1,8 @@
-
-
-
-
-
-
 @extends('admin.base')
-
 {{-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"> --}}
 @section('adminbase')
-
-
 <link rel="stylesheet" type="text/css" href="{{ asset('css/styles.css') }}" >
-
-
-
-
-
 {{ Form::open(['route' => 'manager.project.store','enctype' => 'multipart/form-data','method'=>'post'])}}
-
 	<div class="row">
 		<div class="col-md-3">
 			<div class="contact-info">
