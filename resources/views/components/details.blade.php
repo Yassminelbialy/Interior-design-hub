@@ -35,6 +35,7 @@
                     <div class="md-form mb-2">
                         <i class="fa fa-user"></i>
                         <input type="text"  class="form-control validate" name="username">
+                      
                         <label data-error="wrong" data-success="right" for="defaultForm-email">Your Name</label>
                     </div>
                     <div class="md-form mb-2">

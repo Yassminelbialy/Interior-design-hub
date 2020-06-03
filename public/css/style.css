@@ -1,3 +1,4 @@
+ 
 /* Start info */
 .info {
     margin: 0 auto;
@@ -73,10 +74,7 @@
         left: 20%;
     }
 }
-
-
-
-.our_video .wrapper{
+.wrapper{
     position: absolute;
     width: 220px;
     height: 220px;
@@ -84,30 +82,16 @@
     border-width: 2px;
     border-color: rgba(150, 141, 141, 0.8);
     border-radius: 200px;
-    left: 73%;
-    bottom: 7%;
+    left: 78%;
+    bottom: 10%;
     outline: none;
 }
-
-.social .wrapper{
-    position: absolute;
-    width: 220px;
-    height: 220px;
-    border-style: solid;
-    border-width: 2px;
-    border-color: rgba(150, 141, 141, 0.8);
-    border-radius: 200px;
-    left: 61%;
-    bottom: 5%;
-    outline: none;
-}
-@media (max-width: 767px) {
+@media (max-width: 991px) {
     .wrapper {
-        width: 140px;
-        height: 140px;
-        border-radius: 120px;
+        width: 160px;
+        height: 160px;
+        border-radius: 180px;
         left: 45%;
-        bottom: 10%;
     }
 }
 .icon-wrapper {
@@ -122,13 +106,13 @@
     bottom: 8%;
     outline: none;
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
     .icon-wrapper {
-        width: 120px;
-        height: 120px;
-        border-radius: 100px;
-        left: 6%;
-        bottom: 6%;
+        width: 130px;
+        height: 130px;
+        border-radius: 110px;
+        left: 8%;
+        bottom: 7%;
     }
 }
 .icon-wrapper .icon {
@@ -144,7 +128,7 @@
     margin: auto;
     border-radius: 120px;
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
     .icon-wrapper .icon {
         width: 100px;
         height: 100px;
@@ -207,7 +191,7 @@
 /* Start Details */
 .details
 {
-    /* background: linear-gradient(rgba(34, 27, 25, 0.8), rgba(34, 27, 25, 0.8)), rgba(34, 27, 25, 0.8) url(../images/1.jpg) no-repeat center center; */
+    background: linear-gradient(rgba(34, 27, 25, 0.8), rgba(34, 27, 25, 0.8)), rgba(34, 27, 25, 0.8) url(../images/1.jpg) no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -326,7 +310,7 @@
     }
 }
 .world_video .stats_video .icon-wrapper {
-    osition: absolute;
+    position: absolute;
     width: 180px;
     height: 180px;
     border-style: solid;
@@ -343,7 +327,7 @@
         height: 120px;
         border-radius: 100px;
         left: 6%;
-        bottom: 7%;
+        bottom: 6%;
     }
 }
 .world_video .stats_video .icon-wrapper .icon {
@@ -421,12 +405,13 @@ opacity:1;
 .social .img img{
     width: 100%;
     position: relative;
-    left: 61%;
-    top: 183px;
+    left: 89%;
+    /* top:65px; */
 }
 @media(max-width:991px){
     .social .img img{
         left:20%;
+        top:0
     }
 }
 .social .h1{

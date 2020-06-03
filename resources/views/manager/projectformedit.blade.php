@@ -16,7 +16,7 @@
 
 
 
-{{ Form::model($data,['route' => 'manager.project.store','enctype' => 'multipart/form-data','method'=>'post'])}}
+{{ Form::model($data,['route' => ['manager.project.update',$data->id],'enctype' => 'multipart/form-data','method'=>'PUT'])}}
 
 	<div class="row">
 		<div class="col-md-3">
@@ -56,7 +56,7 @@
 <br>
                     <div class="custom-file form-control  " style="width: 50%">
                         <br>
-                        {!! Form::file('mainimage', ['class'=>'custom-file-input form-control','id'=>"validatedCustomFile", 'required','onchange'=>'showimage(this)']) !!}                    <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
+                        {!! Form::file('mainimage', ['class'=>'custom-file-input form-control','id'=>"validatedCustomFile",'onchange'=>'showimage(this)']) !!}                    <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
                       <div class="invalid-feedback">Example invalid custom file feedback</div>
                     </div>
 

@@ -21,7 +21,7 @@
                                             <span aria-hidden="true">&times;</span>
                                         </button>        
                                         <div class="embed-responsive embed-responsive-16by9">
-                                            <iframe class="embed-responsive-item" src="images/1.mp4" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
+                                            <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
                                         </div>
                                     </div>
                                 </div>
@@ -54,7 +54,7 @@
                 <a class="social-icon" target="_blank" href="#" title="whatsapp"><i class="fa fa-vk"></i></a>
                 
             </div>
-            <button class="btn mb-3 btn_info btn-block">Go somewhere</button>                                                                 
+            <button class="btn btn_info mb-3 btn-block">Go somewhere</button>                                                                 
         </div>
     </div>
 </section>

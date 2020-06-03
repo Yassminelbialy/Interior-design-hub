@@ -6,6 +6,10 @@ use App\Category;
 use Illuminate\Http\Request;
 use Uuid;
 
+
+use Illuminate\Support\Facades\File as LaraFile;
+
+
 class CategoryController extends Controller
 {
     /**
@@ -77,7 +81,7 @@ class CategoryController extends Controller
      */
     public function edit(Category $category)
     {
-        //
+        return view('manager.categoryformedit',['data'=>$category]);
     }
 
     /**
@@ -89,7 +93,22 @@ class CategoryController extends Controller
      */
     public function update(Request $request, Category $category)
     {
-        //
+        $req=$request->all();
+
+        if ($files = $request->file('image'))
+        {
+
+                        LaraFile::delete("categoryimages/{$category->image}");
+
+                        $uuid =Uuid::generate()->string;
+                        $path=$uuid.".".$request->file('image')->getClientOriginalExtension();
+                        $desti='categoryimages/';
+                        $files->move($desti,$path);
+                        $req['image']=$path;
+
+        }
+        $category->update($req);
+        dd($category);
     }
 
     /**
