@@ -13,13 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('home');
-// });
+Route::get('/', function () {
+    return view('home');
+});
 
 Auth::routes();
-Route::get('/', 'UserController@index');
-Route::get('view/{id}', 'UserController@view')->name('project.view');
+
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/control', function () {
     return view('Admin.sideNavBar');
@@ -35,8 +34,10 @@ Route::prefix('manager')->name('manager.')->group(function(){
     Route::resource('project', 'ProjectController');
     Route::resource('category', 'CategoryController');
     Route::resource('project.images', 'ProjectImageController');
-
+    Route::resource('alexandra', 'AlexandrainfoController');
     // Route::resource('project', 'ProjectController');
 
 });
+Route::get('/','UserController@index');
+Route::get('view/{id}', 'UserController@view')->name('project.view');
 
