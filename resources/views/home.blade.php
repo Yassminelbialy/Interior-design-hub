@@ -9,7 +9,7 @@
     @component('components.statitics')
     @endcomponent
 
-    @component('components.projects')
+    @component('components.projects',['projects'=>$projects])
     @endcomponent
 
     @component('components.all_projects')
@@ -30,7 +30,7 @@
     @component('components.state')
     @endcomponent
 
-    @component('components.video',['x'=>`xx`])
+    @component('components.video',['ceoInfo' => $ceoInfo])
     @endcomponent
 
     @component('components.details')

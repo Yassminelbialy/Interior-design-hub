@@ -16,9 +16,9 @@ class AlexandrainfoController extends Controller
     public function index()
     {
         $ceoInfo= Alexandrainfo::all();
-        $contactInfo= Contact::all();
+        // $contactInfo= Contact::all();
 
-        return view('Admin/alexandraInfo',["ceoArray"=>$ceoInfo,"contactArray"=>$contactInfo]);
+        return view('manager/alexandrainfoindex',["ceoArray"=>$ceoInfo]);
     }
 
     /**

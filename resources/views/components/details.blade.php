@@ -14,12 +14,12 @@
                 <div class="modal-body mx-3">
                     <div class="md-form mb-2">
                         <i class="fa fa-user"></i>
-                        <input type="email" id="defaultForm-email" class="form-control validate">
+                        <input type="text" id="defaultForm-email" class="form-control validate">
                         <label data-error="wrong" data-success="right" for="defaultForm-email">Your Name</label>
                     </div>
                     <div class="md-form mb-2">
                         <i class="fa fa-phone"></i>
-                        <input type="password" id="defaultForm-pass" class="form-control validate">
+                        <input type="text" id="defaultForm-pass" class="form-control validate">
                         <label data-error="wrong" data-success="right" for="defaultForm-pass">Your Phone</label>
                     </div>
                     <div class="form-group">
