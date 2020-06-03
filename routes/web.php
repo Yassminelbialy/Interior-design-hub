@@ -19,6 +19,7 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 Route::get('/', 'UserController@index');
+Route::get('view/{id}', 'UserController@view')->name('project.view');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/control', function () {
     return view('Admin.sideNavBar');

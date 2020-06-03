@@ -1,8 +1,8 @@
 <section class="our_video">
     <div class="row">
-        <div class="col-sm-12 col-lg-6 ">
+        <div class="col-lg-5">
             <div class="img">
-                <img src="/images/DSC05123.png" alt="" />
+                <img data-src="/images/DSC05123.png" alt="Alexandra" />
             </div>
             <div class="wrapper">
                 <div class="icon-wrapper">
@@ -31,7 +31,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-12 col-lg-6 ">
+        <div class="col-lg-7">
             <div class="stats">
                 <h2 class="h1">Our Main Statistics</h2>
                 <p>

@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col-lg-6">
             <div class="img">
-                <img src="/images/DSC05123.png" alt="" />
+                <img data-src="/images/DSC05123.png" alt="Alexandra" />
             </div>
             <div class="wrapper">
                 <div class="icon-wrapper">
@@ -41,7 +41,7 @@
                 <hr/>
                 <div class="phone ml-3 mb-1">
                     <h4>Contact US: </h4>
-                    <button class="btn btn-light">viber<img class="viber_image ml-1" src="images/viber.png" alt="" /></button>
+                    <button class="btn btn-light">viber<img class="viber_image ml-1" data-src="images/viber.png" alt="viber" /></button>
                     <button class="btn btn-light ml-3">whatsapp<i class="fa fa-whatsapp text-success"></i></button>
                     <button class="btn btn-light ml-3">telegram<i class="fa fa-telegram text-primary"></i></button>
                 </div>
