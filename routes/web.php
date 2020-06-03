@@ -35,12 +35,10 @@ Route::prefix('manager')->name('manager.')->group(function(){
     Route::resource('category', 'CategoryController');
     Route::resource('project.images', 'ProjectImageController');
     Route::resource('alexandra', 'AlexandrainfoController');
+    Route::resource('fbPosts' ,'FacebookController');
     // Route::resource('project', 'ProjectController');
 
 });
 Route::resource('project.images', 'ProjectImageController');
 Route::post('/contact','ContactController@send');
-
-
-
 Route::get('/','UserController@index');

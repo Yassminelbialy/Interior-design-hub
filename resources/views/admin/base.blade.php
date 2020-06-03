@@ -77,6 +77,9 @@
                                     <a class="nav-link" href="/manager/logo">logos</a>
                                     <a class="nav-link" href="/manager/review">reviews</a>
                                     <a class="nav-link" href="/manager/alexandra">alexandra info</a>
+                                    <a class="nav-link" href="/manager/fbPosts">fbPosts</a>
+
+
 
                                     <a class="nav-link" href="/manager/project">category of projects</a>
                                     <a class="nav-link" href="/manager/user">users</a>
