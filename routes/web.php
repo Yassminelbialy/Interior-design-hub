@@ -37,5 +37,8 @@ Route::prefix('manager')->name('manager.')->group(function(){
 
     // Route::resource('project', 'ProjectController');
 
-});
+});//manager routes
+
+Route::resource('quiz', 'QuizController');
+
 

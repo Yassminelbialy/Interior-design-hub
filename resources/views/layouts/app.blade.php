@@ -24,7 +24,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/main_style.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-
+@stack('token')
 </head>
 <body>
 
@@ -49,6 +49,8 @@
     <script src="{{ asset('js/main.js') }}" ></script>
     {{-- <script src="https://api-maps.yandex.ru/2.1/?apikey=45185f8a-5595-4dca-a730-067482a1af71&lang=ru_RU" type="text/javascript"> </script> --}}
     <script src="https://api-maps.yandex.ru/2.1/?lang=en_RU&amp;apikey=45185f8a-5595-4dca-a730-067482a1af71" type="text/javascript"></script>
+
+    @stack('quizscript')
 
 
 </body>
