@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Consultation;
+use App\Contact;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\SendEmail;
+
 
 class ConsultationController extends Controller
 {
@@ -12,74 +15,28 @@ class ConsultationController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        //
-    }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
+     public function send(Request $request)
+     {
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Consultation  $consultation
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Consultation $consultation)
-    {
-        //
-    }
+            $this->validate($request ,[
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Consultation  $consultation
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Consultation $consultation)
-    {
-        //
-    }
+                'username'   =>     'required',
+                'phone'      =>     'required',
+                'date'       =>      'required|date'
+            ]);
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Consultation  $consultation
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Consultation $consultation)
-    {
-        //
-    }
+            $usersData = array(
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Consultation  $consultation
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Consultation $consultation)
-    {
-        //
-    }
+                    'username'  =>  $request->username,
+                    'phone'     =>  $request->phone,
+                    'date'      =>  $request->date
+            );
+
+            Mail::to('yassminelbialy@gmail.com')
+            ->send(new SendEmail($usersData));
+            return back()->with('success' , 'thanx for contacting us :)');
+
+     }
 }
