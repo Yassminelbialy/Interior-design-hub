@@ -1,7 +1,3 @@
-
-
-
-
 @extends('admin.base')
 
 @section('adminbase')

@@ -33,7 +33,8 @@ Route::prefix('manager')->name('manager.')->group(function(){
     Route::resource('category', 'CategoryController');
     Route::resource('project.images', 'ProjectImageController');
     Route::resource('alexandra', 'AlexandrainfoController');
-    // Route::resource('project', 'ProjectController');
+    Route::resource('alexandra', 'AlexandrainfoController');
+
 
 });//manager routes
 
