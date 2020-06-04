@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> 761874a3b30c55d08c0e1a08a7c89b0a809d5e50
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -71,22 +67,11 @@
                                     <a class="nav-link" href="/manager/project">projects</a>
                                     {{-- <a class="nav-link" href="/manager/project">images of project</a> --}}
 
-                                    <a class="nav-link" href="/manager/category">category of projects</a>
-                                    <a class="nav-link" href="/manager/user">users</a>
-                                    <a class="nav-link" href="/manager/logo">logos</a>
-                                    <a class="nav-link" href="/manager/review">reviews</a>
-                                    <a class="nav-link" href="/manager/alexandra">alexandra info</a>
-                                    <a class="nav-link" href="/manager/project">categories</a>
-                                    <a class="nav-link" href="/manager/user">users</a>
-                                    <a class="nav-link" href="/manager/logo">logos</a>
-                                    <a class="nav-link" href="/manager/review">reviews</a>
-                                    <a class="nav-link" href="/manager/alexandra">alexandra info</a>
-
-                                    <a class="nav-link" href="/manager/project">category of projects</a>
-                                    <a class="nav-link" href="/manager/user">users</a>
-                                    <a class="nav-link" href="/manager/logo">logos</a>
-                                    <a class="nav-link" href="/manager/review">reviews</a>
-                                    <a class="nav-link" href="/manager/alexandra">alexandra info</a>
+                                    <a class="nav-link" href="/manager/category">Category of projects</a>
+                                    <a class="nav-link" href="/manager/user">Users</a>
+                                    <a class="nav-link" href="/manager/logo">Logos</a>
+                                    <a class="nav-link" href="/manager/review">Reviews</a>
+                                    <a class="nav-link" href="/manager/alexandra">Alexandra info</a>
                                     {{-- <a class="nav-link" href="/manager/project">projects</a>
                                     <a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a></nav> --}}
                             </div>
