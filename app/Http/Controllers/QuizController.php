@@ -60,7 +60,7 @@ class QuizController extends Controller
 
               $response=$quiz->save();
 
-
+$response1='';
               if ($files = $request->file('file'))
               {
                 // foreach($request->file('file') as $file)
