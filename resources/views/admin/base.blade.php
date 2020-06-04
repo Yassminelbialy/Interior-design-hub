@@ -72,6 +72,10 @@
                                     <a class="nav-link" href="/manager/logo">Logos</a>
                                     <a class="nav-link" href="/manager/review">Reviews</a>
                                     <a class="nav-link" href="/manager/alexandra">Alexandra info</a>
+                                    <a class="nav-link" href="/manager/consultations">Consultations</a>
+                                    <a class="nav-link" href="/manager/quizzez">Quizzez</a>
+                                    <a class="nav-link" href="/manager/contacts">Contacts</a>
+                                   
                                     {{-- <a class="nav-link" href="/manager/project">projects</a>
                                     <a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a></nav> --}}
                             </div>
