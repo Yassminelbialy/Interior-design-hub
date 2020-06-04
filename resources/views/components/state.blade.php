@@ -5,7 +5,7 @@
             <div class="col-md-6 col-lg-4 mt-3 state">
                 <div class="row">
                     <div class="col-md-4">
-                        <img src="images/7.jpg" alt="" />
+                        <img data-src="images/7.jpg" alt="state" />
                     </div>
                     <div class="col-md-8">
                         <p class="text_info">
@@ -19,7 +19,7 @@
             <div class="col-md-6 col-lg-4 mt-3 state">
                 <div class="row">
                     <div class="col-md-4">
-                        <img src="images/7.jpg" alt="" />
+                        <img data-src="images/7.jpg" alt="state" />
                     </div>
                     <div class="col-md-8">
                         <p class="text_info">
@@ -33,7 +33,7 @@
             <div class="col-md-6 col-lg-4 mt-3 state">
                 <div class="row">
                     <div class="col-md-4">
-                        <img src="images/7.jpg" alt="" />
+                        <img data-src="images/7.jpg" alt="state" />
                     </div>
                     <div class="col-md-8">
                         <p class="text_info">
@@ -47,7 +47,7 @@
             <div class="col-md-6 col-lg-4 mt-3 state">
                 <div class="row">
                     <div class="col-md-4">
-                        <img src="images/7.jpg" alt="" />
+                        <img data-src="images/7.jpg" alt="state" />
                     </div>
                     <div class="col-md-8">
                         <p class="text_info">
@@ -61,7 +61,7 @@
             <div class="col-md-6 col-lg-4 mt-3 state">
                 <div class="row">
                     <div class="col-md-4">
-                        <img src="images/7.jpg" alt="" />
+                        <img data-src="images/7.jpg" alt="state" />
                     </div>
                     <div class="col-md-8">
                         <p class="text_info">
@@ -75,7 +75,7 @@
             <div class="col-md-6 col-lg-4 mt-3 state">
                 <div class="row">
                     <div class="col-md-4">
-                        <img src="images/7.jpg" alt="" />
+                        <img data-src="images/7.jpg" alt="state" />
                     </div>
                     <div class="col-md-8">
                         <p class="text_info">

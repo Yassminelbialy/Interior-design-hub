@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Quiz;
 use Illuminate\Http\Request;
+use Uuid;
 
 class QuizController extends Controller
 {
@@ -24,7 +25,9 @@ class QuizController extends Controller
      */
     public function create()
     {
-        //
+
+        return response()->json(['message' => 'User status updated successfully.']);
+
     }
 
     /**
@@ -35,8 +38,49 @@ class QuizController extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
+
+           $quiz =  new Quiz ;
+
+           $quiz->area = $request->area;
+
+           $quiz->timeOfRsponse = $request->timeOfRsponse;
+
+           $quiz->customerPhoneNo = $request->customerPhoneNo;
+
+
+           $quiz->customerName = $request->customerName;
+
+           $quiz->contactTybe = $request->contactTybe;
+
+           $quiz->participateState = $request->participateState;
+
+
+           $quiz->styles =implode(" \n ", $request->styles);
+           $quiz->design = $request->design ;
+
+              $response=$quiz->save();
+
+
+              if ($files = $request->file('file'))
+              {
+                
+                foreach($request->file('file') as $file)
+                {
+                          $uuid =Uuid::generate()->string;
+                              $path=$uuid.".".$file->getClientOriginalExtension();
+                              $desti='quizimages/';
+                              $file->move($desti,$path);
+                              $response1 =   $quiz->images()->create(['image'=>$path]);
+                }
+
+
+              }
+
+
+
+         return response()->json( ['mydata'=> $request->all(),'myresponse'=> $response1,'opject'=>$quiz,'images'=>$quiz->images] );
+
+        }
 
     /**
      * Display the specified resource.

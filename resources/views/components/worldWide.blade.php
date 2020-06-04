@@ -11,7 +11,7 @@
             <div class="col-md-7">
                 <div class="stats_video">
                     <div class="overlay"></div>
-                    <img src="../images/7.jpg" alt="" />
+                    <img data-src="../images/7.jpg" alt="" />
                     <div class="wrapper">
                         <div class="icon-wrapper">
                             <div class="icon">

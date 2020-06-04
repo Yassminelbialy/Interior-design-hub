@@ -3,7 +3,7 @@
         <div class="col-sm-12 col-lg-6 ">
             @foreach ($ceoInfo as $ceo )
             <div class="img">
-            <img src="{{$ceo->image}}" alt="" />
+            <img data-src="{{$ceo->image}}" alt="Alexandra" />
             </div>
             <div class="wrapper">
                 <div class="icon-wrapper">
@@ -36,7 +36,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-12 col-lg-6 ">
+        <div class="col-lg-6">
             <div class="stats">
                 <h2 class="h1">Our Main Statistics</h2>
                

@@ -1,3 +1,12 @@
+
+    @push('token')
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    @endpush
+
+
+@push('quizscript')
+<script src="{{URL::asset('js/quizscript.js')}}"></script>
+@endpush
     <!-- Button trigger modal -->
      <button class="open_quizes_modal" style="display: none"
       type="button"
@@ -9,7 +18,7 @@
     </button> -->
 
     <div
-      class="modal modal_quizes fade"
+      class="modal modal_quizes fade "
       id="modal_quiz"
       tabindex="-1"
       role="dialog"
@@ -76,7 +85,7 @@
                         aria-labelledby="pills-quiz1-tab"
                       >
                         <form action="">
-                          <h2 class="mb-4">Asdsa sad sadasda sadsadasd sadfsa ?</h2>
+                          <h2 class="mb-4">Which Design You Enjoy ? ?</h2>
                           <div class="container">
                             <div class="row">
                               <div class="col-md-4 col-sm-6">
@@ -87,7 +96,7 @@
                                       alt="picture_style"
                                     />
                                     <label class="checkbox_container">
-                                          <input type="radio" name="check_quiz1">
+                                          <input type="radio" class="q1 x" name="check_quiz1" value="q1 1">
                                           <span class="checkmark"></span>
                                       </label>
                                   <p>Classic</p>
@@ -100,8 +109,8 @@
                                     alt="picture_style"
                                   />
                                <label class="checkbox_container">
-                                    <input type="radio" name="check_quiz1">
-                                    <span class="checkmark"></span>
+                                <input type="radio" class="q1 x" name="check_quiz1" value="q1 2">
+                                <span class="checkmark"></span>
                                 </label>
                                   <p>Classic</p>
                                 </div>
@@ -114,8 +123,8 @@
                                     alt="picture_style"
                                   />
                                <label class="checkbox_container">
-                                    <input type="radio" name="check_quiz1">
-                                    <span class="checkmark"></span>
+                                <input type="radio" class="q1 x" name="check_quiz1" value="q1 3">
+                                <span class="checkmark"></span>
                                 </label>
                                   <p>Classic</p>
                                 </div>
@@ -127,8 +136,8 @@
                                     alt="picture_style"
                                   />
                                <label class="checkbox_container">
-                                    <input type="radio" name="check_quiz1">
-                                    <span class="checkmark"></span>
+                                <input type="radio" class="q1 x" name="check_quiz1" value="q1 4" >
+                                <span class="checkmark"></span>
                                 </label>
                                   <p>Classic</p>
                                 </div>
@@ -140,8 +149,8 @@
                                     alt="picture_style"
                                   />
                                <label class="checkbox_container">
-                                    <input type="radio" name="check_quiz1">
-                                    <span class="checkmark" name="check_quiz1"></span>
+                                <input type="radio" class="q1 x" name="check_quiz1" value="q1 5">
+                                <span class="checkmark" name="check_quiz1"></span>
                                 </label>
                                   <p>Classic</p>
                                 </div>
@@ -153,15 +162,15 @@
                                     alt="picture_style"
                                   />
                                <label class="checkbox_container">
-                                    <input type="radio" name="check_quiz1">
-                                    <span class="checkmark"></span>
+                                <input type="radio" class="q1 x" name="check_quiz1" value="q1 6">
+                                <span class="checkmark"></span>
                                 </label>
                                   <p>Classic</p>
                                 </div>
 
                               </div>
                               <div class="btn_content text-center mt-3 w-100">
-                                <a data-value="2" class="btn btn_next" id="pills-quiz2-tab" data-toggle="pill" href="#pills-quiz2" role="tab" aria-controls="pills-quiz2" aria-selected="false">next</a>
+                                <a data-value="2" class="btn btn_next disabled" id="buttontab1" data-toggle="pill" href="#pills-quiz2" role="tab" aria-controls="pills-quiz2" aria-selected="false">next</a>
                               </div>
                             </div>
                           </div>
@@ -180,9 +189,9 @@
                               <img class="w-100 h-100" src="images/map.PNG" alt="">
                             </div>
                             <div class="col-md-8 col-sm-6">
-                              <h2>yandix ysad kqwey</h2>
+                              <h2>Lets Know More About Our Work</h2>
                               <div class="text_for_rang1">
-                                <span class="mr-2">yandix ysad kqwey yandix ysad </span> <span>5000</span> <span>M<sup>2</sup></span>
+                                <span class="mr-2">Get Info About Your Site Map and Area ?  </span> <span>5000</span> <span>M<sup>2</sup></span>
                               </div>
 
                               <div class="range">
@@ -194,14 +203,14 @@
                                         </span>
                                          <span class="maximum">5000 M<sup>2</sup></span>
                                       </div>
-                                      <input type="range" min="1" max="5000" value="3000" id="myrange" class="slider_range" >
+                                      <input type="range" min="1" max="5000" value="3000" id="myrange" class="slider_range q2"  name="area">
 
                                      </div>
                                 </div>
                               <p>yandix ysad kqwey yandix ysad yandix ysad kqwey yandix </p>
                               <div class="input-group text-center">
                                 <div class="custom-file">
-                                  <input data-browse="Bestand kiezen.PNG" type="file" class="custom-file-input" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04">
+                                  <input data-browse="Bestand kiezen.PNG" multiple type="file" class="custom-file-input check_quiz3 q2" name="file" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04">
                                   <label class="custom-file-label" for="inputGroupFile04"></label>
                                 </div>
                                 <div class="input-group-append">
@@ -211,7 +220,7 @@
 
                             </div>
                             <div class="btn_content text-center mt-3 w-100">
-                               <a data-value="3" class="btn btn_next " id="pills-quiz3-tab" data-toggle="pill" href="#pills-quiz3" role="tab" aria-controls="pills-quiz3" aria-selected="false">next</a>
+                               <a   data-value="3" class="btn btn_next disabled buttontab2 " id="pills-quiz3-tab" data-toggle="pill" href="#pills-quiz3" role="tab" aria-controls="pills-quiz3" aria-selected="false">next</a>
                             </div>
                           </div>
                         </div>
@@ -226,7 +235,7 @@
                       >
                         <section class="quiz3">
                           <form action="">
-                            <h2>Asdsa sad sadasda sadsadasd sadfsa ?</h2>
+                            <h2>Which Styles You Prefer ?</h2>
                             <div class="container">
                               <div class="row">
                                 <div class="col-md-3 col-sm-6">
@@ -236,7 +245,7 @@
                                       alt="picture_style"
                                     />
                                      <label class="checkbox_container">
-                                    <input type="radio" name="check_quiz3">
+                                    <input type="checkbox" name="check_quiz3" value="1" >
                                     <span class="checkmark"></span>
                                 </label>
                                     <p>Classic</p>
@@ -249,8 +258,8 @@
                                       alt="picture_style"
                                     />
                                      <label class="checkbox_container">
-                                    <input type="radio" name="check_quiz3">
-                                    <span class="checkmark"></span>
+                                        <input type="checkbox" name="check_quiz3" value="2" >
+                                        <span class="checkmark"></span>
                                 </label>
                                     <p>Classic</p>
                                   </div>
@@ -263,8 +272,8 @@
                                       alt="picture_style"
                                     />
                                      <label class="checkbox_container">
-                                    <input type="radio" name="check_quiz3">
-                                    <span class="checkmark"></span>
+                                        <input type="checkbox" name="check_quiz3" value="3" >
+                                        <span class="checkmark"></span>
                                 </label>
                                     <p>Classic</p>
                                   </div>
@@ -276,8 +285,8 @@
                                       alt="picture_style"
                                     />
                                      <label class="checkbox_container">
-                                    <input type="radio" name="check_quiz3">
-                                    <span class="checkmark"></span>
+                                        <input type="checkbox" name="check_quiz3" value="4" >
+                                        <span class="checkmark"></span>
                                 </label>
                                     <p>Classic</p>
                                   </div>
@@ -289,8 +298,8 @@
                                       alt="picture_style"
                                     />
                                      <label class="checkbox_container">
-                                    <input type="radio" name="check_quiz3">
-                                    <span class="checkmark"></span>
+                                        <input type="checkbox" name="check_quiz3" value="5" >
+                                        <span class="checkmark"></span>
                                 </label>
                                     <p>Classic</p>
                                   </div>
@@ -302,8 +311,8 @@
                                       alt="picture_style"
                                     />
                                      <label class="checkbox_container">
-                                    <input type="radio" name="check_quiz3">
-                                    <span class="checkmark"></span>
+                                        <input type="checkbox" name="check_quiz3" value="6" >
+                                        <span class="checkmark"></span>
                                 </label>
                                     <p>Classic</p>
                                   </div>
@@ -315,8 +324,8 @@
                                       alt="picture_style"
                                     />
                                      <label class="checkbox_container">
-                                    <input type="radio" name="check_quiz3">
-                                    <span class="checkmark"></span>
+                                        <input type="checkbox" name="check_quiz3" value="7" >
+                                        <span class="checkmark"></span>
                                 </label>
                                     <p>Classic</p>
                                   </div>
@@ -328,14 +337,14 @@
                                       alt="picture_style"
                                     />
                                      <label class="checkbox_container">
-                                    <input type="radio" name="check_quiz3">
-                                    <span class="checkmark"></span>
+                                        <input type="checkbox" name="check_quiz3" value="8" >
+                                        <span class="checkmark"></span>
                                 </label>
                                     <p>Classic</p>
                                   </div>
                                 </div>
                                 <div class="btn_content text-center mt-3 w-100">
-                                  <a data-value="4" class="btn btn_next" id="pills-quiz4-tab" data-toggle="pill" href="#pills-quiz4" role="tab" aria-controls="pills-quiz4" aria-selected="false">next</a>
+                                  <a data-value="4" class="btn btn_next buttontab3 disabled buttontab3" id="pills-quiz4-tab" data-toggle="pill" href="#pills-quiz4" role="tab" aria-controls="pills-quiz4" aria-selected="false">next</a>
                                 </div>
                               </li>
                               </div>
@@ -357,40 +366,40 @@
                             <img class="w-100 h-100" src="images/quiz4.jpg" alt="">
                           </div>
                           <div class="col-md-8 col-sm-6">
-                            <h2>yandix ysad kqwey</h2>
+                            <h2>Would you To Participate In Development?</h2>
 
                             <div class="border choose_multi mt-3">
                               <label class="checkbox_container">
-                                <input type="radio" name="check_quiz4">
+                                <input type="radio" name="check_quiz4" class="q4" value="111">
                                 <span class="checkmark"></span>
                             </label>
-                                <p>Cpongu, kaskak  Cpongu, kaskak  </p>
+                                <p> yes </p>
                             </div>
                             <div class="border choose_multi mt-3">
                               <label class="checkbox_container">
-                                <input type="radio" name="check_quiz4">
+                                <input type="radio" name="check_quiz4" class="q4" value="222">
                                 <span class="checkmark"></span>
                             </label>
-                                <p>Cpongu, kaskak  Cpongu, kaskak  </p>
+                                <p>No </p>
                             </div>
                             <div class="border choose_multi mt-3">
                               <label class="checkbox_container">
-                                <input type="radio" name="check_quiz4">
+                                <input type="radio" name="check_quiz4" class="q4" value="333">
                                 <span class="checkmark"></span>
                             </label>
-                                <p>Cpongu, kaskak  Cpongu, kaskak  </p>
+                                <p>maybe </p>
                             </div>
                             <div class="border choose_multi mt-3">
                               <label class="checkbox_container">
-                                <input type="radio" name="check_quiz4">
+                                <input type="radio" name="check_quiz4" class="q4 " value="444">
                                 <span class="checkmark"></span>
                             </label>
-                               <p>Cpongu, kaskak  Cpongu, kaskak  </p>
+                               <p>i dont know </p>
                             </div>
 
                           </div>
                           <div class="btn_content text-center mt-3 w-100">
-                            <a data-value="5" class="btn btn_next" id="pills-quiz5-tab" data-toggle="pill" href="#pills-quiz5" role="tab" aria-controls="pills-quiz5" aria-selected="false">next</a>
+                            <a data-value="5" class="btn btn_next disabled buttontab4"  id="pills-quiz5-tab" data-toggle="pill" href="#pills-quiz5" role="tab" aria-controls="pills-quiz5" aria-selected="false">next</a>
                           </div>
                         </div>
                       </div>
@@ -409,39 +418,39 @@
                           <img class="w-100 h-100" src="images/quiz5.jpg" alt="">
                         </div>
                         <div class="col-md-8 col-sm-6">
-                          <h2>yandix ysad kqwey kqwey kqwey?</h2>
+                          <h2>Are You In Urgent ?</h2>
 
                           <div class="border choose_multi mt-3">
                             <label class="checkbox_container">
-                              <input type="checkbox">
-                              <span class="checkmark"></span>
+                              <input type="radio" class="q5 " value="1">
+                              <span class="checkmark "></span>
                           </label>
-                             <p>Cpongu, kaskak  Cpongu, kaskak  </p>
+                             <p> Yes My Requesr is Very Urgent </p>
                           </div>
                           <div class="border choose_multi mt-3">
                             <label class="checkbox_container">
-                              <input type="checkbox">
-                              <span class="checkmark"></span>
+                                <input type="radio" class="q5 " value="2">
+                                <span class="checkmark"></span>
                           </label>
-                             <p>Cpongu, kaskak  Cpongu, kaskak  </p>
+                             <p>   Yes My Requesr is Slightly Urgent</p>
                           </div>
                           <div class="border choose_multi mt-3">
                             <label class="checkbox_container">
-                              <input type="checkbox">
+                                <input type="radio" class="q5 " value="3">
                               <span class="checkmark"></span>
                           </label>
-                              <p>Cpongu, kaskak  Cpongu, kaskak  </p>
+                              <p> Not Mattar . </p>
                           </div>
                           <div class="border choose_multi mt-3">
                             <label class="checkbox_container">
-                              <input type="checkbox">
+                                <input type="radio" class="q5 " value="4">
                               <span class="checkmark"></span>
                           </label>
-                              <p>Cpongu, kaskak  Cpongu, kaskak  </p>
+                              <p> No My Requesr is Not Important Instant. </p>
                           </div>
                         </div>
                         <div class="btn_content text-center mt-3 w-100">
-                            <a data-value="5" class="btn btn_next" id="pills-quiz6-tab" data-toggle="pill" href="#pills-quiz6" role="tab" aria-controls="pills-quiz6" aria-selected="false">next</a>
+                            <a data-value="5" class="btn btn_next buttontab5 disabled" id="pills-quiz6-tab" data-toggle="pill" href="#pills-quiz6" role="tab" aria-controls="pills-quiz6" aria-selected="false">next</a>
                         </div>
                       </div>
                     </div>
@@ -455,7 +464,7 @@
                   aria-labelledby="pills-quiz5-tab"
                 >
                 <section class="quiz6">
-                  <h2>yandix ysad kqwey kqwey kqwey?</h2>
+                  <h2>Choose Contact Tybe U Prefer ?</h2>
                   <div class="container-fluid">
                     <div class="row quiz6_content">
 
@@ -471,7 +480,7 @@
                                   <div class="calls_container">
                                   <span>Viber</span><img class="viber_image" src="images/viber.png" alt="">
                                   <label class="checkbox_container">
-                                    <input type="checkbox">
+                                    <input type="radio" class="q6" value="viber">
                                     <span class="checkmark"></span>
                                   </label>
                                   </div>
@@ -480,7 +489,7 @@
                                   <div class="calls_container">
                                   <span>Telegram</span><i class="fab fa-telegram-plane"></i>
                                   <label class="checkbox_container">
-                                    <input type="checkbox">
+                                    <input type="radio" class="q6" value="telegram">
                                     <span class="checkmark"></span>
                                   </label>
                                   </div>
@@ -489,29 +498,29 @@
                                   <div class="calls_container">
                                   <span>Whatsapp</span><img class="viber_image" src="images/whatsapp1.png" alt="">
                                   <label class="checkbox_container">
-                                    <input type="checkbox">
+                                    <input type="radio" class="q6" value="whatsapp">
                                     <span class="checkmark"></span>
                                   </label>
                                   </div>
                                 </div>
                                 <div class="col-md-6 mt-3">
                                   <div class="calls_container">
-                                  <span>Ha no4ty</span><img class="viber_image" src="images/viber.png" alt="">
+                                  <span>Normal</span><img class="viber_image" src="images/viber.png" alt="">
                                   <label class="checkbox_container">
-                                    <input type="checkbox">
+                                    <input type="radio" class="q6" value="normal">
                                     <span class="checkmark"></span>
                                   </label>
                                   </div>
                                 </div>
 
                               <h2>
-                                Bbeante Bawe Ankue Bawe Ankue Bbeante Bawe Ankue Bbeante
+                               Asatisfied Customer Is THe Best  Buissnes Strategy :) .
                               </h2>
-                              <input  type="text" placeholder="Bawe UmR*">
+                              <input  type="text" placeholder="You name*" class="q7" name="name">
 
-                              <input type="text" placeholder="Teneqoh Qar CbR3u*">
+                              <input type="text" placeholder="Your Phone*" class="q7" name="phone">
 
-                              <button class="btn_next done">nonyNTb PE3ynbTAT</button>
+                              <button  disabled class="btn_next done submitquiz" >Send Us All Answers </button>
 
                               <div class="check_it text-left">
                                 <label class="checkbox_container2">

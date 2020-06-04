@@ -6,7 +6,6 @@ use App\Project;
 use App\Category;
 use App\ProjectImage;
 use Illuminate\Http\Request;
-use Ramsey\Uuid\Rfc4122\UuidV1;
 use Uuid ;
 
 class ProjectController extends Controller
@@ -127,8 +126,8 @@ class ProjectController extends Controller
      */
     public function destroy(Project $project)
     {
-        // $project->delete();
-        dd($project);
+        $project->delete();
+        // dd($project);
         return redirect(route('manager.project.index'));
     }
 }
