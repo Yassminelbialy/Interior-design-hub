@@ -14,7 +14,7 @@ class QuizController extends Controller
      */
     public function index()
     {
-        //
+        
     }
 
     /**

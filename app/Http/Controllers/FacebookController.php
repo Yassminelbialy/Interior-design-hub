@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Fbpost;
 
 class FacebookController extends Controller
 {
@@ -13,7 +14,8 @@ class FacebookController extends Controller
      */
     public function index()
     {
-        return "hello facebook images";
+         
+        return view('manager.facebook' , ['dataOfPosts' => Fbpost::all()]);
     }
 
     /**
@@ -23,7 +25,7 @@ class FacebookController extends Controller
      */
     public function create()
     {
-        //
+        return view('manager.addImage');
     }
 
     /**
@@ -34,7 +36,25 @@ class FacebookController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $imgInstance = new Fbpost();
+        $imgInstance->fbLink = $request->linkinput;
+        if($request->hasfile('image')){
+
+            $file = $request->file('image');
+            $extension = $file->getClientOriginalExtension();
+            $fileName = time() . '.' . $extension;
+            $file->move('images/fbimages' , $fileName);
+            $imgInstance->image = $fileName;
+        }else{
+            return $request;
+            $imgInstance->image = '';
+        }
+
+        $imgInstance->save();
+
+        return redirect('/manager/fbPosts');
+       
     }
 
     /**
@@ -79,6 +99,10 @@ class FacebookController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $delImage = Fbpost::find($id);
+        $delImage->delete();
+
+        return redirect('/manager/fbPosts');
+        
     }
 }

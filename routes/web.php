@@ -35,7 +35,6 @@ Route::prefix('manager')->name('manager.')->group(function(){
     Route::resource('alexandra', 'AlexandrainfoController');
     Route::resource('fbPosts' ,'FacebookController');
     // Route::resource('project', 'ProjectController');
-
 });
 Route::resource('project.images', 'ProjectImageController');
 Route::post('/contact','ContactController@send');
