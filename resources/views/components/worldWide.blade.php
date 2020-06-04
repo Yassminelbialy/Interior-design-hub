@@ -15,9 +15,9 @@
                     <div class="wrapper">
                         <div class="icon-wrapper">
                             <div class="icon">
-                                <i class="fa fa-play" data-toggle="modal" data-target="#myModal"></i>
+                                <i class="fa fa-play" data-toggle="modal" data-target="#video2"></i>
                                 <!-- Modal -->
-                                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal fade" id="video2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
                                             <div class="modal-body">
@@ -26,7 +26,11 @@
                                                     <span aria-hidden="true">&times;</span>
                                                 </button>        
                                                 <div class="embed-responsive embed-responsive-16by9">
-                                                    <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
+                                                    <video  controls id="vidEle" class="embed-responsive-item" allowscriptaccess="always" allow="autoplay">
+                                                    
+                                                        <source src="videos/2.mp4" type="video/mp4" >
+                                                      Your browser does not support the video tag.
+                                                  </video>
                                                 </div>
                                         
                                             </div>
@@ -41,4 +45,9 @@
             </div>
         </div>
     </div>
+    <script>
+        
+        document.getElementById("vidEle").disabled=false;
+
+    </script>
 </section>
