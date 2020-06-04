@@ -8,6 +8,12 @@ class Quiz extends Model
 {
     //
 
+
+    public function images()
+    {
+        return $this->hasMany('App\QuizImage','quiz_id');
+    }
+
     protected $guarded = [];
 
 }

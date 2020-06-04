@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Quiz;
 use Illuminate\Http\Request;
-
+use Uuid;
 
 class QuizController extends Controller
 {
@@ -53,10 +53,42 @@ class QuizController extends Controller
            $quiz->contactTybe = $request->contactTybe;
 
            $quiz->participateState = $request->participateState;
-           $response=$quiz->save();
 
-         return response()->json( ['mydata'=> $request->all(),'myresponse'=>$response]);
-    }
+
+           $quiz->styles =implode(" \n ", $request->styles);
+           $quiz->design = $request->design ;
+
+              $response=$quiz->save();
+
+
+              if ($files = $request->file('file'))
+              {
+                // foreach($request->file('file') as $file)
+                // {
+                //           $uuid =Uuid::generate()->string;
+                //               $path=$uuid.".".$request->file('file')->getClientOriginalExtension();
+                //               $desti='quizimages/';
+                //               $files->move($desti,$path);
+                //               $response1 =   $quiz->images()->create(['image'=>$path]);
+                // }
+                foreach($request->file('file') as $file)
+                {
+                          $uuid =Uuid::generate()->string;
+                              $path=$uuid.".".$file->getClientOriginalExtension();
+                              $desti='quizimages/';
+                              $file->move($desti,$path);
+                              $response1 =   $quiz->images()->create(['image'=>$path]);
+                }
+
+
+              }
+
+
+
+         return response()->json( ['mydata'=> $request->all(),'myresponse'=> $response1,'opject'=>$quiz,'images'=>$quiz->images] );
+        //  return response()->json( ['mydata'=> $request->all(),'myresponse'=>$request->file('file')[0]->getClientOriginalExtension()] );
+
+        }
 
     /**
      * Display the specified resource.

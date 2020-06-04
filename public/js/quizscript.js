@@ -19,9 +19,8 @@ var quizform ={
     customerPhone:'',
     category:'',
     styles:[],
-    images:''
+    images:[]
 }
- var myform =new FormData ();
 
 
 $('.modal_quizes').on('change','.q1',(event)=>
@@ -46,7 +45,7 @@ $('.modal_quizes').on('change','.q1',(event)=>
                 }
                 if(event.target.name=='file')
                 {
-                    quizform.images = event.target.files[0];
+                    quizform.images = event.target.files;
                 }
 
 
@@ -154,8 +153,16 @@ $('.modal_quizes').on('change','.q4',(event)=>
 
         $('.submitquiz').on('click',(event)=>
         {
+
+                var myform =new FormData ();
+
                 console.log(quizform)
-                // myform.append('design_id',quizform.design_id);
+                quizform.styles.forEach((a)=>{
+                        myform.append('styles[]',a);
+                })
+
+                myform.append('design',quizform.design_id);
+
                 myform.append('area',quizform.area);
                 myform.append('timeOfRsponse',quizform.timeOfREsponse);
                 myform.append('customerPhoneNo',quizform.customerPhone);
@@ -165,9 +172,18 @@ $('.modal_quizes').on('change','.q4',(event)=>
                 myform.append('participateState',quizform.participantState);
                 if(quizform.images)
                 {
-                    myform.append('file',quizform.images);
+                    // myform.append('file[]',quizform.images);
+
+
+                for (let i=0 ; i < quizform.images.length ; i++)
+                {
+                           myform.append('file[]',quizform.images[i]);
+
 
                 }
+                }
+
+
                         $.ajax({
                 url: "http://localhost:8000/quiz",
                 dataType: 'script',

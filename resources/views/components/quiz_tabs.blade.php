@@ -210,7 +210,7 @@
                               <p>yandix ysad kqwey yandix ysad yandix ysad kqwey yandix </p>
                               <div class="input-group text-center">
                                 <div class="custom-file">
-                                  <input data-browse="Bestand kiezen.PNG" type="file" class="custom-file-input check_quiz3 q2" name="file" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04">
+                                  <input data-browse="Bestand kiezen.PNG" multiple type="file" class="custom-file-input check_quiz3 q2" name="file" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04">
                                   <label class="custom-file-label" for="inputGroupFile04"></label>
                                 </div>
                                 <div class="input-group-append">

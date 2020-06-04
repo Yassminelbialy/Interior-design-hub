@@ -23,6 +23,8 @@ class CreateQuizzesTable extends Migration
             $table->string('contactTybe')->nullable();
             $table->string('customerName')->nullable();
             $table->string('customerPhoneNo')->nullable();
+
+            $table->string('design')->nullable();
             // $table->unsignedBigInteger('category_id')->nullable();
             // $table->foreign('design_id')->references('id')->on('designs');
 
