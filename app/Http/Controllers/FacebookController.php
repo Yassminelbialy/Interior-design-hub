@@ -76,7 +76,7 @@ class FacebookController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('manager.facebookEdit',['facebppkImage' => Fbpost::find($id)]);
     }
 
     /**
@@ -88,7 +88,23 @@ class FacebookController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        
+        $imgInstance = Fbpost::find($id);
+       
+        $imgInstance->fbLink = $request->fbLink;
+        if($request->hasfile('image'))
+        {
+
+            $file = $request->file('image');
+            $extension = $file->getClientOriginalExtension();
+            $fileName = time() . '.' . $extension;
+            $file->move('images/fbimages' , $fileName);
+            $imgInstance->image = $fileName; 
+        }
+       
+        $imgInstance->save();
+
+        return redirect('/manager/fbPosts');       
     }
 
     /**
