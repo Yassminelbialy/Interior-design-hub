@@ -3,7 +3,7 @@
 @section('content')
 
 
-    @component('components.header')
+    @component('components.header',['contact' => $contact])
     @endcomponent
 
     @component('components.statitics')
