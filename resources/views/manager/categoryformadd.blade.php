@@ -16,7 +16,7 @@
 <script type="text/javascript" src="{{ asset('css/scribt.js') }}"></script>
     <div class="container">
 {{ Form::open(['route' => 'manager.category.store','enctype' => 'multipart/form-data','method'=>'post'])}}
-<div class="container contact">
+<div class="container contact text-light">
 	<div class="row">
 		<div class="col-md-3">
 			<div class="contact-info">

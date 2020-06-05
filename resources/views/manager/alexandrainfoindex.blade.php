@@ -3,7 +3,7 @@
 @section('adminbase')
 
 <div class="text-center">
-    <table class="table table-hover table-dark">
+  <table class="table table-dark" style="background-color: rgba(0,0,0,0.5);">
         <thead>
             
           <tr>

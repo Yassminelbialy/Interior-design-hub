@@ -3,8 +3,8 @@
 
 @section('adminbase')
 
-<a href="fbPosts/create">Add image with link</a>
-<table class="table table-dark table-stripped table-bordered">
+<a href="fbPosts/create" class="btn btn-info m-2">Add image with link</a>
+<table class="table table-dark" style="background-color: rgba(0,0,0,0.5);">
   <thead>
     <tr>
       <th scope="col" class="text-light h3">#</th>

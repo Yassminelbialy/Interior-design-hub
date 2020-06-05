@@ -3,7 +3,7 @@
 @section('adminbase')
 
 <div class="text-center">
-    <table class="table table-hover table-dark">
+    <table class="table table-dark" style="background-color: rgba(0,0,0,0.5);">
         <thead>
             <tr>
             <td colspan="6"><a href="{{route('manager.category.create')}}"><i class="fas fa-plus fa-4x" style="color: blue"></i></a></td>

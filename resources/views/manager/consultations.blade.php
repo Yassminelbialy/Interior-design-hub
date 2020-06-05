@@ -3,7 +3,7 @@
 
 @section('adminbase')
 
-<table class="table table-dark table-stripped table-bordered">
+<table class="table table-dark" style="background-color: rgba(0,0,0,0.5);">
   <thead>
     <tr>
       <th scope="col" class="text-light h3">#</th>

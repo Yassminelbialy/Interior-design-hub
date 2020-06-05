@@ -13,7 +13,7 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('css/fbstyle.css') }}" >
 
 
-    <div class="container">
+    <div class="container text-light">
             
             <div class="row">
                     <div class="col-lg-8">
@@ -30,10 +30,10 @@
 
                         <div class="form-group">
                             <label for="exampleFormControlFile1">Upload Image</label>
-                            <input type="file" class="form-control-file btn btn-success" name="image">
+                            <input type="file" class="form-control-file" name="image">
                         </div>
 
-                        {!! Form::submit('Save !' , ['class'=>'btn btn-success']) !!}
+                        {!! Form::submit('Save !' , ['class'=>'btn btn-info']) !!}
 
                         {!! Form::close() !!}
 

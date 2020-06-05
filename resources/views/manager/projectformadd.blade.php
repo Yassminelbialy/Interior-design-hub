@@ -3,7 +3,7 @@
 @section('adminbase')
 <link rel="stylesheet" type="text/css" href="{{ asset('css/styles.css') }}" >
 {{ Form::open(['route' => 'manager.project.store','enctype' => 'multipart/form-data','method'=>'post'])}}
-	<div class="row">
+	<div class="row text-light">
 		<div class="col-md-3">
 			<div class="contact-info">
 				{{-- <img src="https://img.freepik.com/free-vector/abstract-book-pencil-logo_10724-10.jpg?size=338&ext=jpg" alt="image" class="imgweb"/> --}}

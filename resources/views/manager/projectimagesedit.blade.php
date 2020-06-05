@@ -15,7 +15,7 @@
 {{ Form::model($data,['route' => ['manager.project.images.update',$id,$data->id],'enctype' => 'multipart/form-data','method'=>'PUT'])}}
 
 
-<div class="form-group">
+<div class="form-group text-light">
   <label class="control-label col-sm-4" for="lname">Image Description:</label>
   <div class="col-sm-10">
     {!! Form::text('description', null, ['required'=>'true','class'=>"form-control",'placeholder'=>"Project Hint",'aria-label'=>"Book Author Nmae",'id'=>"lname"]) !!}
