@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Fbpost;
 use Illuminate\Http\Request;
-
-class FbpostController extends Controller
+use App\User;
+class AllUsersController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +13,8 @@ class FbpostController extends Controller
      */
     public function index()
     {
-        //
+        return view('manager.user',['data'=>User::all()]);
+
     }
 
     /**
@@ -41,10 +41,10 @@ class FbpostController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Fbpost  $fbpost
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Fbpost $fbpost)
+    public function show($id)
     {
         //
     }
@@ -52,10 +52,10 @@ class FbpostController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Fbpost  $fbpost
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Fbpost $fbpost)
+    public function edit($id)
     {
         //
     }
@@ -64,10 +64,10 @@ class FbpostController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Fbpost  $fbpost
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Fbpost $fbpost)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -75,11 +75,14 @@ class FbpostController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Fbpost  $fbpost
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Fbpost $fbpost)
+    public function destroy($id)
     {
-        //
+        $delImage = User::find($id);
+        $delImage->delete();
+
+        return redirect('/manager/user');
     }
 }

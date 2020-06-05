@@ -16,7 +16,7 @@ class AddFkToProjectsTable extends Migration
         Schema::table('projects', function (Blueprint $table) {
             //
             $table->unsignedBigInteger('category_id')->nullable();
- $table->foreign('category_id')->references('id')->on('categories');
+            $table->foreign('category_id')->references('id')->on('categories');
         });
     }
 

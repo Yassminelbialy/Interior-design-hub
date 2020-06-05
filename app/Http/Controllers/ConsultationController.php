@@ -6,7 +6,7 @@ use App\Contact;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\SendEmail;
-
+use App\Consultation;
 
 class ConsultationController extends Controller
 {
@@ -39,4 +39,39 @@ class ConsultationController extends Controller
             return back()->with('success' , 'thanx for contacting us :)');
 
      }
+    // ************ Yassmin Part *************************
+     public function index()
+    {
+        return view('manager.consultations',['data'=>Consultation::all()]);
+
+    }
+
+     public function create()
+    {
+        //
+    }
+    public function store(Request $request)
+    {
+        //
+    }
+    public function show(Contact $contact)
+    {
+        //
+    }
+    public function edit(Contact $contact)
+    {
+        //
+    }
+    public function update(Request $request, Contact $contact)
+    {
+        //
+    }
+    public function destroy($id)
+    {
+        $delImage = Consultation::find($id);
+        $delImage->delete();
+
+        return redirect('/manager/consultations');
+    }
+
 }

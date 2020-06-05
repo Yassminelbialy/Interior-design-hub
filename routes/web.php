@@ -34,12 +34,15 @@ Route::prefix('manager')->name('manager.')->group(function(){
     Route::resource('project.images', 'ProjectImageController');
     Route::resource('alexandra', 'AlexandrainfoController');
     Route::resource('fbPosts' ,'FacebookController');
-    Route::resource('consultations' ,'FacebookController');
+    Route::resource('consultations' ,'ConsultationController');
+    Route::resource('user' ,'AllUsersController');
+
 
 
 });//manager routes
 
 Route::resource('quiz', 'QuizController');
+Route::resource('profile', 'OrderController');
 
 
 Route::resource('project.images', 'ProjectImageController');

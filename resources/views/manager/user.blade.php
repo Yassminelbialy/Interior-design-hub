@@ -9,8 +9,7 @@
       <th scope="col">#</th>
       <th scope="col">Name </th>
       <th scope="col">Phone</th>
-      <th scope="col">Comment</th>
-      <th scope="col"> Time to call </th>
+      <th scope="col">Email</th>
 
     </tr>
 
@@ -20,12 +19,12 @@
     <td scope="col"></td>  
     <td scope="col">{{ $instance->name }}</td>
     <td scope="col">{{ $instance->phone }}</td>
-    <td scope="col">{{ $instance->comment }}</td>
-    <td scope="col">{{ $instance->timeToCall }}</td>
+    <td scope="col">{{ $instance->email }}</td>
 
+    
 
     <td>
-    {!! Form::open(['route' => ['manager.consultations.destroy', $instance->id] , 'method'=>'delete']) !!}
+    {!! Form::open(['route' => ['manager.user.destroy', $instance->id] , 'method'=>'delete']) !!}
                         {!! Form::submit('Delete !' , ['class'=>'btn btn-danger']) !!}
     {!! Form::close() !!}
     </td>
