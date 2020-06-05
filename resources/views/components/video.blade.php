@@ -16,7 +16,7 @@
                                 <div class="modal-content" >
                                     <div class="modal-body">
                                         <button type="button" class="close close_video_ceo" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true" >&times;</span>
+                                            <span aria-hidden="true" style="margin-left:30px" >&times;</span>
                                         </button>
                                         <div>
                                             <video class="video_ceo"  controls >

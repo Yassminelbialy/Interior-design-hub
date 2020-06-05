@@ -42,7 +42,7 @@
     @component('components.testimonial')
     @endcomponent
 
-    @component('components.contact')
+    @component('components.contact',['contact' => $contact,'ceoInfo' => $ceoInfo])
     @endcomponent
 
     @component('components.map')
