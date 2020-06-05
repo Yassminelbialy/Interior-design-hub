@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Order;
+use App\User;
+use App\Quiz;
 use Illuminate\Http\Request;
 
 class OrderController extends Controller
@@ -14,7 +16,14 @@ class OrderController extends Controller
      */
     public function index()
     {
-        return view('userAccount');
+
+        $user_phone = auth()->user()->phone;
+        
+        $user_phone_quiz = Quiz::where('customerPhoneNo','=',$user_phone)->get();     
+
+         $order_list = Order::where('user_id', '=', auth()->user()->id)->get();
+         return view('userAccount',['orderList'=>$order_list]);
+
     }
 
     /**
