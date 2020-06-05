@@ -7,9 +7,9 @@
 <table class="table table-dark table-stripped table-bordered">
   <thead>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">Image</th>
-      <th scope="col">Link</th>
+      <th scope="col" class="text-light h3">#</th>
+      <th scope="col" class="text-light h3">Image</th>
+      <th scope="col" class="text-light h3">Link</th>
     </tr>
 
     @foreach( $dataOfPosts as $instance )

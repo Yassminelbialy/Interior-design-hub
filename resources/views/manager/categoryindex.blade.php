@@ -3,17 +3,17 @@
 @section('adminbase')
 
 <div class="text-center">
-    <table class="table table-hover table-info">
+    <table class="table table-hover table-dark">
         <thead>
             <tr>
             <td colspan="6"><a href="{{route('manager.category.create')}}"><i class="fas fa-plus fa-4x" style="color: blue"></i></a></td>
             </tr>
-          <tr class="table-dark">
-            <th scope="col">#</th>
-            <th scope="col">image</th>
-            <th scope="col">title</th>
+          <tr>
+            <th scope="col" class="text-light h3">#</th>
+            <th scope="col" class="text-light h3">image</th>
+            <th scope="col" class="text-light h3">title</th>
 
-            <th scope="col">actions</th>
+            <th scope="col" class="text-warning h3">actions</th>
 
 
           </tr>

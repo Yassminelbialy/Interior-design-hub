@@ -6,10 +6,10 @@
 <table class="table table-dark table-stripped table-bordered">
   <thead>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">Name </th>
-      <th scope="col">Phone</th>
-      <th scope="col">Email</th>
+      <th scope="col" class="text-light h3">#</th>
+      <th scope="col" class="text-light h3">Name </th>
+      <th scope="col" class="text-light h3">Phone</th>
+      <th scope="col" class="text-light h3">Email</th>
 
     </tr>
 

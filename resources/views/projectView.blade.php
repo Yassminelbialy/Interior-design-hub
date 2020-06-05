@@ -4,19 +4,19 @@
     <section class="projects" >
       <div class="container-fluid">
         <div class="row">
-          <div style="background-image: url(/projectimages/{{$project->mainImage}});" class="project_content col-sm-6 pb-3">
+          <div style="background-image: url(/projectimages/{{$project->mainImage}});" class="project_content col-sm-12 pb-3">
             <div class="overlayer"></div>
             <div class="border_box"></div>
              <div class="custom_border"></div>
           </div>
-          <div class="col-sm-6 text-light pl-5">
+          <div class="col-sm-12 mt-4 text-light pl-5">
               <h1>
                 <span class="text-info">ProjectTitle: </span>{{$project->title}}
               </h1>
-              <h1>
+              <h2>
                 <span class="text-info">ProjectHint: </span>{{$project->hint}}
-              </h1>
-              <h1 class="text-light"> <strong class="text-info">Description: </strong>{{$project->description}}</h1>
+              </h2>
+              <p class="text-light lead" > <strong class="text-info">Description: </strong>{{$project->description}}</p>
             </div>
         </div>
       </div>
