@@ -25,9 +25,7 @@
     </td>
 
     <td>
-    {!! Form::open(['method'=>'put']) !!}
-                        {!! Form::submit('Update !' , ['class'=>'btn btn-success']) !!}
-    {!! Form::close() !!}
+      <a href="{{ route('manager.fbPosts.edit' , $instance->id) }}" class="btn btn-success">Update !</a>
     </td>
     </tr>
 
