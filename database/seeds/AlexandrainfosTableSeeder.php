@@ -17,10 +17,7 @@ class AlexandrainfosTableSeeder extends Seeder
             'hint' => "Information Technology Institute Mansoura Branch",
             'statement' => "Information Technology Institute Mansoura Branch. Information Technology Institute Mansoura Branch. Information Technology Institute Mansoura Branch",
             'image'=>'images/DSC05123.png',
-            'video'=>'videos/1.mp4',
- 
-
-            
+            'video'=>'videos/1.mp4',            
         ]);
     }
 }

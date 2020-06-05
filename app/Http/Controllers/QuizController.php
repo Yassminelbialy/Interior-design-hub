@@ -15,7 +15,7 @@ class QuizController extends Controller
      */
     public function index()
     {
-        //
+        
     }
 
     /**
@@ -60,17 +60,10 @@ class QuizController extends Controller
 
               $response=$quiz->save();
 
-
+$response1='';
               if ($files = $request->file('file'))
               {
-                // foreach($request->file('file') as $file)
-                // {
-                //           $uuid =Uuid::generate()->string;
-                //               $path=$uuid.".".$request->file('file')->getClientOriginalExtension();
-                //               $desti='quizimages/';
-                //               $files->move($desti,$path);
-                //               $response1 =   $quiz->images()->create(['image'=>$path]);
-                // }
+                
                 foreach($request->file('file') as $file)
                 {
                           $uuid =Uuid::generate()->string;
@@ -86,7 +79,6 @@ class QuizController extends Controller
 
 
          return response()->json( ['mydata'=> $request->all(),'myresponse'=> $response1,'opject'=>$quiz,'images'=>$quiz->images] );
-        //  return response()->json( ['mydata'=> $request->all(),'myresponse'=>$request->file('file')[0]->getClientOriginalExtension()] );
 
         }
 
