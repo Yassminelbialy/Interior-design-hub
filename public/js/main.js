@@ -1,6 +1,20 @@
 $(function () {
-    // strat progress
 
+// when click play video will play auto
+    $(".fa-play").click(function(){
+        $(this).siblings("div").children().find("video").get(0).play()
+     })
+// when click close modal video will close
+     $(".close").click(function(){
+         $(this).siblings("div").children("video").get(0).pause()
+     })
+// when click out modal video will close
+
+     $(".modal").click(function(){
+            $(this).children().find("video").get(0).pause()
+     })
+
+// strat progress
     function activeNavQuisez(willclick) {
         willclick.click(function () {
             let countActive = $(this).data("value");
@@ -165,4 +179,3 @@ $(function () {
     });
 
     });
- 

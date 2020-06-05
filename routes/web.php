@@ -13,19 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/',function(){
 
-Route::get('/ceo','AlexandrainfoController@index');
-
+    return view('auth.login');
+});
 
 // ->middleware('can:manage-users')
-Route::prefix('manager')->name('manager.')->group(function(){
+Route::middleware('manager')->prefix('manager')->name('manager.')->group(function(){
     Route::any('/', function () {
         return view('admin.base');
     });
@@ -41,12 +38,19 @@ Route::prefix('manager')->name('manager.')->group(function(){
 
 });//manager routes
 
-Route::resource('quiz', 'QuizController');
-Route::resource('profile', 'OrderController');
+Route::middleware('user')->group(function(){
 
+    Route::resource('profile', 'OrderController');
+
+});
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::resource('quiz', 'QuizController');
 
 Route::resource('project.images', 'ProjectImageController');
 Route::post('/contact','ConsultationController@send');
 Route::get('/','UserController@index');
 Route::get('view/{id}', 'UserController@view')->name('project.view');
+
+
 

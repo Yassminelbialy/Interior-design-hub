@@ -33,17 +33,20 @@
       </div>
 
       <div class="contact_us">
+        @foreach ($contact as $cont )
         <i class="fas ml-3 fa-mobile-alt"></i>
-        <span class="ml-2">8(911)9256652</span>
+        <span class="ml-2">{{$cont->phoneNo}}</span>
         <i class="far ml-3 fa-envelope"></i>
-        <span class="ml-2">info@design8.ru</span>
+        <span class="ml-2">{{$cont->email}}</span>
+        
       </div>
       <div class="social_media">
-        <i class="fab fa-wikipedia-w ml-2"></i>
-        <i class="fab fa-facebook-f ml-2"></i>
-        <i class="fab fa-instagram ml-2"></i>
-        <i class="fab fa-pinterest ml-2"></i>
+          <i class="fab fa-instagram ml-2"><a href="{{$cont->instaLink}}" ></a></i>
+          <i class="fab fa-facebook-f ml-2"><a href="{{$cont->facebookLink}}" ></a></i>
+          <i class="fab fa-pinterest ml-2"><a href="{{$cont->pinterestLink}}" ></a></i>
+          <i class="fa fa-vk"><a href="{{$cont->wLink}}" ></a></i>
       </div>
+      @endforeach
     </nav>
     <!-- start information -->
 
@@ -57,7 +60,7 @@
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni
           consequuntur sapiente, provident ea saepe blanditiis! Amet quas labore
           maxime dignissimos quo! Aliquam tenetur minima ullam nobis sed
-          assumenda, neque veniam?
+          assumenda, neque veniam
         </p>
         <button>связаться с нами</button>
         <div class="starting"><div></div></div>

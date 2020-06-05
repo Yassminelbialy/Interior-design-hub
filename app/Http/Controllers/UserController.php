@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Alexandrainfo;
 use Illuminate\Http\Request;
+use App\Contact;
 use App\Project;
 use App\ProjectImage;
 use Illuminate\Support\Facades\DB;
@@ -13,8 +14,10 @@ class UserController extends Controller
     {
         $projects = Project::limit(6)->get();
         $ceoInfo= Alexandrainfo::all();
+        $contact= Contact::all();
+
         // return view('home')->with('ceoInfo',$ceoInfo);        
-        return view('home',['projects'=>$projects,'ceoInfo'=>$ceoInfo]);
+        return view('home',['projects'=>$projects,'ceoInfo'=>$ceoInfo,'contact'=>$contact]);
     }
     public function view($id){
         $project = Project::find($id);
