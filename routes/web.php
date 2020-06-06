@@ -34,8 +34,6 @@ Route::middleware('manager')->prefix('manager')->name('manager.')->group(functio
     Route::resource('consultations' ,'ConsultationController');
     Route::resource('user' ,'AllUsersController');
 
-
-
 });//manager routes
 
 Route::middleware('user')->group(function(){

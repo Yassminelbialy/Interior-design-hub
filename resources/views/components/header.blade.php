@@ -38,15 +38,16 @@
         <span class="ml-2">{{$cont->phoneNo}}</span>
         <i class="far ml-3 fa-envelope"></i>
         <span class="ml-2">{{$cont->email}}</span>
-        
       </div>
       <div class="social_media">
-          <i class="fab fa-instagram ml-2"><a href="{{$cont->instaLink}}" ></a></i>
-          <i class="fab fa-facebook-f ml-2"><a href="{{$cont->facebookLink}}" ></a></i>
-          <i class="fab fa-pinterest ml-2"><a href="{{$cont->pinterestLink}}" ></a></i>
-          <i class="fa fa-vk"><a href="{{$cont->wLink}}" ></a></i>
+          <a href="{{$cont->instaLink}}" ><i class="fab fa-instagram ml-2"></i></a>
+          <a href="{{$cont->facebookLink}}" ><i class="fab fa-facebook-f ml-2"></i></a>
+          <a href="{{$cont->pinterestLink}}" ><i class="fab fa-pinterest ml-2"></i></a>
+          <a href="{{$cont->wLink}}" ><i class="fa fa-vk ml-2"></i></a>
+          
+        
+        @endforeach
       </div>
-      @endforeach
     </nav>
     <!-- start information -->
 

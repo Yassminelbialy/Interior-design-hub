@@ -18,10 +18,8 @@ class OrderController extends Controller
     {
 
         $user_phone = auth()->user()->phone;
-        
-        $user_phone_quiz = Quiz::where('customerPhoneNo','=',$user_phone)->get();     
-
-         $order_list = Order::where('user_id', '=', auth()->user()->id)->get();
+        $user_phone_in_quiz = Quiz::where('customerPhoneNo','=',$user_phone)->get();     
+         $order_list_of_user = Order::where('user_id', '=', auth()->user()->id)->get();
          return view('userAccount',['orderList'=>$order_list]);
 
     }

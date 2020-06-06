@@ -96,7 +96,7 @@
             @forelse ($data as $item)
             <tr>
                 <th scope="row">{{$item->id}}</th>
-            <td><img src="/projectimages/{{$item->mainImage}}"style="    display: inline-block; height: 100px ; width:100px ; background-color:red;"></img></td>
+            <td><img src="/projectimages/{{$item->mainImage}}"style="display: inline-block; height: 100px ; width:100px ; background-color:red;"></img></td>
             <td>{{$item->title}}</td>
                 <td>{{$item->category->name}}</td>
             <td style="width: 30%" class="justify-content: center;" >{{$item->hint}}</td>
