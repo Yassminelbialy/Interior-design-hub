@@ -14,8 +14,7 @@
 
 <link rel="stylesheet" type="text/css" href="{{ asset('css/fbstyle.css') }}" >
 
-
-    <div class="container">
+    <div class="container mt-4">
 
             <div class="row">
                     <div class="col-lg-8">
@@ -23,16 +22,16 @@
                     {{ Form::open(['route' => 'manager.fbPosts.store','enctype' => 'multipart/form-data','method'=>'post'])}}
                   
                     <div class="form-group">
-                            <label for="exampleFormControlFile1">Enter Your Link</label>
+                            <label for="exampleFormControlFile1" class="text-light">Enter Your Link</label>
                             <input type="text" class="form-control" name="linkinput">
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group text-light">
                             <label for="exampleFormControlFile1">Upload Image</label>
-                            <input type="file" class="form-control-file btn btn-success" id="exampleFormControlFile1" name="image">
+                            <input type="file" class="form-control-file" id="exampleFormControlFile1" name="image">
                         </div>
 
-                        <button type="submit" class="btn btn-success">Submit</button>
+                        <button type="submit" class="btn btn-info">Submit</button>
                     </form>
 
 

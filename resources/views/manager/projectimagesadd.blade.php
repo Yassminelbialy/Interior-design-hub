@@ -15,7 +15,7 @@
 {{ Form::open(['route' => ['manager.project.images.store',$id],'enctype' => 'multipart/form-data','method'=>'post'])}}
 
 
-<div class="form-group">
+<div class="form-group text-light">
   <label class="control-label col-sm-4" for="lname">Image Description:</label>
   <div class="col-sm-10">
     {!! Form::text('description', null, ['required'=>'true','class'=>"form-control",'placeholder'=>"Project Hint",'aria-label'=>"Book Author Nmae",'id'=>"lname"]) !!}

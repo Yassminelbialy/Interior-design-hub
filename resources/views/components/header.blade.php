@@ -45,9 +45,8 @@
           <i class="fab fa-facebook-f ml-2"><a href="{{$cont->facebookLink}}" ></a></i>
           <i class="fab fa-pinterest ml-2"><a href="{{$cont->pinterestLink}}" ></a></i>
           <i class="fa fa-vk"><a href="{{$cont->wLink}}" ></a></i>
-        
-          @endforeach
       </div>
+      @endforeach
     </nav>
     <!-- start information -->
 

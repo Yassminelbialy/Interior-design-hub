@@ -3,13 +3,13 @@
 
 @section('adminbase')
 
-<table class="table table-dark table-stripped table-bordered">
+<table class="table table-dark" style="background-color: rgba(0,0,0,0.5);">
   <thead>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">Name </th>
-      <th scope="col">Phone</th>
-      <th scope="col">Email</th>
+      <th scope="col" class="text-light h3">#</th>
+      <th scope="col" class="text-light h3">Name </th>
+      <th scope="col" class="text-light h3">Phone</th>
+      <th scope="col" class="text-light h3">Email</th>
 
     </tr>
 

@@ -77,18 +77,18 @@
 @section('adminbase')
 
 <div class="text-center">
-    <table class="table table-hover table-info">
+    <table class="table table-dark" style="background-color: rgba(0,0,0,0.5);">
         <thead>
             <tr>
             <td colspan="6"><a href="{{route('manager.project.create')}}"><i class="fas fa-plus fa-4x" style="color: blue"></i></a></td>
             </tr>
-          <tr class="table-dark">
-            <th scope="col">#</th>
-            <th scope="col">image</th>
-            <th scope="col">title</th>
-            <th scope="col">category</th>
-            <th scope="col">hint</th>
-            <th scope="col">actions</th>
+          <tr>
+            <th scope="col" class="text-light h3">#</th>
+            <th scope="col" class="text-light h3">image</th>
+            <th scope="col" class="text-light h3">title</th>
+            <th scope="col" class="text-light h3">category</th>
+            <th scope="col" class="text-light h3">hint</th>
+            <th scope="col" class="text-light h3">actions</th>
 
           </tr>
         </thead>

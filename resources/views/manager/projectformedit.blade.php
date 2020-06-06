@@ -12,7 +12,7 @@
 
 {{ Form::model($data,['route' => ['manager.project.update',$data->id],'enctype' => 'multipart/form-data','method'=>'PUT'])}}
 
-	<div class="row">
+	<div class="row text-light">
 		<div class="col-md-3">
 			<div class="contact-info">
 				{{-- <img src="https://img.freepik.com/free-vector/abstract-book-pencil-logo_10724-10.jpg?size=338&ext=jpg" alt="image" class="imgweb"/> --}}

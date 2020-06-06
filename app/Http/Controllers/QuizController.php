@@ -36,6 +36,7 @@ class QuizController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+    
     public function store(Request $request)
     {
 
@@ -75,7 +76,6 @@ $response1='';
 
 
               }
-
 
 
          return response()->json( ['mydata'=> $request->all(),'myresponse'=> $response1,'opject'=>$quiz,'images'=>$quiz->images] );

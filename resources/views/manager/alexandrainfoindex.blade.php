@@ -3,17 +3,17 @@
 @section('adminbase')
 
 <div class="text-center">
-    <table class="table table-hover table-info">
-        <thead>    
-          <tr class="table-dark">
-            <th scope="col">#</th>
-            <th scope="col">image</th>
-            <th scope="col">Name</th>
-            <th scope="col">Hint</th>
-            <th scope="col">Statement</th>
-            <th scope="col">video</th>
-            <th scope="col" >Actions</th>
+  <table class="table table-dark" style="background-color: rgba(0,0,0,0.5);">
+        <thead>
             
+          <tr>
+            <th scope="col" class="text-light h3">#</th>
+            <th scope="col" class="text-light h3">image</th>
+            <th scope="col" class="text-light h3">Name</th>
+            <th scope="col" class="text-light h3">Hint</th>
+            <th scope="col" class="text-light h3">Statement</th>
+            <th scope="col" class="text-light h3">video</th>
+
           </tr>
         </thead>
         <tbody>
