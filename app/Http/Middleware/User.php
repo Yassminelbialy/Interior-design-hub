@@ -22,6 +22,6 @@ class User
             return $next($request);
         }
         
-        return redirect ('/');
+        return redirect ('/login');
     }
 }

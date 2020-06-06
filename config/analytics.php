@@ -11,7 +11,7 @@ return [
  * to learn how to get this file. You can also pass the credentials as an array 
  * instead of a file path.
  */
-'service_account_credentials_json' => public_path('itios-279504-d219ccece5ee.json'),
+'service_account_credentials_json' => public_path('iti40-279514-64ec170f8c02.json'),
 
 /*
  * The amount of minutes the Google API responses will be cached.
