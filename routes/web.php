@@ -30,6 +30,7 @@ Route::middleware('manager')->prefix('manager')->name('manager.')->group(functio
     Route::resource('category', 'CategoryController');
     Route::resource('project.images', 'ProjectImageController');
     Route::resource('alexandra', 'AlexandrainfoController');
+    Route::resource('contacts', 'ContactController');
     Route::resource('fbPosts' ,'FacebookController');
     Route::resource('consultations' ,'ConsultationController');
     Route::resource('user' ,'AllUsersController');
