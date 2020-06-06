@@ -38,7 +38,7 @@
         <span class="ml-2">{{$cont->phoneNo}}</span>
         <i class="far ml-3 fa-envelope"></i>
         <span class="ml-2">{{$cont->email}}</span>
-        @endforeach
+        
       </div>
       <div class="social_media">
           <i class="fab fa-instagram ml-2"><a href="{{$cont->instaLink}}" ></a></i>
@@ -46,9 +46,7 @@
           <i class="fab fa-pinterest ml-2"><a href="{{$cont->pinterestLink}}" ></a></i>
           <i class="fa fa-vk"><a href="{{$cont->wLink}}" ></a></i>
         
-        {{-- 
-        
-         --}}
+          @endforeach
       </div>
     </nav>
     <!-- start information -->
