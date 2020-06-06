@@ -21,7 +21,7 @@ class Manager
             return $next($request);
         }
         
-        return redirect ('/login');
+        return redirect ('/profile');
 
         
     }
