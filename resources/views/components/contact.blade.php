@@ -5,7 +5,7 @@
             <div class="img">
                 @foreach ($contact as $cont )
                 @foreach ($ceoInfo as $ceo )
-            <img data-src="{{$ceo->image}}" alt="Alexandra" />
+            <img data-src="/images/{{$ceo->image}}" alt="Alexandra" />
                 @endforeach
             </div>
             
