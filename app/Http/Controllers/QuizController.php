@@ -15,7 +15,8 @@ class QuizController extends Controller
      */
     public function index()
     {
-        
+
+        return view('manager.quizzes',['data'=>Quiz::all()]);
     }
 
     /**
@@ -36,7 +37,7 @@ class QuizController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    
+
     public function store(Request $request)
     {
 
@@ -64,7 +65,7 @@ class QuizController extends Controller
 $response1='';
               if ($files = $request->file('file'))
               {
-                
+
                 foreach($request->file('file') as $file)
                 {
                           $uuid =Uuid::generate()->string;
@@ -124,6 +125,7 @@ $response1='';
      */
     public function destroy(Quiz $quiz)
     {
-        //
+        $quiz->delete();
+        return redirect(route('manager.quizzes.index'));
     }
 }
