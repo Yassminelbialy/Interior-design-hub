@@ -33,6 +33,9 @@ Route::middleware('manager')->prefix('manager')->name('manager.')->group(functio
     Route::resource('fbPosts' ,'FacebookController');
     Route::resource('consultations' ,'ConsultationController');
     Route::resource('user' ,'AllUsersController');
+    Route::resource('quizzes' ,'QuizController');
+
+
 
 });//manager routes
 
