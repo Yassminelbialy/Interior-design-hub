@@ -20,7 +20,7 @@
             @foreach ($ceoInfo as $ceo)
             <tr>
             <th scope="row">{{$ceo->id}}</th>
-              <td><img src="/{{$ceo->image}}"style="display: inline-block; height: 100px; width:100px; border-radius:50%; border:1px solid black"></td>
+              <td><img src="/images/{{$ceo->image}}"style="display: inline-block; height: 100px; width:100px; border-radius:50%; border:1px solid black"></td>
               <td>{{$ceo->name}}</td>
               <td>{{$ceo->hint}}</td>
               <td style="width: 30%" class="justify-content: center;" >{{$ceo->statement}}</td>
@@ -42,7 +42,7 @@
                                                 </button>
                                                 <div class="embed-responsive embed-responsive-16by9">
                                                     <video  controls id="vidEle" class="embed-responsive-item" allowscriptaccess="always" allow="autoplay">
-                                                        <source src="/{{$ceo->video}}" type="video/mp4" >
+                                                        <source src="/videos/{{$ceo->video}}" type="video/mp4" >
                                                       Your browser does not support the video tag.
                                                   </video>
                                                 </div>
