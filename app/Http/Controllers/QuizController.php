@@ -126,6 +126,6 @@ $response1='';
     public function destroy(Quiz $quiz)
     {
         $quiz->delete();
-        return redirect(route('manager.quizzes'));
+        return redirect(route('manager.quizzes.index'));
     }
 }

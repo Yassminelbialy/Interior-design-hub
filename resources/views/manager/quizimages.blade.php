@@ -84,16 +84,12 @@
             </tr>
           <tr>
             <th scope="col" class="text-light h3">#</th>
-            <th scope="col" class="text-light h3">Area</th>
-            <th scope="col" class="text-light h3">timeOfRsponse</th>
-            <th scope="col" class="text-light h3">participateState</th>
-            <th scope="col" class="text-light h3">contactTybe</th>
-            <th scope="col" class="text-light h3">customerName</th>
-            <th scope="col" class="text-light h3">customerPhoneNo</th>
-            <th scope="col" class="text-light h3">design</th>
-            <th scope="col" class="text-light h3">styles</th>
+            <th scope="col" class="text-light h3">Image</th>
 
             <th scope="col" class="text-light h3">Actions</th>
+
+
+
 
           </tr>
         </thead>
@@ -101,14 +97,7 @@
             @forelse ($data as $item)
             <tr>
             <th scope="row">{{$item->id}}</th>
-            <td><h5>{{$item->area}}</h5></td>
-            <td><h5>{{$item->participateState}}</h5></td>
-            <td><h5>{{$item->participateState}}</h5></td>
-            <td><h5>{{$item->contactTybe}}</h5></td>
-            <td><h5>{{$item->customerName}}</h5></td>
-            <td><h5>{{$item->customerPhoneNo}}</h5></td>
-            <td><h5>{{$item->design}}</h5></td>
-            <td><h5>{{$item->styles}}</h5></td>
+            <td><img src="/quizimages/{{$item->image}}"style="display: inline-block; height: 100px ; width:100px ; background-color:red;"></img></td>
 
 
                 <td> &ensp;
