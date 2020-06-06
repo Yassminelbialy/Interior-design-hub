@@ -56,6 +56,10 @@
                                 ><div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Dashboard</a
                             >
+                            <a class="nav-link" href="/manager/quizzes"
+                            ><div class="sb-nav-link-icon"><i class="fas fa-file-contract"></i></div>
+                            QuiZZes Requests</a
+                        >
                             <div class="sb-sidenav-menu-heading">Interface</div>
                             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts"
                                 ><div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
@@ -74,12 +78,12 @@
                                     <a class="nav-link" href="/manager/alexandra">Alexandra info</a>
                                     <a class="nav-link" href="/manager/consultations">Consultations</a>
                                     <a class="nav-link" href="/manager/quizzez">Quizzez</a>
-                                    <a class="nav-link" href="/manager/contacts">Contacts</a>  
+                                    <a class="nav-link" href="/manager/contacts">Contacts</a>
                                     <a class="nav-link" href="/manager/fbPosts">FaceBook Posts</a>
                                     {{-- <a class="nav-link" href="/manager/project">projects</a>
                                     <a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a></nav> --}}
                             </div>
-                            
+
                             <div class="sb-sidenav-menu-heading">Addons</div>
                             <a class="nav-link" href="charts.html"
                                 ><div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\QuizImage;
 use Illuminate\Http\Request;
-
+use App\Quiz;
 class QuizImageController extends Controller
 {
     /**
@@ -12,9 +12,12 @@ class QuizImageController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id)
     {
-        //
+
+
+
+        return view('manager.quizimages',['data'=>Quiz::find($id)->images]);
     }
 
     /**

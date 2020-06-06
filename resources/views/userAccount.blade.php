@@ -41,10 +41,25 @@
                                         <p class="lead">Your Design :</p>
                                         <img src="/images/logo/{{$order->contractImg}}" width="200px" height="200px"/>
 
+                                       
                                     </div>
                                           
                                     <hr>
+                                   
                                     @endforeach
+
+                                    @elseif(!$quizData->isEmpty())
+
+                                    <h2>Your Quiz :</h2>
+                                            @foreach($quizData as $data)
+                                                <p class="lead"> Your Area :{{ $data ->area}}</p>
+                                                <p class="lead"> Your Style : {{ $data ->styles}}</p>
+                                                <p class="lead"> Contact Via : {{ $data ->contactType}}</p>             
+                                                <p class="lead"> Your Design :{{ $data ->design}}</p>             
+
+
+                                            @endforeach
+
                                     @else
                                         You Don't Apply the Quiz
                                     @endif

@@ -16,9 +16,7 @@ class AlexandrainfoController extends Controller
     public function index()
     {
         $ceoInfo= Alexandrainfo::all();
-        // $contactInfo= Contact::all();
-
-        return view('manager/alexandrainfoindex',["ceoArray"=>$ceoInfo]);
+        return view('manager/alexandrainfoindex',["ceoInfo"=>$ceoInfo]);
     }
 
     /**
@@ -59,9 +57,10 @@ class AlexandrainfoController extends Controller
      * @param  \App\Alexandrainfo  $alexandrainfo
      * @return \Illuminate\Http\Response
      */
-    public function edit(Alexandrainfo $alexandrainfo)
+    public function edit($id)
     {
-        //
+        $ceoInfo=Alexandrainfo::findOrFail($id);
+        return view('manager.alexandrainfoedit',["ceoInfo"=>$ceoInfo]);
     }
 
     /**

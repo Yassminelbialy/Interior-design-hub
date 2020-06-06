@@ -80,34 +80,33 @@
     <table class="table table-dark" style="background-color: rgba(0,0,0,0.5);">
         <thead>
             <tr>
-            <td colspan="6"><a href="{{route('manager.project.create')}}"><i class="fas fa-plus fa-4x" style="color: blue"></i></a></td>
+            <td colspan="6"><a href="{{route('manager.quizzes.create')}}"><i class="fas fa-plus fa-4x" style="color: blue"></i></a></td>
             </tr>
           <tr>
             <th scope="col" class="text-light h3">#</th>
-            <th scope="col" class="text-light h3">image</th>
-            <th scope="col" class="text-light h3">title</th>
-            <th scope="col" class="text-light h3">category</th>
-            <th scope="col" class="text-light h3">hint</th>
-            <th scope="col" class="text-light h3">actions</th>
+            <th scope="col" class="text-light h3">Image</th>
+
+            <th scope="col" class="text-light h3">Actions</th>
+
+
+
 
           </tr>
         </thead>
         <tbody>
             @forelse ($data as $item)
             <tr>
-                <th scope="row">{{$item->id}}</th>
-            <td><img src="/projectimages/{{$item->mainImage}}"style="display: inline-block; height: 100px ; width:100px ; background-color:red;"></img></td>
-            <td>{{$item->title}}</td>
-                <td>{{$item->category->name}}</td>
-            <td style="width: 30%" class="justify-content: center;" >{{$item->hint}}</td>
+            <th scope="row">{{$item->id}}</th>
+            <td><img src="/quizimages/{{$item->image}}"style="display: inline-block; height: 100px ; width:100px ; background-color:red;"></img></td>
+
+
                 <td> &ensp;
-                <a href="{{route('manager.project.images.index',$item->id)}}"> <i class="fas fa-binoculars fa-2x" style="color: green"></i></a>
+                <a href="{{route('manager.quizzes.images.index',$item->id)}}"> <i class="fas fa-binoculars fa-2x" style="color: green"></i></a>
 
                       &ensp;
-                      <a href="{{ route('manager.project.edit', $item->id) }}"> <i class="fas fa-edit fa-2x" style="color: blue"></i></a>
 
                        &ensp;
-                       {!!Form::open(['route'=>[ 'manager.project.destroy' , $item->id],'method'=>'delete','style'=>'    display: inline-block '])!!}
+                       {!!Form::open(['route'=>[ 'manager.quizzes.destroy' , $item->id],'method'=>'delete','style'=>'    display: inline-block '])!!}
                        {{ Form::button('<i style="color:red"class="fa fa-trash fa-2x"></i>', ['type' => 'submit'] )  }}
 
                        {!! Form::close() !!}
