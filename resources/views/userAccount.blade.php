@@ -22,7 +22,7 @@
                             <div class="panel-heading">
                                     <ul class="nav nav-tabs">
                                         <li class="active"><a href="#tab1default" data-toggle="tab">My Order</a></li>
-                                        <li><a href="#tab2default" data-toggle="tab">Messages</a></li>
+                                        <li><a href="chat" data-toggle="tab">Messages</a></li>
                                         
                                     </ul>
                             </div>
