@@ -13,6 +13,7 @@
             <th scope="col" class="text-light h3">Hint</th>
             <th scope="col" class="text-light h3">Statement</th>
             <th scope="col" class="text-light h3">video</th>
+            <th scope="col" class="text-light h3">Action</th>
 
           </tr>
         </thead>
