@@ -36,9 +36,12 @@ class OrderAdminController extends Controller
      */
     public function store(Request $request)
     {
+    
         $newOrder = new Order();
+        $user_id  = auth()->user()->id;
         $newOrder->description = $request->orderDesc;
         $newOrder->state = $request->orderState;
+        $newOrder->user_id = $user_id;
         $newOrder->cost = $request->orderCost;
         if($request->hasfile('orderImg')){
 
