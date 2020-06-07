@@ -38,9 +38,8 @@ Route::middleware('manager')->prefix('manager')->name('manager.')->group(functio
     Route::resource('user' ,'AllUsersController');
     Route::resource('quizzes' , 'QuizController');
     Route::resource('quizzes.images' , 'QuizImageController');
-
-
-
+    Route::resource('AdminOrder' , 'OrderAdminController');
+    
 });//manager routes
 
 Route::middleware('user')->group(function(){
