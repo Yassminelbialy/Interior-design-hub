@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Order;
-use App\User;
-use App\Quiz;
 use Illuminate\Http\Request;
-
-class OrderController extends Controller
+use Analytics;
+use Spatie\Analytics\Period;
+class AnalyticsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,11 +14,9 @@ class OrderController extends Controller
      */
     public function index()
     {
-
-        $user_phone = auth()->user()->phone;
-        $user_phone_in_quiz = Quiz::where('customerPhoneNo','=',$user_phone)->get();
-         $order_list_of_user = Order::where('user_id', '=', auth()->user()->id)->get();
-         return view('userAccount',['orderList'=>$order_list_of_user , 'quizData'=> $user_phone_in_quiz]);
+       $data= Analytics::fetchMostVisitedPages(Period::days(7));
+       dd($data);
+        return view('manager.analytics');
 
     }
 
@@ -31,7 +27,7 @@ class OrderController extends Controller
      */
     public function create()
     {
-       
+        //
     }
 
     /**
@@ -48,10 +44,10 @@ class OrderController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Order  $order
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Order $order)
+    public function show($id)
     {
         //
     }
@@ -59,10 +55,10 @@ class OrderController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Order  $order
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Order $order)
+    public function edit($id)
     {
         //
     }
@@ -71,10 +67,10 @@ class OrderController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Order  $order
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Order $order)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -82,10 +78,10 @@ class OrderController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Order  $order
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Order $order)
+    public function destroy($id)
     {
         //
     }

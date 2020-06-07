@@ -30,19 +30,24 @@ Route::middleware('manager')->prefix('manager')->name('manager.')->group(functio
     Route::resource('category', 'CategoryController');
     Route::resource('project.images', 'ProjectImageController');
     Route::resource('alexandra', 'AlexandrainfoController');
+    Route::resource('contacts', 'ContactController');
+    Route::resource('logo', 'logoController');
+    Route::resource('review', 'ReviewController');
     Route::resource('fbPosts' ,'FacebookController');
     Route::resource('consultations' ,'ConsultationController');
     Route::resource('user' ,'AllUsersController');
     Route::resource('quizzes' , 'QuizController');
     Route::resource('quizzes.images' , 'QuizImageController');
-
-
-
+    Route::resource('analytics' ,'AnalyticsController');
+    Route::resource('AdminOrder' , 'OrderAdminController');
+    
 });//manager routes
 
 Route::middleware('user')->group(function(){
 
     Route::resource('profile', 'OrderController');
+    Route::resource('chat', 'ChatController');
+
 
 });
 
