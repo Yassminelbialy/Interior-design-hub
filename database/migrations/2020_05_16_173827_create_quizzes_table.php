@@ -22,7 +22,7 @@ class CreateQuizzesTable extends Migration
             $table->string('participateState')->nullable();
             $table->string('contactTybe')->nullable();
             $table->string('customerName')->nullable();
-            $table->string('customerPhoneNo')->nullable()->unique();
+            $table->string('customerPhoneNo')->nullable();
 
             $table->string('design')->nullable();
             // $table->unsignedBigInteger('category_id')->nullable();
