@@ -22,27 +22,35 @@
                     {{ Form::open(['route' => 'manager.AdminOrder.store','enctype' => 'multipart/form-data','method'=>'post'])}}
 
                   
-                    <div class="form-group">
+                        <div class="form-group">
                             <label for="exampleFormControlFile1" class="text-light">Enter Description of Order</label>
-                            <input type="text" class="form-control" name="orderDesc">
+                            {!! Form::text('description', null, ['required'=>'true','class'=>"form-control",'placeholder'=>'orderDesc']) !!}
                         </div>
 
                         <div class="form-group text-light">
                             <label for="exampleFormControlFile1"> Enter State Of Order</label>
-                            <input type="text" class="form-control-file" id="exampleFormControlFile1" name="orderState">
+                            {!! Form::text('state', null, ['required'=>'true','class'=>"form-control",'placeholder'=>'orderState']) !!}
+
                         </div>
+                        
+                        <div class="form-group text-light">
+                        {!! Form::select('user_id', $user , null, ['class' => 'form-control']) !!}
+
+                        </div>
+                            
 
                         <div class="form-group text-light">
                             <label for="exampleFormControlFile1"> Enter Cost Of Order</label>
-                            <input type="text" class="form-control-file" id="exampleFormControlFile1" name="orderCost">
+                            {!! Form::text('cost', null, ['required'=>'true','class'=>"form-control",'placeholder'=>'orderCost']) !!}
+
                         </div>
 
                         <div class="form-group text-light">
-                            <label for="exampleFormControlFile1"> Add Image Of UserOrder</label>
-                            <input type="file" class="form-control-file" id="exampleFormControlFile1" name="orderImg">
+                            
+                            {!! Form::file('contractImg', ['class'=>' form-control','id'=>"validatedCustomFile", 'required']) !!} 
+                            <label for="validatedCustomFile"> Add Image Of UserOrder</label>
                         </div>
-
-                        <button type="submit" class="btn btn-info">Submit</button>
+                        {!! Form::submit('ADD Order', ['class'=>'btn btn-info']) !!}
                     </form>
 
 

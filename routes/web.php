@@ -40,6 +40,7 @@ Route::middleware('manager')->prefix('manager')->name('manager.')->group(functio
     Route::resource('quizzes.images' , 'QuizImageController');
     Route::resource('analytics' ,'AnalyticsController');
     Route::resource('AdminOrder' , 'OrderAdminController');
+    Route::get('users/{users}/order', 'OrderAdminController@updateOrder')->name('order');
     
 });//manager routes
 
@@ -57,6 +58,7 @@ Route::resource('quiz', 'QuizController');
 
 Route::resource('project.images', 'ProjectImageController');
 Route::post('/contact','ConsultationController@send');
+// Route::post('/quizContact','QuizControllerSendingMail@sendEmail');
 Route::get('/','UserController@index');
 Route::get('view/{id}', 'UserController@view')->name('project.view');
 
