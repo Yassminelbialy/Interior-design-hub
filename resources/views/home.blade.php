@@ -24,7 +24,7 @@
     @component('components.information_plus')
     @endcomponent
 
-    @component('components.clients')
+    @component('components.clients',['logos' => $logos])
     @endcomponent
 
     @component('components.state')
@@ -39,7 +39,7 @@
     @component('components.worldWide')
     @endcomponent
 
-    @component('components.testimonial')
+    @component('components.testimonial',['reviews' => $reviews])
     @endcomponent
 
     @component('components.contact',['contact' => $contact,'ceoInfo' => $ceoInfo])
