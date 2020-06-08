@@ -84,15 +84,19 @@
 
                                     @elseif(!$quizData->isEmpty())
 
-                                    <h2>Your Quiz :</h2>
+                                    <h2 class="text-center text-info">Your Quiz</h2>
+                                        <div class="row text-center">
                                             @foreach($quizData as $data)
-                                                <p class="lead"> Your Area :{{ $data ->area}}</p>
-                                                <p class="lead"> Your Style : {{ $data ->styles}}</p>
-                                                <p class="lead"> Contact Via : {{ $data ->contactType}}</p>
-                                                <p class="lead"> Your Design :{{ $data ->design}}</p>
-
-
+                                                <div class="col-md-6">
+                                                    <p class="lead"> Your Area: <span class="text-info">{{ $data ->area}}</span></p>
+                                                    <p class="lead"> Your Name: <span class="text-info">{{ $data ->customerName}}</span></p>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <p class="lead"> Contact Via: <span class="text-info">{{ $data ->contactTybe}}</span></p>
+                                                    <p class="lead"> Your Design: <span class="text-info">{{ $data ->design}}</span></p>
+                                                </div>
                                             @endforeach
+                                        </div>
 
                                     @else
                                         You Don't Apply the Quiz

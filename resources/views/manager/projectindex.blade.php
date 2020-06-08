@@ -129,4 +129,5 @@
     <div class="col-12 text-center d-flex justify-content-center">
                {{$data->links()}}
     </div>
+</div>
 @endsection
