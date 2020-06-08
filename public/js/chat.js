@@ -38,6 +38,7 @@ function newMessage() {
 		return false;
 	}
 	$('<li class="sent"><img src="http://emilcarlsson.se/assets/mikeross.png" alt="" /><p>' + message + '</p></li>').appendTo($('.messages ul'));
+	sendToServer(message);
 	$('.message-input input').val(null);
 	$('.contact.active .preview').html('<span>You: </span>' + message);
 	$(".messages").animate({ scrollTop: $(document).height() }, "fast");
@@ -53,3 +54,29 @@ $(window).on('keydown', function(e) {
     return false;
   }
 });
+function sendToServer(message){
+	$.ajaxSetup({
+		headers: {
+		'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+		}
+	}); 
+// hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+	var myform= new FormData();	
+	myform.append("writter",message);
+	myform.append("body",message);
+	myform.append("img",message);
+
+	$.ajax({
+		url: "http://localhost:8000/chat",
+		dataType: 'script',
+		cache: false,
+		contentType: false,
+		processData: false,
+		data: myform, // Setting the data attribute of ajax with file_data
+		type: 'POST',
+		success:function(data){
+		x=JSON.parse(data);
+		console.log(x)}
+	})///ajax 
+
+}

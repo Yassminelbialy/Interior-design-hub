@@ -1,9 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Auth;
 use Illuminate\Http\Request;
-
+use App\Message;
 class ChatController extends Controller
 {
     /**
@@ -24,7 +24,8 @@ class ChatController extends Controller
      */
     public function create()
     {
-        //
+        
+        dd(Auth::user()->id);
     }
 
     /**
@@ -35,7 +36,14 @@ class ChatController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $message=new Message;
+        $message->img=$request->img;
+        $message->writter=Auth::user()->name;
+        $message->body=$request->body;
+        $message->user_id=Auth::user()->id;
+        $res=$message->save();
+         return response()->json(['message' => 'User status updated successfully',
+         'data'=>$res]); 
     }
 
     /**
