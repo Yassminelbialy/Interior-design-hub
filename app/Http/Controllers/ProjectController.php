@@ -19,7 +19,7 @@ class ProjectController extends Controller
     {
         // dd(Uuid::generate()->string);
         // return view('manager.myindex',['data'=>Project::all()]);
-        return view('manager.projectindex',['data'=>Project::all()]);
+        return view('manager.projectindex',['data'=>Project::paginate(3)]);
 
     }
 

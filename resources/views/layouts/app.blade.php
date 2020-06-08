@@ -3,11 +3,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <title>@yield('title','A default title')</title>
+    <meta name="keywords" content="@yield('meta_keywords','some default keywords')">
+    <meta name="description" content="@yield('meta_description','default description')">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Interior Design</title>
 
     <!-- Scripts -->
     <script
@@ -53,3 +54,5 @@
 
 </body>
 </html>
+
+

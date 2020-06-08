@@ -54,3 +54,6 @@
 
 
 @endsection
+@section('title')
+{{'interior design'}}
+@endsection

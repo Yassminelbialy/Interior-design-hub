@@ -120,7 +120,13 @@
 
 
 
+            </div>
         </tbody>
       </table>
 </div>
+
+<div class="row sss text-center" >
+    <div class="col-12 text-center d-flex justify-content-center">
+               {{$data->links()}}
+    </div>
 @endsection
