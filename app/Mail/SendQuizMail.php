@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Mail;
 
 use Illuminate\Bus\Queueable;
@@ -7,7 +8,7 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
 
-class SendEmail extends Mailable
+class SendQuizMail extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -18,8 +19,7 @@ class SendEmail extends Mailable
      * @return void
      */
 
-    
-
+     
     public function __construct($data)
     {
         $this->data = $data;
@@ -33,8 +33,8 @@ class SendEmail extends Mailable
     public function build()
     {
         return $this->from('nelshohat@gmail.com')
-        ->subject('New User Request')
-        ->view('dynamic-email')
-        ->with('usersData' , $this->data);
+        ->subject('New Quiz Request')
+        ->view('dynamic-email-quiz')
+        ->with('quizData' , $this->data);
     }
 }

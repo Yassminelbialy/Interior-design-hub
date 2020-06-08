@@ -56,6 +56,7 @@ Route::resource('quiz', 'QuizController');
 
 Route::resource('project.images', 'ProjectImageController');
 Route::post('/contact','ConsultationController@send');
+// Route::post('/quizContact','QuizControllerSendingMail@sendEmail');
 Route::get('/','UserController@index');
 Route::get('view/{id}', 'UserController@view')->name('project.view');
 
