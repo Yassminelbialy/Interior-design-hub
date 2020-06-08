@@ -6,7 +6,8 @@ $("#profile-img").click(function() {
 
 $(".expand-button").click(function() {
   $("#profile").toggleClass("expanded");
-	$("#contacts").toggleClass("expanded");
+    $("#contacts").toggleClass("expanded");
+    console.log('dddddd')
 });
 
 $("#status-options ul li").click(function() {
@@ -16,7 +17,7 @@ $("#status-options ul li").click(function() {
 	$("#status-busy").removeClass("active");
 	$("#status-offline").removeClass("active");
 	$(this).addClass("active");
-	
+
 	if($("#status-online").hasClass("active")) {
 		$("#profile-img").addClass("online");
 	} else if ($("#status-away").hasClass("active")) {
@@ -28,7 +29,7 @@ $("#status-options ul li").click(function() {
 	} else {
 		$("#profile-img").removeClass();
 	};
-	
+
 	$("#status-options").removeClass("active");
 });
 
@@ -48,6 +49,8 @@ $('.submit').click(function() {
   newMessage();
 });
 
+
+
 $(window).on('keydown', function(e) {
   if (e.which == 13) {
     newMessage();
@@ -59,13 +62,15 @@ function sendToServer(message){
 		headers: {
 		'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
 		}
-	}); 
+	});
 // hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-	var myform= new FormData();	
+	var myform= new FormData();
 	myform.append("writter",message);
 	myform.append("body",message);
 	myform.append("img",message);
-
+if(myfile){
+    myform.append('file',myfile)
+}
 	$.ajax({
 		url: "http://localhost:8000/chat",
 		dataType: 'script',
@@ -77,6 +82,19 @@ function sendToServer(message){
 		success:function(data){
 		x=JSON.parse(data);
 		console.log(x)}
-	})///ajax 
+    })///ajax
+    console.log(myfile)
 
 }
+myfile='';
+
+$('#attachment').click(()=>{
+        console.log('sss');
+        document.getElementById('file1').click();
+
+
+})
+$('#file1').change((a)=>{
+    console.log('s')
+   myfile = a.target.files[0]
+})

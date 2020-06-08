@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 use Auth;
 use Illuminate\Http\Request;
 use App\Message;
+use Illuminate\Support\Facades\Auth as FacadesAuth;
+use Uuid ;
 class ChatController extends Controller
 {
     /**
@@ -13,7 +15,12 @@ class ChatController extends Controller
      */
     public function index()
     {
-        return view('chat');
+        if(Auth::user())
+        {
+            return view('chat',['data'=>Message::where(['user_id'=>Auth::user()->id])->get()]);
+            // >>> Message::where(['body'=>'yasmina'])->orderBy('created_at', 'asc')->get()
+        }
+        return view('chat',['data'=>[]]);
 
     }
 
@@ -24,7 +31,7 @@ class ChatController extends Controller
      */
     public function create()
     {
-        
+
         dd(Auth::user()->id);
     }
 
@@ -37,13 +44,24 @@ class ChatController extends Controller
     public function store(Request $request)
     {
         $message=new Message;
-        $message->img=$request->img;
+
+        if ($files = $request->file('file'))
+        {
+                        $uuid =Uuid::generate()->string;
+                        $path=$uuid.".".$request->file('file')->getClientOriginalExtension();
+                        $desti='chatfiles/';
+                        $files->move($desti,$path);
+                        $message->img=$path;
+
+        }
+
         $message->writter=Auth::user()->name;
         $message->body=$request->body;
         $message->user_id=Auth::user()->id;
         $res=$message->save();
+
          return response()->json(['message' => 'User status updated successfully',
-         'data'=>$res]); 
+         'data'=>$res]);
     }
 
     /**
