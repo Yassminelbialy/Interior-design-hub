@@ -31,7 +31,7 @@ Route::middleware('manager')->prefix('manager')->name('manager.')->group(functio
     Route::resource('project.images', 'ProjectImageController');
     Route::resource('alexandra', 'AlexandrainfoController');
     Route::resource('contacts', 'ContactController');
-    Route::resource('logo', 'logoController');
+    Route::resource('logo', 'LogoController');
     Route::resource('review', 'ReviewController');
     Route::resource('fbPosts' ,'FacebookController');
     Route::resource('consultations' ,'ConsultationController');
@@ -53,6 +53,7 @@ Route::middleware('user')->group(function(){
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('quiz', 'QuizController');
+
 
 Route::resource('project.images', 'ProjectImageController');
 Route::post('/contact','ConsultationController@send');
