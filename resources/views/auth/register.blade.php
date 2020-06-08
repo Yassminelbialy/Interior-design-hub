@@ -43,9 +43,15 @@
                         <input id="re_pass" type="password" class="form-control" name="password_confirmation" placeholder="Repeat your password" required autocomplete="new-password">
                     </div>
 
+
                 <div class="form-group">
                     <label for="phone"><i class="fa fa-phone"></i></label>
                     <input id="phone" type="text" class="form-control @error('phone') is-invalid @enderror" name="phone" placeholder="Enter Your Phone" required autofocus>
+                    @error('phone')
+                            <span class="invalid-feedback" role="alert">
+                                <strong style="color:red">{{ $message }}</strong>
+                            </span>
+                    @enderror
                 </div>
                     <div class="form-group form-button">
                         <input type="submit" name="signup" id="signup" class="form-submit" value="Register"/>

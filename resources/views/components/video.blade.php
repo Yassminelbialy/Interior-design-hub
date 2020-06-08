@@ -3,7 +3,7 @@
         <div class="col-sm-12 col-lg-6 ">
             @foreach ($ceoInfo as $ceo )
             <div class="img">
-            <img data-src="{{$ceo->image}}" alt="Alexandra" />
+            <img data-src="/images/{{$ceo->image}}" alt="Alexandra" />
             </div>
             <div class="wrapper">
                 <div class="icon-wrapper">
@@ -20,7 +20,7 @@
                                         </button>
                                         <div>
                                             <video class="video_ceo"  controls >
-                                                <source src="{{$ceo->video}}" type="video/mp4" >
+                                                <source src="/videos/{{$ceo->video}}" type="video/mp4" >
                                               Your browser does not support the video tag.
                                           </video>
 

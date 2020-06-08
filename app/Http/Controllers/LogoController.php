@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Logo;
 use Illuminate\Http\Request;
 
@@ -14,7 +13,8 @@ class LogoController extends Controller
      */
     public function index()
     {
-        //
+        $logos= Logo::all();
+        return view('manager/logoindex',["logo"=>$logos]);
     }
 
     /**
@@ -24,7 +24,7 @@ class LogoController extends Controller
      */
     public function create()
     {
-        //
+        return view ('manager.logocreate');
     }
 
     /**
@@ -35,7 +35,17 @@ class LogoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $logo=new Logo;
+     
+        if ($files = $request->file('image')) {
+            $destinationPath = 'images/logo/'; 
+            $Image = $files->getClientOriginalName();
+            $files->move($destinationPath, $Image);
+            $logo->image=$Image; 
+        }
+
+        $logo->save();
+        return redirect('/manager/logo');
     }
 
     /**
@@ -55,9 +65,10 @@ class LogoController extends Controller
      * @param  \App\Logo  $logo
      * @return \Illuminate\Http\Response
      */
-    public function edit(Logo $logo)
+    public function edit($id)
     {
-        //
+        $logo=Logo::findOrFail($id);
+        return view('manager.logoedit',['logo'=>$logo]);
     }
 
     /**
@@ -67,9 +78,20 @@ class LogoController extends Controller
      * @param  \App\Logo  $logo
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Logo $logo)
+    public function update(Request $request, $id)
     {
-        //
+        $logo=Logo::find($id);
+        $path = public_path()."/images/logo/".$logo->image;
+        unlink($path);      
+        if ($files = $request->file('image')) {
+            $destinationPath = 'images/logo'; 
+            $Image = $files->getClientOriginalName();
+            $files->move($destinationPath, $Image);
+            $logo->image=$Image; 
+        }
+
+        $logo->save();
+        return redirect('/manager/logo');
     }
 
     /**
@@ -78,8 +100,12 @@ class LogoController extends Controller
      * @param  \App\Logo  $logo
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Logo $logo)
+    public function destroy(Request $request, $id)
     {
-        //
+        $logo=Logo::find($id);
+        $path = public_path()."/images/logo/".$logo->image;
+        unlink($path);
+        $logo->delete();
+        return redirect('/manager/logo');
     }
 }

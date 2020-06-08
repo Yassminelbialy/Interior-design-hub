@@ -79,14 +79,15 @@
                                     <a class="nav-link" href="/manager/consultations">Consultations</a>
                                     <a class="nav-link" href="/manager/quizzez">Quizzez</a>
                                     <a class="nav-link" href="/manager/contacts">Contacts</a>
+                                    <a class="nav-link" href="/manager/AdminOrder">Users Orders</a>
                                     <a class="nav-link" href="/manager/fbPosts">FaceBook Posts</a>
                                     {{-- <a class="nav-link" href="/manager/project">projects</a>
                                     <a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a></nav> --}}
                             </div>
 
                             <div class="sb-sidenav-menu-heading">Addons</div>
-                            <a class="nav-link" href="charts.html"
-                                ><div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                            <a class="nav-link" href="/manager/analytics"
+                                ><div class="sb-nav-link-icon" ><i class="fas fa-chart-area"></i></div>
                                 Charts</a
                             ><a class="nav-link" href="/manager/category/create"
                                 ><div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>

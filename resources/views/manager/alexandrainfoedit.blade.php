@@ -25,18 +25,18 @@
                     </div>
                   </div>
                   <div class="form-group">
-                    <label class="control-label col-sm-4" for="lname">Image:</label>
+                    <label class="control-label col-sm-4" for="image">Image:</label>
                    <br>
                     <div class="custom-file form-control " style="width: 50%">
                         <br>
-                        {!! Form::file('image', ['class'=>'custom-file-input form-control','id'=>"validatedCustomFile"]) !!}     
-                        <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
+                        {!! Form::file('image', ['class'=>'custom-file-input form-control','id'=>"validatedCustomFile1"]) !!}     
+                        <label class="custom-file-label" for="validatedCustomFile1">Choose file...</label>
                       
                     </div>
                 </div>
                 
                 <div class="form-group">
-                    <label class="control-label col-sm-4" for="lname">Video:</label>
+                    <label class="control-label col-sm-4" for="video">Video:</label>
                    <br>
                     <div class="custom-file form-control " style="width: 50%">
                         <br>
