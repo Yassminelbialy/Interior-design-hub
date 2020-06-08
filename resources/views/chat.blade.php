@@ -39,10 +39,22 @@
                 </li>
 
                 @forelse ($data as $item)
+                @if ($item->img)
                 <li class="sent">
-                <img src="/chatfiles/{{$item->img}}" alt="" />
-                <p>{{$item->body}}</p>
+                    <img src="/chatfiles/{{$item->img}}" alt="" />
+
+                    <p style="font-size:22; text-align: center;">
+                        <img src="/chatfiles/{{$item->img}}" style="width: 200px;height:200px;" alt="" srcset="">
+<br>
+                        {{$item->body}}</br>
                 </li>
+                @else
+                <li class="sent">
+					<img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
+                    <p>{{$item->body}}</p>
+                    </li>
+                @endif
+
                 @empty
                     <div class="danger bg-primary">No Data</div>
                 @endforelse

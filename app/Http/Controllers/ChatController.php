@@ -18,7 +18,7 @@ class ChatController extends Controller
         if(Auth::user())
         {
             return view('chat',['data'=>Message::where(['user_id'=>Auth::user()->id])->get()]);
-
+            // >>> Message::where(['body'=>'yasmina'])->orderBy('created_at', 'asc')->get()
         }
         return view('chat',['data'=>[]]);
 
