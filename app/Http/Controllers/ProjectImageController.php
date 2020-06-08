@@ -22,8 +22,8 @@ class ProjectImageController extends Controller
     public function index(Request $request,$id)
     {
         // dd($id);
-        $projectImages=Project::find($id)->images;
-        // dd($projectImages);
+        $projectImages=Project::find($id)->images()->paginate(3);
+
     return view('manager.projectimages',['id'=>$id,'data'=>$projectImages]) ;
     }
 
