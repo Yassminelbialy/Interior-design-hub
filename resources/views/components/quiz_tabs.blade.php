@@ -480,7 +480,7 @@
                                   <div class="calls_container">
                                   <span>Viber</span><img class="viber_image" src="images/viber.png" alt="">
                                   <label class="checkbox_container">
-                                    <input type="radio" class="q6" value="viber">
+                                    <input type="radio" class="q6" value="viber" name="viber">
                                     <span class="checkmark"></span>
                                   </label>
                                   </div>
@@ -489,7 +489,7 @@
                                   <div class="calls_container">
                                   <span>Telegram</span><i class="fab fa-telegram-plane"></i>
                                   <label class="checkbox_container">
-                                    <input type="radio" class="q6" value="telegram">
+                                    <input type="radio" class="q6" value="telegram" name="telegram">
                                     <span class="checkmark"></span>
                                   </label>
                                   </div>
@@ -498,7 +498,7 @@
                                   <div class="calls_container">
                                   <span>Whatsapp</span><img class="viber_image" src="images/whatsapp1.png" alt="">
                                   <label class="checkbox_container">
-                                    <input type="radio" class="q6" value="whatsapp">
+                                    <input type="radio" class="q6" value="whatsapp" name="whatsapp">
                                     <span class="checkmark"></span>
                                   </label>
                                   </div>
@@ -507,7 +507,7 @@
                                   <div class="calls_container">
                                   <span>Normal</span><img class="viber_image" src="images/viber.png" alt="">
                                   <label class="checkbox_container">
-                                    <input type="radio" class="q6" value="normal">
+                                    <input type="radio" class="q6" value="normal" name="normal">
                                     <span class="checkmark"></span>
                                   </label>
                                   </div>
@@ -768,7 +768,11 @@
                       <img src="/images/instgram_phone.PNG" alt="mobile image">
                   </div>
                   <div class="col-md-6 col-sm-12">
+
+                  
                       <button class="btn_next">nepentn HA Instgram</button>
+                  
+                  
                       <div class="wiki">
                       <i class="fas fa-globe"></i> <a href="">BepHYTbCr Ha CaNT</a>
                       </div>

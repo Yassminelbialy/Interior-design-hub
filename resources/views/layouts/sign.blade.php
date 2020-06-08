@@ -14,6 +14,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    
     <!-- Font Icon -->
     <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
 
@@ -49,6 +50,13 @@
                                     <a class="nav-link text-dark" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
+                            
+                            
+                                
+                                    
+                                  
+                            
+
                         @endguest
                     </ul>
                 </div>

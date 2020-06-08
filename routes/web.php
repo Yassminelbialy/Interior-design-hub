@@ -31,28 +31,34 @@ Route::middleware('manager')->prefix('manager')->name('manager.')->group(functio
     Route::resource('project.images', 'ProjectImageController');
     Route::resource('alexandra', 'AlexandrainfoController');
     Route::resource('contacts', 'ContactController');
-    Route::resource('logo', 'logoController');
+    Route::resource('logo', 'LogoController');
     Route::resource('review', 'ReviewController');
     Route::resource('fbPosts' ,'FacebookController');
     Route::resource('consultations' ,'ConsultationController');
     Route::resource('user' ,'AllUsersController');
     Route::resource('quizzes' , 'QuizController');
     Route::resource('quizzes.images' , 'QuizImageController');
+    Route::resource('analytics' ,'AnalyticsController');
     Route::resource('AdminOrder' , 'OrderAdminController');
+    Route::get('users/{users}/order', 'OrderAdminController@updateOrder')->name('order');
     
 });//manager routes
 
 Route::middleware('user')->group(function(){
 
     Route::resource('profile', 'OrderController');
+    Route::resource('chat', 'ChatController');
+
 
 });
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('quiz', 'QuizController');
 
+
 Route::resource('project.images', 'ProjectImageController');
 Route::post('/contact','ConsultationController@send');
+// Route::post('/quizContact','QuizControllerSendingMail@sendEmail');
 Route::get('/','UserController@index');
 Route::get('view/{id}', 'UserController@view')->name('project.view');
 

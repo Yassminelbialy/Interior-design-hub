@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Order;
+use App\Quiz;
+use App\User;
 
 class OrderAdminController extends Controller
 {
@@ -14,6 +16,7 @@ class OrderAdminController extends Controller
      */
     public function index()
     {
+
         $OrderDetails = Order::all();
         return view('manager.orderViewAdmin',['OrdersDetails'=>$OrderDetails]);
     }
@@ -25,7 +28,9 @@ class OrderAdminController extends Controller
      */
     public function create()
     {
-        return view ('manager.addOrderForm');
+        $quiz = Quiz::pluck('customerPhoneNo')->all();
+        $user = User::whereIn('phone' ,$quiz)->whereIn('state',[0])->pluck('name','id')->toArray();
+        return view('manager.addOrderForm',compact('user'));
     }
 
     /**
@@ -36,20 +41,19 @@ class OrderAdminController extends Controller
      */
     public function store(Request $request)
     {
-        $newOrder = new Order();
-        $newOrder->description = $request->orderDesc;
-        $newOrder->state = $request->orderState;
-        $newOrder->cost = $request->orderCost;
-        if($request->hasfile('orderImg')){
+        
+        $req=$request->all();
+        
+        if($request->file('contractImg')){
 
-            $file = $request->file('orderImg');
+            $file = $request->file('contractImg');
             $extension = $file->getClientOriginalExtension();
             $fileName = time() . '.' . $extension;
             $file->move('images/AdminOrderImages' , $fileName);
-            $newOrder->contractImg = $fileName;
+            $req['contractImg']=$fileName;
         }
 
-        $newOrder->save();
+        $order = Order::create($req);
 
         return redirect('/manager/AdminOrder');
 
@@ -75,6 +79,15 @@ class OrderAdminController extends Controller
     public function edit($id)
     {
         return view('manager.editAdminOrder' , ['orderUpdated'=>Order::find($id)]);
+    }
+    public function updateOrder(User $users){
+        $id = $users->id;
+        $user=User::find($id);
+        if($user){
+            $user->state = 1 ;
+            $user->save();
+        }
+        return redirect()->back();   
     }
 
     /**
