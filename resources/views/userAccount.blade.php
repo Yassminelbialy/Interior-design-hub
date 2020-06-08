@@ -29,7 +29,7 @@
                             <div class="panel-body">
                                 <div class="tab-content">
                               
-                                @if(count($orderList) > 0)
+                                @if(Auth::check() && Auth::user()->state == 1)
                                     @foreach($orderList as $order)
                                             
                                     <div class="tab-pane fade in active" id="tab1default">
@@ -39,7 +39,7 @@
                                         <p class="lead">State : {{ $order->state }}</p>
                                         <p class="lead">Cost  : {{ $order->cost }}</p>
                                         <p class="lead">Your Design :</p>
-                                        <img src="/images/logo/{{$order->contractImg}}" width="200px" height="200px"/>
+                                        <img src="/images/AdminOrderImages/{{$order->contractImg}}" width="200px" height="200px"/>
 
                                        
                                     </div>

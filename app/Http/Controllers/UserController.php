@@ -25,4 +25,5 @@ class UserController extends Controller
         return view('projectView',['project'=>$project,'relProjects'=>$relProjects]);
 
     }
+
 }
