@@ -23,7 +23,7 @@
                                     <ul class="nav nav-tabs">
                                         <li class="active"><a href="#tab1default" data-toggle="tab">My Order</a></li>
                                         <li><a href="chat" data-toggle="tab">Messages</a></li>
-                                        
+
                                     </ul>
                             </div>
                             <div class="panel-body">
@@ -31,7 +31,7 @@
                               
                                 @if(Auth::check() && Auth::user()->state == 1)
                                     @foreach($orderList as $order)
-                                            
+
                                     <div class="tab-pane fade in active" id="tab1default">
 
                                         <p class="lead">Your Order_id : {{ $order->id }}</p>
@@ -41,11 +41,11 @@
                                         <p class="lead">Your Design :</p>
                                         <img src="/images/AdminOrderImages/{{$order->contractImg}}" width="200px" height="200px"/>
 
-                                       
+
                                     </div>
-                                          
+
                                     <hr>
-                                   
+
                                     @endforeach
 
                                     @elseif(!$quizData->isEmpty())
@@ -54,8 +54,8 @@
                                             @foreach($quizData as $data)
                                                 <p class="lead"> Your Area :{{ $data ->area}}</p>
                                                 <p class="lead"> Your Style : {{ $data ->styles}}</p>
-                                                <p class="lead"> Contact Via : {{ $data ->contactType}}</p>             
-                                                <p class="lead"> Your Design :{{ $data ->design}}</p>             
+                                                <p class="lead"> Contact Via : {{ $data ->contactType}}</p>
+                                                <p class="lead"> Your Design :{{ $data ->design}}</p>
 
 
                                             @endforeach
@@ -64,7 +64,7 @@
                                         You Don't Apply the Quiz
                                     @endif
                                     <div class="tab-pane fade" id="tab2default">Default 2</div>
-                                  
+
                                 </div>
                             </div>
                         </div>

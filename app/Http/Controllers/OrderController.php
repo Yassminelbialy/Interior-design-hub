@@ -21,6 +21,7 @@ class OrderController extends Controller
          $order_list_of_user = Order::where('user_id', '=', auth()->user()->id)->get();
          return view('userAccount',['orderList'=>$order_list_of_user , 'quizData'=> $user_phone_in_quiz]);
 
+         
     }
 
     /**
