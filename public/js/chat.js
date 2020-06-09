@@ -83,7 +83,7 @@ if(myfile){
 		x=JSON.parse(data);
 		console.log(x)}
     })///ajax
-    console.log(myfile)
+    console.log("##########"+myfile)
 
 }
 myfile='';

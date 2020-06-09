@@ -41,7 +41,8 @@ Route::middleware('manager')->prefix('manager')->name('manager.')->group(functio
     Route::resource('analytics' ,'AnalyticsController');
     Route::resource('AdminOrder' , 'OrderAdminController');
     Route::get('users/{users}/order', 'OrderAdminController@updateOrder')->name('order');
-    
+    Route::resource('jopAppli' , 'JopApplicantController');
+
 });//manager routes
 
 Route::middleware('user')->group(function(){
@@ -60,7 +61,12 @@ Route::resource('project.images', 'ProjectImageController');
 Route::post('/contact','ConsultationController@send');
 // Route::post('/quizContact','QuizControllerSendingMail@sendEmail');
 Route::get('/','UserController@index');
+
 Route::get('view/{id}', 'UserController@view')->name('project.view');
+Route::get('jopapply/{id?}', 'JopApplicantController@create')->where('id', '[0-9]+')->name('applyjop');
+Route::post('jopapply/{id?}', 'JopApplicantController@store')->where('id', '[0-9]+')->name('applyjopform');
+
+Route::get('jops', 'JopApplicantController@index')->name('jops');
 
 
 
