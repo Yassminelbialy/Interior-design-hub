@@ -4,5 +4,5 @@
 <p> My Styla is : {{ $quizData->styles}}</p>
 <p> Time Of Response : {{ $quizData->timeOfRsponse}}</p>
 <p> State : {{ $quizData->participateState}}</p>
-<p> You Can Contact with Me Via : {{ $quizData->contactType}}</p>
+<p> You Can Contact with Me Via : {{ $quizData->contactTybe}}</p>
 <p> My Phone Number : {{ $quizData->customerPhoneNo}}</p>

@@ -15,7 +15,7 @@ class AnalyticsController extends Controller
     public function index()
     {
        $data= Analytics::fetchMostVisitedPages(Period::days(7));
-       dd($data);
+    //    dd($data);
         return view('manager.analytics');
 
     }

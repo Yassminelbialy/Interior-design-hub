@@ -24,19 +24,15 @@
 		<div class="contact-profile">
 			<img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
 			<p>Admin</p>
-			<div class="social-media">
-				<i class="fa fa-facebook" aria-hidden="true"></i>
-				<i class="fa fa-twitter" aria-hidden="true"></i>
-				 <i class="fa fa-instagram" aria-hidden="true"></i>
-			</div>
 		</div>
 		<div class="messages">
 			<ul>
-
+				
 				<li class="replies">
 					<img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
-					<p>Wrong. You take the gun, or you pull out a bigger one. Or, you call their bluff. Or, you do any one of a hundred and forty six other things.</p>
-                </li>
+					<p>Hello, Iam the admin .. You can talk to me ;  i will reply soon</p>
+				</li>
+				
 
                 @forelse ($data as $item)
                 @if ($item->img)
@@ -45,7 +41,7 @@
 
                     <p style="font-size:22; text-align: center;">
                         <img src="/chatfiles/{{$item->img}}" style="width: 200px;height:200px;" alt="" srcset="">
-<br>
+				<br>
                         {{$item->body}}</br>
                 </li>
                 @else
@@ -56,7 +52,7 @@
                 @endif
 
                 @empty
-                    <div class="danger bg-primary">No Data</div>
+                    <!-- <div class="danger bg-primary">No Data</div> -->
                 @endforelse
 			</ul>
 		</div>
