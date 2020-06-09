@@ -16,7 +16,7 @@ class QuizController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-  
+
     public function index()
     {
 
@@ -34,8 +34,8 @@ class QuizController extends Controller
         return response()->json(['message' => 'User status updated successfully.']);
 
     }
-    
-  
+
+
     /**
      * Store a newly created resource in storage.
      *
@@ -65,9 +65,9 @@ class QuizController extends Controller
            $quiz->styles =implode(" \n ", $request->styles);
            $quiz->design = $request->design ;
 
-              $response=$quiz->save();
+            //   $response=$quiz->save();
 
-$response1='';
+                $response1='';
               if ($files = $request->file('file'))
               {
 
@@ -83,9 +83,8 @@ $response1='';
 
               }
 
-              Mail::to('yassminelbialy@gmail.com')
-              ->send(new SendQuizMail ($quiz));
-
+            //   Mail::to('yassminelbialy@gmail.com')
+            //   ->send(new SendQuizMail ($quiz));
 
          return response()->json( ['mydata'=> $request->all(),'myresponse'=> $response1,'opject'=>$quiz,'images'=>$quiz->images] );
 

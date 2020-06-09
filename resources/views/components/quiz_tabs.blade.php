@@ -6,6 +6,7 @@
 
 @push('quizscript')
 <script src="{{URL::asset('js/quizscript.js')}}"></script>
+
 @endpush
     <!-- Button trigger modal -->
      <button class="open_quizes_modal" style="display: none"
@@ -769,10 +770,10 @@
                   </div>
                   <div class="col-md-6 col-sm-12">
 
-                  
+
                       <button class="btn_next">nepentn HA Instgram</button>
-                  
-                  
+
+
                       <div class="wiki">
                       <i class="fas fa-globe"></i> <a href="">BepHYTbCr Ha CaNT</a>
                       </div>
