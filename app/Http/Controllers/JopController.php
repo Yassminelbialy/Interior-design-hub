@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Jop;
 use Illuminate\Http\Request;
-use Analytics;
-use Spatie\Analytics\Period;
-class AnalyticsController extends Controller
+
+class JopController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,10 +14,7 @@ class AnalyticsController extends Controller
      */
     public function index()
     {
-       $data= Analytics::fetchMostVisitedPages(Period::days(7));
-    //    dd($data);
-        return view('manager.analytics');
-
+        //
     }
 
     /**
@@ -44,10 +41,10 @@ class AnalyticsController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Jop  $jop
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Jop $jop)
     {
         //
     }
@@ -55,10 +52,10 @@ class AnalyticsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Jop  $jop
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Jop $jop)
     {
         //
     }
@@ -67,10 +64,10 @@ class AnalyticsController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Jop  $jop
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Jop $jop)
     {
         //
     }
@@ -78,10 +75,10 @@ class AnalyticsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Jop  $jop
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Jop $jop)
     {
         //
     }

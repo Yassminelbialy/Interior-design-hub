@@ -15,9 +15,7 @@
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('base.name', 'studia') }}</title>
-
-        <title>Charts - SB Admin</title>
+        <title>{{ config('base.name', 'Interior Design') }}</title>
         <link href="/admin/dist/css/styles.css" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
     </head>
@@ -28,9 +26,7 @@
             ><!-- Navbar Search-->
             <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
                 <div class="input-group">
-                    <input class="form-control" type="text" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2" />
                     <div class="input-group-append">
-                        <button class="btn btn-success" type="button"><i class="fas fa-search "></i></button>
                     </div>
                 </div>
             </form>
@@ -39,9 +35,13 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                        <a class="dropdown-item" href="#">Settings</a><a class="dropdown-item" href="#">Activity Log</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="login.html">Logout</a>
+                        <a href="{{ route('logout') }}" class="dropdown-item"
+                         style="!important;"                                         onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();">Logout</a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
                     </div>
                 </li>
             </ul>
@@ -52,7 +52,7 @@
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading">Core</div>
-                            <a class="nav-link" href="index.html"
+                            <a class="nav-link" href="/manager"
                                 ><div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Dashboard</a
                             >
@@ -63,21 +63,20 @@
                             <div class="sb-sidenav-menu-heading">Interface</div>
                             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts"
                                 ><div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                                TABLES
+                                CONTROLL
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div
                             ></a>
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="/manager/project">projects</a>
+                                    <a class="nav-link" href="/manager/project">Projects</a>
                                     {{-- <a class="nav-link" href="/manager/project">images of project</a> --}}
 
                                     <a class="nav-link" href="/manager/category">Category of projects</a>
                                     <a class="nav-link" href="/manager/user">Users</a>
                                     <a class="nav-link" href="/manager/logo">Logos</a>
                                     <a class="nav-link" href="/manager/review">Reviews</a>
-                                    <a class="nav-link" href="/manager/alexandra">Alexandra info</a>
+                                    <a class="nav-link" href="/manager/alexandra">Company info</a>
                                     <a class="nav-link" href="/manager/consultations">Consultations</a>
-                                    <a class="nav-link" href="/manager/quizzez">Quizzez</a>
                                     <a class="nav-link" href="/manager/contacts">Contacts</a>
                                     <a class="nav-link" href="/manager/AdminOrder">Users Orders</a>
                                     <a class="nav-link" href="/manager/fbPosts">FaceBook Posts</a>
@@ -88,10 +87,7 @@
                             <div class="sb-sidenav-menu-heading">Addons</div>
                             <a class="nav-link" href="/manager/analytics"
                                 ><div class="sb-nav-link-icon" ><i class="fas fa-chart-area"></i></div>
-                                Charts</a
-                            ><a class="nav-link" href="/manager/category/create"
-                                ><div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                                MY TABLE</a>
+                                Charts</a>
                         </div>
                     </div>
                     <div class="sb-sidenav-footer">
