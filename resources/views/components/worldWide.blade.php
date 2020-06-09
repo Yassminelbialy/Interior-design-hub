@@ -45,5 +45,9 @@
             </div>
         </div>
     </div>
+    <script>
 
+        document.getElementById("vidEle").disabled=false;
+
+    </script>
 </section>
