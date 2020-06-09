@@ -20,8 +20,8 @@
     <td scope="col"></td>  
     <td scope="col">{{ $instance->name }}</td>
     <td scope="col">{{ $instance->phone }}</td>
-    <td scope="col">{{ $instance->comment }}</td>
-    <td scope="col">{{ $instance->timeToCall }}</td>
+    <!-- <td scope="col">{{ $instance->comment }}</td>
+    <td scope="col">{{ $instance->timeToCall }}</td> -->
 
 
     <td>

@@ -39,7 +39,7 @@
                 <li class="sent">
                     <img src="/chatfiles/{{$item->img}}" alt="" />
 
-                    <p style="font-size:22; text-align: center;">
+                    <p style="font-size:22; ">
                         <img src="/chatfiles/{{$item->img}}" style="width: 200px;height:200px;" alt="" srcset="">
 				<br>
                         {{$item->body}}</br>

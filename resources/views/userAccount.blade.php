@@ -13,6 +13,7 @@
 
 
         <body>
+            
             <a href="{{ route('logout') }}" class="btn btn-danger" style="color:#e8e8e8 !important;margin:10px;padding:10px;font-size:20px;float:right;"                                         onclick="event.preventDefault();
                 document.getElementById('logout-form').submit();">Logout</a>
             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -21,13 +22,13 @@
             <div class="container">
         
                 <div class="page-header">
-                    <h1 class="text-center" style="color:#e8e8e8">Welcome To Your Profile<span class="pull-right label label-default"></span></h1>
+                    <h1 class="text-center" style="color:#DA70D6">Welcome {{$userName}} To Your Profile<span class="pull-right label label-default"></span></h1>
                 </div>
-                <div class="row">
+                <div class="row" >
                     <div class="col-md-12">
                         <div class="panel with-nav-tabs panel-success">
                             <div class="panel-heading">
-                                    <ul class="nav nav-tabs">
+                                    <ul class="nav nav-tabs" styl>
                                         <li class="active"><a href="#tab1default" data-toggle="tab">My Order</a></li>
                                         <li><a href="chat" data-toggle="tab">Messages</a></li>
 
@@ -66,16 +67,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- <div class="tab-pane fade in active" id="tab1default">
-
-                                        <p class="lead">Your Order_id : {{ $order->id }}</p>
-                                        <p class="lead">Description : {{ $order->description }}</p>
-                                        <p class="lead">State : {{ $order->state }}</p>
-                                        <p class="lead">Cost  : {{ $order->cost }}</p>
-                                        <p class="lead">Your Design :</p>
-                                        <img src="/images/AdminOrderImages/{{$order->contractImg}}" width="200px" height="200px"/> -->
-
-
+                                 
                                     </div>
 
                                     <hr>
@@ -99,7 +91,7 @@
                                         </div>
 
                                     @else
-                                        You Don't Apply the Quiz
+                                       <h4> You Don't Apply the Quiz , apply <a href= "/"> Now </a></h4>
                                     @endif
                                     <div class="tab-pane fade" id="tab2default">Default 2</div>
 
