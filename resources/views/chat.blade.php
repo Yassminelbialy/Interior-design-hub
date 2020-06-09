@@ -41,7 +41,7 @@
 
                     <p style="font-size:22; text-align: center;">
                         <img src="/chatfiles/{{$item->img}}" style="width: 200px;height:200px;" alt="" srcset="">
-<br>
+				<br>
                         {{$item->body}}</br>
                 </li>
                 @else
@@ -52,7 +52,7 @@
                 @endif
 
                 @empty
-                    <div class="danger bg-primary">No Data</div>
+                    <!-- <div class="danger bg-primary">No Data</div> -->
                 @endforelse
 			</ul>
 		</div>
