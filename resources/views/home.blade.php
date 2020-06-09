@@ -2,7 +2,6 @@
 
 @section('content')
 
-
     @component('components.header',['contact' => $contact])
     @endcomponent
 

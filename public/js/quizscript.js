@@ -122,6 +122,8 @@ $('.submitquiz').on('click',(event)=>
                 success:function(data)
                 {
                     x=JSON.parse(data);
+                    console.log(x);
+                    console.log(data);
                 }
        })///ajax
     });
