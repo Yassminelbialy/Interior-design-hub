@@ -1,5 +1,6 @@
  <!-- start projects -->
  <section class="projects">
+  
       @if(count($projects)>0)
       <h2 class="text-left">HAWN NPOEktbi:</h2>
       <div class="container-fluid">
