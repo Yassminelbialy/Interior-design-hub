@@ -34,7 +34,7 @@
 				</li>
 				
 
-                @forelse ($chatData as $item)
+                @forelse ($data as $item)
                 @if ($item->img)
                 <li class="sent">
                     <img src="/chatfiles/{{$item->img}}" alt="" />
