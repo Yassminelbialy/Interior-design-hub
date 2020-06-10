@@ -14,7 +14,8 @@ class JopController extends Controller
      */
     public function index()
     {
-        //
+        $jops= Jop::all();
+        return view('manager/jopindex',["jops"=>$jops]);
     }
 
     /**
@@ -24,7 +25,7 @@ class JopController extends Controller
      */
     public function create()
     {
-        //
+        return view ('manager.jopcreate');
     }
 
     /**
@@ -35,7 +36,16 @@ class JopController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $jop=new Jop;
+        $jop->title= $request->title;
+        $jop->description= $request->description;
+        $jop->location= $request->location;
+        $jop->requirements= $request->requirements;
+        $jop->jopType= $request->jopType;
+
+        $jop->save();
+        return redirect('/manager/jops');
+
     }
 
     /**
@@ -55,10 +65,12 @@ class JopController extends Controller
      * @param  \App\Jop  $jop
      * @return \Illuminate\Http\Response
      */
-    public function edit(Jop $jop)
+    public function edit( $id)
     {
-        //
+        $jop=Jop::findOrFail($id);
+        return view('manager.jopedit',['jop'=>$jop]);
     }
+    
 
     /**
      * Update the specified resource in storage.
@@ -67,9 +79,17 @@ class JopController extends Controller
      * @param  \App\Jop  $jop
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Jop $jop)
+    public function update(Request $request, $id)
     {
-        //
+        $jop= Jop::find($id);
+        $jop->title= $request->title;
+        $jop->description= $request->description;
+        $jop->location= $request->location;
+        $jop->requirements= $request->requirements;
+        $jop->jopType= $request->jopType;
+
+        $jop->save();
+        return redirect('/manager/jops');
     }
 
     /**
@@ -78,8 +98,10 @@ class JopController extends Controller
      * @param  \App\Jop  $jop
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Jop $jop)
+    public function destroy(Request $request, $id)
     {
-        //
+        $jop=Jop::find($id);       
+        $jop->delete();
+        return redirect('/manager/jops');
     }
 }

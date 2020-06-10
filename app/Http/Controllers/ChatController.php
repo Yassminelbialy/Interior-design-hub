@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 use Auth;
-use Illuminate\Http\Request;
 use App\Message;
+use Illuminate\Http\Request;
+
 use Illuminate\Support\Facades\Auth as FacadesAuth;
 use Uuid ;
 class ChatController extends Controller

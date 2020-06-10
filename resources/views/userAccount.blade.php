@@ -90,7 +90,7 @@
                                         </div>
 
                                     @else
-                                       <h4 style="color:0000FF;font-weight: bold;"> You Don't Apply the Quiz , apply <a href= "/"> Now </a></h4>
+                                       <h4 style="color:0000FF;font-weight: bold;"> You Didn't Apply the Quiz , apply <a href= "/"> Now </a></h4>
                                     @endif
                                     <div class="tab-pane fade" id="tab2default">Default 2</div>
 
@@ -100,6 +100,37 @@
                     </div>
 
                 </div>
+                <!-- <img src="../images/f2.png" style="display: block;"> -->
+                <!-- Chat modal -->
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-toggle="modal" 
+                data-target="#exampleModalCenter" style="position: absolute;left:50%;top: 80%;">
+                Chat with Admin
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                ...
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end -->
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
             </div>
     </body>
 </html>
