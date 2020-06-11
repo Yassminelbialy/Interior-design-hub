@@ -33,6 +33,11 @@
 	border-color: #ddd;
 	border-bottom-color: transparent;
 }
+body {
+    letter-spacing: 0.8px;
+    background: linear-gradient(0deg, #fff, 50%, #18847a);
+    background-repeat: no-repeat
+}
 
 .container-fluid {
     margin-top: 80px !important;
