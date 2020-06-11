@@ -1,41 +1,14 @@
-<!DOCTYPE html>
-<html>
+@extends('layouts.user')
 
-<head>
-    <title>Profile</title>
-    <!-- profile links -->
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
-    <link href="{{ asset('css/userProfileStyle.css')}}" rel="stylesheet">
-    <!-- chat liks -->
-    <link rel="stylesheet" href="../../css/chatstyle.css">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-    {{-- <head><script src='//production-assets.codepen.io/assets/editor/live/console_runner-079c09a0e3b9ff743e39ee2d5637b9216b3545af0de366d4b9aad9dc87e26bfd.js'></script><script src='//production-assets.codepen.io/assets/editor/live/events_runner-73716630c22bbc8cff4bd0f07b135f00a0bdc5d14629260c3ec49e5606f98fdd.js'></script><script src='//production-assets.codepen.io/assets/editor/live/css_live_reload_init-2c0dc5167d60a5af3ee189d570b1835129687ea2a61bee3513dee3a50c115a77.js'></script><meta charset='UTF-8'><meta name="robots" content="noindex"><link rel="shortcut icon" type="image/x-icon" href="//production-assets.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" /><link rel="mask-icon" type="" href="//production-assets.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" /><link rel="canonical" href="https://codepen.io/emilcarlsson/pen/ZOQZaV?limit=all&page=74&q=contact+" /> --}}
-    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,300' rel='stylesheet' type='text/css'>
-    <script src="https://use.typekit.net/hoy3lrg.js"></script>
-    <script>
-        try {
-            Typekit.load({
-                async: true
-            });
-        } catch (e) {}
-    </script>
-    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css'>
-    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css'>
-
-</head>
-
-<body>
-    <a href="{{ route('logout') }}" class="btn " style="background-color:0000FF; color:#0000FF !important;margin:10px;padding:10px;font-size:20px;display:absolute;float:right;" onclick="event.preventDefault();
+@section('content')
+    <a href="{{ route('logout') }}" class="btn btn-danger" style="color:white !important;margin:10px;padding:10px;font-size:20px;float:right;border-radius:10px" onclick="event.preventDefault();
                 document.getElementById('logout-form').submit();">Logout</a>
     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
         @csrf
     </form>
     <div class="container">
         <div class="page-header">
-            <h1 class="text-center" style="color:#0000FF;font-weight: bold;font-family: Times New Roman">
+            <h1 class="text-center text-info" style="font-weight: bold;font-family: Times New Roman">
                 Welcome {{$userName}} To Your Profile<span class="pull-right label label-default"></span></h1>
         </div>
         <div class="row">
@@ -50,13 +23,13 @@
                                     <div class="card-header bg-white">
                                         <div class="row justify-content-between">
                                             <div class="col">
-                                                <p class="text-muted"> Order ID <span class="font-weight-bold text-dark">{{ $order->id }}</span></p>
+                                                <p class="text-muted" style="margin:10px"> Order ID <span class="font-weight-bold text-dark">{{ $order->id }}</span></p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="card-body">
                                         <div class="media flex-column flex-sm-row">
-                                            <div class="media-body ">
+                                            <div class="media-body " style="margin:10px">
                                                 <h5 class="bold">Description: {{ $order->description }}</h5>
                                                 <p class="text-muted">Cost: {{ $order->cost }}$</p>
                                             </div><img class="align-self-center img-fluid" src="/images/AdminOrderImages/{{$order->contractImg}}" width="180 " height="180">
@@ -104,7 +77,7 @@
     </div>
     <!-- Chat modal -->
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" style="position: absolute;left:50%;top: 80%;">
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" style="position: absolute;left:50%;">
         Chat with Admin
     </button>
     <!-- Modal -->
@@ -169,14 +142,4 @@
         </div>
     </div>
     <!-- end -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <!-- chat scripts -->
-    <script src='//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'></script>
-    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
-    <script src="../../js/chat.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    </div>
-</body>
-
-</html>
+@endsection

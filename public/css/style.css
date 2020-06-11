@@ -517,3 +517,14 @@ i {
     font-size: 30px;
     color: #aa8f63;
 }
+.all_project{
+    padding: 10px 100px;
+    background-color: var(--secondColor);
+    background: linear-gradient( to left, var(--secondColor), #ffefd1 112px, var(--secondColor) );
+    font-size: 18px;
+    font-weight: bold;
+}
+.row{
+    margin: 0;
+    padding: 0;
+}
