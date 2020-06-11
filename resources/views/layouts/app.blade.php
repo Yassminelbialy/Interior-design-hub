@@ -11,6 +11,7 @@
 
 
     <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
     <script
       src="https://kit.fontawesome.com/5c57781684.js"
       crossorigin="anonymous"
@@ -27,25 +28,14 @@
 <body>
 
 
-        <main>
+        <main id="app">
             @yield('content')
         </main>
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-      crossorigin="anonymous"
-    ></script>
-    <script src="js/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="{{ asset('js/owl.carousel.min.js') }}" ></script>
+    <script src="{{ asset('js/map.js') }}" ></script>
     <script src="{{ asset('js/lazyLoading.js') }}"></script>
     <script src="{{ asset('js/main.js') }}" ></script>
-
-    {{-- <script src="https://api-maps.yandex.ru/2.1/?apikey=45185f8a-5595-4dca-a730-067482a1af71&lang=ru_RU" type="text/javascript"> </script> --}}
     <script src="https://api-maps.yandex.ru/2.1/?lang=en_RU&amp;apikey=45185f8a-5595-4dca-a730-067482a1af71" type="text/javascript"></script>
 
     @stack('quizscript')
