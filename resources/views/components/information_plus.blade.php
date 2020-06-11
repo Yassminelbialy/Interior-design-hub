@@ -7,4 +7,4 @@
       </p>
     </section>
 
-    <!-- end information plus -->
+  <!-- end information plus -->

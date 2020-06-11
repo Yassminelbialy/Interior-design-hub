@@ -2,6 +2,32 @@
 
 @section('content')
 
+@if ($errors->any())
+
+
+
+
+@foreach ($errors->all() as $error)
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>Holy guacamole!</strong> You should check in on some of those fields below. for {{$error}}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+           @endforeach
+
+
+@endif
+@if (\Session::has('success'))
+    <div class="alert alert-success">
+        <ul>
+            <li>{!! \Session::get('success') !!}</li>
+        </ul>
+    </div>
+@endif
+
+
+
 
 @component('components.loading')
 @endcomponent
@@ -44,7 +70,8 @@
 
 @component('components.our_team')
 @endcomponent
-@component('components.clients')
+
+@component('components.clients',['logos' => $logos])
 @endcomponent
 
 @component('components.state')
@@ -59,8 +86,10 @@
 @component('components.worldWide')
 @endcomponent
 
-@component('components.testimonial')
+
+@component('components.testimonial',['reviews' => $reviews])
 @endcomponent
+
 
 @component('components.contact',['contact' => $contact,'ceoInfo' => $ceoInfo])
 @endcomponent
@@ -73,4 +102,8 @@
 @endcomponent
 
 
+
+@endsection
+@section('title')
+{{'interior design'}}
 @endsection

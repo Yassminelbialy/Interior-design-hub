@@ -127,7 +127,7 @@ $(function () {
     });
 
     //   start slider
-    AOS.init();
+
     var $slider = $(".slider"),
         $slideBGs = $(".slide__bg"),
         diff = 0,
@@ -317,13 +317,13 @@ $(function () {
     });
 
     // when click play video will play auto
-    $(".fa-play").click(function () {
-        $(this).siblings("div").children().find("video").get(0).play();
-    });
-    // when click close modal video will close
-    $(".close").click(function () {
-        $(this).siblings("div").children("video").get(0).pause();
-    });
+    // $(".fa-play").click(function () {
+    //     $(this).siblings("div").children().find("video").get(0).play();
+    // });
+    // // when click close modal video will close
+    // $(".close").click(function () {
+    //     $(this).siblings("div").children("video").get(0).pause();
+    // });
     // when click out modal video will close
 
     // $(".modal").click(function () {

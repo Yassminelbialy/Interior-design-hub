@@ -1,0 +1,40 @@
+<?php
+
+namespace App\Mail;
+
+use Illuminate\Bus\Queueable;
+use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Mail\Mailable;
+use Illuminate\Queue\SerializesModels;
+
+
+class SendQuizMail extends Mailable
+{
+    use Queueable, SerializesModels;
+
+    public $data;
+    /**
+     * Create a new message instance.
+     *
+     * @return void
+     */
+
+     
+    public function __construct($data)
+    {
+        $this->data = $data;
+    }
+
+    /**
+     * Build the message.
+     *
+     * @return $this
+     */
+    public function build()
+    {
+        return $this->from('nelshohat@gmail.com')
+        ->subject('New Quiz Request')
+        ->view('dynamic-email-quiz')
+        ->with('quizData' , $this->data);
+    }
+}
