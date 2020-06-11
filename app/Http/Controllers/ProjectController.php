@@ -7,6 +7,8 @@ use App\Category;
 use App\ProjectImage;
 use Illuminate\Http\Request;
 use Uuid ;
+use Illuminate\Support\Facades\File as LaraFile;
+
 
 class ProjectController extends Controller
 {
@@ -102,6 +104,7 @@ class ProjectController extends Controller
 
             if ($files = $request->file('mainimage'))
             {
+                            LaraFile::delete("projectimages/{$project->mainimage}");
                             $uuid =Uuid::generate()->string;
                             $path=$uuid.".".$request->file('mainimage')->getClientOriginalExtension();
                             $desti='projectimages/';

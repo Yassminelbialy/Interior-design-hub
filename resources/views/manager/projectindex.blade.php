@@ -93,7 +93,7 @@
           </tr>
         </thead>
         <tbody>
-            @forelse ($data as $item)
+            @forelse ($data as $item) 
             <tr>
                 <th scope="row">{{$item->id}}</th>
             <td><img src="/projectimages/{{$item->mainImage}}"style="display: inline-block; height: 100px ; width:100px ; background-color:red;"></img></td>
