@@ -13,7 +13,7 @@
             <th scope="col" class="text-light h3">Title</th>
             <th scope="col" class="text-light h3">Description</th>
             <th scope="col" class="text-light h3">Requirements</th>
-            <th scope="col" class="text-light h3">Jop Type</th>
+            <th scope="col" class="text-light h3">Type</th>
             <th scope="col" class="text-light h3">Location</th>  
             <th scope="col" class="text-light h3" colspan="2">Actions</th>
           </tr>

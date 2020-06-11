@@ -19,6 +19,7 @@ class JopApplicantController extends Controller
     {
         return view('jopApp.jops',['data'=>Jop::all()]);
 
+
     }
 
     /**
