@@ -7,6 +7,7 @@ use App\Contact;
 use App\Project;
 use App\Logo;
 use App\Review;
+use App\Category;
 use App\ProjectImage;
 use Illuminate\Support\Facades\DB;
 class UserController extends Controller
@@ -26,6 +27,13 @@ class UserController extends Controller
         $project = Project::find($id);
         $relProjects=ProjectImage::where('project_id','=',$id)->get();
         return view('projectView',['project'=>$project,'relProjects'=>$relProjects]);
+
+    }
+    public function allprojects(){
+        $projects = Project::all();
+        $contact= Contact::limit(1)->get();
+        $categories = Category::all()->pluck('name','id')->toArray();
+        return view('AllProjectShow',['projects'=>$projects,'contact'=>$contact,'categories'=>$categories]);
 
     }
 
