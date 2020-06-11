@@ -15,22 +15,24 @@
 
 
                 @forelse ($data as $item)
-                      <li class="list-group-item m-3">
+                <li class="list-group-item m-3">
                     <!-- Custom content-->
                     <div class="media align-items-lg-center flex-column flex-lg-row p-3">
                         <div class="media-body order-2 order-lg-1">
-                        <h5 class="mt-0 font-weight-bold mb-2">{{$item->title}}</h5>
-                        <p class="font-italic text-muted mb-0 small">{{$item->description}}</p>
-                        <hr>
-                        <h6>Jop REquirement</h6>
-                        <p class="font-italic text-muted mb-0 small">{{$item->description}}</p>
+                            <h5 class="mt-0 font-weight-bold mb-2">{{$item->title}}</h5>
+                            <p class="font-italic text-muted mb-0 small">{{$item->description}}</p>
+                            <hr>
+                            <h6>Jop REquirement</h6>
+                            <p class="font-italic text-muted mb-0 small">{{$item->description}}</p>
 
-                        <hr>
-                        <h6 style="display: inline-block"   >Jop Type</h6>
-                        <p style="display: inline-block"class="font-italic text-muted mb-0 small">{{$item->jopType}} <h6 style="display: inline-block"> Location:</h6>{{$item->location}}</p>
+                            <hr>
+                            <h6 style="display: inline-block">Jop Type</h6>
+                            <p style="display: inline-block" class="font-italic text-muted mb-0 small">{{$item->jopType}}
+                                <h6 style="display: inline-block"> Location:</h6>{{$item->location}}
+                            </p>
 
                             <div class="d-flex align-items-center justify-content-between mt-1">
-                            <h6 class="font-weight-bold my-2">{{$item->created_at}}</h6>
+                                <h6 class="font-weight-bold my-2">{{$item->created_at}}</h6>
                                 <ul class="list-inline small">
                                     <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
                                     <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
@@ -39,11 +41,14 @@
                                     <li class="list-inline-item m-0"><i class="fa fa-star-o text-gray"></i></li>
                                 </ul>
                             </div>
-                        <a href="{{route('applyjopform',$item->id)}}" class="btn btn--radius-2 btn--blue btn-danger">APPLY</a>       </div>
+                            <a href="{{route('applyjopform',$item->id)}}" class="btn btn--radius-2 btn--blue btn-danger">APPLY</a>
+                        </div>
                     </div> <!-- End -->
                 </li> <!-- End -->
                 @empty
-                    <div class="text-center"> <p>hello worled</p></div>
+                <div class="text-center">
+                    <p>hello worled</p>
+                </div>
                 @endforelse
 
             </ul> <!-- End -->

@@ -36,97 +36,97 @@
                     <div class="alert alert-danger">
                         <ul>
                             @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
+                            <li>{{ $error }}</li>
                             @endforeach
                         </ul>
                     </div>
-                @endif
-                @if (\Session::has('success'))
-    <div class="alert alert-success">
-        <ul>
-            <li>{!! \Session::get('success') !!}</li>
-        </ul>
-    </div>
-@endif
+                    @endif
+                    @if (\Session::has('success'))
+                    <div class="alert alert-success">
+                        <ul>
+                            <li>{!! \Session::get('success') !!}</li>
+                        </ul>
+                    </div>
+                    @endif
                     <h2 class="title">Registration Form For Jop Application</h2>
                     {{ Form::open(['route' => ['applyjopform',$id],'enctype' => 'multipart/form-data','method'=>'post'])}}
                     <div class="row row-space">
-                            <div class="col-2">
-                                <div class="input-group">
-                                    <label class="label">Full Name</label>
-                                    <input class="input--style-4" type="text" name="fullName">
-                                </div>
+                        <div class="col-2">
+                            <div class="input-group">
+                                <label class="label">Full Name</label>
+                                <input class="input--style-4" type="text" name="fullName">
                             </div>
-                            <div class="col-2">
-                                <div class="input-group">
-                                    <label class="label">URL Protofolio</label>
-                                    <input class="input--style-4" type="text" name="urlProtofolio">
+                        </div>
+                        <div class="col-2">
+                            <div class="input-group">
+                                <label class="label">URL Protofolio</label>
+                                <input class="input--style-4" type="text" name="urlProtofolio">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row-space">
+                        <div class="col-2">
+                            <div class="input-group">
+                                <label class="label">Birthday</label>
+                                <div class="input-group-icon">
+                                    <input class="input--style-4 js-datepicker" type="text" name="age">
+                                    <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
                                 </div>
                             </div>
                         </div>
-                        <div class="row row-space">
-                            <div class="col-2">
-                                <div class="input-group">
-                                    <label class="label">Birthday</label>
-                                    <div class="input-group-icon">
-                                        <input class="input--style-4 js-datepicker" type="text" name="age">
-                                        <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-2">
-                                <div class="input-group">
-                                    <label class="label">Gender</label>
-                                    <div class="p-t-10">
-                                        <label class="radio-container m-r-45">Male
-                                            <input type="radio" checked="checked" name="gender">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                        <label class="radio-container">Female
-                                            <input type="radio" name="gender">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                    </div>
+                        <div class="col-2">
+                            <div class="input-group">
+                                <label class="label">Gender</label>
+                                <div class="p-t-10">
+                                    <label class="radio-container m-r-45">Male
+                                        <input type="radio" checked="checked" name="gender">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="radio-container">Female
+                                        <input type="radio" name="gender">
+                                        <span class="checkmark"></span>
+                                    </label>
                                 </div>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="row row-space">
-                            <div class="col-2">
-                                <div class="input-group">
-                                    <label class="label">Email</label>
-                                    <input class="input--style-4" type="email" name="email">
-                                </div>
-                            </div>
-                            <div class="col-2">
-                                <div class="input-group">
-                                    <label class="label">Phone Number</label>
-                                    <input class="input--style-4" type="text" name="phone">
-                                </div>
+                    <div class="row row-space">
+                        <div class="col-2">
+                            <div class="input-group">
+                                <label class="label">Email</label>
+                                <input class="input--style-4" type="email" name="email">
                             </div>
                         </div>
-
-
-                        <div class="row row-space">
-                            <div class="col-2">
-                                <div class="input-group">
-                                    <label class="label">CV</label>
-                                    <input id="myfile" style="display: none" class="myfile input--style-4 d-none" type="file" name="file" >
-                                    <a onclick="document.querySelector('.myfile').click()" class="btn btn--radius-2 btn--blue">Upload CV</a>
-
-                                </div>
+                        <div class="col-2">
+                            <div class="input-group">
+                                <label class="label">Phone Number</label>
+                                <input class="input--style-4" type="text" name="phone">
                             </div>
-                            <div class="col-2">
+                        </div>
+                    </div>
+
+
+                    <div class="row row-space">
+                        <div class="col-2">
+                            <div class="input-group">
+                                <label class="label">CV</label>
+                                <input id="myfile" style="display: none" class="myfile input--style-4 d-none" type="file" name="file">
+                                <a onclick="document.querySelector('.myfile').click()" class="btn btn--radius-2 btn--blue">Upload CV</a>
 
                             </div>
                         </div>
+                        <div class="col-2">
 
-                        <div class="p-t-15">
-                            <button class="btn btn--radius-2 btn--blue" type="submit">Submit</button>
                         </div>
-                        {!! Form::close() !!}
+                    </div>
 
-                         </div>
+                    <div class="p-t-15">
+                        <button class="btn btn--radius-2 btn--blue" type="submit">Submit</button>
+                    </div>
+                    {!! Form::close() !!}
+
+                </div>
             </div>
         </div>
     </div>
