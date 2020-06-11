@@ -5,19 +5,37 @@
 <script src="{{URL::asset('js/quizscript.js')}}"></script>
 
 @endpush
-<!-- Button trigger modal -->
-<button class="open_quizes_modal" style="display: none" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal_quiz">
-  Launch quizes modal
-</button> -->
-<div class="modal modal_quizes fade " id="modal_quiz" tabindex="-1" role="dialog" aria-labelledby="quizModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="text-center modal-head">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
+    <!-- Button trigger modal -->
+     <button class="open_quizes_modal" style="display: none"
+      type="button"
+      class="btn btn-primary"
+      data-toggle="modal"
+      data-target="#modal_quiz"
+    >
+      Launch quizes modal
+    </button>
+
+    <div
+      class="modal modal_quizes fade "
+      id="modal_quiz"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="quizModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="text-center modal-head">
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
 
         <div class="container all_quizes">
           <div class="row">
