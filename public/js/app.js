@@ -37238,6 +37238,8 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
 /**
+<<<<<<< HEAD
+=======
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
  * for JavaScript based Bootstrap features such as modals and tabs. This
  * code may be modified to fit the specific needs of your application.
@@ -37250,6 +37252,7 @@ try {
   __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.js");
 } catch (e) {}
 /**
+>>>>>>> a100e3120426c5f22edee69d6c4949dac1872bb3
  * We'll load the axios HTTP library which allows us to easily issue requests
  * to our Laravel back-end. This library automatically handles sending the
  * CSRF token as a header based on the value of the "XSRF" token cookie.
@@ -37269,7 +37272,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     broadcaster: 'pusher',
 //     key: process.env.MIX_PUSHER_APP_KEY,
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
-//     forceTLS: true
+//     encrypted: true
 // });
 
 /***/ }),
@@ -37292,8 +37295,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/macbookair/Desktop/interior-design-web/Laravel-project/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/macbookair/Desktop/interior-design-web/Laravel-project/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /myprojects/free/Laravel-project/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /myprojects/free/Laravel-project/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

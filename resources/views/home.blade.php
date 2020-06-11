@@ -22,54 +22,55 @@
         </ul>
     </div>
 @endif
-    @component('components.header',['contact' => $contact])
-    @endcomponent
 
-    @component('components.statitics')
-    @endcomponent
+@component('components.header',['contact' => $contact])
+@endcomponent
 
-    @component('components.projects',['projects'=>$projects])
-    @endcomponent
+@component('components.statitics')
+@endcomponent
 
-    @component('components.all_projects')
-    @endcomponent
+@component('components.projects',['projects'=>$projects])
+@endcomponent
 
-    @component('components.services')
-    @endcomponent
+@component('components.all_projects')
+@endcomponent
 
-    @component('components.quiz_tabs')
-    @endcomponent
+@component('components.services')
+@endcomponent
 
-    @component('components.information_plus')
-    @endcomponent
+@component('components.quiz_tabs')
+@endcomponent
 
-    @component('components.clients',['logos' => $logos])
-    @endcomponent
+@component('components.information_plus')
+@endcomponent
 
-    @component('components.state')
-    @endcomponent
+@component('components.clients',['logos' => $logos])
+@endcomponent
 
-    @component('components.video',['ceoInfo' => $ceoInfo])
-    @endcomponent
+@component('components.state')
+@endcomponent
 
-    @component('components.details')
-    @endcomponent
+@component('components.video',['ceoInfo' => $ceoInfo])
+@endcomponent
 
-    @component('components.worldWide')
-    @endcomponent
+@component('components.details')
+@endcomponent
 
-    @component('components.testimonial',['reviews' => $reviews])
-    @endcomponent
+@component('components.worldWide')
+@endcomponent
 
-    @component('components.contact',['contact' => $contact,'ceoInfo' => $ceoInfo])
-    @endcomponent
+@component('components.testimonial',['reviews' => $reviews])
+@endcomponent
 
-    @component('components.map')
+@component('components.contact',['contact' => $contact,'ceoInfo' => $ceoInfo])
+@endcomponent
 
-    @endcomponent
+@component('components.map')
 
-    @component('components.footer')
-    @endcomponent
+@endcomponent
+
+@component('components.footer')
+@endcomponent
 
 
 @endsection

@@ -38,7 +38,19 @@ function newMessage() {
 	if($.trim(message) == '') {
 		return false;
 	}
-	$('<li class="sent"><img src="http://emilcarlsson.se/assets/mikeross.png" alt="" /><p>' + message + '</p></li>').appendTo($('.messages ul'));
+	if(myfile ){
+		var reader = new FileReader();
+		reader.onload=function(e){
+		$('<li class="sent"><img src="http://emilcarlsson.se/assets/mikeross.png" alt="" /><p>'+
+		'<img src="'+e.target.result+'" style="width: 200px;height:200px;"/><br>'
+		+ message + '</p></li>').appendTo($('.messages ul'));
+	    console.log(e.target.result)}
+		reader.readAsDataURL(myfile);
+		
+	}else{
+		$('<li class="sent"><img src="http://emilcarlsson.se/assets/mikeross.png" alt="" /><p>'+
+		 message + '</p></li>').appendTo($('.messages ul'));
+	}
 	sendToServer(message);
 	$('.message-input input').val(null);
 	$('.contact.active .preview').html('<span>You: </span>' + message);

@@ -1,10 +1,7 @@
 @extends('admin.base')
-
 @section('adminbase')
-
 <!doctype html>
 <html class="no-js" lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -17,9 +14,7 @@
     <link rel="stylesheet" href="../../css/analytics.css">
     <script src="../../js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
-
 <body>
-  
     <!-- Start Welcome area -->
     <div class="all-content-wrapper">
         <div class="analytics-sparkle-area">
@@ -166,11 +161,11 @@
                                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                         <div class="actions graph-rp actions-graph-rp">
                                             <a href="#" class="btn btn-dark btn-circle active tip-top" data-toggle="tooltip" title="Refresh">
-													<i class="fa fa-reply" aria-hidden="true"></i>
-												</a>
+                                                <i class="fa fa-reply" aria-hidden="true"></i>
+                                            </a>
                                             <a href="#" class="btn btn-blue-grey btn-circle active tip-top" data-toggle="tooltip" title="Delete">
-													<i class="fa fa-trash-o" aria-hidden="true"></i>
-												</a>
+                                                <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -334,7 +329,7 @@
     <script src="../../js/counterup/jquery.counterup.min.js"></script>
     <script src="../../js/counterup/waypoints.min.js"></script>
     <script src="../../js/counterup/counterup-active.js"></script>
-    
+
     <script src="../../js/morrisjs/raphael-min.js"></script>
     <script src="../../js/morrisjs/morris.js"></script>
     <script src="../../js/morrisjs/morris-active.js"></script>
