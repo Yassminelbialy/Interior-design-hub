@@ -13,9 +13,9 @@
                         <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
                         <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" placeholder="Your Name" value="{{ old('name') }}" required autocomplete="name" autofocus>
                         @error('username')
-                            <span class="invalid-feedback" role="alert">
-                                <strong style="color:red">{{ $message }}</strong>
-                            </span>
+                        <span class="invalid-feedback" role="alert">
+                            <strong style="color:red">{{ $message }}</strong>
+                        </span>
                         @enderror
                     </div>
                     <div class="form-group">
@@ -23,9 +23,9 @@
                         <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" placeholder="Your Email" value="{{ old('email') }}" required autocomplete="email">
 
                         @error('email')
-                            <span class="invalid-feedback" role="alert">
-                                <strong style="color:red">{{ $message }}</strong>
-                            </span>
+                        <span class="invalid-feedback" role="alert">
+                            <strong style="color:red">{{ $message }}</strong>
+                        </span>
                         @enderror
                     </div>
                     <div class="form-group">
@@ -33,9 +33,9 @@
                         <input id="pass" type="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="Password" required autocomplete="new-password">
 
                         @error('password')
-                            <span class="invalid-feedback" role="alert">
-                                <strong style="color:red">{{ $message }}</strong>
-                            </span>
+                        <span class="invalid-feedback" role="alert">
+                            <strong style="color:red">{{ $message }}</strong>
+                        </span>
                         @enderror
                     </div>
                     <div class="form-group">
@@ -43,12 +43,18 @@
                         <input id="re_pass" type="password" class="form-control" name="password_confirmation" placeholder="Repeat your password" required autocomplete="new-password">
                     </div>
 
-                <div class="form-group">
-                    <label for="phone"><i class="fa fa-phone"></i></label>
-                    <input id="phone" type="text" class="form-control @error('phone') is-invalid @enderror" name="phone" placeholder="Enter Your Phone" required autofocus>
-                </div>
+
+                    <div class="form-group">
+                        <label for="phone"><i class="fa fa-phone"></i></label>
+                        <input id="phone" type="text" class="form-control @error('phone') is-invalid @enderror" name="phone" placeholder="Enter Your Phone" required autofocus>
+                        @error('phone')
+                        <span class="invalid-feedback" role="alert">
+                            <strong style="color:red">{{ $message }}</strong>
+                        </span>
+                        @enderror
+                    </div>
                     <div class="form-group form-button">
-                        <input type="submit" name="signup" id="signup" class="form-submit" value="Register"/>
+                        <input type="submit" name="signup" id="signup" class="form-submit" value="Register" />
                     </div>
                 </form>
             </div>

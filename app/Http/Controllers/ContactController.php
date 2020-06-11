@@ -14,7 +14,8 @@ class ContactController extends Controller
      */
     public function index()
     {
-        //
+        $contacts= Contact::all();
+        return view('manager/contactindex',["contacts"=>$contacts]);
     }
 
     /**
@@ -55,9 +56,10 @@ class ContactController extends Controller
      * @param  \App\Contact  $contact
      * @return \Illuminate\Http\Response
      */
-    public function edit(Contact $contact)
+    public function edit($id)
     {
-        //
+        $contacts= Contact::findOrFail($id);
+        return view('manager.contactedit',["contact"=>$contacts]);
     }
 
     /**
@@ -67,9 +69,21 @@ class ContactController extends Controller
      * @param  \App\Contact  $contact
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Contact $contact)
+    public function update(Request $request, $id)
     {
-        //
+        $contact=Contact::find($id);
+        $contact->phoneNo=$request->phoneNo;
+        $contact->email=$request->email;
+        $contact->whatsAppLink=$request->whatsAppLink;
+        $contact->facebookLink=$request->facebookLink;
+        $contact->instaLink=$request->instaLink;
+        $contact->telegramLink=$request->telegramLink;
+        $contact->viberLink=$request->viberLink;
+        $contact->pinterestLink=$request->pinterestLink;
+        $contact->wLink=$request->wLink;
+
+        $contact->save();
+        return redirect('/manager/contacts');
     }
 
     /**

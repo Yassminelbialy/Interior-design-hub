@@ -14,7 +14,8 @@ class ReviewController extends Controller
      */
     public function index()
     {
-        //
+        $reviews= Review::all();
+        return view('manager/reviewindex',["reviews"=>$reviews]);
     }
 
     /**
@@ -24,7 +25,7 @@ class ReviewController extends Controller
      */
     public function create()
     {
-        //
+        return view ('manager.reviewcreate');
     }
 
     /**
@@ -35,7 +36,17 @@ class ReviewController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $review=new Review();
+     
+        if ($files = $request->file('image')) {
+            $destinationPath = 'images/review/'; 
+            $Image = $files->getClientOriginalName();
+            $files->move($destinationPath, $Image);
+            $review->image=$Image; 
+        }
+
+        $review->save();
+        return redirect('/manager/review');
     }
 
     /**
@@ -55,9 +66,10 @@ class ReviewController extends Controller
      * @param  \App\Review  $review
      * @return \Illuminate\Http\Response
      */
-    public function edit(Review $review)
+    public function edit($id)
     {
-        //
+        $review=Review::findOrFail($id);
+        return view('manager.reviewedit',['review'=>$review]);
     }
 
     /**
@@ -67,9 +79,20 @@ class ReviewController extends Controller
      * @param  \App\Review  $review
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Review $review)
+    public function update(Request $request, $id)
     {
-        //
+        $review=Review::find($id);
+        $path = public_path()."/images/review/".$review->image;
+        unlink($path);
+        if ($files = $request->file('image')) {
+            $destinationPath = 'images/review'; 
+            $Image = $files->getClientOriginalName();
+            $files->move($destinationPath, $Image);
+            $review->image=$Image; 
+        }
+
+        $review->save();
+        return redirect('/manager/review');
     }
 
     /**
@@ -78,8 +101,12 @@ class ReviewController extends Controller
      * @param  \App\Review  $review
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Review $review)
+    public function destroy(Request $request, $id)
     {
-        //
+        $review=Review::find($id);
+        $path = public_path()."/images/review/".$review->image;
+        unlink($path);
+        $review->delete();
+        return redirect('/manager/review');
     }
 }

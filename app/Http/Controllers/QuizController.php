@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Quiz;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\SendQuizMail;
 use Uuid;
 
 class QuizController extends Controller
@@ -13,13 +15,15 @@ class QuizController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+
     public function index()
     {
 
         return view('manager.quizzes',['data'=>Quiz::all()]);
     }
 
-    /**
+        /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
@@ -30,6 +34,7 @@ class QuizController extends Controller
         return response()->json(['message' => 'User status updated successfully.']);
 
     }
+
 
     /**
      * Store a newly created resource in storage.
@@ -62,13 +67,13 @@ class QuizController extends Controller
 
               $response=$quiz->save();
 
-$response1='';
+                $response1='';
               if ($files = $request->file('file'))
               {
 
                 foreach($request->file('file') as $file)
                 {
-                          $uuid =Uuid::generate()->string;
+                             $uuid =Uuid::generate()->string;
                               $path=$uuid.".".$file->getClientOriginalExtension();
                               $desti='quizimages/';
                               $file->move($desti,$path);
@@ -77,7 +82,9 @@ $response1='';
 
 
               }
-
+              $quiz->save();
+              Mail::to('yassminelbialy@gmail.com')
+              ->send(new SendQuizMail ($quiz));
 
          return response()->json( ['mydata'=> $request->all(),'myresponse'=> $response1,'opject'=>$quiz,'images'=>$quiz->images] );
 

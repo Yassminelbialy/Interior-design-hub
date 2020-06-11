@@ -6,7 +6,8 @@
 
       <div class="container">
         <div class="row">
-          <div class="col-md-2 col-sm-3 col-4">
+
+        <div class="col-md-2 col-sm-3 col-4">
             <img data-src="images/client1.PNG" alt="etisalat" />
           </div>
           <div class="col-md-2 col-sm-3 col-4">
@@ -42,6 +43,13 @@
           <div class="col-md-2 col-sm-3 col-4">
             <img data-src="images/client3.PNG" alt="adidas.jpg" />
           </div>
+
+
+          @foreach ($logos as $logo )
+          <div class="col-md-2 col-sm-3 col-4">
+            <img data-src="images/logo/{{$logo->image}}" alt="image client" class="w-100 h-100" />
+          </div>
+          @endforeach
         </div>
       </div>
     </section>

@@ -20,13 +20,25 @@ class ConsultationController extends Controller
      public function send(Request $request)
      {
 
+        // dd($request->all());
+
+
             $this->validate($request ,[
 
                 'username'   =>     'required',
                 'phone'      =>     'required',
-                'date'       =>      'required|date'
-            ]);
+                'date' => 'date '
+                ,
 
+
+                ]);
+
+
+            $consultation = new Consultation ();
+            $consultation->name =$request->username;
+            $consultation->timeToCall=$request->date;
+            $consultation->phone=$request->phone;
+            $consultation->save();
             $usersData = array(
 
                     'username'  =>  $request->username,
