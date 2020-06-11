@@ -1,4 +1,4 @@
-<h1 style="color:red">   Hi i'm {{ $quizData->customerName }}</h1>
+<h1 style="color:red"> Hi i'm {{ $quizData->customerName }}</h1>
 <p> I need a design Like : {{ $quizData->design}}</p>
 <p> My Area : {{ $quizData->area }} </p>
 <p> My Styla is : {{ $quizData->styles}}</p>

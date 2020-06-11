@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,6 +26,7 @@
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 @stack('token')
 </head>
+
 <body>
 
 
@@ -38,10 +40,9 @@
     <script src="{{ asset('js/main.js') }}" ></script>
     <script src="https://api-maps.yandex.ru/2.1/?lang=en_RU&amp;apikey=45185f8a-5595-4dca-a730-067482a1af71" type="text/javascript"></script>
 
-    @stack('quizscript')
+  @stack('quizscript')
 
 
 </body>
+
 </html>
-
-
