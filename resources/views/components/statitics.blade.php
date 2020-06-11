@@ -1,5 +1,5 @@
     <!-- start statitics -->
-    <section class="statitics text-center">
+    <section class="statitics text-center" id="statitics">
       <div class="border_box"></div>
       <div class="border_box"></div>
       <div class="container">

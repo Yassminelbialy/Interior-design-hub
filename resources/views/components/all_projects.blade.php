@@ -1,5 +1,5 @@
    <!-- start All projects -->
-   <section class="allProjects text-center">
+   <section class="allProjects text-center" id="all_projects">
       <div>
         <button>All Projects</button>
       </div>

@@ -15,7 +15,7 @@
       data-target="#modal_quiz"
     >
       Launch quizes modal
-    </button> -->
+    </button>
 
     <div
       class="modal modal_quizes fade "

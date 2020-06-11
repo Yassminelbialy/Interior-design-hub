@@ -3,54 +3,74 @@
 @section('content')
 
 
-    @component('components.header',['contact' => $contact])
-    @endcomponent
+@component('components.loading')
+@endcomponent
 
-    @component('components.statitics')
-    @endcomponent
 
-    @component('components.projects',['projects'=>$projects])
-    @endcomponent
+@component('components.header',['contact' => $contact])
+@endcomponent
 
-    @component('components.all_projects')
-    @endcomponent
+@component('components.who_us')
+@endcomponent
 
-    @component('components.services')
-    @endcomponent
+@component('components.steps_working')
+@endcomponent
 
-    @component('components.quiz_tabs')
-    @endcomponent
+@component('components.all_services')
+@endcomponent
 
-    @component('components.information_plus')
-    @endcomponent
+@component('components.statitics')
+@endcomponent
 
-    @component('components.clients')
-    @endcomponent
+@component('components.projects',['projects'=>$projects])
+@endcomponent
 
-    @component('components.state')
-    @endcomponent
+@component('components.all_projects')
+@endcomponent
 
-    @component('components.video',['ceoInfo' => $ceoInfo])
-    @endcomponent
 
-    @component('components.details')
-    @endcomponent
+@component('components.services')
+@endcomponent
 
-    @component('components.worldWide')
-    @endcomponent
+@component('components.3d_projects')
+@endcomponent
 
-    @component('components.testimonial')
-    @endcomponent
 
-    @component('components.contact',['contact' => $contact,'ceoInfo' => $ceoInfo])
-    @endcomponent
+@component('components.quiz_tabs')
+@endcomponent
 
-    @component('components.map')
+@component('components.information_plus')
+@endcomponent
 
-    @endcomponent
+@component('components.our_team')
+@endcomponent
+@component('components.clients')
+@endcomponent
 
-    @component('components.footer')
-    @endcomponent
+@component('components.state')
+@endcomponent
+
+@component('components.video',['ceoInfo' => $ceoInfo])
+@endcomponent
+
+@component('components.details')
+@endcomponent
+
+@component('components.worldWide')
+@endcomponent
+
+@component('components.testimonial')
+@endcomponent
+
+@component('components.contact',['contact' => $contact,'ceoInfo' => $ceoInfo])
+@endcomponent
+
+@component('components.map')
+
+@endcomponent
+
+@component('components.footer')
+@endcomponent
 
 
 @endsection

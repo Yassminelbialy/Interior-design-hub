@@ -1,5 +1,5 @@
   <!-- start information plus-->
-  <section class="information_plus text-center">
+  <section class="information_plus text-center" id="quizes">
       <h5 class="my-2">Lorem ipsum dolor sit amet </h5>
       <p class="mb-2">Bbi Moketo Ehbbed Ay Btngan</p>
       <p>
