@@ -5,11 +5,11 @@
 @endcomponent
  <!-- start projects -->
  <div class="row mt-1">
-    <div class="col-md-3">
+    <div class="col-md-3" style="background-color: black">
       <div class="list-group mb-2" >
-        <h1>All Categories</h1>
+        <h1 style="color:#c19e70" class="text-center">All Categories</h1>
         @foreach($categories as $category)
-          <a href="#" class="list-group-item list-group-item-action list-group-item-info mb-1">{{$category}}</a>
+          <a href="#" class="list-group-item list-group-item-action text-light mb-1 mt-2" style="background-color:#c19e70 !important;width:60%">{{$category}}</a>
         @endforeach
       </div>
     </div>
