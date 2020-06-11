@@ -2,6 +2,27 @@
 
 @section('content')
 
+@if ($errors->any())
+
+            @foreach ($errors->all() as $error)
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>Holy guacamole!</strong> You should check in on some of those fields below. for {{$error}}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+           @endforeach
+
+
+@endif
+@if (\Session::has('success'))
+    <div class="alert alert-success">
+        <ul>
+            <li>{!! \Session::get('success') !!}</li>
+        </ul>
+    </div>
+@endif
+
 @component('components.header',['contact' => $contact])
 @endcomponent
 

@@ -1,5 +1,3 @@
-@extends('admin.base')
-@section('adminbase')
 
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
@@ -955,4 +953,3 @@ $(window).on('keydown', function(e) {
 //# sourceURL=pen.js
 </script>
 </body></html>
-@endsection
