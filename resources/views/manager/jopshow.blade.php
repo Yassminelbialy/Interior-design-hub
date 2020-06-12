@@ -15,7 +15,6 @@
                 <th scope="col" class="text-light h3">fullName</th>
                 <th scope="col" class="text-light h3">Email</th>
                 <th scope="col" class="text-light h3">Age</th>
-                <th scope="col" class="text-light h3">Salary</th>
                 <th scope="col" class="text-light h3">CV</th>  
                 <th scope="col" class="text-light h3">Portofolio</th>  
                 <th scope="col" class="text-light h3">Phone</th>  
@@ -30,8 +29,11 @@
               <td>{{$applicant->fullName}}</td>
               <td>{{$applicant->email}}</td>
               <td>{{$applicant->age}}</td>
-              <td>{{$applicant->salary}}</td>
-              <td>{{$applicant->cv}}</td>
+              <td>
+                   <embed src="/cvs/{{$applicant->cv}}" style="width:50px; height:50px;" frameborder="0">
+                   
+                </td>
+                </td>
               <td>{{$applicant->urlProtofolio}}</td>
               <td>{{$applicant->phone}}</td>
 
@@ -42,13 +44,7 @@
 
               </td>
               
-              <td>
-                {!!Form::open(['route'=>[ 'manager.jopAppli.destroy' , $applicant->id],'method'=>'delete','style'=>'    display: inline-block '])!!}
-                {{ Form::button('<i style="color:red"class="fa fa-trash fa-2x"></i>', ['type' => 'submit'] )  }}
-
-
-          {!! Form::close() !!}
-        </td>
+              
       </tr>
       @endforeach
            

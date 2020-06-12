@@ -58,7 +58,6 @@ class JopController extends Controller
     {
         $jop=Jop::findOrFail($id);
         $applicant= $jop->applicants;
-        //  dd($applicant);
         return view('manager.jopshow',['jop'=>$jop,'applicants'=>$applicant]);
     }
 

@@ -29,8 +29,6 @@ class JopApplicantController extends Controller
      */
     public function create($id=null)
     {
-        // dd($id);
-        // dd('ssss');
         return view('jopApp.applicationForm',['id'=>$id]);
      }
 
@@ -57,10 +55,8 @@ class JopApplicantController extends Controller
                          $desti='cvs/';
                          $files->move($desti,$path);
                          $request['cv']=$path;
-                         // dd('dd');
          }
          $applicant =Jop::find($id);
-        //  dd($request['cv']);
         if($id && $applicant)
         {
              $applicant->applicants()->create($request->except(['gender','file']));
@@ -68,7 +64,7 @@ class JopApplicantController extends Controller
                 JopApplicant::create($request->except(['gender','file'])        );
 
 }
-        // dd($request->all());
+        
         return redirect(route('applyjop'))->with('success', 'Done');
     }
 
@@ -78,9 +74,10 @@ class JopApplicantController extends Controller
      * @param  \App\JopApplicant  $jopApplicant
      * @return \Illuminate\Http\Response
      */
-    public function show(JopApplicant $jopApplicant)
+    public function show($id)
     {
-        //
+        $jopApplicant=JopApplicant::findOrFail($id);       
+        return view('manager.jopApplishow',['jopAppli'=>$jopApplicant]);
     }
 
     /**
