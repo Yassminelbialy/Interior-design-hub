@@ -22,7 +22,7 @@
         </div>
         @foreach ($reviews as $review )
         <div class="items">
-          <img class="slider_image" data-src="images/review/{{$review->image}}" alt="book" />
+          <img class="slider_image" data-src="/images/review/{{$review->image}}" alt="book" />
         </div>
         @endforeach
       </div>

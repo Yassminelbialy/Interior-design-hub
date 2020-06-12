@@ -18,7 +18,7 @@
       @foreach ($reviews as $review)
       <tr>
         <th scope="row">{{$review->id}}</th>
-        <td><img src="/images/{{$review->image}}" style="display: inline-block; height: 100px; width:100px; border-radius:50%; border:1px solid black"></td>
+        <td><img src="/images/review/{{$review->image}}" style="display: inline-block; height: 100px; width:100px; border-radius:50%; border:1px solid black"></td>
         <td>
           <a href="{{ route('manager.review.edit', $review->id) }}"> <i class="fas fa-edit fa-2x" style="color: blue"></i></a>
         </td>
