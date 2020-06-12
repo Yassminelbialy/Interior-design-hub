@@ -22,6 +22,7 @@ class CreateJopsTable extends Migration
             $table->string('location')->nullable();
 
 
+            $table->softDeletes();
 
             $table->timestamps();
         });
