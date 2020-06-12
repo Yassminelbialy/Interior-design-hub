@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-md-5">
                 <h1>WORLDWIDE</h1>
-                <p class="text" >
+                <p class="text">
                     Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.
                     <button class="btn btn_info">Go somewhere</button>
                 </p>
@@ -21,16 +21,15 @@
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
                                             <div class="modal-body">
-
                                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                     <span aria-hidden="true">&times;</span>
                                                 </button>
                                                 <div class="embed-responsive embed-responsive-16by9">
-                                                    <video  controls id="vidEle" class="embed-responsive-item" allowscriptaccess="always" allow="autoplay">
+                                                    <video controls id="vidEle" class="embed-responsive-item" allowscriptaccess="always" allow="autoplay">
 
-                                                        <source src="videos/2.mp4" type="video/mp4" >
-                                                      Your browser does not support the video tag.
-                                                  </video>
+                                                        <source src="videos/2.mp4" type="video/mp4">
+                                                        Your browser does not support the video tag.
+                                                    </video>
                                                 </div>
 
                                             </div>
@@ -46,8 +45,6 @@
         </div>
     </div>
     <script>
-
-        document.getElementById("vidEle").disabled=false;
-
+        document.getElementById("vidEle").disabled = false;
     </script>
 </section>

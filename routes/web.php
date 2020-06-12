@@ -62,6 +62,8 @@ Route::resource('project.images', 'ProjectImageController');
 Route::post('/contact','ConsultationController@send');
 // Route::post('/quizContact','QuizControllerSendingMail@sendEmail');
 Route::get('/','UserController@index');
+Route::get('/allproject','UserController@allprojects');
+
 
 Route::get('view/{id}', 'UserController@view')->name('project.view');
 Route::get('jopapply/{id?}', 'JopApplicantController@create')->where('id', '[0-9]+')->name('applyjop');
