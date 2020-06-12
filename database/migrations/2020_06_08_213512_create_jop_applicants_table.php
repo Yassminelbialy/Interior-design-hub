@@ -24,7 +24,8 @@ class CreateJopApplicantsTable extends Migration
             $table->string('urlProtofolio')->nullable();
             $table->string('phone')->nullable();
 
-            $table->foreign('jop_id')->references('id')->on('jops');
+            $table->foreign('jop_id')->references('id')->on('jops')->onDelete('cascade');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
