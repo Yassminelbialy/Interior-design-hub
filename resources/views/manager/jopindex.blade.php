@@ -16,7 +16,7 @@
             <th scope="col" class="text-light h3">Requirements</th>
             <th scope="col" class="text-light h3">Jop Type</th>
             <th scope="col" class="text-light h3">Location</th>  
-            <th scope="col" class="text-light h3" colspan="2">Actions</th>
+            <th scope="col" class="text-light h3" colspan="3">Actions</th>
           </tr>
         </thead>
         <tbody>
