@@ -7,7 +7,7 @@ use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request  ;
 use Illuminate\Support\Facades\Auth;
-
+use App\Company;
 class LoginController extends Controller
 {
     /*
@@ -45,9 +45,12 @@ class LoginController extends Controller
 
     protected function authenticated(Request $request, $user)
                 {
+                    $companies =Company::where('user_id',Auth::user()->id)->get();
+                    if($companies->count()>0)
+                    {
+                    $request->session()->put('COPMANY', $companies[0]);
 
-
-    $request->session()->put('KEY', 'VALUE');
+                    }
 
                 }
 }
