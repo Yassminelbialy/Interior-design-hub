@@ -66,6 +66,7 @@ Route::post('/contact','ConsultationController@send');
 // Route::post('/quizContact','QuizControllerSendingMail@sendEmail');
 Route::get('/','UserController@index');
 Route::get('/allproject/{category?}','UserController@allprojects')->where('category', '[A-Za-z1-9]+')->name('listAllProjects');
+Route::get('/search','UserController@search')->name('search');
 
 
 Route::get('view/{id}', 'UserController@view')->name('project.view');
