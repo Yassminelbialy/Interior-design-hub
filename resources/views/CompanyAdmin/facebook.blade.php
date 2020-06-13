@@ -1,6 +1,5 @@
-@extends('admin.base')
-
-@section('adminbase')
+@extends('admin.companyBase')
+@section('CompanyAdminBase')
 
 <a href="fbPosts/create" class="btn btn-info m-2">Add image with link</a>
 <table class="table table-dark" style="background-color: rgba(0,0,0,0.5);">

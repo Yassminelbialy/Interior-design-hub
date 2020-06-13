@@ -73,15 +73,13 @@
                         <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
                                 <a class="nav-link" href="/companypanel/project">Projects</a>
-
-                                <a class="nav-link" href="/companypanel/category">Category of projects</a>
                                 <a class="nav-link" href="/companypanel/user">Users</a>
                                 <a class="nav-link" href="/companypanel/review">Reviews</a>
                                 <a class="nav-link" href="/companypanel/alexandra">Company info</a>
                                 <a class="nav-link" href="/companypanel/consultations">Consultations</a>
                                 <a class="nav-link" href="/companypanel/contacts">Contacts</a>
                                 <a class="nav-link" href="/companypanel/AdminOrder">Users Orders</a>
-                                <a class="nav-link" href="/companypanel/fbPosts">FaceBook Posts</a>
+                                <!-- <a class="nav-link" href="/companypanel/fbPosts">FaceBook Posts</a> -->
                                 <a class="nav-link" href="/companypanel/jops">Jobs</a>
     
                         </div>
@@ -101,7 +99,7 @@
         </div>
         <div id="layoutSidenav_content">
             <main>
-                @yield('adminbase')
+                @yield('CompanyAdminBase')
             </main>
             <footer class="py-4 bg-light mt-auto">
                 <div class="container-fluid">

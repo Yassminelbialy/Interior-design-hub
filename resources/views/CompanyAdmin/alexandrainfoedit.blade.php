@@ -1,5 +1,5 @@
-@extends('admin.base')
-@section('adminbase')
+@extends('admin.companyBase')
+@section('CompanyAdminBase')
 <link rel="stylesheet" type="text/css" href="{{ asset('css/styles.css') }}">
 
 {{ Form::model($ceoInfo,['route' => ['manager.alexandra.update',$ceoInfo],'enctype' => 'multipart/form-data','method'=>'PUT'])}}

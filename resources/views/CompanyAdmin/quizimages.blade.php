@@ -65,9 +65,8 @@
 </div>
 </section> --}}
 
-@extends('admin.base')
-
-@section('adminbase')
+@extends('admin.companyBase')
+@section('CompanyAdminBase')
 <div class="text-center">
     <table class="table table-dark" style="background-color: rgba(0,0,0,0.5);">
         <thead>

@@ -77,25 +77,25 @@ Route::get('jops', 'JopApplicantController@index')->name('jops');
 Route::get('/companyForm','CompanyController@index');
 
 // Company Admin panel
-Route::middleware('manager')->prefix('companypanel')->name('admin.')->group(function(){
+Route::middleware('manager')->prefix('companypanel')->name('company.')->group(function(){
     Route::any('/', function () {
         return view('admin.companyBase');
     });
-    Route::resource('project', 'ProjectController');
-    Route::resource('project.images', 'ProjectImageController');
-    Route::resource('alexandra', 'AlexandrainfoController');
-    Route::resource('contacts', 'ContactController');
-    Route::resource('jops', 'JopController');
-    Route::resource('review', 'ReviewController');
-    Route::resource('consultations' ,'ConsultationController');
-    Route::resource('user' ,'AllUsersController');
-    Route::resource('trash' ,'TrashController');
-    Route::resource('quizzes' , 'QuizController');
-    Route::resource('quizzes.images' , 'QuizImageController');
-    Route::resource('AdminOrder' , 'OrderAdminController');
-    Route::get('users/{users}/order', 'OrderAdminController@updateOrder')->name('order');
-    Route::resource('jopAppli' , 'JopApplicantController');
-    Route::resource('chatList' , 'ChatAdminController');
+    Route::resource('project', 'CompanyAdmin\ProjectController');
+    Route::resource('project.images', 'CompanyAdmin\ProjectImageController');
+    Route::resource('alexandra', 'CompanyAdmin\AlexandrainfoController');
+    Route::resource('contacts', 'CompanyAdmin\ContactController');
+    Route::resource('jops', 'CompanyAdmin\JopController');
+    Route::resource('review', 'CompanyAdmin\ReviewController');
+    Route::resource('consultations' ,'CompanyAdmin\ConsultationController');
+    Route::resource('user' ,'CompanyAdmin\AllUsersController');
+    Route::resource('trash' ,'CompanyAdmin\TrashController');
+    Route::resource('quizzes' , 'CompanyAdmin\QuizController');
+    Route::resource('quizzes.images' , 'CompanyAdmin\QuizImageController');
+    Route::resource('AdminOrder' , 'CompanyAdmin\OrderAdminController');
+    Route::get('users/{users}/order', 'CompanyAdmin\OrderAdminController@updateOrder')->name('order');
+    Route::resource('jopAppli' , 'CompanyAdmin\JopApplicantController');
+    Route::resource('chatList' , 'CompanyAdmin\ChatAdminController');
 
 
 });//manager routes

@@ -1,5 +1,5 @@
-@extends('admin.base')
-@section('adminbase')
+@extends('admin.companyBase')
+@section('CompanyAdminBase')
 <link rel="stylesheet" type="text/css" href="{{ asset('css/styles.css') }}">
 {{ Form::open(['route' => 'manager.logo.store','enctype' => 'multipart/form-data','method'=>'post'])}}
 <div class="row text-light">

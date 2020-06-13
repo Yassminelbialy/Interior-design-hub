@@ -1,34 +1,22 @@
 <?php
 
-namespace App\Http\Controllers\Manager;
-use App\Http\Controllers\Controller;
-use App\Order;
-use App\User;
-use App\Quiz;
-use Auth;
-use App\Message;
-use Illuminate\Http\Request;
+namespace App\Http\Controllers\CompanyAdmin;
 
-class OrderController extends Controller
+use App\Http\Controllers\Controller;
+use App\QuizImage;
+use Illuminate\Http\Request;
+use App\Quiz;
+
+class QuizImageController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id)
     {
-        $user_phone = auth()->user()->phone;
-        $user_name = auth()->user()->name;
-        $user_phone_in_quiz = Quiz::where('customerPhoneNo','=',$user_phone)->get();
-         $order_list_of_user = Order::where('user_id', '=', auth()->user()->id)->get();
-
-        $chatData=Message::where('user_id', '=', auth()->user()->id)->get();
-
-         return view('userAccount',['orderList'=>$order_list_of_user ,
-          'quizData'=> $user_phone_in_quiz, "userName"=>$user_name,'chatData'=>$chatData]);
-
-         
+        return view('CompanyAdmin.quizimages', ['data' => Quiz::find($id)->images]);
     }
 
     /**
@@ -38,7 +26,7 @@ class OrderController extends Controller
      */
     public function create()
     {
-       
+        //
     }
 
     /**
@@ -55,10 +43,10 @@ class OrderController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Order  $order
+     * @param  \App\QuizImage  $quizImage
      * @return \Illuminate\Http\Response
      */
-    public function show(Order $order)
+    public function show(QuizImage $quizImage)
     {
         //
     }
@@ -66,10 +54,10 @@ class OrderController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Order  $order
+     * @param  \App\QuizImage  $quizImage
      * @return \Illuminate\Http\Response
      */
-    public function edit(Order $order)
+    public function edit(QuizImage $quizImage)
     {
         //
     }
@@ -78,10 +66,10 @@ class OrderController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Order  $order
+     * @param  \App\QuizImage  $quizImage
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Order $order)
+    public function update(Request $request, QuizImage $quizImage)
     {
         //
     }
@@ -89,10 +77,10 @@ class OrderController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Order  $order
+     * @param  \App\QuizImage  $quizImage
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Order $order)
+    public function destroy(QuizImage $quizImage)
     {
         //
     }
