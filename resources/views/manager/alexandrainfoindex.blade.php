@@ -26,9 +26,7 @@
                 <td>{{$ceo->hint}}</td>
                 <td style="width: 30%" class="justify-content: center;">{{$ceo->statement}}</td>
                 <td>
-                    <div class="stats_video">
-                        <div class="overlay"></div>
-                        <img data-src="/images/7.jpg" alt="" />
+                    <div class="stats_video">                    
                         <div class="wrapper">
                             <div class="icon-wrapper">
                                 <div class="icon">

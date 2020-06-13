@@ -18,7 +18,7 @@
       @foreach ($logo as $logo)
       <tr>
         <th scope="row">{{$logo->id}}</th>
-        <td><img src="/images/{{$logo->image}}" style="display: inline-block; height: 100px; width:100px; border-radius:50%; border:1px solid black"></td>
+        <td><img src="/images/logo/{{$logo->image}}" style="display: inline-block; height: 100px; width:100px; border-radius:50%; border:1px solid black"></td>
         <td>
           <a href="{{ route('manager.logo.edit', $logo->id) }}"> <i class="fas fa-edit fa-2x" style="color: blue"></i></a>
         </td>
