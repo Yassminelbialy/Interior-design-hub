@@ -73,6 +73,31 @@ Route::get('jopapply/{id?}', 'JopApplicantController@create')->where('id', '[0-9
 Route::post('jopapply/{id?}', 'JopApplicantController@store')->where('id', '[0-9]+')->name('applyjopform');
 
 Route::get('jops', 'JopApplicantController@index')->name('jops');
+Route::get('/companyForm','CompanyController@index');
+
+// Company Admin panel
+Route::middleware('manager')->prefix('admin')->name('admin.')->group(function(){
+    Route::any('/', function () {
+        return view('admin.companyBase');
+    });
+    Route::resource('project', 'ProjectController');
+    Route::resource('project.images', 'ProjectImageController');
+    Route::resource('alexandra', 'AlexandrainfoController');
+    Route::resource('contacts', 'ContactController');
+    Route::resource('jops', 'JopController');
+    Route::resource('review', 'ReviewController');
+    Route::resource('consultations' ,'ConsultationController');
+    Route::resource('user' ,'AllUsersController');
+    Route::resource('trash' ,'TrashController');
+    Route::resource('quizzes' , 'QuizController');
+    Route::resource('quizzes.images' , 'QuizImageController');
+    Route::resource('AdminOrder' , 'OrderAdminController');
+    Route::get('users/{users}/order', 'OrderAdminController@updateOrder')->name('order');
+    Route::resource('jopAppli' , 'JopApplicantController');
+    Route::resource('chatList' , 'ChatAdminController');
+
+
+});//manager routes
 
 
 
