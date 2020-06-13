@@ -6,10 +6,19 @@
  <!-- start projects -->
  <div class="row mt-1">
     <div class="col-md-3" style="background-color: black">
+
+
+
+    <form class="form-inline  m-5 " method="get" action="/search">
+     <i class="fas fa-search" aria-hidden="true"></i>
+            <input required name="data" class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search"
+              aria-label="Search">
+    </form>
+
       <h1 style="margin-top:60px" class="text-center text-light">All Categories</h1>
       <div class="list-group mb-2" style="height: 400px;overflow-x: hidden;">
         @foreach($categories as $category)
-          <a href="#" class="list-group-item list-group-item-action text-light mb-1 mt-2" style="background-color:#c19e70 !important;width:60%;margin:0 auto">{{$category}}</a>
+      <a href="{{route('listAllProjects',$category)}}" class="list-group-item list-group-item-action text-light mb-1 mt-2" style="background-color:#c19e70 !important;width:60%;margin:0 auto">{{$category}}</a>
         @endforeach
       </div>
     </div>
