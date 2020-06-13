@@ -1,11 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
-
-use App\Topic;
+namespace App\Http\Controllers\Manager;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class TopicController extends Controller
+class ChatAdminController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +13,7 @@ class TopicController extends Controller
      */
     public function index()
     {
-        //
+        return view('manager.adminChat',['data'=>[]]);
     }
 
     /**
@@ -41,10 +40,10 @@ class TopicController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Topic  $topic
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Topic $topic)
+    public function show($id)
     {
         //
     }
@@ -52,10 +51,10 @@ class TopicController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Topic  $topic
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Topic $topic)
+    public function edit($id)
     {
         //
     }
@@ -64,10 +63,10 @@ class TopicController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Topic  $topic
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Topic $topic)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -75,10 +74,10 @@ class TopicController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Topic  $topic
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Topic $topic)
+    public function destroy($id)
     {
         //
     }

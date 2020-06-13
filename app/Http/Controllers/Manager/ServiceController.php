@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Manager;
+use App\Http\Controllers\Controller;
 
-use App\Hire;
+use App\Service;
 use Illuminate\Http\Request;
 
-class HireController extends Controller
+class ServiceController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +15,7 @@ class HireController extends Controller
      */
     public function index()
     {
-        //
+
     }
 
     /**
@@ -41,10 +42,10 @@ class HireController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Hire  $hire
+     * @param  \App\Service  $service
      * @return \Illuminate\Http\Response
      */
-    public function show(Hire $hire)
+    public function show(Service $service)
     {
         //
     }
@@ -52,10 +53,10 @@ class HireController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Hire  $hire
+     * @param  \App\Service  $service
      * @return \Illuminate\Http\Response
      */
-    public function edit(Hire $hire)
+    public function edit(Service $service)
     {
         //
     }
@@ -64,10 +65,10 @@ class HireController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Hire  $hire
+     * @param  \App\Service  $service
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Hire $hire)
+    public function update(Request $request, Service $service)
     {
         //
     }
@@ -75,10 +76,10 @@ class HireController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Hire  $hire
+     * @param  \App\Service  $service
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Hire $hire)
+    public function destroy(Service $service)
     {
         //
     }

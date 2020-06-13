@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
-
-use App\Image3d;
+namespace App\Http\Controllers\Manager;
+use App\Http\Controllers\Controller;
+use App\Topic;
 use Illuminate\Http\Request;
 
-class Image3dController extends Controller
+class TopicController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class Image3dController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Image3d  $image3d
+     * @param  \App\Topic  $topic
      * @return \Illuminate\Http\Response
      */
-    public function show(Image3d $image3d)
+    public function show(Topic $topic)
     {
         //
     }
@@ -52,10 +52,10 @@ class Image3dController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Image3d  $image3d
+     * @param  \App\Topic  $topic
      * @return \Illuminate\Http\Response
      */
-    public function edit(Image3d $image3d)
+    public function edit(Topic $topic)
     {
         //
     }
@@ -64,10 +64,10 @@ class Image3dController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Image3d  $image3d
+     * @param  \App\Topic  $topic
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Image3d $image3d)
+    public function update(Request $request, Topic $topic)
     {
         //
     }
@@ -75,10 +75,10 @@ class Image3dController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Image3d  $image3d
+     * @param  \App\Topic  $topic
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Image3d $image3d)
+    public function destroy(Topic $topic)
     {
         //
     }

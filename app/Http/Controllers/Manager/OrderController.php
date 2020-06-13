@@ -1,12 +1,15 @@
 <?php
 
-namespace App\Http\Controllers;
-
+namespace App\Http\Controllers\Manager;
+use App\Http\Controllers\Controller;
+use App\Order;
+use App\User;
+use App\Quiz;
+use Auth;
+use App\Message;
 use Illuminate\Http\Request;
-use App\Jop;
-use Illuminate\Support\Facades\Redirect;
 
-class TrashController extends Controller
+class OrderController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +18,17 @@ class TrashController extends Controller
      */
     public function index()
     {
-        $jops=Jop::onlyTrashed()->get();
-        
-        return view('manager.trash', ["jops"=>$jops]);
+        $user_phone = auth()->user()->phone;
+        $user_name = auth()->user()->name;
+        $user_phone_in_quiz = Quiz::where('customerPhoneNo','=',$user_phone)->get();
+         $order_list_of_user = Order::where('user_id', '=', auth()->user()->id)->get();
+
+        $chatData=Message::where('user_id', '=', auth()->user()->id)->get();
+
+         return view('userAccount',['orderList'=>$order_list_of_user ,
+          'quizData'=> $user_phone_in_quiz, "userName"=>$user_name,'chatData'=>$chatData]);
+
+         
     }
 
     /**
@@ -27,7 +38,7 @@ class TrashController extends Controller
      */
     public function create()
     {
-        //
+       
     }
 
     /**
@@ -44,10 +55,10 @@ class TrashController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Order  $order
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Order $order)
     {
         //
     }
@@ -55,24 +66,22 @@ class TrashController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Order  $order
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Order $order)
     {
-        $jops=Jop::withTrashed()->where('id',$id)->first();
-        $jops->restore();
-        return Redirect()->back();  
+        //
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Order  $order
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Order $order)
     {
         //
     }
@@ -80,14 +89,11 @@ class TrashController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Order  $order
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Order $order)
     {
-        $jop=Jop::withTrashed()->where('id',$id)->first();
-        $jop->forceDelete();
-        return Redirect()->back();
-
+        //
     }
 }

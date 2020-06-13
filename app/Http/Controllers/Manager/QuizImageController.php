@@ -1,20 +1,23 @@
 <?php
 
-namespace App\Http\Controllers;
-
-use App\Workstep;
+namespace App\Http\Controllers\Manager;
+use App\Http\Controllers\Controller;
+use App\QuizImage;
 use Illuminate\Http\Request;
-
-class WorkstepController extends Controller
+use App\Quiz;
+class QuizImageController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id)
     {
-        //
+
+
+
+        return view('manager.quizimages',['data'=>Quiz::find($id)->images]);
     }
 
     /**
@@ -41,10 +44,10 @@ class WorkstepController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Workstep  $workstep
+     * @param  \App\QuizImage  $quizImage
      * @return \Illuminate\Http\Response
      */
-    public function show(Workstep $workstep)
+    public function show(QuizImage $quizImage)
     {
         //
     }
@@ -52,10 +55,10 @@ class WorkstepController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Workstep  $workstep
+     * @param  \App\QuizImage  $quizImage
      * @return \Illuminate\Http\Response
      */
-    public function edit(Workstep $workstep)
+    public function edit(QuizImage $quizImage)
     {
         //
     }
@@ -64,10 +67,10 @@ class WorkstepController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Workstep  $workstep
+     * @param  \App\QuizImage  $quizImage
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Workstep $workstep)
+    public function update(Request $request, QuizImage $quizImage)
     {
         //
     }
@@ -75,10 +78,10 @@ class WorkstepController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Workstep  $workstep
+     * @param  \App\QuizImage  $quizImage
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Workstep $workstep)
+    public function destroy(QuizImage $quizImage)
     {
         //
     }

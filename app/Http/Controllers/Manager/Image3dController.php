@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
-
-use App\Style;
+namespace App\Http\Controllers\Manager;
+use App\Http\Controllers\Controller;
+use App\Image3d;
 use Illuminate\Http\Request;
 
-class StyleController extends Controller
+class Image3dController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class StyleController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Style  $style
+     * @param  \App\Image3d  $image3d
      * @return \Illuminate\Http\Response
      */
-    public function show(Style $style)
+    public function show(Image3d $image3d)
     {
         //
     }
@@ -52,10 +52,10 @@ class StyleController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Style  $style
+     * @param  \App\Image3d  $image3d
      * @return \Illuminate\Http\Response
      */
-    public function edit(Style $style)
+    public function edit(Image3d $image3d)
     {
         //
     }
@@ -64,10 +64,10 @@ class StyleController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Style  $style
+     * @param  \App\Image3d  $image3d
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Style $style)
+    public function update(Request $request, Image3d $image3d)
     {
         //
     }
@@ -75,10 +75,10 @@ class StyleController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Style  $style
+     * @param  \App\Image3d  $image3d
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Style $style)
+    public function destroy(Image3d $image3d)
     {
         //
     }

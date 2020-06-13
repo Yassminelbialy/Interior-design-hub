@@ -1,7 +1,7 @@
 <?php
 
-namespace App\Http\Controllers;
-
+namespace App\Http\Controllers\Manager;
+use App\Http\Controllers\Controller;
 use App\Project;
 use App\Category;
 use App\ProjectImage;

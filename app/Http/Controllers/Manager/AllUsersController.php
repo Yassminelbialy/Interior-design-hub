@@ -1,11 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
-
+namespace App\Http\Controllers\Manager;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Analytics;
-use Spatie\Analytics\Period;
-class AnalyticsController extends Controller
+use App\User;
+class AllUsersController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +13,7 @@ class AnalyticsController extends Controller
      */
     public function index()
     {
-       $data= Analytics::fetchMostVisitedPages(Period::days(7));
-    //    dd($data);
-        return view('manager.analytics');
+        return view('manager.user',['data'=>User::all()]);
 
     }
 
@@ -73,6 +70,7 @@ class AnalyticsController extends Controller
     public function update(Request $request, $id)
     {
         //
+
     }
 
     /**
@@ -83,6 +81,9 @@ class AnalyticsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $delImage = User::find($id);
+        $delImage->delete();
+
+        return redirect('/manager/user');
     }
 }

@@ -16,7 +16,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('base.name', 'Interior Design') }}</title>
+    <title>Interior Design</title>
     <link href="/admin/dist/css/styles.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
 </head>
@@ -72,28 +72,25 @@
                         </a>
                         <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="/manager/project">Projects</a>
-                                {{-- <a class="nav-link" href="/manager/project">images of project</a> --}}
+                                <a class="nav-link" href="/companypanel/project">Projects</a>
 
-                                <a class="nav-link" href="/manager/category">Category of projects</a>
-                                <a class="nav-link" href="/manager/user">Users</a>
-                                <a class="nav-link" href="/manager/logo">Logos</a>
-                                <a class="nav-link" href="/manager/review">Reviews</a>
-                                <a class="nav-link" href="/manager/alexandra">Company info</a>
-                                <a class="nav-link" href="/manager/consultations">Consultations</a>
-                                <a class="nav-link" href="/manager/contacts">Contacts</a>
-                                <a class="nav-link" href="/manager/AdminOrder">Users Orders</a>
-                                <a class="nav-link" href="/manager/fbPosts">FaceBook Posts</a>
-                                <a class="nav-link" href="/manager/jops">Jobs</a>
-                                {{-- <a class="nav-link" href="/manager/project">projects</a>
-                                    <a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a></nav> --}}
+                                <a class="nav-link" href="/companypanel/category">Category of projects</a>
+                                <a class="nav-link" href="/companypanel/user">Users</a>
+                                <a class="nav-link" href="/companypanel/review">Reviews</a>
+                                <a class="nav-link" href="/companypanel/alexandra">Company info</a>
+                                <a class="nav-link" href="/companypanel/consultations">Consultations</a>
+                                <a class="nav-link" href="/companypanel/contacts">Contacts</a>
+                                <a class="nav-link" href="/companypanel/AdminOrder">Users Orders</a>
+                                <a class="nav-link" href="/companypanel/fbPosts">FaceBook Posts</a>
+                                <a class="nav-link" href="/companypanel/jops">Jobs</a>
+    
                         </div>
 
-                        <div class="sb-sidenav-menu-heading">Addons</div>
+                        <!-- <div class="sb-sidenav-menu-heading">Addons</div>
                         <a class="nav-link" href="/manager/analytics">
                             <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                             Charts
-                        </a>
+                        </a> -->
                     </div>
                 </div>
                 <div class="sb-sidenav-footer">

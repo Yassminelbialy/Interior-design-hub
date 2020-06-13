@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
-use Uuid ;
-use App\Review;
+namespace App\Http\Controllers\Manager;
+use App\Http\Controllers\Controller;
+use App\Logo;
 use Illuminate\Http\Request;
+use Uuid ;
 
-class ReviewController extends Controller
+class LogoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +15,8 @@ class ReviewController extends Controller
      */
     public function index()
     {
-        $reviews= Review::all();
-        return view('manager/reviewindex',["reviews"=>$reviews]);
+        $logos= Logo::all();
+        return view('manager/logoindex',["logo"=>$logos]);
     }
 
     /**
@@ -25,7 +26,7 @@ class ReviewController extends Controller
      */
     public function create()
     {
-        return view ('manager.reviewcreate');
+        return view ('manager.logocreate');
     }
 
     /**
@@ -36,31 +37,41 @@ class ReviewController extends Controller
      */
     public function store(Request $request)
     {
+        // $logo=new Logo;
+     
+        // if ($files = $request->file('image')) {
+        //     $destinationPath = 'images/logo/'; 
+        //     $Image = $files->getClientOriginalName();
+        //     $files->move($destinationPath, $Image);
+        //     $logo->image=$Image; 
+        // }
+
+        // $logo->save();
+        // return redirect('/manager/logo');
         $req=$request->all();
 
     if ($files = $request->file('image'))
     {
                     $uuid =Uuid::generate()->string;
                     $path=$uuid.".".$request->file('image')->getClientOriginalExtension();
-                    $desti='images/review/';
+                    $desti='images/logo/';
                     $files->move($desti,$path);
                     $req['image']=$path;
-                    // dd('dd');
+                
     }
 
-    $review = Review::create($req);
-        //
-        // dd($project);
-        return redirect('/manager/review');
+    $logo = Logo::create($req);
+        
+        return redirect('/manager/logo');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Review  $review
+     * @param  \App\Logo  $logo
      * @return \Illuminate\Http\Response
      */
-    public function show(Review $review)
+    public function show(Logo $logo)
     {
         //
     }
@@ -68,54 +79,63 @@ class ReviewController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Review  $review
+     * @param  \App\Logo  $logo
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
-        $review=Review::findOrFail($id);
-        return view('manager.reviewedit',['review'=>$review]);
+        $logo=Logo::findOrFail($id);
+        return view('manager.logoedit',['logo'=>$logo]);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Review  $review
+     * @param  \App\Logo  $logo
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
     {
-        $review=Review::find($id);
-        $path = public_path()."/images/review/".$review->image;
-        unlink($path);
+        $logo=Logo::find($id);
+        $path = public_path()."/images/logo/".$logo->image;
+        unlink($path);      
+        // if ($files = $request->file('image')) {
+        //     $destinationPath = 'images/logo'; 
+        //     $Image = $files->getClientOriginalName();
+        //     $files->move($destinationPath, $Image);
+        //     $logo->image=$Image; 
+        // }
+
+        // $logo->save();
+        // return redirect('/manager/logo');
+        
         $req=$request->all();
         if ($files = $request->file('image'))
         {
                         $uuid =Uuid::generate()->string;
                         $path=$uuid.".".$request->file('image')->getClientOriginalExtension();
-                        $desti='images/review/';
+                        $desti='images/logo/';
                         $files->move($desti,$path);
                         $req['image']=$path;                        
         }
 
-        $review = $review->update($req);           
-        return redirect(route('manager.review.index'));
-
+        $logo = $logo->update($req);           
+        return redirect(route('manager.logo.index'));
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Review  $review
+     * @param  \App\Logo  $logo
      * @return \Illuminate\Http\Response
      */
     public function destroy(Request $request, $id)
     {
-        $review=Review::find($id);
-        $path = public_path()."/images/review/".$review->image;
+        $logo=Logo::find($id);
+        $path = public_path()."/images/logo/".$logo->image;
         unlink($path);
-        $review->delete();
-        return redirect('/manager/review');
+        $logo->delete();
+        return redirect('/manager/logo');
     }
 }

@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
-
+namespace App\Http\Controllers\Manager;
+use App\Http\Controllers\Controller;
+use App\Workstep;
 use Illuminate\Http\Request;
 
-class ChatAdminController extends Controller
+class WorkstepController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +14,7 @@ class ChatAdminController extends Controller
      */
     public function index()
     {
-        return view('manager.adminChat',['data'=>[]]);
+        //
     }
 
     /**
@@ -40,10 +41,10 @@ class ChatAdminController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Workstep  $workstep
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Workstep $workstep)
     {
         //
     }
@@ -51,10 +52,10 @@ class ChatAdminController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Workstep  $workstep
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Workstep $workstep)
     {
         //
     }
@@ -63,10 +64,10 @@ class ChatAdminController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Workstep  $workstep
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Workstep $workstep)
     {
         //
     }
@@ -74,10 +75,10 @@ class ChatAdminController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Workstep  $workstep
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Workstep $workstep)
     {
         //
     }

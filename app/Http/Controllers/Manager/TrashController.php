@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
-
-use App\ServiceImage;
+namespace App\Http\Controllers\Manager;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Jop;
+use Illuminate\Support\Facades\Redirect;
 
-class ServiceImageController extends Controller
+class TrashController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +15,9 @@ class ServiceImageController extends Controller
      */
     public function index()
     {
-        //
+        $jops=Jop::onlyTrashed()->get();
+        
+        return view('manager.trash', ["jops"=>$jops]);
     }
 
     /**
@@ -41,10 +44,10 @@ class ServiceImageController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\ServiceImage  $serviceImage
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(ServiceImage $serviceImage)
+    public function show($id)
     {
         //
     }
@@ -52,22 +55,24 @@ class ServiceImageController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\ServiceImage  $serviceImage
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(ServiceImage $serviceImage)
+    public function edit($id)
     {
-        //
+        $jops=Jop::withTrashed()->where('id',$id)->first();
+        $jops->restore();
+        return Redirect()->back();  
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\ServiceImage  $serviceImage
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, ServiceImage $serviceImage)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -75,11 +80,14 @@ class ServiceImageController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\ServiceImage  $serviceImage
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(ServiceImage $serviceImage)
+    public function destroy($id)
     {
-        //
+        $jop=Jop::withTrashed()->where('id',$id)->first();
+        $jop->forceDelete();
+        return Redirect()->back();
+
     }
 }
