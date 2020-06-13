@@ -18,7 +18,7 @@ class CreateConsultationsTable extends Migration
             $table->string('name')->nullable();
             // $table->string('email')->nullable();
             $table->string('phone')->nullable();
-            $table->string('comment')->nullable();
+            // $table->string('comment')->nullable();
             // $table->string('tybeOfContact')->nullable();
             $table->dateTime('timeToCall')->nullable();
 

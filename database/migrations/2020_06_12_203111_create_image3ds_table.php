@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateHiresTable extends Migration
+class CreateImage3dsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,15 @@ class CreateHiresTable extends Migration
      */
     public function up()
     {
-        Schema::create('hires', function (Blueprint $table) {
+        Schema::create('image3ds', function (Blueprint $table) {
             $table->id();
-            $table->string('job_title')->nullable();
-            $table->string('job_description')->nullable();
-            $table->string('file')->nullable();
+            $table->string('image')->nullable();
+            $table->string('frame')->nullable();
+            $table->string('hint')->nullable();
+           
 
+            $table->unsignedBigInteger('company_id')->nullable();
+            $table->foreign('company_id')->references('id')->on('companies');
             $table->softDeletes();
             $table->timestamps();
         });
@@ -31,6 +34,6 @@ class CreateHiresTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('hires');
+        Schema::dropIfExists('image3ds');
     }
 }
