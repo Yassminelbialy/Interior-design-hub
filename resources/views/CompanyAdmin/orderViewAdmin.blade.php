@@ -1,5 +1,5 @@
-@extends('admin.base')
-@section('adminbase')
+@extends('admin.companyBase')
+@section('CompanyAdminBase')
 <a href="AdminOrder/create " class="btn btn-info m-2">Add New Order</a>
 
 <table class="table table-dark" style="background-color: rgba(0,0,0,0.5);">

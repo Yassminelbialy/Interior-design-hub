@@ -1,5 +1,5 @@
-@extends('admin.base')
-@section('adminbase')
+@extends('admin.companyBase')
+@section('CompanyAdminBase')
 <link rel="stylesheet" type="text/css" href="{{ asset('css/styles.css') }}">
 
 {{ Form::model($contact,['route' => ['manager.contacts.update',$contact],'method'=>'PUT'])}}

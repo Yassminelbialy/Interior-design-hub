@@ -1,6 +1,5 @@
-@extends('admin.base')
-{{-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"> --}}
-@section('adminbase')
+@extends('admin.companyBase')
+@section('CompanyAdminBase')
 {{ Form::open(['route' => ['manager.project.images.store',$id],'enctype' => 'multipart/form-data','method'=>'post'])}}
 <div class="form-group text-light">
   <label class="control-label col-sm-4" for="lname">Image Description:</label>

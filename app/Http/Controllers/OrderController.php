@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Order;
 use App\User;
 use App\Quiz;
