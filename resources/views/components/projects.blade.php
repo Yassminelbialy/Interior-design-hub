@@ -2,7 +2,7 @@
      <h2> Last Projects</h2>
      <div class="container-fluid">
          <div class="row">
-         @forelse  ($projects as $project)
+             @forelse ($projects as $project)
              <div class="col-md-6">
                  <div class="project_card">
                      <div class="face face1">
@@ -11,10 +11,10 @@
                      <div class="face face2">
                          <div class="content">
                              <h2>
-                             {{$project->title}}
+                                 {{$project->title}}
                              </h2>
                              <p>
-                             {{$project->hint}}
+                                 {{$project->hint}}
                              </p>
                              <a class="btn btn-dark mb-1 text-light" href="{{ url('view/'.$project->id)}}">View Project</a>
 
@@ -25,7 +25,7 @@
 
              @empty
              <div class="alert alert-info text-center" style="margin:0 auto;width:50%">
-                <h1>No Projects Yet</h1>
+                 <h1>No Projects Yet</h1>
              </div>
              @endforelse
 

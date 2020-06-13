@@ -201,3 +201,9 @@ small {
     color: #8C9EFF;
     cursor: pointer
 }
+body{
+    background-image: url(../images/f2.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}

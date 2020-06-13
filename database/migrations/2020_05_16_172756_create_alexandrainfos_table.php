@@ -20,7 +20,8 @@ class CreateAlexandrainfosTable extends Migration
             $table->string('image')->nullable();
             $table->string('video')->nullable();
             $table->text('statement')->nullable();
-
+            $table->string('aboutUs')->nullable();
+            $table->string('companyLogo')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });

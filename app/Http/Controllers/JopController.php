@@ -54,9 +54,11 @@ class JopController extends Controller
      * @param  \App\Jop  $jop
      * @return \Illuminate\Http\Response
      */
-    public function show(Jop $jop)
+    public function show( $id)
     {
-        //
+        $jop=Jop::findOrFail($id);
+        $applicant= $jop->applicants;
+        return view('manager.jopshow',['jop'=>$jop,'applicants'=>$applicant]);
     }
 
     /**
