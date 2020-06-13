@@ -101,3 +101,7 @@ Route::middleware('manager')->prefix('admin')->name('admin.')->group(function(){
 });//manager routes
 
 
+Route::get('dddd', function () {
+
+    dd(session('KEY'));
+});
