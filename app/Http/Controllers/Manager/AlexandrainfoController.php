@@ -77,28 +77,29 @@ class AlexandrainfoController extends Controller
         $ceo->name=$request->name;
         $ceo->hint=$request->hint;
         $ceo->statement=$request->statement;
-        // first request img then give parameters to store 
-        // $ceo->image=$request->image->store('images','public');        
+        // first request img then give parameters to store
+        // $ceo->image=$request->image->store('images','public');
         // $ceo->video=$request->video->store('videos','public');
         // upload img to path , assign the img request to real file, then get name as date upload
         if ($files = $request->file('image')) {
-            $destinationPath = 'images/'; 
+            $destinationPath = 'images/';
             $Image = $files->getClientOriginalName();
             $files->move($destinationPath, $Image);
-            $ceo->image=$Image; 
+            $ceo->image=$Image;
         }
 
-       
+
         if ($files = $request->file('video')) {
-            $destinationPath = 'videos/'; 
+            $destinationPath = 'videos/';
             $Video = $files->getClientOriginalName();
             $files->move($destinationPath, $Video);
-            $ceo->video=$Video; 
+            $ceo->video=$Video;
         }
 
         $ceo->save();
+        // dd($request->all(  ));
         return redirect('/manager/alexandra');
-    
+
     }
 
     /**

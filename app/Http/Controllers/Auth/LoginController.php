@@ -45,10 +45,11 @@ class LoginController extends Controller
 
     protected function authenticated(Request $request, $user)
                 {
-                    $companies =Company::where('user_id',Auth::user()->id)->get();
-                    if($companies->count()>0)
+                    $company= Auth::user()->company;
+                             // $companies =Company::where('user_id',Auth::user()->id)->get();
+                    if($company)
                     {
-                    $request->session()->put('COPMANY', $companies[0]);
+                    $request->session()->put('COPMANY', $company);
 
                     }
 
