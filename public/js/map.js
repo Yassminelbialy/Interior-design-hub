@@ -1,9 +1,8 @@
 $(function(){
 
-
     ymaps.ready(function () {
 var myMap = new ymaps.Map('map404', {
-        center: [29.9773, 31.1325],
+        center: [31.182921241870083,29.846314975966273],
         zoom: 16,
         type: 'yandex#satellite'
     }, {
@@ -47,7 +46,7 @@ var myMap = new ymaps.Map('map404', {
          */
         iconLayout: 'default#imageWithContent',
         // Custom image for the placemark icon.
-        iconImageHref: '/images/logo/baselogo.png ',
+        iconImageHref: '/images/logo/mylogo.png',
         // The size of the placemark.
         iconImageSize: [58, 48],
         /**
@@ -75,7 +74,7 @@ var myMap = new ymaps.Map('map404', {
          */
         iconLayout: 'default#imageWithContent',
         // Custom image for the placemark icon.
-        iconImageHref: '/images/logo/baselogo.png ',
+        iconImageHref: '/images/logo/mylogo.png',
         // The size of the placemark.
         iconImageSize: [50, 50],
         /**

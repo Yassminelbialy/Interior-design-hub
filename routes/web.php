@@ -70,11 +70,11 @@ Route::get('/search','UserController@search')->name('search');
 
 
 Route::get('view/{id}', 'UserController@view')->name('project.view');
-Route::get('jopapply/{id?}', 'JopApplicantController@create')->where('id', '[0-9]+')->name('applyjop');
-Route::post('jopapply/{id?}', 'JopApplicantController@store')->where('id', '[0-9]+')->name('applyjopform');
+Route::get('jopapply/{id?}', 'Manager\JopApplicantController@create')->where('id', '[0-9]+')->name('applyjop');
+Route::post('jopapply/{id?}', 'Manager\JopApplicantController@store')->where('id', '[0-9]+')->name('applyjopform');
 
-Route::get('jops', 'JopApplicantController@index')->name('jops');
-Route::get('/companyForm','CompanyController@index');
+Route::get('jops', 'Manager\JopApplicantController@index')->name('jops');
+Route::get('companyForm','CompanyController@index');
 
 // Company Admin panel
 Route::middleware('manager')->prefix('companypanel')->name('company.')->group(function(){

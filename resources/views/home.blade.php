@@ -26,7 +26,10 @@
     </div>
 @endif
 
-
+<script>
+    xxx=90
+    console.log(xxx)
+</script>
 
 
 @component('components.loading')
