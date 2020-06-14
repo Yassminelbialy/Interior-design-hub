@@ -42,24 +42,17 @@
                     @csrf
 
                 <div class="modal-body mx-3">
-                    <div class="md-form mb-2">
-                        <i class="fa fa-user"></i>
-                        <input type="text"  class="form-control validate" name="username">
-
-                        <label data-error="wrong" data-success="right" for="defaultForm-email">Your Name</label>
+                    <div class="form-group mb-2">
+                        <label data-error="wrong" data-success="right" for="defaultForm-email">Company Name</label>
+                        <input type="text"  class="form-control validate" name="companyName">
                     </div>
-                    <div class="md-form mb-2">
-                        <i class="fa fa-phone"></i>
-                        <input type="text" name="phone" class="form-control validate">
-                        <label data-error="wrong" data-success="right" for="defaultForm-pass">Your Phone</label>
+                    <div class="form-groupmb-2">
+                        <label data-error="wrong" data-success="right" for="defaultForm-pass">Your Location</label>
+                        <input type="text" name="location" class="form-control validate">
                     </div>
                     <div class="form-group">
-                        <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
-                            <input type="text" class="form-control datetimepicker-input" name="date" data-target="#datetimepicker1"/>
-                            <div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
-                                <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-                            </div>
-                        </div>
+                        <input type="checkbox" name="acceptConditions" id="agree-term" class="agree-term" />
+                        <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
                     </div>
 
                 </div>
