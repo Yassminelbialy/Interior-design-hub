@@ -58,11 +58,13 @@ class ProjectController extends Controller
             $req['mainimage'] = $path;
             // dd('dd');
         }
+        if(session('COPMANY'))
+        {
+         $project =    session('COPMANY')->projects()->create($req);
+         return redirect(route('company.project.index'));
 
-        $project = Project::create($req);
-        //
-        // dd($project);
-        return redirect(route('company.project.index'));
+        }//getting projects for session user company
+
     }
 
     /**
