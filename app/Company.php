@@ -45,7 +45,7 @@ class Company extends Model
     //     return $this->belongsTo('App\Alexandrainfo','id','company_id');
     // }
 
-    public function myinfo()
+    public function info()
     {
         return $this->hasOne('App\Alexandrainfo');
     }
