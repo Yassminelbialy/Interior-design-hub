@@ -40,9 +40,14 @@ class Company extends Model
     {
         return $this->hasMany('App\Image3d');
     }
-    public function info()
+    // public function info()
+    // {
+    //     return $this->belongsTo('App\Alexandrainfo','id','company_id');
+    // }
+
+    public function myinfo()
     {
-        return $this->belongsTo('App\Alexandrainfo','id','company_id');
+        return $this->hasOne('App\Alexandrainfo');
     }
 
     protected $guarded = [];
