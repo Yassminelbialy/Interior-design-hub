@@ -20,7 +20,11 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        return view('CompanyAdmin.projectindex', ['data' => Project::paginate(3)]);
+        // dd();
+        if(session('COPMANY'))
+        {
+            return view('CompanyAdmin.projectindex', ['data' => session('COPMANY')->projects()->paginate(3)]);
+        }//getting projects for session user company
     }
 
     /**

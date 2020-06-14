@@ -105,5 +105,5 @@ Route::middleware('manager')->prefix('companypanel')->name('company.')->group(fu
 
 Route::get('dddd', function () {
 
-    dd(session('COPMANY'));
+    dd(session('COPMANY')->projects);
 });
