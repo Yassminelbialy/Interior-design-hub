@@ -77,7 +77,7 @@ Route::get('jops', 'Manager\JopApplicantController@index')->name('jops');
 Route::get('/companyForm','CompanyController@index');
 
 // Company Admin panel
-Route::middleware('manager')->prefix('companypanel')->name('company.')->group(function(){
+Route::middleware('company')->prefix('companypanel')->name('company.')->group(function(){
     Route::any('/', function () {
         return view('admin.companyBase');
     });
