@@ -11,6 +11,9 @@
 </form>
 <button class="btn btn-info mt-4" style="margin:10px;padding:10px;outline:none;font-size:20px;float:right;border-radius:10px" data-toggle="modal" data-target="#modalLoginForm">Sell with us</button>
 <div style="clear:both"></div>
+@if($msg = Session::get('success'))
+    <div class="alert alert-success text-center" style="width:50%;margin:10px auto;font-size:25px">{{$msg}}</div>
+@endif
 <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -21,39 +24,37 @@
                 <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-
-
-            @if(count($errors) > 0)
-
-                <div class="alert alert-danger">
-                    <ul>
-                        @foreach($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-
-            @endif
-
-            @if($msg = Session::get('success'))
-                <div class="alert alert-success">{{$msg}}</div>
-            @endif
-            <form action="" method="post">
+            <form action="{{route('company.form')}}" method="post">
 
                     @csrf
 
                 <div class="modal-body mx-3">
                     <div class="form-group mb-2">
                         <label data-error="wrong" data-success="right" for="defaultForm-email">Company Name</label>
-                        <input type="text"  class="form-control validate" name="companyName">
+                        <input type="text"  class="form-control @error('companyName') is-invalid @enderror" name="companyName">
+                        @error('companyName')
+                        <span class="invalid-feedback" role="alert">
+                            <strong style="color:red">{{ $message }}</strong>
+                        </span>
+                        @enderror
                     </div>
                     <div class="form-groupmb-2">
                         <label data-error="wrong" data-success="right" for="defaultForm-pass">Your Location</label>
-                        <input type="text" name="location" class="form-control validate">
+                        <input type="text" name="location" class="form-control @error('location') is-invalid @enderror">
+                        @error('location')
+                        <span class="invalid-feedback" role="alert">
+                            <strong style="color:red">{{ $message }}</strong>
+                        </span>
+                        @enderror
                     </div>
                     <div class="form-group">
-                        <input type="checkbox" name="acceptConditions" id="agree-term" class="agree-term" />
+                        <input type="checkbox" value="1" name="acceptConditions" id="agree-term" class="agree-term @error('acceptConditions') is-invalid @enderror" />
                         <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
+                        @error('acceptConditions')
+                        <span class="invalid-feedback" role="alert">
+                            <strong style="color:red">{{ $message }}</strong>
+                        </span>
+                        @enderror
                     </div>
 
                 </div>

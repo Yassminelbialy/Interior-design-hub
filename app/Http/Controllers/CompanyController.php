@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Company;
+use Auth;
 use Illuminate\Http\Request;
 
 class CompanyController extends Controller
@@ -37,6 +38,23 @@ class CompanyController extends Controller
     public function store(Request $request)
     {
         //
+
+        $this->validate($request ,[
+
+            'companyName'   =>     'required',
+            'location'      =>     'required',
+            'acceptConditions' => 'required ',
+            ]);
+
+
+        $company = new Company ();
+        $company->companyName =$request->companyName;
+        $company->location=$request->location;
+        $company->acceptConditions=$request->acceptConditions;
+        $company->user_id=Auth::id();
+        $company->save();
+        return back()->with('success' , 'Wait Admin For Accept:)');
+
     }
 
     /**
