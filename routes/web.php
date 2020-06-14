@@ -44,6 +44,7 @@ Route::middleware('manager')->prefix('manager')->name('manager.')->group(functio
     Route::resource('AdminOrder' , 'Manager\OrderAdminController');
     Route::get('users/{users}/order', 'Manager\OrderAdminController@updateOrder')->name('order');
     Route::resource('jopAppli' , 'Manager\JopApplicantController');
+    Route::resource('topics' , 'Manager\TopicController');
     Route::resource('chatList' , 'Manager\ChatAdminController');
 
 
@@ -58,12 +59,11 @@ Route::middleware('user')->group(function(){
 });
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::resource('quiz', 'QuizController');
+Route::resource('quiz', 'Manager\QuizController');
 
 
-Route::resource('project.images', 'ProjectImageController');
-Route::post('/contact','ConsultationController@send');
-// Route::post('/quizContact','QuizControllerSendingMail@sendEmail');
+Route::resource('project.images', 'Manager\ProjectImageController');
+Route::post('/contact','Manager\ConsultationController@send');
 Route::get('/','UserController@index');
 Route::get('/allproject/{category?}','UserController@allprojects')->where('category', '[A-Za-z1-9]+')->name('listAllProjects');
 Route::get('/search','UserController@search')->name('search');
@@ -74,7 +74,7 @@ Route::get('jopapply/{id?}', 'Manager\JopApplicantController@create')->where('id
 Route::post('jopapply/{id?}', 'Manager\JopApplicantController@store')->where('id', '[0-9]+')->name('applyjopform');
 
 Route::get('jops', 'Manager\JopApplicantController@index')->name('jops');
-Route::get('companyForm','CompanyController@index');
+Route::get('/companyForm','CompanyController@index');
 
 // Company Admin panel
 Route::middleware('manager')->prefix('companypanel')->name('company.')->group(function(){
@@ -96,6 +96,8 @@ Route::middleware('manager')->prefix('companypanel')->name('company.')->group(fu
     Route::get('users/{users}/order', 'CompanyAdmin\OrderAdminController@updateOrder')->name('order');
     Route::resource('jopAppli' , 'CompanyAdmin\JopApplicantController');
     Route::resource('chatList' , 'CompanyAdmin\ChatAdminController');
+
+
 
 
 });//manager routes

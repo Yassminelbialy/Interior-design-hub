@@ -2,90 +2,48 @@
     <h1 class="text-center">Info</h1>
     <div class="container">
         <div class="row">
+
+        @forelse($topics as $topicsData)
             <div class="col-md-6 col-lg-4 mt-3 state">
                 <div class="row">
                     <div class="col-md-4">
-                        <img data-src="images/7.jpg" alt="state" />
+                        <img data-src="{{ asset('images/topicImages/'. $topicsData->image)}}" alt="state" class="mb-2"/>
                     </div>
                     <div class="col-md-8">
-                        <p class="text_info">
-                            Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.
-                            Even the all-powerful Pointing has no control.
-                        </p>
+                        <h3 class="text_info">
+                            {{ $topicsData->title }}
+                        </h3>
                     </div>
                 </div>
-                <a href="#" class="btn btn-block">Go somewhere</a>
-            </div>
-            <div class="col-md-6 col-lg-4 mt-3 state">
-                <div class="row">
-                    <div class="col-md-4">
-                        <img data-src="images/7.jpg" alt="state" />
-                    </div>
-                    <div class="col-md-8">
-                        <p class="text_info">
-                            Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.
-                            Even the all-powerful Pointing has no control.
-                        </p>
-                    </div>
+                
+            <button class="btn btn_info btn-block" data-toggle="modal" data-target="#modalLoginForm{{$topicsData->id}}">View Details</button>
+            <div class="modal fade" id="modalLoginForm{{$topicsData->id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header text-center">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <img class="card-img-top" data-src="{{ asset('images/topicImages/'. $topicsData->image)}}" alt="Topic" style="height:350px">
+                  <div class="projectDetails mt-5">
+                    <p class="card-title text-dark p-2"><strong class="text-info">Topic Hint: </strong>{{ $topicsData->hint }}</p>
+                    <p class="card-text text-dark mb-2 p-2"><strong class="text-info">Topic Description: </strong>{{ $topicsData->description }}</p>
+
+                  </div>
                 </div>
-                <a href="#" class="btn btn-block">Go somewhere</a>
+              </div>
             </div>
-            <div class="col-md-6 col-lg-4 mt-3 state">
-                <div class="row">
-                    <div class="col-md-4">
-                        <img data-src="images/7.jpg" alt="state" />
-                    </div>
-                    <div class="col-md-8">
-                        <p class="text_info">
-                            Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.
-                            Even the all-powerful Pointing has no control.
-                        </p>
-                    </div>
-                </div>
-                <a href="#" class="btn btn-block">Go somewhere</a>
+
+
             </div>
-            <div class="col-md-6 col-lg-4 mt-3 state">
-                <div class="row">
-                    <div class="col-md-4">
-                        <img data-src="images/7.jpg" alt="state" />
-                    </div>
-                    <div class="col-md-8">
-                        <p class="text_info">
-                            Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.
-                            Even the all-powerful Pointing has no control.
-                        </p>
-                    </div>
-                </div>
-                <a href="#" class="btn btn-block">Go somewhere</a>
+        @empty
+
+            <div class="alert alert-info btn-block">
+                No Topics Yet ...
             </div>
-            <div class="col-md-6 col-lg-4 mt-3 state">
-                <div class="row">
-                    <div class="col-md-4">
-                        <img data-src="images/7.jpg" alt="state" />
-                    </div>
-                    <div class="col-md-8">
-                        <p class="text_info">
-                            Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.
-                            Even the all-powerful Pointing has no control.
-                        </p>
-                    </div>
-                </div>
-                <a href="#" class="btn btn-block">Go somewhere</a>
-            </div>
-            <div class="col-md-6 col-lg-4 mt-3 state">
-                <div class="row">
-                    <div class="col-md-4">
-                        <img data-src="images/7.jpg" alt="state" />
-                    </div>
-                    <div class="col-md-8">
-                        <p class="text_info">
-                            Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.
-                            Even the all-powerful Pointing has no control.
-                        </p>
-                    </div>
-                </div>
-                <a href="#" class="btn btn-block">Go somewhere</a>
-            </div>
+        @endforelse
+           
         </div>
     </div>
 </section>

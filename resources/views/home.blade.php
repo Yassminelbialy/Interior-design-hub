@@ -77,7 +77,7 @@
 @component('components.clients',['logos' => $logos])
 @endcomponent
 
-@component('components.state')
+@component('components.state' ,['topics'=>$topics])
 @endcomponent
 
 @component('components.video',['ceoInfo' => $ceoInfo])
