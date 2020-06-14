@@ -39,4 +39,9 @@ class User extends Authenticatable
     public function instagram(){
         return $this->hasOne(Instagram::class, 'user_id', 'id');
     }
+    public function company()
+    {
+        return $this->hasOne('App\Company');
+    }
+
 }

@@ -108,7 +108,7 @@ class CategoryController extends Controller
 
         }
         $category->update($req);
-        dd($category);
+        return redirect(route('manager.category.index'));
     }
 
     /**

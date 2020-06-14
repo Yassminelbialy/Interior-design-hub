@@ -103,3 +103,7 @@ Route::middleware('company')->prefix('companypanel')->name('company.')->group(fu
 });//manager routes
 
 
+Route::get('dddd', function () {
+
+    dd(session('COPMANY')->projects);
+});

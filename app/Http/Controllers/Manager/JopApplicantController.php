@@ -17,6 +17,7 @@ class JopApplicantController extends Controller
      */
     public function index()
     {
+        dd('sss');
         return view('jopApp.jops',['data'=>Jop::all()]);
 
 
@@ -64,7 +65,7 @@ class JopApplicantController extends Controller
                 JopApplicant::create($request->except(['gender','file'])        );
 
 }
-        
+
         return redirect(route('applyjop'))->with('success', 'Done');
     }
 
@@ -76,7 +77,7 @@ class JopApplicantController extends Controller
      */
     public function show($id)
     {
-        $jopApplicant=JopApplicant::findOrFail($id);       
+        $jopApplicant=JopApplicant::findOrFail($id);
         return view('manager.jopApplishow',['jopAppli'=>$jopApplicant]);
     }
 
