@@ -11,6 +11,13 @@
 </form>
 <button class="btn btn-info mt-4" style="margin:10px;padding:10px;outline:none;font-size:20px;float:right;border-radius:10px" data-toggle="modal" data-target="#modalLoginForm">Sell with us</button>
 <div style="clear:both"></div>
+@if(count($errors) > 0)
+
+    <div class="alert alert-danger text-center" style="width:50%;margin:10px auto;font-size:25px">
+        All field required
+    </div>
+
+@endif
 @if($msg = Session::get('success'))
     <div class="alert alert-success text-center" style="width:50%;margin:10px auto;font-size:25px">{{$msg}}</div>
 @endif
