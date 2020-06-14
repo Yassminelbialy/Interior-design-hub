@@ -19,6 +19,7 @@ class CreateProjectsTable extends Migration
             $table->string('hint')->nullable();
             $table->string('mainImage')->nullable();
             $table->text('description')->nullable();
+            $table->text('showINSlider')->nullable();
                 
             $table->softDeletes();
             $table->timestamps();

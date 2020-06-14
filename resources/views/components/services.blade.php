@@ -1,5 +1,5 @@
-    <!--end services -->
-    <section class="services text-center">
+    <!-- end services -->
+    <!-- <section class="services text-center">
       <div class="container">
         <div class="row">
           <div class="col-md-4 col-sm-6">
@@ -88,6 +88,6 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!--end services -->

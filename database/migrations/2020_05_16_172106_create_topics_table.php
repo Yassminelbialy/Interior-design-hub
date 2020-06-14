@@ -19,9 +19,9 @@ class CreateTopicsTable extends Migration
             $table->string('hint')->nullable();
             $table->string('image')->nullable();
             $table->text('description')->nullable();
-            $table->string('price')->nullable();
+            // $table->string('price')->nullable();
             $table->string('keyWords')->nullable();
-            $table->string('URL')->nullable();
+           // $table->string('URL')->nullable();
 
 
             $table->softDeletes();
