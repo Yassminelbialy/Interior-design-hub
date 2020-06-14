@@ -62,7 +62,7 @@
     </div>
 
     <div class="text-center">
-        <bottom class="btn btn_info mt-4" style="position: relative;top: 172px;" data-toggle="modal" data-target="#modalLoginForm">Contact Us
-        </bottom>
+        <button class="btn btn_info mt-4" style="position: relative;top: 172px;" data-toggle="modal" data-target="#modalLoginForm">Contact Us
+        </button>
     </div>
 </div>

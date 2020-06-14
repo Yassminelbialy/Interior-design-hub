@@ -6,10 +6,74 @@
 
 <a href="{{ route('logout') }}" class="btn btn-danger" style="color:white !important;margin:10px;padding:10px;font-size:20px;float:right;border-radius:10px" onclick="event.preventDefault();
                 document.getElementById('logout-form').submit();">Logout</a>
-<a href="/companyForm" class="btn btn-danger" style="color:white !important;margin:10px;padding:10px;font-size:20px;float:right;border-radius:10px">Sell with us</a>
 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
     @csrf
 </form>
+<button class="btn btn-info mt-4" style="margin:10px;padding:10px;outline:none;font-size:20px;float:right;border-radius:10px" data-toggle="modal" data-target="#modalLoginForm">Sell with us</button>
+<div style="clear:both"></div>
+@if(count($errors) > 0)
+
+    <div class="alert alert-danger text-center" style="width:50%;margin:10px auto;font-size:25px">
+        All field required
+    </div>
+
+@endif
+@if($msg = Session::get('success'))
+    <div class="alert alert-success text-center" style="width:50%;margin:10px auto;font-size:25px">{{$msg}}</div>
+@endif
+<div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h4 class="modal-title w-100 font-weight-bold">Confirm</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form action="{{route('company.form')}}" method="post">
+
+                    @csrf
+
+                <div class="modal-body mx-3">
+                    <div class="form-group mb-2">
+                        <label data-error="wrong" data-success="right" for="defaultForm-email">Company Name</label>
+                        <input type="text"  class="form-control @error('companyName') is-invalid @enderror" name="companyName">
+                        @error('companyName')
+                        <span class="invalid-feedback" role="alert">
+                            <strong style="color:red">{{ $message }}</strong>
+                        </span>
+                        @enderror
+                    </div>
+                    <div class="form-groupmb-2">
+                        <label data-error="wrong" data-success="right" for="defaultForm-pass">Your Location</label>
+                        <input type="text" name="location" class="form-control @error('location') is-invalid @enderror">
+                        @error('location')
+                        <span class="invalid-feedback" role="alert">
+                            <strong style="color:red">{{ $message }}</strong>
+                        </span>
+                        @enderror
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" value="1" name="acceptConditions" id="agree-term" class="agree-term @error('acceptConditions') is-invalid @enderror" />
+                        <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
+                        @error('acceptConditions')
+                        <span class="invalid-feedback" role="alert">
+                            <strong style="color:red">{{ $message }}</strong>
+                        </span>
+                        @enderror
+                    </div>
+
+                </div>
+                <div class="modal-footer d-flex justify-content-center">
+                <button class="btn btn-success btn-block">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>
+<!-- <a href="/companyForm" class="btn btn-danger" style="color:white !important;margin:10px;padding:10px;font-size:20px;float:right;border-radius:10px">Sell with us</a> -->
+
 <div class="container">
     <div class="page-header">
         <h1 class="text-center text-info" style="font-weight: bold;font-family: Times New Roman">
