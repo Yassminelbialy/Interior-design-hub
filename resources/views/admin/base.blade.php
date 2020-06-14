@@ -84,6 +84,7 @@
                                 <a class="nav-link" href="/manager/contacts">Contacts</a>
                                 <a class="nav-link" href="/manager/AdminOrder">Users Orders</a>
                                 <a class="nav-link" href="/manager/fbPosts">FaceBook Posts</a>
+                                <a class="nav-link" href="/manager/topics">Topics</a>
                                 <a class="nav-link" href="/manager/jops">Jobs</a>
                                 {{-- <a class="nav-link" href="/manager/project">projects</a>
                                     <a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a></nav> --}}
