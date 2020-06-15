@@ -48,11 +48,10 @@ Route::middleware('manager')->prefix('manager')->name('manager.')->group(functio
     Route::resource('jopAppli' , 'Manager\JopApplicantController');
     Route::resource('topics' , 'Manager\TopicController');
     Route::resource('chatList' , 'Manager\ChatAdminController');
+    Route::get('/counter/info' , 'Manager\CounterController@getCounterOfSpecificCompany');
     Route::resource('company' , 'CompanyController');
     Route::get('users/{users}/company', 'CompanyController@ConfirmCompany')->name('company');
 
-
-    
 
 
 });//manager routes
@@ -74,6 +73,8 @@ Route::resource('project.images', 'Manager\ProjectImageController');
 Route::post('/contact','Manager\ConsultationController@send');
 Route::get('/','UserController@index');
 Route::get('/allproject/{category?}','UserController@allprojects')->where('category', '[A-Za-z1-9]+')->name('listAllProjects');
+Route::get('/allprojectcustomsearch','UserController@customsearch');
+
 Route::get('/search','UserController@search')->name('search');
 
 
@@ -94,6 +95,7 @@ Route::middleware('company')->prefix('companypanel')->name('company.')->group(fu
     Route::resource('contacts', 'CompanyAdmin\ContactController');
     Route::resource('jops', 'CompanyAdmin\JopController');
     Route::resource('review', 'CompanyAdmin\ReviewController');
+    Route::resource('reviewTrash' ,'CompanyAdmin\ReviewTrashController');
     Route::resource('consultations' ,'CompanyAdmin\ConsultationController');
     Route::resource('user' ,'CompanyAdmin\AllUsersController');
     Route::resource('trash' ,'CompanyAdmin\TrashController');
@@ -111,6 +113,8 @@ Route::middleware('company')->prefix('companypanel')->name('company.')->group(fu
 
 
 Route::get('dddd', function () {
+       $dede= App\Project::find(1);
+    return response()->json(['message' => 'User status updated successfully.','data'=>[$dede]]);
 
     dd(session('COPMANY')->projects);
 });
