@@ -17,7 +17,7 @@
                             <div class="icon">
                                 <i class="fa video2_btn fa-play" data-toggle="modal" data-target="#video2"></i>
                                 <!-- Modal -->
-                                <div class="modal fade" id="video2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal modal_video fade" id="video2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
                                             <div class="modal-body">

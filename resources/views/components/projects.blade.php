@@ -1,5 +1,5 @@
  <!-- start projects -->
-<!-- <section class="projects">
+ <!-- <section class="projects">
      @if(count($projects)>0)
      <h2 class="text-left">HAWN NPOEktbi:</h2>
      <div class="container-fluid">
@@ -36,11 +36,11 @@
      <h2> Last Projects</h2>
      <div class="container-fluid">
          <div class="row">
-         @forelse  ($projects as $project)
+             @forelse($projects as $project)
              <div class="col-md-6">
                  <div class="project_card">
                      <div class="face face1">
-                         <img src="/projectimages/{{$project->mainImage}}" class="w-100 h-100" alt="" />
+                         <img src="/projectimages/{{$project->mainImage}}" alt="" />
                      </div>
                      <div class="face face2">
                          <div class="content">
@@ -56,13 +56,33 @@
                      </div>
                  </div>
              </div>
-
              @empty
              <div class="alert alert-info text-center" style="margin:0 auto;width:50%">
                 <h1>No Projects Yet</h1>
              </div>
              @endforelse
+             <div class="col-md-6">
+                 <div class="project_card">
+                     <div class="face face1">
+                         <img src="./images/pictures_projects/2.jpeg" alt="" />
+                     </div>
+                     <div class="face face2">
+                         <div class="content">
+                             <h2>
+                                 Lorem, ipsum
+                             </h2>
+                             <p>
+                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
+                                 atque sunt ab ipsum? Et veniam error unde repellat voluptates
+                                 maxime, harum distinctio voluptatum quas voluptatem corporis.
+                                 Quisquam molestiae repudiandae hic?
+                             </p>
+                             <a href="#">show details</a>
 
+                         </div>
+                     </div>
+                 </div>
+             </div>
 
              <div class="col-md-6">
                  <div class="project_card">
@@ -156,32 +176,10 @@
                  </div>
              </div>
 
-             <div class="col-md-6">
-                 <div class="project_card">
-                     <div class="face face1">
-                         <img src="/images/pictures_projects/4.jpeg" alt="" />
-                     </div>
-                     <div class="face face2">
-                         <div class="content">
-                             <h2>
-                                 Lorem, ipsum
-                             </h2>
-                             <p>
-                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
-                                 atque sunt ab ipsum? Et veniam error unde repellat voluptates
-                                 maxime, harum distinctio voluptatum quas voluptatem corporis.
-                                 Quisquam molestiae repudiandae hic?
-                             </p>
-                             <a href="#">show details</a>
-
-                         </div>
-                     </div>
-                 </div>
-             </div>
-
-
 
          </div>
      </div>
+
+     <button>All projects</button>
 
  </section>
