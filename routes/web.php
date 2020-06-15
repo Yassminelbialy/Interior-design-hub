@@ -46,6 +46,7 @@ Route::middleware('manager')->prefix('manager')->name('manager.')->group(functio
     Route::resource('jopAppli' , 'Manager\JopApplicantController');
     Route::resource('topics' , 'Manager\TopicController');
     Route::resource('chatList' , 'Manager\ChatAdminController');
+    Route::get('/counter/info' , 'Manager\CounterController@getCounterOfSpecificCompany');
 
 
 });//manager routes
