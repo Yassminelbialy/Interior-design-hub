@@ -9,11 +9,13 @@
 
 
 
-    <form class="form-inline  m-5 " method="get" action="/search">
-     <i class="fas fa-search" aria-hidden="true"></i>
-            <input required name="data" class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search"
-              aria-label="Search">
-    </form>
+
+    <div class="form-inline m-5">
+       <i class="fas fa-search" aria-hidden="true"></i>
+        <input id='search' required name="data" class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search"
+        aria-label="Search">
+    </div>
+
 
       <h1 style="margin-top:60px" class="text-center text-light">All Categories</h1>
       <div class="list-group mb-2" style="height: 400px;overflow-x: hidden;">
@@ -59,5 +61,78 @@
       <!-- end projects -->
     </div>
  </div>
+ <script>
+
+     $(function(){
+        $('#search').on('change',(e)=>
+        {
+            console.log(e.target.value) ;
+            $.ajax({
+                url: "http://localhost:8000/dddd",
+                dataType: 'script',
+                cache: false,
+                contentType: false,
+                processData: false,
+                data: {},                         // Setting the data attribute of ajax with file_data
+                type: 'get',
+                success:function(data)
+                {
+                    x=JSON.parse(data);
+                    console.log(x.data);
+            //         x.data.foreach(element => {
+            //             $(`
+            //                    <div class="col-md-6" >
+            //         <div class="project_card">
+            //             <div class="face face1">
+            //                 <img src="/projectimages/${element.mainImage}" class="w-100 h-100" alt="" />
+            //             </div>
+            //             <div class="face face2">
+            //                 <div class="content">
+            //                     <h2>
+            //                         ${element.title}
+            //                     </h2>
+            //                     <p>
+            //                         ${element.hint}
+            //                     </p>
+            //                     <a class="btn btn-dark mb-1 text-light" href="/view/${element.id}">View Project</a>
+
+            //                 </div>
+            //             </div>
+            //         </div>
+            //     </div>
+            //    `).appendTo('#alldata');//end div added
+
+            //         });//end for loop
+                    console.log(x.data,'ssss')
+                    x.data.forEach(element => {
+                        // console.log(element)
+                        $(`
+                    <div class="col-md-6" >
+                        <div class="project_card">
+                            <div class="face face1">
+                                <img src="/projectimages/${element.mainImage}" class="w-100 h-100" alt="" />
+                        </div>
+                        <div class="face face2">
+                            <div class="content">
+                                <h2>
+                                    ${element.title}
+                                </h2>
+                                <p>
+                                    ${element.hint}
+                                </p>
+                                <a class="btn btn-dark mb-1 text-light" href="/view/${element.id}">View Project</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               `).appendTo('#alldata');//end div added
+
+                    });
+                }
+       })///ajax
+        })
+     })
+ </script>
 
  @endsection

@@ -104,6 +104,7 @@ Route::middleware('manager')->prefix('companypanel')->name('company.')->group(fu
 
 
 Route::get('dddd', function () {
+       $dede= App\Project::find(1);
+    return response()->json(['message' => 'User status updated successfully.','data'=>[$dede]]);
 
-    dd(session('COMPANY'));
 });
