@@ -5,11 +5,11 @@
 <table class="table table-dark" style="background-color: rgba(0,0,0,0.5);">
   <thead>
     <tr>
-      <th  class="text-light h5">companyName </th>
-      <th class="text-light h5">Director</th>
-      <th class="text-light h5">Location</th>
-      <th  class="text-light h5">Confirm</th>
-      <th class="text-light h5"> Action </th>
+      <th class="text-light h6" style="font-weight:700">companyName </th>
+      <th class="text-light h6" style="font-weight:700">Director</th>
+      <th class="text-light h6" style="font-weight:700">Location</th>
+      <th class="text-light h6" style="font-weight:700">Confirm</th>
+      <th class="text-danger h6" style="font-weight:700"> Action </th>
     </tr>
     @foreach( $companies as $company)
     <tr>
@@ -26,7 +26,7 @@
       </td>
       <td>
         {!! Form::open(['route' => ['manager.company.destroy', $company->id] , 'method'=>'delete']) !!}
-            {!! Form::submit('Delete !' , ['class'=>'btn btn-danger']) !!}
+            {!! Form::button('<i style="color:#fff" class="fa fa-trash fa-2x"></i>' , ['class'=>'btn btn-danger','type' => 'submit'] ) !!}
         {!! Form::close() !!}
       </td>
     </tr>
