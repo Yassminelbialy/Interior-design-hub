@@ -37,17 +37,6 @@ class LogoController extends Controller
      */
     public function store(Request $request)
     {
-        // $logo=new Logo;
-     
-        // if ($files = $request->file('image')) {
-        //     $destinationPath = 'images/logo/'; 
-        //     $Image = $files->getClientOriginalName();
-        //     $files->move($destinationPath, $Image);
-        //     $logo->image=$Image; 
-        // }
-
-        // $logo->save();
-        // return redirect('/manager/logo');
         $req=$request->all();
 
     if ($files = $request->file('image'))
@@ -133,8 +122,6 @@ class LogoController extends Controller
     public function destroy(Request $request, $id)
     {
         $logo=Logo::find($id);
-        $path = public_path()."/images/logo/".$logo->image;
-        unlink($path);
         $logo->delete();
         return redirect('/manager/logo');
     }

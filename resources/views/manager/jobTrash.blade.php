@@ -27,10 +27,10 @@
               <td>{{$jop->location}}</td>
               
               <td>
-                <a href="{{ route('manager.trash.edit', $jop->id) }}"class="btn btn-success">Active</a>
+                <a href="{{ route('manager.jobTrash.edit', $jop->id) }}"class="btn btn-success">Active</a>
               </td>
               <td>
-                {!! Form::open(['route' => ['manager.trash.destroy',$jop->id] ,'method' => 'delete', 'style'=>'display:inline-block']) !!}
+                {!! Form::open(['route' => ['manager.jobTrash.destroy',$jop->id] ,'method' => 'delete', 'style'=>'display:inline-block']) !!}
                 {!! Form::submit('Delete',['class'=>'btn btn-secondary']) !!}
                 {!! Form::close() !!}
               </td>
@@ -40,44 +40,3 @@
   </table>
 </div>
 @endsection
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
