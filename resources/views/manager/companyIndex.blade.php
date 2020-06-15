@@ -26,7 +26,7 @@
       </td>
       <td>
         {!! Form::open(['route' => ['manager.company.destroy', $company->id] , 'method'=>'delete']) !!}
-            {!! Form::button('<i style="color:#fff"class="fa fa-trash fa-2x"></i>' , ['class'=>'btn btn-danger','type' => 'submit'] ) !!}
+            {!! Form::button('<i style="color:#fff" class="fa fa-trash fa-2x"></i>' , ['class'=>'btn btn-danger','type' => 'submit'] ) !!}
         {!! Form::close() !!}
       </td>
     </tr>

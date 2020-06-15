@@ -72,16 +72,16 @@
                 <td colspan="6"><a href="{{route('manager.quizzes.create')}}"><i class="fas fa-plus fa-4x" style="color: blue"></i></a></td>
             </tr>
             <tr>
-                <th scope="col" class="text-light h3">#</th>
-                <th scope="col" class="text-light h3">Area</th>
-                <th scope="col" class="text-light h3">timeOfRsponse</th>
-                <th scope="col" class="text-light h3">participateState</th>
-                <th scope="col" class="text-light h3">contactTybe</th>
-                <th scope="col" class="text-light h3">customerName</th>
-                <th scope="col" class="text-light h3">customerPhoneNo</th>
-                <th scope="col" class="text-light h3">design</th>
-                <th scope="col" class="text-light h3">styles</th>
-                <th scope="col" class="text-light h3">Actions</th>
+                <th scope="col" class="text-light h6" style="font-weight:700">#</th>
+                <th scope="col" class="text-light h6" style="font-weight:700">Area</th>
+                <th scope="col" class="text-light h6" style="font-weight:700">timeOfRsponse</th>
+                <th scope="col" class="text-light h6" style="font-weight:700">participateState</th>
+                <th scope="col" class="text-light h6" style="font-weight:700">contactTybe</th>
+                <th scope="col" class="text-light h6" style="font-weight:700">customerName</th>
+                <th scope="col" class="text-light h6" style="font-weight:700">customerPhoneNo</th>
+                <th scope="col" class="text-light h6" style="font-weight:700">design</th>
+                <th scope="col" class="text-light h6" style="font-weight:700">styles</th>
+                <th scope="col" class="text-light h6" style="font-weight:700">Actions</th>
             </tr>
         </thead>
         <tbody>

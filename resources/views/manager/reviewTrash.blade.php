@@ -6,9 +6,9 @@
     <thead>
       
       <tr>
-        <th scope="col" class="text-light h3">#</th>
-        <th scope="col" class="text-light h3">image</th>
-        <th scope="col" class="text-light h3" colspan="2">Actions</th>
+        <th scope="col" class="text-light h6" style="font-weight:700">#</th>
+        <th scope="col" class="text-light h6" style="font-weight:700">image</th>
+        <th scope="col" class="text-light h6" colspan="2" style="font-weight:700">Actions</th>
 
       </tr>
     </thead>
