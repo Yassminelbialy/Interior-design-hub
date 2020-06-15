@@ -7,31 +7,31 @@
     <div class="row">
         <div class="col-lg-8">
             {{ Form::open(['route' => 'manager.AdminOrder.store','enctype' => 'multipart/form-data','method'=>'post'])}}
-            <div class="form-group">
-                <label for="exampleFormControlFile1" class="text-light">Enter Description of Order</label>
-                {!! Form::text('description', null, ['required'=>'true','class'=>"form-control",'placeholder'=>'orderDesc']) !!}
-            </div>
-            <div class="form-group text-light">
-                <label for="exampleFormControlFile1" class="text-light">Add State For Order</label>
-                <select name="state" class="form-control">
-                    <option value="prepare">prepare</option>
-                    <option value="underwork">underwork</option>
-                    <option value="done">done</option>
-                </select>
-            </div>
-            <div class="form-group text-light">
-                <label for="exampleFormControlFile1" class="text-light">Add User For Order</label>
-                {!! Form::select('user_id', $user , null, ['class' => 'form-control']) !!}
-            </div>
-            <div class="form-group text-light">
-                <label for="exampleFormControlFile1"> Enter Cost Of Order</label>
-                {!! Form::text('cost', null, ['required'=>'true','class'=>"form-control",'placeholder'=>'orderCost']) !!}
-            </div>
-            <div class="form-group text-light">
-                {!! Form::file('contractImg', ['class'=>' form-control','id'=>"validatedCustomFile", 'required']) !!}
-                <label for="validatedCustomFile"> Add Image Of UserOrder</label>
-            </div>
-            {!! Form::submit('ADD Order', ['class'=>'btn btn-info']) !!}
+                <div class="form-group">
+                    <label for="exampleFormControlFile1" class="text-light">Enter Description of Order</label>
+                    {!! Form::text('description', null, ['required'=>'true','class'=>"form-control",'placeholder'=>'orderDesc']) !!}
+                </div>
+                <div class="form-group text-light">
+                    <label for="exampleFormControlFile1" class="text-light">Add State For Order</label>
+                    <select name="state" class="form-control">
+                        <option value="underwork">underwork</option>
+                        <option value="prepare">prepare</option>
+                        <option value="done">done</option>
+                    </select>
+                </div>
+                <div class="form-group text-light">
+                    <label for="exampleFormControlFile1" class="text-light">Add User For Order</label>
+                    {!! Form::select('user_id', $user , null, ['class' => 'form-control']) !!}
+                </div>
+                <div class="form-group text-light">
+                    <label for="exampleFormControlFile1"> Enter Cost Of Order</label>
+                    {!! Form::text('cost', null, ['required'=>'true','class'=>"form-control",'placeholder'=>'orderCost']) !!}
+                </div>
+                <div class="form-group text-light">
+                    {!! Form::file('contractImg', ['class'=>' form-control','id'=>"validatedCustomFile", 'required']) !!}
+                    <label for="validatedCustomFile"> Add Image Of UserOrder</label>
+                </div>
+                {!! Form::submit('ADD Order', ['class'=>'btn btn-info']) !!}
             </form>
         </div>
     </div>
