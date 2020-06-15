@@ -1,7 +1,7 @@
 @extends('admin.companyBase')
 @section('CompanyAdminBase')
 <link rel="stylesheet" type="text/css" href="{{ asset('css/styles.css') }}">
-{{ Form::open(['route' => 'manager.jops.store','method'=>'post'])}}
+{{ Form::open(['route' => 'company.jops.store','method'=>'post'])}}
 <div class="row text-light">
 	<div class="col-md-9">
 		<div class="contact-form">

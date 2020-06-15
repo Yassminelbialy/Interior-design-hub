@@ -36,7 +36,7 @@
               <td>{{$applicant->phone}}</td>
 
               <td>
-                <a href="{{route('manager.jopAppli.show',$applicant->id)}}"> 
+                <a href="{{route('company.jopAppli.show',$applicant->id)}}"> 
                   <i class="fas fa-binoculars fa-2x" style="color: green"></i>
                 </a>
 
