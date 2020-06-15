@@ -48,6 +48,11 @@ Route::middleware('manager')->prefix('manager')->name('manager.')->group(functio
     Route::resource('jopAppli' , 'Manager\JopApplicantController');
     Route::resource('topics' , 'Manager\TopicController');
     Route::resource('chatList' , 'Manager\ChatAdminController');
+    Route::resource('company' , 'CompanyController');
+    Route::get('users/{users}/company', 'CompanyController@ConfirmCompany')->name('company');
+
+
+    
 
 
 });//manager routes
@@ -56,6 +61,7 @@ Route::middleware('user')->group(function(){
 
     Route::resource('profile', 'OrderController');
     Route::resource('chat', 'ChatController');
+    Route::post('/companyForm','CompanyController@store')->name('company.form');
 
 
 });
@@ -76,10 +82,9 @@ Route::get('jopapply/{id?}', 'Manager\JopApplicantController@create')->where('id
 Route::post('jopapply/{id?}', 'Manager\JopApplicantController@store')->where('id', '[0-9]+')->name('applyjopform');
 
 Route::get('jops', 'Manager\JopApplicantController@index')->name('jops');
-Route::get('/companyForm','CompanyController@index');
 
 // Company Admin panel
-Route::middleware('manager')->prefix('companypanel')->name('company.')->group(function(){
+Route::middleware('company')->prefix('companypanel')->name('company.')->group(function(){
     Route::any('/', function () {
         return view('admin.companyBase');
     });
@@ -107,5 +112,5 @@ Route::middleware('manager')->prefix('companypanel')->name('company.')->group(fu
 
 Route::get('dddd', function () {
 
-    dd(session('COMPANY'));
+    dd(session('COPMANY')->projects);
 });

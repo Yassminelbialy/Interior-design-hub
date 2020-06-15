@@ -23,9 +23,9 @@
       </td>
       <td>
         @if($order->user->state == 0)
-        <a href="{{ route('manager.order' , $order->user_id) }}" class="btn text-danger"><i class="far fa-check-square fa-3x"></i></a>
+        <a href="{{ route('manager.order' , $order->user_id) }}" class="btn text-danger"><i class="far fa-check-square fa-2x"></i></a>
         @else
-        <a href="{{ route('manager.order' , $order->user_id) }}" class="btn text-info"><i class="fas fa-check-square fa-3x"></i></a>
+        <a class="btn text-info"><i class="fas fa-check-square fa-2x"></i></a>
         @endif
       </td>
       <td>

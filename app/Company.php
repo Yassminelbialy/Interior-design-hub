@@ -40,6 +40,10 @@ class Company extends Model
     {
         return $this->hasMany('App\Image3d');
     }
+    public function user()
+    {
+        return $this->hasOne('App\User','id','user_id');
+    }
     // public function info()
     // {
     //     return $this->belongsTo('App\Alexandrainfo','id','company_id');
