@@ -12,10 +12,15 @@
                 {!! Form::text('description', null, ['required'=>'true','class'=>"form-control",'placeholder'=>'orderDesc']) !!}
             </div>
             <div class="form-group text-light">
-                <label for="exampleFormControlFile1"> Enter State Of Order</label>
-                {!! Form::text('state', null, ['required'=>'true','class'=>"form-control",'placeholder'=>'orderState']) !!}
+                <label for="exampleFormControlFile1" class="text-light">Add State For Order</label>
+                <select name="state" class="form-control">
+                    <option value="prepare">prepare</option>
+                    <option value="underwork">underwork</option>
+                    <option value="done">done</option>
+                </select>
             </div>
             <div class="form-group text-light">
+                <label for="exampleFormControlFile1" class="text-light">Add User For Order</label>
                 {!! Form::select('user_id', $user , null, ['class' => 'form-control']) !!}
             </div>
             <div class="form-group text-light">
