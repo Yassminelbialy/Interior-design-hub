@@ -41,13 +41,12 @@ class ReviewController extends Controller
 
     if ($files = $request->file('image'))
     {
-                    $uuid =Uuid::generate()->string;
-                    $path=$uuid.".".$request->file('image')->getClientOriginalExtension();
-                    $desti='images/review/';
-                    $files->move($desti,$path);
-                    $req['image']=$path;
-                    // dd('dd');
-    }
+        $uuid =Uuid::generate()->string;
+        $path=$uuid.".".$request->file('image')->getClientOriginalExtension();
+        $desti='images/review/';
+        $files->move($desti,$path);
+        $req['image']=$path;
+}
 
     $review = Review::create($req);
         //
@@ -92,12 +91,12 @@ class ReviewController extends Controller
         unlink($path);
         $req=$request->all();
         if ($files = $request->file('image'))
-        {
-                        $uuid =Uuid::generate()->string;
-                        $path=$uuid.".".$request->file('image')->getClientOriginalExtension();
-                        $desti='images/review/';
-                        $files->move($desti,$path);
-                        $req['image']=$path;                        
+       {
+            $uuid =Uuid::generate()->string;
+            $path=$uuid.".".$request->file('image')->getClientOriginalExtension();
+            $desti='images/review/';
+            $files->move($desti,$path);
+            $req['image']=$path;                        
         }
 
         $review = $review->update($req);           
@@ -114,8 +113,6 @@ class ReviewController extends Controller
     public function destroy(Request $request, $id)
     {
         $review=Review::find($id);
-        $path = public_path()."/images/review/".$review->image;
-        unlink($path);
         $review->delete();
         return redirect('/manager/review');
     }
