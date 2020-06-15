@@ -9,7 +9,6 @@
 
 
 
-
     <div class="form-inline m-5">
        <i class="fas fa-search" aria-hidden="true"></i>
         <input id='search' required name="data" class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search"
@@ -19,12 +18,39 @@
 
       <h1 style="margin-top:60px" class="text-center text-light">All Categories</h1>
       <div class="list-group mb-2" style="height: 400px;overflow-x: hidden;">
-        @foreach($categories as $category)
-      <a href="{{route('listAllProjects',$category)}}" class="list-group-item list-group-item-action text-light mb-1 mt-2" style="background-color:#c19e70 !important;width:60%;margin:0 auto">{{$category}}</a>
+        @foreach($categories as $id=>$category)
+      <p name="{{$id}}" class="categoryclass list-group-item list-group-item-action text-light mb-1 mt-2" style="background-color:#c19e70 !important;width:60%;margin:0 auto">{{$category}}</p>
+        @endforeach
+
+      </div>
+
+
+      <h1 style="margin-top:60px" class="text-center text-light">All Companies</h1>
+      <div class="list-group mb-2" style="height: 400px;overflow-x: hidden;">
+        @foreach($companies as $id=>$company )
+      <p name="{{$id}}" class=" companyclass list-group-item list-group-item-action text-light mb-1 mt-2" style="background-color:#c19e70 !important;width:60%;margin:0 auto">{{$company}}</p>
         @endforeach
       </div>
     </div>
     <div class="col-md-9" style="background-color:#c19e70">
+
+        <div id ='before' class="row" style="display: list-item;">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    {{-- <li class="breadcrumb-item"><a href="#">Home</a></li> --}}
+                    {{-- <li class="breadcrumb-item"><a href="#">All Projects</a></li> --}}
+                    <li class="breadcrumb-item active" aria-current="page">Home</li>
+                    <li class="breadcrumb-item active" aria-current="page">All Projects</li>
+
+                    <button style="margin: auto;" class="btn btn-secondary">
+                        Reset Search
+                    </button>
+                </ol>
+
+            </nav>
+
+        </div>
+
       <section class="projects_container text-center">
         <h2> All Projects</h2>
         <div class="container-fluid">
@@ -68,43 +94,110 @@
         {
             console.log(e.target.value) ;
             $.ajax({
-                url: "http://localhost:8000/dddd",
+                url: "http://localhost:8000/search",
                 dataType: 'script',
-                cache: false,
-                contentType: false,
-                processData: false,
-                data: {},                         // Setting the data attribute of ajax with file_data
+                cache: true,
+                contentType: true,
+                processData: true,
+                data: {data:e.target.value},                         // Setting the data attribute of ajax with file_data
                 type: 'get',
                 success:function(data)
                 {
                     x=JSON.parse(data);
                     console.log(x.data);
-            //         x.data.foreach(element => {
-            //             $(`
-            //                    <div class="col-md-6" >
-            //         <div class="project_card">
-            //             <div class="face face1">
-            //                 <img src="/projectimages/${element.mainImage}" class="w-100 h-100" alt="" />
-            //             </div>
-            //             <div class="face face2">
-            //                 <div class="content">
-            //                     <h2>
-            //                         ${element.title}
-            //                     </h2>
-            //                     <p>
-            //                         ${element.hint}
-            //                     </p>
-            //                     <a class="btn btn-dark mb-1 text-light" href="/view/${element.id}">View Project</a>
+                    console.log(x.data,'ssss');
+                    $('#alldata').html('');
+                    $('#before').html('');
+                    $(`
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item active" aria-current="page">Home</li>
+                            <li class="breadcrumb-item active" aria-current="page">Over Website</li>
 
-            //                 </div>
-            //             </div>
-            //         </div>
-            //     </div>
-            //    `).appendTo('#alldata');//end div added
+                            <button style="margin: auto;" class="btn btn-secondary">
+                                Reset Search
+                            </button>
+                        </ol>
 
-            //         });//end for loop
-                    console.log(x.data,'ssss')
-                    x.data.forEach(element => {
+                     </nav>
+                    `).appendTo('#before')
+                    drawdata(x.data)
+
+                }
+       })///ajax
+        })//end on change
+
+        var category ='';
+        var company ='';
+
+        var categoryName ='';
+        var companyName ='';
+
+        $('.categoryclass').on('click',(e)=>{
+
+            category =$(e.target).attr('name');
+            categoryName =$(e.target).html();
+
+            customsearch(category,company)
+
+        })//change category
+
+        $('.companyclass').on('click',(e)=>{
+
+        company =$(e.target).attr('name');
+        companyName =$(e.target).html();
+        customsearch(category,company)
+
+        })//change company
+
+        $('#before').on('click','button',()=>{
+            companyName ='';
+            categoryName= '';
+            company ='';
+            category= '';
+            customsearch(category,company)
+        })//reset
+
+        function customsearch(category,company) {
+            console.log(category,company,'OOO');
+
+            $.ajax({
+                url: "http://localhost:8000/allprojectcustomsearch",
+                dataType: 'script',
+                cache: true,
+                contentType: true,
+                processData: true,
+                data: {category,company},                         // Setting the data attribute of ajax with file_data
+                type: 'get',
+                success:function(data)
+                {
+                    x=JSON.parse(data);
+                    console.log(x,'ssss');
+                    $('#alldata').html('')
+                    $('#before').html('');
+                    $(`
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item active" aria-current="page">Home</li>
+                            <li class="breadcrumb-item active" aria-current="page">Company-${companyName}</li>
+
+                            <li class="breadcrumb-item active" aria-current="page">Category-${categoryName}</li>                            <button style="margin: auto;" class="btn btn-secondary">
+                                Reset Search
+                            </button>
+                        </ol>
+
+                     </nav>
+                    `).appendTo('#before')
+                    drawdata(x.data)
+
+                }
+       })///ajax
+        }
+
+
+
+    function drawdata(data) {
+        data.forEach(element => {
                         // console.log(element)
                         $(`
                     <div class="col-md-6" >
@@ -128,11 +221,11 @@
                 </div>
                `).appendTo('#alldata');//end div added
 
-                    });
-                }
-       })///ajax
-        })
-     })
+                    });//end llooping
+    }//lopping to draw
+
+
+     })//document
  </script>
 
  @endsection

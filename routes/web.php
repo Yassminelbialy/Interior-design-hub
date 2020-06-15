@@ -52,7 +52,7 @@ Route::middleware('manager')->prefix('manager')->name('manager.')->group(functio
     Route::get('users/{users}/company', 'CompanyController@ConfirmCompany')->name('company');
 
 
-    
+
 
 
 });//manager routes
@@ -74,6 +74,8 @@ Route::resource('project.images', 'Manager\ProjectImageController');
 Route::post('/contact','Manager\ConsultationController@send');
 Route::get('/','UserController@index');
 Route::get('/allproject/{category?}','UserController@allprojects')->where('category', '[A-Za-z1-9]+')->name('listAllProjects');
+Route::get('/allprojectcustomsearch','UserController@customsearch');
+
 Route::get('/search','UserController@search')->name('search');
 
 
@@ -115,8 +117,5 @@ Route::get('dddd', function () {
        $dede= App\Project::find(1);
     return response()->json(['message' => 'User status updated successfully.','data'=>[$dede]]);
 
-<<<<<<< HEAD
-=======
     dd(session('COPMANY')->projects);
->>>>>>> 240a262373e67161695c8000bbfa84f5e34422f3
 });
