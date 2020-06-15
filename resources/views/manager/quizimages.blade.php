@@ -75,10 +75,10 @@
                 <td colspan="6"><a href="{{route('manager.quizzes.create')}}"><i class="fas fa-plus fa-4x" style="color: blue"></i></a></td>
             </tr>
             <tr>
-                <th scope="col" class="text-light h3">#</th>
-                <th scope="col" class="text-light h3">Image</th>
+                <th scope="col" class="text-light h6" style="font-weight:700">#</th>
+                <th scope="col" class="text-light h6" style="font-weight:700">Image</th>
 
-                <th scope="col" class="text-light h3">Actions</th>
+                <th scope="col" class="text-light h6" style="font-weight:700">Actions</th>
             </tr>
         </thead>
         <tbody>

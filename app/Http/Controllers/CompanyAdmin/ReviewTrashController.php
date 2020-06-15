@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Manager;
+namespace App\Http\Controllers\CompanyAdmin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Jop;
+use App\Review;
 use Illuminate\Support\Facades\Redirect;
 
-class TrashController extends Controller
+class ReviewTrashController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +15,9 @@ class TrashController extends Controller
      */
     public function index()
     {
-        $jops=Jop::onlyTrashed()->get();
+        $reviews=Review::onlyTrashed()->get();
         
-        return view('manager.trash', ["jops"=>$jops]);
+        return view('CompanyAdmin.reviewTrash', ["reviews"=>$reviews]);
     }
 
     /**
@@ -60,8 +60,8 @@ class TrashController extends Controller
      */
     public function edit($id)
     {
-        $jops=Jop::withTrashed()->where('id',$id)->first();
-        $jops->restore();
+        $review=Review::withTrashed()->where('id',$id)->first();
+        $review->restore();
         return Redirect()->back();  
     }
 
@@ -85,8 +85,10 @@ class TrashController extends Controller
      */
     public function destroy($id)
     {
-        $jop=Jop::withTrashed()->where('id',$id)->first();
-        $jop->forceDelete();
+        $review=Review::withTrashed()->where('id',$id)->first();
+        $path = public_path()."/images/review/".$review->image;
+        unlink($path);
+        $review->forceDelete();
         return Redirect()->back();
 
     }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Company;
 use Auth;
+use App\User;
 use Illuminate\Http\Request;
 
 class CompanyController extends Controller
@@ -15,8 +16,9 @@ class CompanyController extends Controller
      */
     public function index()
     {
-        return view('companyForm');
-
+        $company = Company::paginate(4);
+        
+        return view('manager.companyIndex',['companies'=>$company]);
     }
 
     /**
@@ -53,7 +55,7 @@ class CompanyController extends Controller
         $company->acceptConditions=$request->acceptConditions;
         $company->user_id=Auth::id();
         $company->save();
-        return back()->with('success' , 'Wait Admin For Accept:)');
+        return back()->with('success' , 'Please wait untill admin accept your confirm :)');
 
     }
 
@@ -67,7 +69,15 @@ class CompanyController extends Controller
     {
         //
     }
-
+    public function ConfirmCompany(User $users){
+        $id = $users->id;
+        $user=User::find($id);
+        if($user){
+            $user->adminRole = 2 ;
+            $user->save();
+        }
+        return redirect()->back();   
+    }
     /**
      * Show the form for editing the specified resource.
      *
@@ -97,8 +107,11 @@ class CompanyController extends Controller
      * @param  \App\Company  $company
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Company $company)
+    public function destroy($id)
     {
-        //
+        $trashCompany = Company::find($id);
+        $trashCompany->delete();
+        return redirect('/manager/company');
+        
     }
 }
