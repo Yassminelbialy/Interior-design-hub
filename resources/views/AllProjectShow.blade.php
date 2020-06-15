@@ -26,9 +26,9 @@
       <section class="projects_container text-center">
         <h2> All Projects</h2>
         <div class="container-fluid">
-            <div class="row">
+            <div class="row" id='alldata'>
                 @forelse  ($projects as $project)
-                <div class="col-md-6">
+                <div class="col-md-6" >
                     <div class="project_card">
                         <div class="face face1">
                             <img src="/projectimages/{{$project->mainImage}}" class="w-100 h-100" alt="" />

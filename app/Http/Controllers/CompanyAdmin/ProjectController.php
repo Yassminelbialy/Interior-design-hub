@@ -21,9 +21,9 @@ class ProjectController extends Controller
     public function index()
     {
         // dd();
-        if(session('COPMANY'))
+        if(session('COMPANY'))
         {
-            return view('CompanyAdmin.projectindex', ['data' => session('COPMANY')->projects()->paginate(3)]);
+            return view('CompanyAdmin.projectindex', ['data' => session('COMPANY')->projects()->paginate(3)]);
         }//getting projects for session user company
     }
 
@@ -58,11 +58,13 @@ class ProjectController extends Controller
             $req['mainimage'] = $path;
             // dd('dd');
         }
+        if(session('COMPANY'))
+        {
+         $project =    session('COMPANY')->projects()->create($req);
+         return redirect(route('company.project.index'));
 
-        $project = Project::create($req);
-        //
-        // dd($project);
-        return redirect(route('company.project.index'));
+        }//getting projects for session user company
+
     }
 
     /**
@@ -98,9 +100,12 @@ class ProjectController extends Controller
     public function update(Request $request, Project $project)
     {
         // $categories = Category::all()->pluck('name','id')->toArray();
-
+// dd('ss');
         // dd($project,'s');
-
+if(session('COMPANY'))
+{
+    if(session('COMPANY')->id == $project->company_id)
+    {
         $req = $request->all();
 
         if ($files = $request->file('mainimage')) {
@@ -118,7 +123,13 @@ class ProjectController extends Controller
         // dd($project);
         return redirect(route('company.project.index'));
 
-        // //
+    }else {
+        return redirect('notfonded');
+    }
+}else{
+    return redirect('/');
+}
+
     }
 
     /**
@@ -129,8 +140,12 @@ class ProjectController extends Controller
      */
     public function destroy(Project $project)
     {
+        if (session("COMPANY")->id == $project->company_id)
+        {
         $project->delete();
         // dd($project);
         return redirect(route('company.project.index'));
+        }
+
     }
 }

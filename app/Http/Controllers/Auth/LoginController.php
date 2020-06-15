@@ -49,7 +49,7 @@ class LoginController extends Controller
                              // $companies =Company::where('user_id',Auth::user()->id)->get();
                     if($company)
                     {
-                    $request->session()->put('COPMANY', $company);
+                    $request->session()->put('COMPANY', $company);
 
                     }
 
