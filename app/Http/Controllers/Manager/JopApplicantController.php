@@ -17,7 +17,7 @@ class JopApplicantController extends Controller
      */
     public function index()
     {
-        dd('sss');
+        // dd('sss');
         return view('jopApp.jops',['data'=>Jop::all()]);
 
 

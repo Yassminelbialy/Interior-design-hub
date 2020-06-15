@@ -88,13 +88,13 @@
                 <td>{{$item->category->name}}</td>
                 <td style="width: 30%" class="justify-content: center;">{{$item->hint}}</td>
                 <td> &ensp;
-                    <a href="{{route('manager.project.images.index',$item->id)}}"> <i class="fas fa-binoculars fa-2x" style="color: green"></i></a>
+                    <a href="{{route('company.project.images.index',$item->id)}}"> <i class="fas fa-binoculars fa-2x" style="color: green"></i></a>
 
                     &ensp;
-                    <a href="{{ route('manager.project.edit', $item->id) }}"> <i class="fas fa-edit fa-2x" style="color: blue"></i></a>
+                    <a href="{{ route('company.project.edit', $item->id) }}"> <i class="fas fa-edit fa-2x" style="color: blue"></i></a>
 
                     &ensp;
-                    {!!Form::open(['route'=>[ 'manager.project.destroy' , $item->id],'method'=>'delete','style'=>' display: inline-block '])!!}
+                    {!!Form::open(['route'=>[ 'company.project.destroy' , $item->id],'method'=>'delete','style'=>' display: inline-block '])!!}
                     {{ Form::button('<i style="color:red"class="fa fa-trash fa-2x"></i>', ['type' => 'submit'] )  }}
 
                     {!! Form::close() !!}
