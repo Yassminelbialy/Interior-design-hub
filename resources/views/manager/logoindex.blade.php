@@ -5,7 +5,8 @@
   <table class="table table-dark" style="background-color: rgba(0,0,0,0.5);">
     <thead>
       <tr>
-        <td colspan="6"><a href="{{route('manager.logo.create')}}"><i class="fas fa-plus fa-4x" style="color: blue"></i></a></td>
+        <td colspan="2"><a href="{{route('manager.logoTrash.index')}}"><i class="fas fa-trash fa-4x" style="color: blue"></i></a></td>
+        <td colspan="2"><a href="{{route('manager.logo.create')}}"><i class="fas fa-plus fa-4x" style="color: blue"></i></a></td>
       </tr>
       <tr>
         <th scope="col" class="text-light h3">#</th>

@@ -65,7 +65,6 @@ class QuizController extends Controller
            $quiz->styles =implode(" \n ", $request->styles);
            $quiz->design = $request->design ;
 
-              $response=$quiz->save();
 
                 $response1='';
               if ($files = $request->file('file'))
@@ -82,11 +81,11 @@ class QuizController extends Controller
 
 
               }
-              $quiz->save();
-              Mail::to('yassminelbialy@gmail.com')
-              ->send(new SendQuizMail ($quiz));
+              $response=$quiz->save();
+            //   Mail::to('yassminelbialy@gmail.com')
+            //   ->send(new SendQuizMail ($quiz));
 
-         return response()->json( ['mydata'=> $request->all(),'myresponse'=> $response1,'opject'=>$quiz,'images'=>$quiz->images] );
+         return response()->json( ['mydata'=> $request->all(),'myresponse'=> $response,'opject'=>$quiz,'images'=>$quiz->images] );
 
         }
 

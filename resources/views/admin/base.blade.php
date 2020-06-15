@@ -89,6 +89,7 @@
                                 <a class="nav-link" href="/manager/topics">Topics</a>
                                 <a class="nav-link" href="/manager/jops">Jobs</a>
                                 <a class="nav-link" href="/manager/counter/info">Counter</a>
+                                <a class="nav-link" href="/manager/company">All Company</a>
 
                                 {{-- <a class="nav-link" href="/manager/project">projects</a>
                                     <a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a></nav> --}}

@@ -54,9 +54,6 @@
 @component('components.projects',['projects'=>$projects])
 @endcomponent
 
-@component('components.all_projects')
-@endcomponent
-
 
 @component('components.services')
 @endcomponent

@@ -6,12 +6,12 @@
 <table class="table table-dark" style="background-color: rgba(0,0,0,0.5);">
   <thead>
     <tr>
-      <th scope="col" class="text-light h3">#</th>
-      <th scope="col" class="text-light h3">title</th>
-      <th scope="col" class="text-light h3">hint</th>
-      <th scope="col" class="text-light h3">image</th>
-      <th scope="col" class="text-light h3">description</th>
-      <th scope="col" class="text-light h3">KeyWord</th>
+      <th scope="col" class="text-light h6" style="font-weight:700">#</th>
+      <th scope="col" class="text-light h6" style="font-weight:700">title</th>
+      <th scope="col" class="text-light h6" style="font-weight:700">hint</th>
+      <th scope="col" class="text-light h6" style="font-weight:700">image</th>
+      <th scope="col" class="text-light h6" style="font-weight:700">description</th>
+      <th scope="col" class="text-light h6" style="font-weight:700">KeyWord</th>
       
     </tr>
     

@@ -21,10 +21,14 @@ class ProjectImageController extends Controller
      */
     public function index(Request $request,$id)
     {
-        // dd($id);
-        $projectImages=Project::find($id)->images()->paginate(3);
+        if(session('COMPANY'))
+        {
 
-    return view('CompanyAdmin.projectimages',['id'=>$id,'data'=>$projectImages]) ;
+            $projectImages=session('COMPANY')->projects()->find($id)->images()->paginate(3);
+
+            return view('CompanyAdmin.projectimages',['id'=>$id,'data'=>$projectImages]) ;
+        }//getting projects for session user company
+
     }
 
     /**
@@ -46,8 +50,10 @@ class ProjectImageController extends Controller
      */
     public function store(Request $request,$id)
     {
-        // dd(Project::find($id));
-        $project=Project::find($id);
+        if (session('COMPANY'))
+        {
+                   // dd(Project::find($id));
+        $project=session('COMPANY')->projects()->find($id);
         $req=$request->all();
 
         if ($files = $request->file('image'))
@@ -63,6 +69,8 @@ class ProjectImageController extends Controller
         $image = $project->images()->create($req);
         //     //
         return redirect(route('company.project.images.index',$id));
+
+        }
 
     }
 

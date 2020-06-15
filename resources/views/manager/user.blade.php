@@ -5,14 +5,14 @@
 <table class="table table-dark" style="background-color: rgba(0,0,0,0.5);">
   <thead>
     <tr>
-      <th scope="col" class="text-light h3">#</th>
-      <th scope="col" class="text-light h3">Name </th>
-      <th scope="col" class="text-light h3">Phone</th>
-      <th scope="col" class="text-light h3">Email</th>
-      <th scope="col" class="text-light h3">State</th>
+      <th scope="col" class="text-light h6" style="font-weight:700">#</th>
+      <th scope="col" class="text-light h6" style="font-weight:700">Name </th>
+      <th scope="col" class="text-light h6" style="font-weight:700">Phone</th>
+      <th scope="col" class="text-light h6" style="font-weight:700">Email</th>
+      <th scope="col" class="text-light h6" style="font-weight:700">State</th>
     </tr>
     @foreach( $data as $instance )
-    @if($instance->adminRole != 1)
+    @if($instance->adminRole != 1 && $instance->adminRole != 2)
     <tr>
       <td scope="col"></td>
       <td scope="col">{{ $instance->name }}</td>

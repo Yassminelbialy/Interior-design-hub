@@ -29,7 +29,7 @@ class OrderAdminController extends Controller
     public function create()
     {
         $quiz = Quiz::pluck('customerPhoneNo')->all();
-        $user = User::whereIn('phone' ,$quiz)->whereIn('state',[0])->pluck('name','id')->toArray();
+        $user = User::whereIn('phone' ,$quiz)->whereIn('state',[0])->where('adminRole','=',NULL)->pluck('name','id')->toArray();
         return view('manager.addOrderForm',compact('user'));
     }
 

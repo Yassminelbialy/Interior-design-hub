@@ -11,7 +11,7 @@
                         <i class="video_ceo_btn fa fa-play" data-toggle="modal" data-target="#my_video_ceo"></i>
 
                         <!-- Modal -->
-                        <div class="modal fade" id="my_video_ceo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal modal_video fade" id="my_video_ceo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="modal-body">

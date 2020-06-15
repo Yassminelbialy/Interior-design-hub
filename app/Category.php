@@ -13,6 +13,10 @@ class Category extends Model
 
     use SoftDeletes;
 
+    public function projects()
+    {
+        return $this->belongsTo('App\Project','id','category_id');
+    }
 
 
     protected $guarded = [];

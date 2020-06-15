@@ -1,7 +1,7 @@
 @extends('admin.companyBase')
 @section('CompanyAdminBase')
 <link rel="stylesheet" type="text/css" href="{{ asset('css/styles.css') }}">
-{{ Form::model($review,['route' => ['manager.review.update',$review],'enctype' => 'multipart/form-data','method'=>'PUT'])}}
+{{ Form::model($review,['route' => ['company.review.update',$review],'enctype' => 'multipart/form-data','method'=>'PUT'])}}
 <div class="row text-light">
   <div class="col-md-3">
     <div class="contact-info">

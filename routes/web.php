@@ -37,7 +37,9 @@ Route::middleware('manager')->prefix('manager')->name('manager.')->group(functio
     Route::resource('fbPosts' ,'Manager\FacebookController');
     Route::resource('consultations' ,'Manager\ConsultationController');
     Route::resource('user' ,'Manager\AllUsersController');
-    Route::resource('trash' ,'Manager\TrashController');
+    Route::resource('jobTrash' ,'Manager\JobTrashController');
+    Route::resource('logoTrash' ,'Manager\LogoTrashController');
+    Route::resource('reviewTrash' ,'Manager\ReviewTrashController');
     Route::resource('quizzes' , 'Manager\QuizController');
     Route::resource('quizzes.images' , 'Manager\QuizImageController');
     Route::resource('analytics' ,'Manager\AnalyticsController');
@@ -47,6 +49,9 @@ Route::middleware('manager')->prefix('manager')->name('manager.')->group(functio
     Route::resource('topics' , 'Manager\TopicController');
     Route::resource('chatList' , 'Manager\ChatAdminController');
     Route::get('/counter/info' , 'Manager\CounterController@getCounterOfSpecificCompany');
+    Route::resource('company' , 'CompanyController');
+    Route::get('users/{users}/company', 'CompanyController@ConfirmCompany')->name('company');
+
 
 
 });//manager routes
@@ -55,6 +60,7 @@ Route::middleware('user')->group(function(){
 
     Route::resource('profile', 'OrderController');
     Route::resource('chat', 'ChatController');
+    Route::post('/companyForm','CompanyController@store')->name('company.form');
 
 
 });
@@ -67,6 +73,8 @@ Route::resource('project.images', 'Manager\ProjectImageController');
 Route::post('/contact','Manager\ConsultationController@send');
 Route::get('/','UserController@index');
 Route::get('/allproject/{category?}','UserController@allprojects')->where('category', '[A-Za-z1-9]+')->name('listAllProjects');
+Route::get('/allprojectcustomsearch','UserController@customsearch');
+
 Route::get('/search','UserController@search')->name('search');
 
 
@@ -75,7 +83,6 @@ Route::get('jopapply/{id?}', 'Manager\JopApplicantController@create')->where('id
 Route::post('jopapply/{id?}', 'Manager\JopApplicantController@store')->where('id', '[0-9]+')->name('applyjopform');
 
 Route::get('jops', 'Manager\JopApplicantController@index')->name('jops');
-Route::get('/companyForm','CompanyController@index');
 
 // Company Admin panel
 Route::middleware('company')->prefix('companypanel')->name('company.')->group(function(){
@@ -88,6 +95,7 @@ Route::middleware('company')->prefix('companypanel')->name('company.')->group(fu
     Route::resource('contacts', 'CompanyAdmin\ContactController');
     Route::resource('jops', 'CompanyAdmin\JopController');
     Route::resource('review', 'CompanyAdmin\ReviewController');
+    Route::resource('reviewTrash' ,'CompanyAdmin\ReviewTrashController');
     Route::resource('consultations' ,'CompanyAdmin\ConsultationController');
     Route::resource('user' ,'CompanyAdmin\AllUsersController');
     Route::resource('trash' ,'CompanyAdmin\TrashController');
@@ -105,6 +113,8 @@ Route::middleware('company')->prefix('companypanel')->name('company.')->group(fu
 
 
 Route::get('dddd', function () {
+       $dede= App\Project::find(1);
+    return response()->json(['message' => 'User status updated successfully.','data'=>[$dede]]);
 
     dd(session('COPMANY')->projects);
 });

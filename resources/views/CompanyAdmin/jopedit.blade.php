@@ -1,7 +1,7 @@
 @extends('admin.companyBase')
 @section('CompanyAdminBase')
 <link rel="stylesheet" type="text/css" href="{{ asset('css/styles.css') }}">
-{{ Form::model($jop,['route' => ['manager.jops.update',$jop],'method'=>'PUT'])}}
+{{ Form::model($jop,['route' => ['company.jops.update',$jop],'method'=>'PUT'])}}
 <div class="row text-light">
 
 	<div class="col-md-9">

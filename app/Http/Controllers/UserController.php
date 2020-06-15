@@ -10,6 +10,7 @@ use App\Review;
 use App\Category;
 use App\ProjectImage;
 use App\Topic;
+use App\Company;
 use Illuminate\Support\Facades\DB;
 
 use function GuzzleHttp\Promise\all;
@@ -26,8 +27,8 @@ class UserController extends Controller
         $reviews= Review::all();
         $topics = Topic::limit(6)->get();
 
-        
-        
+
+
 
         return view('home',['projects'=>$projects,'ceoInfo'=>$ceoInfo,'contact'=>$contact,'logos'=>$logos,'reviews'=>$reviews , 'topics'=>$topics]);
     }
@@ -59,8 +60,10 @@ class UserController extends Controller
 
         $contact= Contact::limit(1)->get();
         $categories = Category::all()->pluck('name','id')->toArray();
+        $companies = Company::all()->pluck('companyName','id')->toArray();
+
         // dd($categories);
-        return view('AllProjectShow',['projects'=>$projects,'contact'=>$contact,'categories'=>$categories]);
+        return view('AllProjectShow',['projects'=>$projects,'contact'=>$contact,'categories'=>$categories,'companies'=>$companies]);
 
     }
 
@@ -68,10 +71,11 @@ class UserController extends Controller
                 // dd($request->all());
                 $projects = [];
 
-                   $category = Category::where('name',$request->date)->orWhere('name','like','%'."$request->data".'%')->get();
+                   $category = Category::where('name',$request->data)->orWhere('name','like','%'."$request->data".'%')->get();
                    if($category->count()>0)
                    {
-                                 $getprojects= Project::where('category_id',$category[0]->id)->get();
+                                //  $getprojects= Project::where('category_id',$category[0]->id)->get();
+                                $getprojects= $category[0]->projects()->get();
 
                                  foreach ($getprojects as $key)
                                  {
@@ -89,14 +93,65 @@ class UserController extends Controller
                                  }
                    }
 
+                   $company = Company::where('companyName',$request->data)->orWhere('companyName','like','%'."$request->data".'%')->get();
+                   if($company->count()>0)
+                   {
+                                //  $getprojects= Project::where('category_id',$category[0]->id)->get();
+                                $getprojects= $company[0]->projects()->get();
+
+                                 foreach ($getprojects as $key)
+                                 {
+                                     array_push($projects,$key);
+                                 }
+                   }
 
 
-        $contact= Contact::limit(1)->get();
-        $categories = Category::all()->pluck('name','id')->toArray();
-
-
-        return view('AllProjectShow',['projects'=>$projects,'contact'=>$contact,'categories'=>$categories]);
+        return response()->json(['data'=>$projects]);
 
     }
+    public function customsearch(Request $request)
+    {
+            if($request->category && !$request->company)
+            {
+                $category = Category::find($request->category);
+               if ($category)
+               {
+                return response()->json(['c3'=>'c3','data'=>$category->projects()->get()]);
+               }
+            }//for category
+
+            if(!$request->category && $request->company)
+            {
+                $company = Company::find($request->company);
+               if ($company)
+               {
+                return response()->json(['c2'=>'c2','data'=>$company->projects]);
+               }
+            }//for company
+            if($request->category && $request->company)
+            {
+                $company = Company::find($request->company);
+
+
+            return response()->json(['c1'=>'c1','data'=>$company->projects()->where('category_id',$request->category)->get()]);
+
+            }//for all
+
+
+            if(!$request->category && !$request->company)
+            {
+
+
+            return response()->json(['c9'=>'c9','data'=>Project::all()]);
+
+            }//for all without restrict
+
+
+
+    return response()->json(['message' => 'User status updated successfully.','data'=>$request->all()]);
+
+
+    }
+
 
 }
