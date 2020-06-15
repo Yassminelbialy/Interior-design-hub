@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Auth;
 
-class Manager
+class Company
 {
     /**
      * Handle an incoming request.
@@ -16,19 +16,11 @@ class Manager
      */
     public function handle($request, Closure $next)
     {
-        if(Auth::check() && Auth::user()->adminRole==1)
+        if( Auth::check() && Auth::user()->adminRole == 2)
         {
             return $next($request);
         }
-        else if(Auth::check() && Auth::user()->adminRole==2)
-        {
-            return redirect ('/companypanel');   
-        }
-        else{
-            return redirect ('/profile');
-        }
-        
 
-        
+        return redirect ('/login');
     }
 }
