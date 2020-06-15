@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\Manager;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Jop;
+use App\Logo;
 use Illuminate\Support\Facades\Redirect;
 
-class TrashController extends Controller
+class LogoTrashController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +15,9 @@ class TrashController extends Controller
      */
     public function index()
     {
-        $jops=Jop::onlyTrashed()->get();
+        $logos=Logo::onlyTrashed()->get();
         
-        return view('manager.trash', ["jops"=>$jops]);
+        return view('manager.logoTrash', ["logos"=>$logos]);
     }
 
     /**
@@ -60,8 +60,8 @@ class TrashController extends Controller
      */
     public function edit($id)
     {
-        $jops=Jop::withTrashed()->where('id',$id)->first();
-        $jops->restore();
+        $logo=Logo::withTrashed()->where('id',$id)->first();
+        $logo->restore();
         return Redirect()->back();  
     }
 
@@ -85,8 +85,10 @@ class TrashController extends Controller
      */
     public function destroy($id)
     {
-        $jop=Jop::withTrashed()->where('id',$id)->first();
-        $jop->forceDelete();
+        $logo=Logo::withTrashed()->where('id',$id)->first();
+        $path = public_path()."/images/logo/".$logo->image;
+        unlink($path);
+        $logo->forceDelete();
         return Redirect()->back();
 
     }

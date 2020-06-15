@@ -37,7 +37,8 @@ Route::middleware('manager')->prefix('manager')->name('manager.')->group(functio
     Route::resource('fbPosts' ,'Manager\FacebookController');
     Route::resource('consultations' ,'Manager\ConsultationController');
     Route::resource('user' ,'Manager\AllUsersController');
-    Route::resource('trash' ,'Manager\TrashController');
+    Route::resource('jobTrash' ,'Manager\JobTrashController');
+    Route::resource('logoTrash' ,'Manager\LogoTrashController');
     Route::resource('quizzes' , 'Manager\QuizController');
     Route::resource('quizzes.images' , 'Manager\QuizImageController');
     Route::resource('analytics' ,'Manager\AnalyticsController');

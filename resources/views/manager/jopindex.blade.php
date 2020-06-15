@@ -7,7 +7,7 @@
 
         <thead>
             <tr>
-                <td colspan="4"><a href="{{route('manager.trash.index')}}"><i class="fas fa-trash fa-4x" style="color: blue"></i></a></td>
+                <td colspan="4"><a href="{{route('manager.jobTrash.index')}}"><i class="fas fa-trash fa-4x" style="color: blue"></i></a></td>
                 <td colspan="4"><a href="{{route('manager.jops.create')}}"><i class="fas fa-plus fa-4x" style="color: blue"></i></a></td>
              </tr>
           <tr>
