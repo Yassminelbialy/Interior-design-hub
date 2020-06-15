@@ -94,6 +94,7 @@ Route::middleware('company')->prefix('companypanel')->name('company.')->group(fu
     Route::resource('contacts', 'CompanyAdmin\ContactController');
     Route::resource('jops', 'CompanyAdmin\JopController');
     Route::resource('review', 'CompanyAdmin\ReviewController');
+    Route::resource('reviewTrash' ,'CompanyAdmin\ReviewTrashController');
     Route::resource('consultations' ,'CompanyAdmin\ConsultationController');
     Route::resource('user' ,'CompanyAdmin\AllUsersController');
     Route::resource('trash' ,'CompanyAdmin\TrashController');
