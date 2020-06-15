@@ -2593,3 +2593,8 @@ footer ul li a {
     text-decoration: underline var(--secondColor) !important;
     font-size: 20px;
 }
+
+
+.modal-backdrop.show{
+    display: none;
+}
