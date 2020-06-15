@@ -26,7 +26,10 @@
     </div>
 @endif
 
-
+<script>
+    xxx=90
+    console.log(xxx)
+</script>
 
 
 @component('components.loading')
@@ -71,7 +74,7 @@
 @component('components.clients',['logos' => $logos])
 @endcomponent
 
-@component('components.state')
+@component('components.state' ,['topics'=>$topics])
 @endcomponent
 
 @component('components.video',['ceoInfo' => $ceoInfo])

@@ -45,10 +45,10 @@
                      <div class="face face2">
                          <div class="content">
                              <h2>
-                             {{$project->title}}
+                                 {{$project->title}}
                              </h2>
                              <p>
-                             {{$project->hint}}
+                                 {{$project->hint}}
                              </p>
                              <a class="btn btn-dark mb-1 text-light" href="{{ url('view/'.$project->id)}}">View Project</a>
 
@@ -58,7 +58,7 @@
              </div>
              @empty
              <div class="alert alert-info text-center" style="margin:0 auto;width:50%">
-                <h1>No Projects Yet</h1>
+                 <h1>No Projects Yet</h1>
              </div>
              @endforelse
              <div class="col-md-6">

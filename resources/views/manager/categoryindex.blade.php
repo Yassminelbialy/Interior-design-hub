@@ -8,10 +8,10 @@
         <td colspan="6"><a href="{{route('manager.category.create')}}"><i class="fas fa-plus fa-4x" style="color: blue"></i></a></td>
       </tr>
       <tr>
-        <th scope="col" class="text-light h3">#</th>
-        <th scope="col" class="text-light h3">image</th>
-        <th scope="col" class="text-light h3">title</th>
-        <th scope="col" class="text-warning h3">actions</th>
+        <th scope="col" class="text-light h6" style="font-weight:700">#</th>
+        <th scope="col" class="text-light h6" style="font-weight:700">image</th>
+        <th scope="col" class="text-light h6" style="font-weight:700">title</th>
+        <th scope="col" class="text-warning h6" style="font-weight:700">actions</th>
       </tr>
     </thead>
     <tbody>

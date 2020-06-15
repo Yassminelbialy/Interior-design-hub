@@ -5,7 +5,8 @@
   <table class="table table-dark" style="background-color: rgba(0,0,0,0.5);">
     <thead>
       <tr>
-        <td colspan="6"><a href="{{route('manager.logo.create')}}"><i class="fas fa-plus fa-4x" style="color: blue"></i></a></td>
+        <td colspan="2"><a href="{{route('manager.logoTrash.index')}}"><i class="fas fa-trash fa-4x" style="color: blue"></i></a></td>
+        <td colspan="2"><a href="{{route('manager.logo.create')}}"><i class="fas fa-plus fa-4x" style="color: blue"></i></a></td>
       </tr>
       <tr>
         <th scope="col" class="text-light h3">#</th>
@@ -18,7 +19,7 @@
       @foreach ($logo as $logo)
       <tr>
         <th scope="row">{{$logo->id}}</th>
-        <td><img src="/images/{{$logo->image}}" style="display: inline-block; height: 100px; width:100px; border-radius:50%; border:1px solid black"></td>
+        <td><img src="/images/logo/{{$logo->image}}" style="display: inline-block; height: 100px; width:100px; border-radius:50%; border:1px solid black"></td>
         <td>
           <a href="{{ route('manager.logo.edit', $logo->id) }}"> <i class="fas fa-edit fa-2x" style="color: blue"></i></a>
         </td>

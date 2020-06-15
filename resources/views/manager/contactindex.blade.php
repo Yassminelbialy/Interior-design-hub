@@ -7,17 +7,17 @@
     <thead>
 
       <tr>
-        <th scope="col" class="text-light h3">#</th>
-        <th scope="col" class="text-light h3">Phone</th>
-        <th scope="col" class="text-light h3">Email</th>
-        <th scope="col" class="text-light h3">Telegram</th>
-        <th scope="col" class="text-light h3">Facebook</th>
-        <th scope="col" class="text-light h3">Whats</th>
-        <th scope="col" class="text-light h3">Viber</th>
-        <th scope="col" class="text-light h3">Pinterest</th>
-        <th scope="col" class="text-light h3">Instagram</th>
-        <th scope="col" class="text-light h3">WLink</th>
-        <th scope="col" class="text-light h3">Actions</th>
+        <th scope="col" class="text-light h6" style="font-weight:700">#</th>
+        <th scope="col" class="text-light h6" style="font-weight:700">Phone</th>
+        <th scope="col" class="text-light h6" style="font-weight:700">Email</th>
+        <th scope="col" class="text-light h6" style="font-weight:700">Telegram</th>
+        <th scope="col" class="text-light h6" style="font-weight:700">Facebook</th>
+        <th scope="col" class="text-light h6" style="font-weight:700">Whats</th>
+        <th scope="col" class="text-light h6" style="font-weight:700">Viber</th>
+        <th scope="col" class="text-light h6" style="font-weight:700">Pinterest</th>
+        <th scope="col" class="text-light h6" style="font-weight:700">Instagram</th>
+        <th scope="col" class="text-light h6" style="font-weight:700">WLink</th>
+        <th scope="col" class="text-light h6" style="font-weight:700">Actions</th>
       </tr>
     </thead>
     <tbody>

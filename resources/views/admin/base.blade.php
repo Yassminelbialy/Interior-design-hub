@@ -18,7 +18,9 @@
 
     <title>{{ config('base.name', 'Interior Design') }}</title>
     <link href="/admin/dist/css/styles.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
+        @stack('locationpicker')
 </head>
 
 <body class="sb-nav-fixed">
@@ -84,7 +86,10 @@
                                 <a class="nav-link" href="/manager/contacts">Contacts</a>
                                 <a class="nav-link" href="/manager/AdminOrder">Users Orders</a>
                                 <a class="nav-link" href="/manager/fbPosts">FaceBook Posts</a>
+                                <a class="nav-link" href="/manager/topics">Topics</a>
                                 <a class="nav-link" href="/manager/jops">Jobs</a>
+                                <a class="nav-link" href="/manager/company">All Company</a>
+
                                 {{-- <a class="nav-link" href="/manager/project">projects</a>
                                     <a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a></nav> --}}
                         </div>

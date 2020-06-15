@@ -72,17 +72,17 @@
                 <td colspan="6"><a href="{{route('manager.project.create')}}"><i class="fas fa-plus fa-4x" style="color: blue"></i></a></td>
             </tr>
             <tr>
-                <th scope="col" class="text-light h3">#</th>
-                <th scope="col" class="text-light h3">image</th>
-                <th scope="col" class="text-light h3">title</th>
-                <th scope="col" class="text-light h3">category</th>
-                <th scope="col" class="text-light h3">hint</th>
-                <th scope="col" class="text-light h3">actions</th>
+                <th scope="col" class="text-light h6" style="font-weight:700">#</th>
+                <th scope="col" class="text-light h6" style="font-weight:700">image</th>
+                <th scope="col" class="text-light h6" style="font-weight:700">title</th>
+                <th scope="col" class="text-light h6" style="font-weight:700">category</th>
+                <th scope="col" class="text-light h6" style="font-weight:700">hint</th>
+                <th scope="col" class="text-danger h6" style="font-weight:700">actions</th>
 
             </tr>
         </thead>
         <tbody>
-            @forelse ($data as $item)
+            @forelse ($data as $item) 
             <tr>
                 <th scope="row">{{$item->id}}</th>
                 <td><img src="/projectimages/{{$item->mainImage}}" style="display: inline-block; height: 100px ; width:100px ; background-color:red;"></img></td>

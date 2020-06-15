@@ -20,8 +20,14 @@ class Manager
         {
             return $next($request);
         }
+        else if(Auth::check() && Auth::user()->adminRole==2)
+        {
+            return redirect ('/companypanel');   
+        }
+        else{
+            return redirect ('/profile');
+        }
         
-        return redirect ('/profile');
 
         
     }
