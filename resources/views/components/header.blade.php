@@ -84,21 +84,29 @@
 
 
     <ul class="slider-pagi"></ul>
+
     <div class="slider">
-        <div class="slide slide-0 active">
+
+
+    @foreach($slide_img as $slide_imgg)
+        <div  style = " background:url({{ asset('images/projectsSlider/'. $slide_imgg->img)}})" class="slide slide-0 active">
+           
+           
             <div class="slide__bg"></div>
             <div class="slide__content">
                 <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
                     <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
                 </svg>
                 <div class="slide__text">
-                    <h2 class="slide__text-heading">Project name 1</h2>
-                    <p class="slide__text-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia.</p>
+                    <h2 class="slide__text-heading">{{ $slide_imgg->title }}</h2>
+                    <p class="slide__text-desc">{{ $slide_imgg->description  }}</p>
                     <a class="slide__text-link">Project link</a>
                 </div>
             </div>
         </div>
-        <div class="slide slide-1 ">
+
+        @endforeach
+        <!-- <div class="slide slide-1 ">
             <div class="slide__bg"></div>
             <div class="slide__content">
                 <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
@@ -136,8 +144,12 @@
                     <a class="slide__text-link">Project link</a>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
+
+
+
+
     <div class="buttons_call">
         <div class="mb-1">
             <button class="call_me phone"><i class="fas fa-phone-alt fa-x"></i></button>

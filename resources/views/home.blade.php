@@ -36,7 +36,7 @@
 @endcomponent
 
 
-@component('components.header',['contact' => $contact])
+@component('components.header',['contact' => $contact ,'slide_img'=>$slider_projcts])
 @endcomponent
 
 @component('components.who_us')
