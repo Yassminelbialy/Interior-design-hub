@@ -92,7 +92,7 @@
         <div  class="slide slide-0 active">
            
            
-            <div style="background:url({{ asset('images/projectsSlider/'. $slide_imgg->img)}})" class="slide__bg"></div>
+            <div style="background:url({{ asset('images/projectsSlider/'. $slide_imgg->img)}}); no-repeat  " class="slide__bg"></div>
             <div class="slide__content">
                 <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
                     <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
@@ -100,7 +100,7 @@
                 <div class="slide__text">
                     <h2 class="slide__text-heading">{{ $slide_imgg->title }}</h2>
                     <p class="slide__text-desc">{{ $slide_imgg->description  }}</p>
-                    <a class="slide__text-link">Project link</a>
+                    <a class="slide__text-link" href="{{ url('view/'.$slide_imgg->project_id)}}">Project link</a>
                 </div>
             </div>
         </div>
