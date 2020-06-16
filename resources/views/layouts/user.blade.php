@@ -11,7 +11,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <script src="{{ asset('js/app.js') }}" defer></script>
     <title>Interior Design</title>
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link href="{{ asset('css/userProfileStyle.css')}}" rel="stylesheet">
     <!-- chat liks -->
     <link rel="stylesheet" href="{{ asset('css/chatstyle.css')}}">
@@ -35,8 +35,8 @@
             @yield('content')
         </main>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="js/jquery-min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <!-- chat scripts -->
     <script src='//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'></script>
     <script src="{{ asset('js/chat.js') }}"></script>

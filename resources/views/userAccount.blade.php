@@ -72,8 +72,6 @@
         </div>
     </div>
     </div>
-<!-- <a href="/companyForm" class="btn btn-danger" style="color:white !important;margin:10px;padding:10px;font-size:20px;float:right;border-radius:10px">Sell with us</a> -->
-
 <div class="container">
     <div class="page-header">
         <h1 class="text-center text-info" style="font-weight: bold;font-family: Times New Roman">
@@ -106,9 +104,22 @@
                                 <div class="row px-3">
                                     <div class="col">
                                         <ul id="progressbar">
-                                            <li class="step0 active " id="step1">{{ $order->state }}</li>
-                                            <li class="step0 active text-center" id="step2">{{ $order->state }}</li>
-                                            <li class="step0 text-muted text-right" id="step3">{{ $order->state }}</li>
+                                            @if($order->state == "underwork")
+                                                <li class="step0 active " id="step1">UnderWork</li>
+                                            @else
+                                                <li class="step0  " id="step1">UnderWork</li>
+                                            @endif
+                                            @if($order->state == "prepare")
+                                                <li class="step0 active text-center" id="step2">PrePare</li>
+                                            @else
+                                                <li class="step0 text-center" id="step2">PrePare</li>
+                                            @endif
+
+                                             @if($order->state == "done")
+                                                <li class="step0 text-muted text-right active" id="step3">Done</li>
+                                            @else
+                                                <li class="step0 text-muted text-right " id="step3">Done</li>
+                                            @endif
                                         </ul>
                                     </div>
                                 </div>
