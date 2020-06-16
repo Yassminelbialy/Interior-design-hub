@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddCompanyFkTpProjects extends Migration
+class AddCompanyIdFkToUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class AddCompanyFkTpProjects extends Migration
      */
     public function up()
     {
-        Schema::table('projects', function (Blueprint $table) {
+        Schema::table('users', function (Blueprint $table) {
+            
             $table->unsignedBigInteger('company_id')->nullable();
-            $table->foreign('company_id')->references('id')->on('companies');
-        });
-        //
+            $table->foreign('company_id')->references('id')->on('companies'); 
 
+        });
     }
 
     /**
@@ -28,6 +28,8 @@ class AddCompanyFkTpProjects extends Migration
      */
     public function down()
     {
-        //
+        Schema::table('users', function (Blueprint $table) {
+            //
+        });
     }
 }

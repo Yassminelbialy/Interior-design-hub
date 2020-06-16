@@ -57,10 +57,14 @@ class CompanyController extends Controller
         $company->user_id=Auth::id();
         $company->save();
         $user=Auth::user();
+<<<<<<< HEAD
         $user->company_id = $company->id ;
         $user->save();
+=======
+        $user->company_id = $company->id;
+            $user->save();
+>>>>>>> 78c84ee2ce4b31fc2f749febbfa54dc5862e58f4
         return back()->with('success' , 'Please wait untill admin accept your confirm :)');
-
     }
 
     /**

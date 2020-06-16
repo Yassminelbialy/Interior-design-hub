@@ -11,6 +11,7 @@ use App\Category;
 use App\ProjectImage;
 use App\Topic;
 use App\Company;
+use App\Sliderimages;
 use Illuminate\Support\Facades\DB;
 
 use function GuzzleHttp\Promise\all;
@@ -27,10 +28,14 @@ class UserController extends Controller
         $reviews= Review::all();
         $topics = Topic::limit(6)->get();
 
+        $slider_image_project = DB::table('projects')
+        ->join('sliderimages','projects.id' ,'sliderimages.project_id')
+        ->get();
 
 
 
-        return view('home',['projects'=>$projects,'ceoInfo'=>$ceoInfo,'contact'=>$contact,'logos'=>$logos,'reviews'=>$reviews , 'topics'=>$topics]);
+
+        return view('home',['projects'=>$projects,'ceoInfo'=>$ceoInfo,'contact'=>$contact,'logos'=>$logos,'reviews'=>$reviews , 'topics'=>$topics ,'slider_projcts'=>$slider_image_project]);
     }
     public function view($id){
         $project = Project::find($id);
