@@ -39,7 +39,7 @@
             </div>
         @empty
 
-            <div class="alert alert-info btn-block">
+            <div class="alert btn_info btn-block">
                 No Topics Yet ...
             </div>
         @endforelse
