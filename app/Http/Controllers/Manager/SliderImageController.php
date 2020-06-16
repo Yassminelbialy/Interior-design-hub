@@ -43,20 +43,10 @@ class SliderImageController extends Controller
     public function store(Request $request)
     {
         $proj_image = new Sliderimages();
-        //  $data = Project::find('id')
-        //  ->join('sliderimages','sliderimages.project_id' , 'projects.id')
-        //  ->get();
-
-        //  dd($data);
-        // $data = Project::find($request->projectid)
-        // ->join('sliderimages','sliderimages.project_id' , 'projects.id')
-        // ->where($request->projectid,'=','proects.id')
-        // ->get();
-
-        //dd($data);
+        
         $proj_image->project_id = $request->title;
 
-        //dd($proj_image->project_id);
+        
         if($request->hasfile('proImg'))
         {
 
