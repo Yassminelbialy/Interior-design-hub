@@ -6,6 +6,7 @@ use App\Company;
 use Auth;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth as FacadesAuth;
 
 class CompanyController extends Controller
 {
@@ -17,7 +18,7 @@ class CompanyController extends Controller
     public function index()
     {
         $company = Company::paginate(4);
-        
+
         return view('manager.companyIndex',['companies'=>$company]);
     }
 
@@ -56,8 +57,13 @@ class CompanyController extends Controller
         $company->user_id=Auth::id();
         $company->save();
         $user=Auth::user();
+<<<<<<< HEAD
+        $user->company_id = $company->id ;
+        $user->save();
+=======
         $user->company_id = $company->id;
             $user->save();
+>>>>>>> 78c84ee2ce4b31fc2f749febbfa54dc5862e58f4
         return back()->with('success' , 'Please wait untill admin accept your confirm :)');
     }
 
@@ -78,7 +84,7 @@ class CompanyController extends Controller
             $user->adminRole = 2 ;
             $user->save();
         }
-        return redirect()->back();   
+        return redirect()->back();
     }
     /**
      * Show the form for editing the specified resource.
@@ -114,6 +120,6 @@ class CompanyController extends Controller
         $trashCompany = Company::find($id);
         $trashCompany->delete();
         return redirect('/manager/company');
-        
+
     }
 }

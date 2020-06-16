@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 use Uuid ;
 use App\Review;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ReviewController extends Controller
 {
@@ -16,6 +17,8 @@ class ReviewController extends Controller
     public function index()
     {
         $reviews= Review::all();
+        $reviews= Auth::user()->company->reviews ;
+
         return view('CompanyAdmin/reviewindex',["reviews"=>$reviews]);
     }
 
@@ -26,6 +29,7 @@ class ReviewController extends Controller
      */
     public function create()
     {
+
         return view ('CompanyAdmin.reviewcreate');
     }
 
@@ -46,10 +50,11 @@ class ReviewController extends Controller
         $desti='images/review/';
         $files->move($desti,$path);
         $req['image']=$path;
-                    
-    }
 
-    $review = Review::create($req);
+    }
+    $review = Auth::user()->company->reviews()->create($req);
+
+    // $review = Review::create($req);
         //
         // dd($project);
         return redirect('/companypanel/review');
@@ -74,7 +79,8 @@ class ReviewController extends Controller
      */
     public function edit($id)
     {
-        $review=Review::findOrFail($id);
+        // $review=Review::findOrFail($id);
+        $review= Auth::user()->company->reviews()->find($id) ;
         return view('CompanyAdmin.reviewedit',['review'=>$review]);
     }
 
@@ -87,7 +93,7 @@ class ReviewController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $review=Review::find($id);
+        $review= Auth::user()->company->reviews()->find($id);
         $path = public_path()."/images/review/".$review->image;
         unlink($path);
         $req=$request->all();
@@ -97,10 +103,10 @@ class ReviewController extends Controller
             $path=$uuid.".".$request->file('image')->getClientOriginalExtension();
             $desti='images/review/';
             $files->move($desti,$path);
-            $req['image']=$path;                        
+            $req['image']=$path;
         }
 
-        $review = $review->update($req);           
+        $review = $review->update($req);
         return redirect(route('company.review.index'));
 
     }
@@ -113,7 +119,7 @@ class ReviewController extends Controller
      */
     public function destroy(Request $request, $id)
     {
-        $review=Review::find($id);
+        $review= Auth::user()->company->reviews()->find($id) ;
         $review->delete();
         return redirect('/companypanel/review');
     }
