@@ -17,7 +17,7 @@
     <tbody>
     @foreach($slider as $slider_img)
         <tr>
-            <td>{{ $slider_img ->project_id}}</td>
+            <td>{{ $slider_img ->title}}</td>
             <td scope="col"><img src="{{ asset('images/projectsSlider/'. $slider_img->img) }}" alt="image" width="150px" height="80px" /></td>
 
         </tr>

@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Project;
 use App\Sliderimages;
+use DB;
 
 class SliderImageController extends Controller
 {
@@ -16,7 +17,9 @@ class SliderImageController extends Controller
     public function index()
     {
 
-        $data_slider = Sliderimages::all();
+        $data_slider = DB::table('projects')
+        ->join('sliderimages','projects.id' ,'sliderimages.id')
+        ->get();
         return view ('manager.slider' ,['slider'=>$data_slider]);
     }
 
@@ -53,6 +56,7 @@ class SliderImageController extends Controller
        
         $proj_image->save();
 
+        return redirect('manager/sliderImage');
     }
 
     /**
