@@ -25,38 +25,21 @@
     <div class="main-content">
         <div class="menu text-center d-flex justify-content-around align-items-center">
             <a class="navbar-brand" href="#"><img data-src="/images/company_logo.PNG" alt="logo image"> </a>
-
-            <!-- <div class="contact_us">
-        @foreach ($contact as $cont )
-        <i class="fas ml-3 fa-mobile-alt"></i>
-        <span class="ml-2">{{$cont->phoneNo}}</span>
-        <i class="far ml-3 fa-envelope"></i>
-        <span class="ml-2">{{$cont->email}}</span>
-      </div>
-      <div class="social_media">
-          <a href="{{$cont->instaLink}}" ><i class="fab fa-instagram ml-2"></i></a>
-          <a href="{{$cont->facebookLink}}" ><i class="fab fa-facebook-f ml-2"></i></a>
-          <a href="{{$cont->pinterestLink}}" ><i class="fab fa-pinterest ml-2"></i></a>
-          <a href="{{$cont->wLink}}" ><i class="fa fa-vk ml-2"></i></a>
-
-
-        @endforeach
-      </div> -->
-
+      @foreach ($contact as $cont )
             <div class="contact_us">
-
+                
                 <i class="fas ml-3 fa-mobile-alt"></i>
-                <span class="ml-2">010-677-706-40</span>
+                <span class="ml-2">{{$cont->phoneNo}}</span>
                 <i class="far ml-3 fa-envelope"></i>
-                <span class="ml-2">AhmedSaid@gmail.com </span>
+                <span class="ml-2">{{$cont->email}}</span>
             </div>
             <div class="social_media">
-                <a><i class="fab fa-instagram ml-2"></i></a>
-                <a><i class="fab fa-facebook-f ml-2"></i></a>
-                <a><i class="fab fa-pinterest ml-2"></i></a>
-                <a><i class="fa fa-vk ml-2"></i></a>
-
+                <a href="{{$cont->instaLink}}"><i class="fab fa-instagram ml-2"></i></a>
+                <a href="{{$cont->facebookLink}}"><i class="fab fa-facebook-f ml-2"></i></a>
+                <a href="{{$cont->pinterestLink}}"><i class="fab fa-pinterest ml-2"></i></a>
+                <a href="{{$cont->wLink}}" ><i class="fa fa-vk ml-2"></i></a>               
             </div>
+            @endforeach
             <!--
             <div class="color_container">
                 <h2>Change Theme</h2>
