@@ -19,7 +19,11 @@
         <tr>
             <td>{{ $slider_img ->title}}</td>
             <td scope="col"><img src="{{ asset('images/projectsSlider/'. $slider_img->img) }}" alt="image" width="150px" height="80px" /></td>
-
+            <td>
+                {!! Form::open(['route' => ['manager.sliderImage.destroy', $slider_img->id] , 'method'=>'delete']) !!}
+                {!! Form::submit('Delete !' , ['class'=>'btn btn-danger']) !!}
+                {!! Form::close() !!}
+            </td>
         </tr>
     @endforeach
     </tbody>

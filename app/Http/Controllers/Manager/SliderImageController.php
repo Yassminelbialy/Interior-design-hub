@@ -101,6 +101,8 @@ class SliderImageController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $deleted_pro = Sliderimages::find($id);
+        $deleted_pro->delete();
+        return redirect('manager/sliderImage');
     }
 }
