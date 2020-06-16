@@ -78,6 +78,7 @@
                                 {{-- <a class="nav-link" href="/manager/project">images of project</a> --}}
 
                                 <a class="nav-link" href="/manager/category">Category of projects</a>
+                                <a class="nav-link" href="/manager/sliderImage">image Of Projects Slider</a>
                                 <a class="nav-link" href="/manager/user">Users</a>
                                 <a class="nav-link" href="/manager/logo">Logos</a>
                                 <a class="nav-link" href="/manager/review">Reviews</a>
