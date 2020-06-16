@@ -55,8 +55,10 @@ class CompanyController extends Controller
         $company->acceptConditions=$request->acceptConditions;
         $company->user_id=Auth::id();
         $company->save();
+        $user=Auth::user();
+        $user->company_id = $company->id;
+            $user->save();
         return back()->with('success' , 'Please wait untill admin accept your confirm :)');
-
     }
 
     /**

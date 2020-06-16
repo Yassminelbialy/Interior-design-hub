@@ -16,7 +16,7 @@ class AddCompanyIdFkToUsersTable extends Migration
         Schema::table('users', function (Blueprint $table) {
             //
             $table->unsignedBigInteger('company_id')->nullable();
-            $table->foreign('company_id')->references('id')->on('companies');
+            $table->foreign('company_id')->references('id')->on('companies')->onDelete('cascade');
         });
     }
 

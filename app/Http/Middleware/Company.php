@@ -17,7 +17,7 @@ class Company
      */
     public function handle($request, Closure $next)
     {
-        if( Auth::check() && Auth::user()->adminRole == 2 )
+        if( Auth::check() && Auth::user()->adminRole == 2 && Auth::user()->company_id !=NULL)
         {
             return $next($request);
         }
