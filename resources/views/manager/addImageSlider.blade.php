@@ -12,9 +12,11 @@
             <label for="exampleFormControlFile1" >Select Project Name</label>
             <br>
                 <select name="title">
-                @foreach($projectsName as $pname)
-                    <option name="projectname">{{$pname->id}} : {{ $pname->title }}</option>
-                @endforeach
+
+                        @foreach($projectsName as $pname)
+                            <option  value="{{$pname->id}}">{{$pname->title}}</option>
+                        @endforeach
+
                 </select>
             </div>
             <div class="form-group text-light">

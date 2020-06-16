@@ -18,7 +18,7 @@ class SliderImageController extends Controller
     {
 
         $data_slider = DB::table('projects')
-        ->join('sliderimages','projects.id' ,'sliderimages.id')
+        ->join('sliderimages','projects.id' ,'sliderimages.project_id')
         ->get();
         return view ('manager.slider' ,['slider'=>$data_slider]);
     }
@@ -43,7 +43,20 @@ class SliderImageController extends Controller
     public function store(Request $request)
     {
         $proj_image = new Sliderimages();
-        $proj_image->project_id = $request->projectname;
+        //  $data = Project::find('id')
+        //  ->join('sliderimages','sliderimages.project_id' , 'projects.id')
+        //  ->get();
+
+        //  dd($data);
+        // $data = Project::find($request->projectid)
+        // ->join('sliderimages','sliderimages.project_id' , 'projects.id')
+        // ->where($request->projectid,'=','proects.id')
+        // ->get();
+
+        //dd($data);
+        $proj_image->project_id = $request->title;
+
+        //dd($proj_image->project_id);
         if($request->hasfile('proImg'))
         {
 
