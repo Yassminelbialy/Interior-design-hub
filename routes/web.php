@@ -46,12 +46,12 @@ Route::middleware('manager')->prefix('manager')->name('manager.')->group(functio
     Route::resource('AdminOrder' , 'Manager\OrderAdminController');
     Route::get('users/{users}/order', 'Manager\OrderAdminController@updateOrder')->name('order');
     Route::resource('jopAppli' , 'Manager\JopApplicantController');
-    Route::resource('sliderImage' , 'Manager\SliderImageController');
     Route::resource('topics' , 'Manager\TopicController');
     Route::resource('chatList' , 'Manager\ChatAdminController');
-    Route::get('/counter/info' , 'Manager\CounterController@getCounterOfSpecificCompany');
     Route::resource('company' , 'CompanyController');
     Route::get('users/{users}/company', 'CompanyController@ConfirmCompany')->name('company');
+
+
 
 
 
@@ -68,8 +68,6 @@ Route::middleware('user')->group(function(){
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('quiz', 'Manager\QuizController');
-
-
 Route::resource('project.images', 'Manager\ProjectImageController');
 Route::post('/contact','Manager\ConsultationController@send');
 Route::get('/','UserController@index');
