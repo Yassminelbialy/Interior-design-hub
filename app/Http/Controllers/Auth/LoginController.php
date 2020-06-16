@@ -50,7 +50,6 @@ class LoginController extends Controller
                     if($company)
                     {
                     $request->session()->put('COMPANY', $company);
-
                     }
 
                 }
