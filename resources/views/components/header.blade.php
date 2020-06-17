@@ -60,19 +60,11 @@
     <div class="slider">
 
 
-<<<<<<< HEAD
-    @foreach([] as $slide_imgg)
-        <div  class="slide slide-0 active">
-
-
-            <div style="background:url({{ asset('images/projectsSlider/'. $slide_imgg->img)}})" class="slide__bg"></div>
-=======
     @forelse($slide_img as $slide_imgg)
         <div  class="slide slide-0 active">
            
            
             <div style="background:url({{ asset('images/projectsSlider/'. $slide_imgg->img)}}); no-repeat  " class="slide__bg"></div>
->>>>>>> 0c2bcf6038a1eb3bbe88a1987e2e809a3e8d1103
             <div class="slide__content">
                 <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
                     <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
