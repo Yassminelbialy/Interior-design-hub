@@ -73,28 +73,28 @@ class AlexandrainfoController extends Controller
      */
     public function update(Request $request, $id)
     {
+
         $ceo=Alexandrainfo::find($id);
         $ceo->name=$request->name;
         $ceo->hint=$request->hint;
         $ceo->statement=$request->statement;
         if ($files = $request->file('image')) {
-            $destinationPath = 'images/'; 
+            $destinationPath = 'images/';
             $Image = $files->getClientOriginalName();
             $files->move($destinationPath, $Image);
-            $ceo->image=$Image; 
+            $ceo->image=$Image;
         }
 
-       
+
         if ($files = $request->file('video')) {
-            $destinationPath = 'videos/'; 
+            $destinationPath = 'videos/';
             $Video = $files->getClientOriginalName();
             $files->move($destinationPath, $Video);
-            $ceo->video=$Video; 
+            $ceo->video=$Video;
         }
-
-        $ceo->save();
+         $ceo->save();
         return redirect('/companypanel/alexandra');
-    
+
     }
 
     /**
