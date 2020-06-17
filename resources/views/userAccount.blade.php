@@ -54,6 +54,15 @@
                         </span>
                         @enderror
                     </div>
+                    <div class="form-groupmb-2">
+                        <label data-error="wrong" data-success="right" for="defaultForm-pass">Your Phone Number</label>
+                        <input type="text" name="phoneNum" class="form-control @error('phoneNum') is-invalid @enderror">
+                        @error('phoneNum')
+                        <span class="invalid-feedback" role="alert">
+                            <strong style="color:red">{{ $message }}</strong>
+                        </span>
+                        @enderror
+                    </div>
                     <div class="form-group">
                         <input type="checkbox" value="1" name="acceptConditions" id="agree-term" class="agree-term @error('acceptConditions') is-invalid @enderror" />
                         <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
