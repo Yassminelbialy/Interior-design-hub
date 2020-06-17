@@ -51,7 +51,7 @@
         </div>
     </div>
     <script>
-            lat={{$ceo->lat}}
-            lng={{$ceo->lng}}
+            lat={{$ceoInfo->lat}}
+            lng={{$ceoInfo->lng}}
     </script>
 </section>
