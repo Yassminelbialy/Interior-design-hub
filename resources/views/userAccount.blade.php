@@ -4,7 +4,7 @@
 
 
 
-<a href="{{ route('logout') }}" class="btn btn-danger" style="color:white !important;margin:10px;padding:10px;font-size:20px;float:right;border-radius:10px" onclick="event.preventDefault();
+<a href="{{ route('logout') }}" class="btn btn-danger" rel="nofollow" style="color:white !important;margin:10px;padding:10px;font-size:20px;float:right;border-radius:10px" onclick="event.preventDefault();
                 document.getElementById('logout-form').submit();">Logout</a>
 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
     @csrf

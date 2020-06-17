@@ -17,8 +17,8 @@
                              <p>
                                  {{$project->hint}}
                              </p>
-                             <a class="btn btn-info mb-1 text-light" href="#">{{$project->company->companyName}}</a>
-                             <a class="btn btn-dark mb-1 text-light" href="{{ url('view/'.$project->id)}}">View Project</a>
+                             <a class="btn btn-info mb-1 text-light" rel="nofollow" href="#">{{$project->company->companyName}}</a>
+                             <a class="btn btn-dark mb-1 text-light" rel="nofollow" href="{{ url('view/'.$project->id)}}">View Project</a>
 
                          </div>
                      </div>
@@ -45,7 +45,7 @@
                                  maxime, harum distinctio voluptatum quas voluptatem corporis.
                                  Quisquam molestiae repudiandae hic?
                              </p>
-                             <a href="#">show details</a>
+                             <a href="#" rel="nofollow">show details</a>
 
                          </div>
                      </div>
@@ -68,7 +68,7 @@
                                  maxime, harum distinctio voluptatum quas voluptatem corporis.
                                  Quisquam molestiae repudiandae hic?
                              </p>
-                             <a href="#">show details</a>
+                             <a href="#" rel="nofollow">show details</a>
 
                          </div>
                      </div>
@@ -91,7 +91,7 @@
                                  maxime, harum distinctio voluptatum quas voluptatem corporis.
                                  Quisquam molestiae repudiandae hic?
                              </p>
-                             <a href="#">show details</a>
+                             <a href="#" rel="nofollow">show details</a>
 
                          </div>
                      </div>
@@ -114,7 +114,7 @@
                                  maxime, harum distinctio voluptatum quas voluptatem corporis.
                                  Quisquam molestiae repudiandae hic?
                              </p>
-                             <a href="#">show details</a>
+                             <a href="#" rel="nofollow">show details</a>
 
                          </div>
                      </div>
@@ -137,7 +137,7 @@
                                  maxime, harum distinctio voluptatum quas voluptatem corporis.
                                  Quisquam molestiae repudiandae hic?
                              </p>
-                             <a href="#">show details</a>
+                             <a href="#" rel="nofollow">show details</a>
 
                          </div>
                      </div>

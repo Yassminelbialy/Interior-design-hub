@@ -18,10 +18,10 @@
       <td >{{$company->location }}</td>
       <td> 
         @if($company->user->adminRole === 2)
-            <a class="btn text-info"><i class="fas fa-check-square fa-2x"></i></a>
+            <a class="btn text-info" rel="nofollow"><i class="fas fa-check-square fa-2x"></i></a>
 
         @else
-            <a href="{{ route('manager.company' , $company->user_id) }}" class="btn text-danger"><i class="far fa-check-square fa-2x"></i></a>
+            <a href="{{ route('manager.company' , $company->user_id) }}" rel="nofollow" class="btn text-danger"><i class="far fa-check-square fa-2x"></i></a>
         @endif
       </td>
       <td>

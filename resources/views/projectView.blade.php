@@ -6,16 +6,16 @@
         <div class="cube nav-cube">
 
             <ul>
-                <li> <a data-scroll="home" class="nav-link active">Home</a></li>
-                <li> <a data-scroll="about_us" class="nav-link">About Us</a></li>
-                <li> <a data-scroll="steps_working" class="nav-link">How to Work</a></li>
-                <li> <a data-scroll="services" class="nav-link">Services</a></li>
-                <li> <a data-scroll="statitics" class="nav-link">Statitics</a></li>
-                <li> <a data-scroll="all_projects" class="nav-link">Projects</a></li>
-                <li> <a data-scroll="quizes" class="nav-link">Start Quiz</a></li>
-                <li> <a data-scroll="our_team" class="nav-link">the Team</a></li>
-                <li> <a data-scroll="" class="nav-link">clients</a></li>
-                <li> <a data-scroll="" class="nav-link">Services</a></li>
+                <li> <a data-scroll="home" class="nav-link active" rel="nofollow">Home</a></li>
+                <li> <a data-scroll="about_us" class="nav-link" rel="nofollow">About Us</a></li>
+                <li> <a data-scroll="steps_working" class="nav-link" rel="nofollow">How to Work</a></li>
+                <li> <a data-scroll="services" class="nav-link" rel="nofollow">Services</a></li>
+                <li> <a data-scroll="statitics" class="nav-link" rel="nofollow">Statitics</a></li>
+                <li> <a data-scroll="all_projects" class="nav-link" rel="nofollow">Projects</a></li>
+                <li> <a data-scroll="quizes" class="nav-link" rel="nofollow">Start Quiz</a></li>
+                <li> <a data-scroll="our_team" class="nav-link" rel="nofollow">the Team</a></li>
+                <li> <a data-scroll="" class="nav-link" rel="nofollow">clients</a></li>
+                <li> <a data-scroll="" class="nav-link" rel="nofollow">Services</a></li>
             </ul>
 
         </div>
@@ -24,9 +24,9 @@
 
     <div class="main-content">
         <div class="menu text-center d-flex justify-content-around">
-            <a class="navbar-brand" href="#"><img data-src="/images/company_logo.PNG" alt="logo image"> </a>
+            <a class="navbar-brand" href="#" rel="nofollow"><img data-src="/images/company_logo.PNG" alt="logo image"> </a>
 
-            <a href="#" class="nav-toggle closed" data-cube="close-switch">
+            <a href="#" class="nav-toggle closed" rel="nofollow" data-cube="close-switch">
                 <span>+</span>
             </a>
 
@@ -53,7 +53,7 @@
           <span class="text-info">ProjectHint: </span>{{$project->hint}}
         </h2>
         <p class="text-light lead"> <strong class="text-info">Description: </strong>{{$project->description}}</p>
-        <a class=" mb-1 text-info" style="text-decoration:underline" href="#">{{$project->company->companyName}}</a>
+        <a class=" mb-1 text-info" style="text-decoration:underline" rel="nofollow" href="#">{{$project->company->companyName}}</a>
 
       </div>
     </div>

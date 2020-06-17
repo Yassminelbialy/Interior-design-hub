@@ -69,7 +69,7 @@
                                 <p>
                                 {{$project->hint}}
                                 </p>
-                                <a class="btn btn-dark mb-1 text-light" href="{{ url('view/'.$project->id)}}">View Project</a>
+                                <a class="btn btn-dark mb-1 text-light" rel="nofollow" href="{{ url('view/'.$project->id)}}">View Project</a>
 
                             </div>
                         </div>
