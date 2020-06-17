@@ -14,7 +14,7 @@
 @if(count($errors) > 0)
 
     <div class="alert alert-danger text-center" style="width:50%;margin:10px auto;font-size:25px">
-        All field required
+        Something Error please check it !!
     </div>
 
 @endif
@@ -49,6 +49,15 @@
                         <label data-error="wrong" data-success="right" for="defaultForm-pass">Your Location</label>
                         <input type="text" name="location" class="form-control @error('location') is-invalid @enderror">
                         @error('location')
+                        <span class="invalid-feedback" role="alert">
+                            <strong style="color:red">{{ $message }}</strong>
+                        </span>
+                        @enderror
+                    </div>
+                    <div class="form-groupmb-2">
+                        <label data-error="wrong" data-success="right" for="defaultForm-pass">Your Phone Number</label>
+                        <input type="text" name="phoneNum" class="form-control @error('phoneNum') is-invalid @enderror">
+                        @error('phoneNum')
                         <span class="invalid-feedback" role="alert">
                             <strong style="color:red">{{ $message }}</strong>
                         </span>
