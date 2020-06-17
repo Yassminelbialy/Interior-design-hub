@@ -47,6 +47,7 @@ class CompanyController extends Controller
             'companyName'   =>     'required',
             'location'      =>     'required',
             'acceptConditions' => 'required ',
+            'phoneNum'       => 'phone:EG'
             ]);
 
 

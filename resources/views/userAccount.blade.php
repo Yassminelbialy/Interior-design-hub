@@ -14,7 +14,7 @@
 @if(count($errors) > 0)
 
     <div class="alert alert-danger text-center" style="width:50%;margin:10px auto;font-size:25px">
-        All field required
+        Something Error please check it !!
     </div>
 
 @endif
