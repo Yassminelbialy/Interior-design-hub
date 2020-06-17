@@ -66,9 +66,12 @@ class UserController extends Controller
         $contact= Contact::limit(1)->get();
         $categories = Category::all()->pluck('name','id')->toArray();
         $companies = Company::all()->pluck('companyName','id')->toArray();
+        $slider_image_project = DB::table('projects')
+        ->join('sliderimages','projects.id' ,'sliderimages.project_id')
+        ->get();
 
         // dd($categories);
-        return view('AllProjectShow',['projects'=>$projects,'contact'=>$contact,'categories'=>$categories,'companies'=>$companies]);
+        return view('AllProjectShow',['projects'=>$projects,'contact'=>$contact,'categories'=>$categories,'companies'=>$companies , 'slider_projcts'=>$slider_image_project]);
 
     }
 

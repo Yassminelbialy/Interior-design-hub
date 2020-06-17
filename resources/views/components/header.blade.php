@@ -88,7 +88,7 @@
     <div class="slider">
 
 
-    @foreach($slide_img as $slide_imgg)
+    @forelse($slide_img as $slide_imgg)
         <div  class="slide slide-0 active">
            
            
@@ -104,8 +104,14 @@
                 </div>
             </div>
         </div>
+    @empty
 
-        @endforeach
+        <div class='alert btn_info'>
+                
+                <p class="text-center" style="margin-top:200px">No Projects</p> 
+         
+         </div>
+    @endforelse
         <!-- <div class="slide slide-1 ">
             <div class="slide__bg"></div>
             <div class="slide__content">

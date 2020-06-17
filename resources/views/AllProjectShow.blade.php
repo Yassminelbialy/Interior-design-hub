@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-@component('components.header',['contact' => $contact])
+@component('components.header',['contact' => $contact,'slide_img'=>$slider_projcts])
 @endcomponent
  <!-- start projects -->
  <div class="row mt-1">
