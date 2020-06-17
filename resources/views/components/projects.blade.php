@@ -151,6 +151,6 @@
          </div>
      </div>
 
-     <button>All projects</button>
+     <a href="/allproject"><button>All projects</button></a>
 
  </section>
