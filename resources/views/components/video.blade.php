@@ -50,4 +50,8 @@
 
         </div>
     </div>
+    <script>
+            lat={{$ceo->lat}}
+            lng={{$ceo->lng}}
+    </script>
 </section>

@@ -77,6 +77,9 @@ class AlexandrainfoController extends Controller
         $ceo->name=$request->name;
         $ceo->hint=$request->hint;
         $ceo->statement=$request->statement;
+
+        $ceo->lat=$request->lat;
+        $ceo->lng=$request->lng;
         // first request img then give parameters to store
         // $ceo->image=$request->image->store('images','public');
         // $ceo->video=$request->video->store('videos','public');
@@ -97,7 +100,7 @@ class AlexandrainfoController extends Controller
         }
 
         $ceo->save();
-        // dd($request->all(  ));
+        // dd($ceo);
         return redirect('/manager/alexandra');
 
     }
