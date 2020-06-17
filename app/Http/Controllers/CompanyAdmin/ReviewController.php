@@ -16,10 +16,9 @@ class ReviewController extends Controller
      */
     public function index()
     {
-        $reviews= Review::all();
-        $reviews= Auth::user()->company->reviews ;
-
-        return view('CompanyAdmin/reviewindex',["reviews"=>$reviews]);
+        // $reviews= Review::all();
+         $reviews= Auth::user()->company->reviews ;
+         return view('CompanyAdmin/reviewindex',["reviews"=>$reviews]);
     }
 
     /**
@@ -29,8 +28,7 @@ class ReviewController extends Controller
      */
     public function create()
     {
-
-        return view ('CompanyAdmin.reviewcreate');
+       return view ('CompanyAdmin.reviewcreate');
     }
 
     /**

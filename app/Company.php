@@ -49,10 +49,6 @@ class Company extends Model
     {
         return $this->hasMany('App\Review');
     }
-    // public function info()
-    // {
-    //     return $this->belongsTo('App\Alexandrainfo','id','company_id');
-    // }
 
     public function info()
     {

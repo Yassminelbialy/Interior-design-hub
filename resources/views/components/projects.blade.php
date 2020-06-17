@@ -1,46 +1,13 @@
- <!-- start projects -->
- <!-- <section class="projects">
-     @if(count($projects)>0)
-     <h2 class="text-left">HAWN NPOEktbi:</h2>
-     <div class="container-fluid">
-         <div class="row">
-             @foreach ($projects as $project)
-
-             <div style="background-image: url(/projectimages/{{$project->mainImage}});" class="project_content col-md-4 col-sm-6 pb-3">
-                 <div class="overlayer"></div>
-                 <div class="border_box"></div>
-                 <div class="custom_border"></div>
-                 <div>
-                     <p>
-                         {{$project->title}}
-                     </p>
-
-                     <p class=""> {{$project->hint}}</p>
-                     <a class="btn btn-dark mb-1 text-light" href="{{ url('view/'.$project->id)}}">View Project</a>
-                 </div>
-             </div>
-             @endforeach
-
-         </div>
-         @else
-         <div class="alert alert-info text-center" style="margin:0 auto;width:50%">
-             <h1>No Projects Yet</h1>
-         </div>
-         @endif
-     </div>
- </section> -->
- <!-- end projects -->
-
 
  <section class="projects_container text-center">
-     <h2> Last Projects</h2>
+     <h1> Last Projects</h1>
      <div class="container-fluid">
          <div class="row">
              @forelse($projects as $project)
              <div class="col-md-6">
                  <div class="project_card">
                      <div class="face face1">
-                         <img src="/projectimages/{{$project->mainImage}}" alt="" />
+                         <img src="/projectimages/{{$project->mainImage}}" alt="mainImage" />
                      </div>
                      <div class="face face2">
                          <div class="content">
@@ -50,7 +17,8 @@
                              <p>
                                  {{$project->hint}}
                              </p>
-                             <a class="btn btn-dark mb-1 text-light" href="{{ url('view/'.$project->id)}}">View Project</a>
+                             <a class="btn btn-info mb-1 text-light" rel="nofollow" href="#">{{$project->company->companyName}}</a>
+                             <a class="btn btn-dark mb-1 text-light" rel="nofollow" href="{{ url('view/'.$project->id)}}">View Project</a>
 
                          </div>
                      </div>
@@ -64,7 +32,7 @@
              <div class="col-md-6">
                  <div class="project_card">
                      <div class="face face1">
-                         <img src="./images/pictures_projects/2.jpeg" alt="" />
+                         <img src="./images/pictures_projects/2.jpeg" alt="mainImage" />
                      </div>
                      <div class="face face2">
                          <div class="content">
@@ -77,7 +45,7 @@
                                  maxime, harum distinctio voluptatum quas voluptatem corporis.
                                  Quisquam molestiae repudiandae hic?
                              </p>
-                             <a href="#">show details</a>
+                             <a href="#" rel="nofollow">show details</a>
 
                          </div>
                      </div>
@@ -87,7 +55,7 @@
              <div class="col-md-6">
                  <div class="project_card">
                      <div class="face face1">
-                         <img src="/images/pictures_projects/3.jpeg" alt="" />
+                         <img src="/images/pictures_projects/3.jpeg" alt="mainImage" />
                      </div>
                      <div class="face face2">
                          <div class="content">
@@ -100,7 +68,7 @@
                                  maxime, harum distinctio voluptatum quas voluptatem corporis.
                                  Quisquam molestiae repudiandae hic?
                              </p>
-                             <a href="#">show details</a>
+                             <a href="#" rel="nofollow">show details</a>
 
                          </div>
                      </div>
@@ -110,7 +78,7 @@
              <div class="col-md-6">
                  <div class="project_card">
                      <div class="face face1">
-                         <img src="/images/pictures_projects/4.jpeg" alt="" />
+                         <img src="/images/pictures_projects/4.jpeg" alt="mainImage" />
                      </div>
                      <div class="face face2">
                          <div class="content">
@@ -123,7 +91,7 @@
                                  maxime, harum distinctio voluptatum quas voluptatem corporis.
                                  Quisquam molestiae repudiandae hic?
                              </p>
-                             <a href="#">show details</a>
+                             <a href="#" rel="nofollow">show details</a>
 
                          </div>
                      </div>
@@ -133,7 +101,7 @@
              <div class="col-md-6">
                  <div class="project_card">
                      <div class="face face1">
-                         <img src="/images/pictures_projects/5.jpeg" alt="" />
+                         <img src="/images/pictures_projects/5.jpeg" alt="mainImage" />
                      </div>
                      <div class="face face2">
                          <div class="content">
@@ -146,7 +114,7 @@
                                  maxime, harum distinctio voluptatum quas voluptatem corporis.
                                  Quisquam molestiae repudiandae hic?
                              </p>
-                             <a href="#">show details</a>
+                             <a href="#" rel="nofollow">show details</a>
 
                          </div>
                      </div>
@@ -156,7 +124,7 @@
              <div class="col-md-6">
                  <div class="project_card">
                      <div class="face face1">
-                         <img src="/images/pictures_projects/1.jpeg" alt="" />
+                         <img src="/images/pictures_projects/1.jpeg" alt="mainImage" />
                      </div>
                      <div class="face face2">
                          <div class="content">
@@ -169,7 +137,7 @@
                                  maxime, harum distinctio voluptatum quas voluptatem corporis.
                                  Quisquam molestiae repudiandae hic?
                              </p>
-                             <a href="#">show details</a>
+                             <a href="#" rel="nofollow">show details</a>
 
                          </div>
                      </div>
