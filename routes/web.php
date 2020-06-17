@@ -52,10 +52,6 @@ Route::middleware('manager')->prefix('manager')->name('manager.')->group(functio
     Route::resource('company' , 'CompanyController');
     Route::get('users/{users}/company', 'CompanyController@ConfirmCompany')->name('company');
 
-
-
-
-
 });//manager routes
 
 Route::middleware('user')->group(function(){
@@ -68,7 +64,7 @@ Route::middleware('user')->group(function(){
 });
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::resource('quiz', 'Manager\QuizController');
+Route::resource('quiz/{id?}', 'Manager\QuizController')->name('quiz');
 Route::resource('project.images', 'Manager\ProjectImageController');
 Route::post('/contact','Manager\ConsultationController@send');
 Route::get('/','UserController@index');
@@ -118,3 +114,4 @@ Route::get('dddd', function () {
 
     dd(session('COPMANY')->projects);
 });
+

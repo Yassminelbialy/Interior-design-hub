@@ -4,6 +4,7 @@ namespace App\Http\Controllers\CompanyAdmin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\User;
+use Auth;
 class AllUsersController extends Controller
 {
     /**
@@ -13,7 +14,8 @@ class AllUsersController extends Controller
      */
     public function index()
     {
-        return view('CompanyAdmin.user',['data'=>User::all()]);
+        $users = Auth::user()->company->users;
+        return view('CompanyAdmin.user',['data'=>$users]);
 
     }
 

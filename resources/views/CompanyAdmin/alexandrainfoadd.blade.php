@@ -55,7 +55,7 @@ $(function() {
 </style>
 @endpush
 
-{{ Form::model($ceoInfo,['route' => ['company.alexandra.update',$ceoInfo],'enctype' => 'multipart/form-data','method'=>'PUT'])}}
+{{ Form::open(['route' => ['company.alexandra.store'],'enctype' => 'multipart/form-data','method'=>'post'])}}
 <div class="row">
   <div class="col-md-9">
     <div class="contact-form">
@@ -117,7 +117,7 @@ $(function() {
       </div>
       <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">
-          {!! Form::submit('Edit', ['class'=>'btn btn-default btn btn-outline-secondary']) !!}
+          {!! Form::submit('Add', ['class'=>'btn btn-default btn btn-outline-secondary']) !!}
         </div>
       </div>
 

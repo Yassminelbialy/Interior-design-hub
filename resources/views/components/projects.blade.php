@@ -32,7 +32,8 @@
                  <h1>No Projects Yet</h1>
              </div>
              @endforelse
-             <div class="col-md-6">
+
+             {{-- <div class="col-md-6">
                  <div class="project_card">
                      <div class="face face1">
                          <img src="./images/pictures_projects/2.jpeg" alt="mainImage" />
@@ -145,7 +146,7 @@
                          </div>
                      </div>
                  </div>
-             </div>
+             </div> --}}
 
 
          </div>

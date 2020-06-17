@@ -24,7 +24,7 @@
                 <td>{{$ceo->hint}}</td>
                 <td style="width: 30%" class="justify-content: center;">{{$ceo->statement}}</td>
                 <td>
-                    <div class="stats_video">                    
+                    <div class="stats_video">
                         <div class="wrapper">
                             <div class="icon-wrapper">
                                 <div class="icon">
@@ -53,7 +53,7 @@
                     </div>
                 </td>
                 <td>
-                    <a href="{{ route('manager.alexandra.edit', $ceo->id) }}"> <i class="fas fa-edit fa-2x" style="color: blue"></i></a>
+                    <a href="{{ route('company.alexandra.edit', $ceo->id) }}"> <i class="fas fa-edit fa-2x" style="color: blue"></i></a>
                 </td>
             </tr>
             @endforeach

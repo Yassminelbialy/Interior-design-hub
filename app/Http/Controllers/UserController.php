@@ -21,7 +21,7 @@ class UserController extends Controller
     //
     public function index()
     {
-        $projects = Project::limit(6)->get();
+        $projects = Project::limit(2)->get();
         $ceoInfo= Alexandrainfo::limit(1)->get();
         $contact= Contact::limit(1)->get();
         $logos= Logo::all();

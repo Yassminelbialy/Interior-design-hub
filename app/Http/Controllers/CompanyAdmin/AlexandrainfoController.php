@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Alexandrainfo;
 use App\Contact;
 use Illuminate\Http\Request;
+use Auth;
+
 
 class AlexandrainfoController extends Controller
 {
@@ -16,8 +18,16 @@ class AlexandrainfoController extends Controller
      */
     public function index()
     {
-        $ceoInfo= Alexandrainfo::all();
-        return view('CompanyAdmin/alexandrainfoindex',["ceoInfo"=>$ceoInfo]);
+        // $ceoInfo= Alexandrainfo::all();
+
+        // return view('CompanyAdmin/alexandrainfoindex',["ceoInfo"=>$ceoInfo]);
+        $info =Auth::user()->company->info;
+        if($info)
+        {
+            return view('CompanyAdmin/alexandrainfoindex',["ceoInfo"=>[$info] ]);
+        }else{
+            return view('CompanyAdmin.alexandrainfoadd');
+        }
     }
 
     /**
@@ -27,7 +37,7 @@ class AlexandrainfoController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -38,7 +48,9 @@ class AlexandrainfoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // dd($request);
+      $z=  Auth::user()->company->info()->create($request->all());
+        return redirect(route('company.alexandra.index'));
     }
 
     /**
