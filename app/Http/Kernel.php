@@ -62,8 +62,14 @@ class Kernel extends HttpKernel
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
-        'manager'   =>\App\Http\Middleware\Manager::class,
-        'user' =>\App\Http\Middleware\User::class,
-        'company' =>\App\Http\Middleware\Company::class,
+        'manager'   => \App\Http\Middleware\Manager::class,
+        'user' => \App\Http\Middleware\User::class,
+        'company' => \App\Http\Middleware\Company::class,
+        /**** OTHER MIDDLEWARE ****/
+        'localize'                => \Mcamara\LaravelLocalization\Middleware\LaravelLocalizationRoutes::class,
+        'localizationRedirect'    => \Mcamara\LaravelLocalization\Middleware\LaravelLocalizationRedirectFilter::class,
+        'localeSessionRedirect'   => \Mcamara\LaravelLocalization\Middleware\LocaleSessionRedirect::class,
+        'localeCookieRedirect'    => \Mcamara\LaravelLocalization\Middleware\LocaleCookieRedirect::class,
+        'localeViewPath'          => \Mcamara\LaravelLocalization\Middleware\LaravelLocalizationViewPath::class
     ];
 }

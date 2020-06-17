@@ -3965,7 +3965,6 @@ input[type=button].btn-block {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   justify-content: space-between;
   padding: 0.5rem 1rem;
 }
@@ -7337,8 +7336,7 @@ button.bg-dark:focus {
 .fixed-top, .sb-nav-fixed #layoutSidenav #layoutSidenav_nav, .sb-nav-fixed .sb-topnav {
   position: fixed;
   top: 0;
-  right: 0;
-  left: 0;
+
   z-index: 1030;
 }
 
@@ -10052,6 +10050,7 @@ body {
 }
 .sb-nav-fixed .sb-topnav {
   z-index: 1039;
+  width: 100%;
 }
 .sb-nav-fixed #layoutSidenav #layoutSidenav_nav {
   width: 225px;
@@ -10065,7 +10064,7 @@ body {
   overflow-y: auto;
 }
 .sb-nav-fixed #layoutSidenav #layoutSidenav_content {
-  padding-left: 225px;
+
   top: 56px;
 }
 
@@ -10215,3 +10214,32 @@ body {
 #layoutSidenav_content{
   background:linear-gradient(rgba(34, 27, 25, 0.8), rgba(34, 27, 25, 0.8)), rgba(34, 27, 25, 0.8) url(../../../images/header.jpg) no-repeat
 }
+
+
+/* start custom style */
+
+nav .languages li {
+    display: inline-block;
+    color: white;
+    font-weight: bolder;
+    margin-left: 30px;
+}
+
+nav .languages li a {
+   color: white;
+   font-size: 22px;
+}
+
+nav .languages li.active {
+background-color: #c19e70;
+color: white;
+padding: 2px 20px ;
+border-radius: 20px;
+margin: 0 10px;
+
+ }
+
+
+
+
+

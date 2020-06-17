@@ -41,14 +41,14 @@
 
 .who_us .skewing {
     top: 170px;
-    transform: skewY(-14deg);
+    transform: skewY(-10deg);
     background-color: var(--mainColor);
 }
 
 .steps_working .skewing {
     top: 240px;
     height: 400px;
-    transform: skewY(-14deg);
+    transform: skewY(-10deg);
     background-color: var(--secondColor);
 }
 
@@ -94,6 +94,7 @@ body {
     min-height: 100vh;
     z-index: 9999;
     background-color: var(--mainColor);
+    display: none;
 
 }
 
@@ -571,6 +572,7 @@ body {
     transform-origin: 50% 200px;
     transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
     backface-visibility: hidden;
+    text-align: center;
 }
 
 .transform.cube {
@@ -586,7 +588,7 @@ body {
 }
 
 .nav-cube .contact_us span {
-    color: white;
+
     line-height: 10px;
     position: relative;
     top: -5px;
@@ -597,7 +599,7 @@ body {
     font-size: 24px;
 }
 .nav-cube .social_media {
-    color: white;
+
     margin: 0 100px;
 }
 
@@ -739,14 +741,11 @@ body {
 }
 .menu .login {
     color: white;
-
     height: 64%;
-    float: right;
-
     line-height: 31px;
     background-color: var(--secondColor);
     border: 1px solid white !important;
-    outline: none;
+    margin-right:11px
 }
 
 a:visited {
@@ -1366,11 +1365,11 @@ nav .contact_us i {
     color: var(--secondColor);
 }
 
-.steps_working .col-sm-6:nth-of-type(odd) {
+.steps_working .col-md-6:nth-of-type(odd) {
     border-right: 4px solid white;
 }
 
-.steps_working .col-sm-6:nth-of-type(odd)::after {
+.steps_working .col-md-6:nth-of-type(odd)::after {
     content: "";
     position: absolute;
     width: 25px;
@@ -1625,7 +1624,8 @@ nav .contact_us i {
 .service_box {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+
 }
 
 .service_box .box {
@@ -1635,7 +1635,7 @@ nav .contact_us i {
     background-color: var(--mainColor);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
     border-radius: 50px;
-    margin: 50px 10px;
+    margin: 50px 30px;
     box-sizing: border-box;
     overflow: hidden;
     text-align: center;
@@ -1792,11 +1792,12 @@ nav .contact_us i {
 }
 .information_plus p:first-of-type {
     font-size: 35px;
+
 }
 .information_plus p:last-of-type {
     margin: 0 auto;
     font-size: 18px;
-    padding: 0 473px;
+    padding: 10px;
     margin-bottom: 10px;
 }
 .information_plus p:last-of-type span {
@@ -2011,22 +2012,24 @@ nav .contact_us i {
 }
 .clients .custom_border,
 .testimonial_slider .custom_border {
-    position: relative;
+    margin: 0 20%;
     border-top: 4px solid white;
-    padding: 30px 500px;
-    width: 40%;
+    padding: 30px 10%;
+
+}
+.clients h2 ,.testimonial_slider h2{
+    background: white;
+    position: relative;
+    top: 35px;
+    padding: 10px;
+    border-radius: 40px;
     display: inline-block;
+
+    z-index: 2;
 }
-.clients .custom_border h2,
-.testimonial_slider .custom_border h2 {
-    position: absolute;
-    top: -28px;
-    background-color: white;
-    width: 211px;
-    left: 40%;
-    border-radius: 20px;
-    padding: 10px 0;
-}
+
+
+
 .clients img {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -2597,4 +2600,12 @@ footer ul li a {
 
 .modal-backdrop.show{
     display: none;
+}
+
+
+/* responsive */
+.responsive_contact{
+    color: black;
+    display: inline-block;
+    margin: 5px auto;
 }

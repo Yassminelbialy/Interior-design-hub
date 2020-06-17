@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,13 +17,16 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/',function(){
+Route::get('/', function () {
 
     return view('auth.login');
 });
 
+Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']], function () {
+
+
 // ->middleware('can:manage-users')
-Route::middleware('manager')->prefix('manager')->name('manager.')->group(function(){
+Route::middleware('manager')->prefix('manager')->name('manager.')->group(function () {
     Route::any('/', function () {
         return view('admin.base');
     });
@@ -49,29 +53,30 @@ Route::middleware('manager')->prefix('manager')->name('manager.')->group(functio
     Route::resource('jopAppli' , 'Manager\JopApplicantController');
     Route::resource('topics' , 'Manager\TopicController');
     Route::resource('chatList' , 'Manager\ChatAdminController');
+    Route::resource('sliderImage' , 'Manager\SliderImageController');
     Route::resource('company' , 'CompanyController');
     Route::get('users/{users}/company', 'CompanyController@ConfirmCompany')->name('company');
+});
+}); //manager routes
 
-});//manager routes
 
-Route::middleware('user')->group(function(){
+
+Route::middleware('user')->group(function () {
 
     Route::resource('profile', 'OrderController');
     Route::resource('chat', 'ChatController');
-    Route::post('/companyForm','CompanyController@store')->name('company.form');
-
-
+    Route::post('/companyForm', 'CompanyController@store')->name('company.form');
 });
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('quiz/{id?}', 'Manager\QuizController')->name('quiz');
 Route::resource('project.images', 'Manager\ProjectImageController');
-Route::post('/contact','Manager\ConsultationController@send');
-Route::get('/','UserController@index');
-Route::get('/allproject/{category?}','UserController@allprojects')->where('category', '[A-Za-z1-9]+')->name('listAllProjects');
-Route::get('/allprojectcustomsearch','UserController@customsearch');
+Route::post('/contact', 'Manager\ConsultationController@send');
+Route::get('/', 'UserController@index');
+Route::get('/allproject/{category?}', 'UserController@allprojects')->where('category', '[A-Za-z1-9]+')->name('listAllProjects');
+Route::get('/allprojectcustomsearch', 'UserController@customsearch');
 
-Route::get('/search','UserController@search')->name('search');
+Route::get('/search', 'UserController@search')->name('search');
 
 
 Route::get('view/{id}', 'UserController@view')->name('project.view');
@@ -81,36 +86,37 @@ Route::post('jopapply/{id?}', 'Manager\JopApplicantController@store')->where('id
 Route::get('jops', 'Manager\JopApplicantController@index')->name('jops');
 
 // Company Admin panel
-Route::middleware('company')->prefix('companypanel')->name('company.')->group(function(){
-    Route::any('/', function () {
-        return view('admin.companyBase');
-    });
-    Route::resource('project', 'CompanyAdmin\ProjectController');
-    Route::resource('project.images', 'CompanyAdmin\ProjectImageController');
-    Route::resource('alexandra', 'CompanyAdmin\AlexandrainfoController');
-    Route::resource('contacts', 'CompanyAdmin\ContactController');
-    Route::resource('jops', 'CompanyAdmin\JopController');
-    Route::resource('review', 'CompanyAdmin\ReviewController');
-    Route::resource('reviewTrash' ,'CompanyAdmin\ReviewTrashController');
-    Route::resource('consultations' ,'CompanyAdmin\ConsultationController');
-    Route::resource('user' ,'CompanyAdmin\AllUsersController');
-    Route::resource('trash' ,'CompanyAdmin\TrashController');
-    Route::resource('quizzes' , 'CompanyAdmin\QuizController');
-    Route::resource('quizzes.images' , 'CompanyAdmin\QuizImageController');
-    Route::resource('AdminOrder' , 'CompanyAdmin\OrderAdminController');
-    Route::get('users/{users}/order', 'CompanyAdmin\OrderAdminController@updateOrder')->name('order');
-    Route::resource('jopAppli' , 'CompanyAdmin\JopApplicantController');
-    Route::resource('chatList' , 'CompanyAdmin\ChatAdminController');
 
 
+    Route::middleware('company')->prefix('companypanel')->name('company.')->group(function () {
+        Route::any('/', function () {
+            return view('admin.companyBase');
+        });
 
 
-});//manager routes
+        Route::resource('project', 'CompanyAdmin\ProjectController');
+        Route::resource('project.images', 'CompanyAdmin\ProjectImageController');
+        Route::resource('alexandra', 'CompanyAdmin\AlexandrainfoController');
+        Route::resource('contacts', 'CompanyAdmin\ContactController');
+        Route::resource('jops', 'CompanyAdmin\JopController');
+        Route::resource('review', 'CompanyAdmin\ReviewController');
+        Route::resource('reviewTrash', 'CompanyAdmin\ReviewTrashController');
+        Route::resource('consultations', 'CompanyAdmin\ConsultationController');
+        Route::resource('user', 'CompanyAdmin\AllUsersController');
+        Route::resource('trash', 'CompanyAdmin\TrashController');
+        Route::resource('quizzes', 'CompanyAdmin\QuizController');
+        Route::resource('quizzes.images', 'CompanyAdmin\QuizImageController');
+        Route::resource('AdminOrder', 'CompanyAdmin\OrderAdminController');
+        Route::get('users/{users}/order', 'CompanyAdmin\OrderAdminController@updateOrder')->name('order');
+        Route::resource('jopAppli', 'CompanyAdmin\JopApplicantController');
+        Route::resource('chatList', 'CompanyAdmin\ChatAdminController');
+
+}); //manager routes
 
 
 Route::get('dddd', function () {
-       $dede= App\Project::find(1);
-    return response()->json(['message' => 'User status updated successfully.','data'=>[$dede]]);
+    $dede = App\Project::find(1);
+    return response()->json(['message' => 'User status updated successfully.', 'data' => [$dede]]);
 
     dd(session('COPMANY')->projects);
 });

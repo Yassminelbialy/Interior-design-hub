@@ -1,4 +1,15 @@
 $(function () {
+    let win = $(window);
+    win.on("resize", function () {
+        if (win.width() <= 920) {
+              $(".cube").prepend($(".contact_us").addClass("responsive_contact"))
+        }
+        else{
+            $(".menu .navbar-brand").after($(".contact_us").removeClass("responsive_contact"))
+        }
+
+
+    });
     //start loading
     $(window).on("load", function () {
         $(".cube_container_loading").fadeOut(2000);
@@ -93,14 +104,14 @@ $(function () {
     $("body").on("click", ".nav-toggle.closed", function (e) {
         e.preventDefault();
         var pageDiv = $(".page");
-         navCube = $(".nav-cube");
-        var closeSwitch = $(this)
+        navCube = $(".nav-cube");
+        var closeSwitch = $(this);
         closeSwitch.addClass("opened");
         closeSwitch.removeClass("closed");
         closeSwitch.data("cube-target", ".nav-cube");
         pageDiv.addClass("open");
         navCube.addClass("transform");
-        $(this).html("<i class='fas fa-times'></i>")
+        $(this).html("<i class='fas fa-times'></i>");
     });
 
     $("body").on("click", ".nav-toggle.opened", function (e) {
@@ -109,7 +120,7 @@ $(function () {
         $(this).removeClass("opened").addClass("closed");
         pageDiv.removeClass("open");
         navCube.removeClass("transform");
-        $(this).html("<i class='fas fa-bars'></i>")
+        $(this).html("<i class='fas fa-bars'></i>");
     });
 
     // start change theme
@@ -150,7 +161,6 @@ $(function () {
 
     createBullets();
 
-
     function autoSlide() {
         autoSlideTimeout = setTimeout(function () {
             curSlide++;
@@ -162,18 +172,15 @@ $(function () {
     autoSlide();
 
     function changeSlides() {
+        $slider.addClass("animating");
+        $slider.css("top");
+        $(".slide").removeClass("active");
+        $(".slide-" + curSlide).addClass("active");
 
-
-
-            $slider.addClass("animating");
-            $slider.css("top");
-            $(".slide").removeClass("active");
-            $(".slide-" + curSlide).addClass("active");
-
-            setTimeout(function () {
-                $slider.removeClass("animating");
-                animating = false;
-            }, animTime);
+        setTimeout(function () {
+            $slider.removeClass("animating");
+            animating = false;
+        }, animTime);
 
         window.clearTimeout(autoSlideTimeout);
         $(".slider-pagi__elem").removeClass("active");
@@ -184,21 +191,17 @@ $(function () {
         autoSlide();
     }
 
-
     function navigateLeft() {
-
         if (curSlide > 0) curSlide--;
         changeSlides();
     }
 
     function navigateRight() {
-
-        if (curSlide <numOfSlides) curSlide++;
+        if (curSlide < numOfSlides) curSlide++;
         changeSlides();
     }
 
     $(document).on("mousedown", ".slider", function (e) {
-
         window.clearTimeout(autoSlideTimeout);
         var startX = e.pageX,
             winW = $(window).width();
@@ -207,7 +210,6 @@ $(function () {
         $(document).on("mousemove ", function (e) {
             var x = e.pageX;
             diff = ((startX - x) / winW) * 70;
-
 
             $slider.css(
                 "transform",
@@ -223,7 +225,6 @@ $(function () {
     $(document).on("mouseup touchend", function (e) {
         $(document).off("mousemove touchmove");
 
-
         if (diff <= -8) {
             navigateLeft();
         }
@@ -231,7 +232,6 @@ $(function () {
             navigateRight();
         }
     });
-
 
     $(document).on("click", ".slider-pagi__elem", function () {
         curSlide = $(this).data("page");
@@ -310,12 +310,11 @@ $(function () {
 
     // animate body&html to top
 
-    $(".call_me").on("click",function(){
-
+    $(".call_me").on("click", function () {
         $("html , body").animate({
-            scrollTop:0
-        })
-    })
+            scrollTop: 0,
+        });
+    });
 
     // strat progress
     function activeNavQuisez(willclick) {

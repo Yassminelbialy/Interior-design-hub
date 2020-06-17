@@ -1,8 +1,7 @@
      <!-- start testimonial slider -->
     <section class="testimonial_slider  text-center">
-      <div class="custom_border">
-        <h2>Testimonial</h2>
-      </div>
+    <h2>Testimonial</h2>
+      <div class="custom_border"></div>
       <div class="owl-carousel owl-theme">
         @foreach ($reviews as $review )
         <div class="items">
@@ -11,4 +10,4 @@
         @endforeach
       </div>
     </section>
-    <!-- start testimonial slider --> 
+    <!-- start testimonial slider -->

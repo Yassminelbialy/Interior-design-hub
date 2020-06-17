@@ -1,4 +1,11 @@
+<?php
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
+  LaravelLocalization::setLocale();
+?>
+
+
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -20,13 +27,23 @@
     <link href="/admin/dist/css/styles.css" rel="stylesheet" />
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
-        @stack('locationpicker')
+    @stack('locationpicker')
 </head>
 
 <body class="sb-nav-fixed">
 
-    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.html">ADMIN CONTROLL </a><button class="btn btn-link btn-sm order-1 order-lg-0 " id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button><!-- Navbar Search-->
+    <nav id="admin_nav" class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html"> {{trans('messages.admin_controll')}} </a><button style="display: none;" class="btn btn-link btn-sm order-1 order-lg-0 " id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button><!-- Navbar Search-->
+        <ul class="languages">
+            @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+            <li <?php if  ($localeCode == LaravelLocalization::setLocale())  {echo "class=active" ;}  ?> >
+                <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                    {{ $properties['native'] }}
+
+                </a>
+            </li>
+            @endforeach
+        </ul>
         <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
             <div class="input-group">
                 <div class="input-group-append">
@@ -56,42 +73,42 @@
                         <div class="sb-sidenav-menu-heading">Core</div>
                         <a class="nav-link" href="/manager">
                             <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                            Dashboard
+                            {{trans('messages.dashboard')}}
+
                         </a>
                         <a class="nav-link" href="/manager/quizzes">
                             <div class="sb-nav-link-icon"><i class="fas fa-file-contract"></i></div>
-                            QuiZZes Requests
+
+                            {{trans('messages.quiz_requests')}}
                         </a>
                         <a class="nav-link" href="/manager/chatList">
                             <div class="sb-nav-link-icon"><i class="fas fa-file-contract"></i></div>
-                            Chat List
+                            {{trans('messages.chat_list')}}
                         </a>
                         <div class="sb-sidenav-menu-heading">Interface</div>
                         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                             <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                            CONTROLL
+                            {{trans('messages.nested_controll')}}
                             <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                         </a>
                         <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="/manager/project">Projects</a>
+                                <a class="nav-link" href="/manager/project"> {{trans('messages.projects')}} </a>
                                 {{-- <a class="nav-link" href="/manager/project">images of project</a> --}}
 
-                                <a class="nav-link" href="/manager/category">Category of projects</a>
-                                <a class="nav-link" href="/manager/sliderImage">image Of Projects Slider</a>
-                                <a class="nav-link" href="/manager/user">Users</a>
-                                <a class="nav-link" href="/manager/logo">Logos</a>
-                                <a class="nav-link" href="/manager/review">Reviews</a>
-                                <a class="nav-link" href="/manager/alexandra">Company info</a>
-                                <a class="nav-link" href="/manager/consultations">Consultations</a>
-                                <a class="nav-link" href="/manager/contacts">Contacts</a>
-                                <a class="nav-link" href="/manager/AdminOrder">Users Orders</a>
-                                <a class="nav-link" href="/manager/fbPosts">FaceBook Posts</a>
-                                <a class="nav-link" href="/manager/topics">Topics</a>
-                                <a class="nav-link" href="/manager/service">Service</a>
-                                <a class="nav-link" href="/manager/jops">Jobs</a>
-                                <a class="nav-link" href="/manager/counter/info">Number Of Clients For Companies</a>
-                                <a class="nav-link" href="/manager/company">All Company</a>
+                                <a class="nav-link" href="/manager/category">{{trans('messages.categories')}} </a>
+                                <a class="nav-link" href="/manager/user">{{trans('messages.users')}} </a>
+
+                                <a class="nav-link" href="/manager/logo">{{trans('messages.logos')}}</a>
+                                <a class="nav-link" href="/manager/review">{{trans('messages.reviews')}}</a>
+                                <a class="nav-link" href="/manager/alexandra">{{trans('messages.company_info')}}</a>
+                                <a class="nav-link" href="/manager/consultations">{{trans('messages.consultations')}}</a>
+                                <a class="nav-link" href="/manager/contacts">{{trans('messages.contacts')}}</a>
+                                <a class="nav-link" href="/manager/AdminOrder">{{trans('messages.users_order')}}</a>
+                                <a class="nav-link" href="/manager/fbPosts">{{trans('messages.facebook_posts')}}</a>
+                                <a class="nav-link" href="/manager/topics">{{trans('messages.topics')}}</a>
+                                <a class="nav-link" href="/manager/jops">{{trans('messages.jobs')}}</a>
+                                <a class="nav-link" href="/manager/company">{{trans('messages.all_companies')}}</a>
 
                                 {{-- <a class="nav-link" href="/manager/project">projects</a>
                                     <a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a></nav> --}}
@@ -100,7 +117,7 @@
                         <div class="sb-sidenav-menu-heading">Addons</div>
                         <a class="nav-link" href="/manager/analytics">
                             <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                            Charts
+                            {{trans('messages.charts')}}
                         </a>
                     </div>
                 </div>
@@ -113,11 +130,35 @@
         <div id="layoutSidenav_content">
             <main>
                 @yield('adminbase')
+
+
+<script>
+     lang = "<?php  echo LaravelLocalization::setLocale() ; ?>"
+
+    if(lang=="ar"){
+
+        $(".languages ul li").css({
+         background:"#c19e70"
+     })
+
+     $(".fixed-top, .sb-nav-fixed #layoutSidenav #layoutSidenav_nav, .sb-nav-fixed .sb-topnav ").css("right","0")
+     $(".sb-nav-fixed #layoutSidenav #layoutSidenav_content").css("padding-right","225px")
+     $("#admin_nav").css("flex-direction","row-reverse")
+
+    }
+    else{
+        $(".fixed-top, .sb-nav-fixed #layoutSidenav #layoutSidenav_nav, .sb-nav-fixed .sb-topnav ").css("left","0")
+        $(".sb-nav-fixed #layoutSidenav #layoutSidenav_content").css("padding-left","225px")
+        $(".languages ul li").addClass("active")
+    }
+</script>
             </main>
             <footer class="py-4 bg-light mt-auto">
                 <div class="container-fluid">
                     <div class="d-flex align-items-center justify-content-between small">
-                        <div class="text-muted">Copyright &copy; ITI Mansoura Branch</div>
+                        <div class="text-muted">
+                            {{trans('messages.copyright')}}
+                        </div>
                         <div>
                             <a href="#">Privacy Policy</a>
                             &middot;
