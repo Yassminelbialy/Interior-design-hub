@@ -19,6 +19,7 @@
         "laravel/ui": "^2.0",
         "laravelcollective/html": "^6.1",
         "mcamara/laravel-localization": "^1.5",
+        "propaganistas/laravel-phone": "^4.2",
         "socialiteproviders/instagram": "^3.0",
         "spatie/laravel-analytics": "^3.9",
         "webpatser/laravel-uuid": "^3.0"

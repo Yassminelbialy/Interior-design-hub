@@ -10,9 +10,9 @@
                         <img data-src="{{ asset('images/topicImages/'. $topicsData->image)}}" alt="state" class="mb-2"/>
                     </div>
                     <div class="col-md-8">
-                        <h3 class="text_info">
+                        <h2 class="text_info">
                             {{ $topicsData->title }}
-                        </h3>
+                        </h2>
                     </div>
                 </div>
                 
@@ -39,7 +39,7 @@
             </div>
         @empty
 
-            <div class="alert alert-info btn-block">
+            <div class="alert btn_info btn-block">
                 No Topics Yet ...
             </div>
         @endforelse

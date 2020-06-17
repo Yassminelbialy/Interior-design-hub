@@ -38,16 +38,17 @@ Route::middleware('manager')->prefix('manager')->name('manager.')->group(functio
     Route::resource('logo', 'Manager\LogoController');
     Route::resource('jops', 'Manager\JopController');
     Route::resource('review', 'Manager\ReviewController');
-    Route::resource('fbPosts', 'Manager\FacebookController');
-    Route::resource('consultations', 'Manager\ConsultationController');
-    Route::resource('user', 'Manager\AllUsersController');
-    Route::resource('jobTrash', 'Manager\JobTrashController');
-    Route::resource('logoTrash', 'Manager\LogoTrashController');
-    Route::resource('reviewTrash', 'Manager\ReviewTrashController');
-    Route::resource('quizzes', 'Manager\QuizController');
-    Route::resource('quizzes.images', 'Manager\QuizImageController');
-    Route::resource('analytics', 'Manager\AnalyticsController');
-    Route::resource('AdminOrder', 'Manager\OrderAdminController');
+    Route::resource('fbPosts' ,'Manager\FacebookController');
+    Route::resource('consultations' ,'Manager\ConsultationController');
+    Route::resource('user' ,'Manager\AllUsersController');
+    Route::resource('jobTrash' ,'Manager\JobTrashController');
+    Route::resource('logoTrash' ,'Manager\LogoTrashController');
+    Route::resource('reviewTrash' ,'Manager\ReviewTrashController');
+    Route::resource('service', 'Manager\ServiceController');
+    Route::resource('quizzes' , 'Manager\QuizController');
+    Route::resource('quizzes.images' , 'Manager\QuizImageController');
+    Route::resource('analytics' ,'Manager\AnalyticsController');
+    Route::resource('AdminOrder' , 'Manager\OrderAdminController');
     Route::get('users/{users}/order', 'Manager\OrderAdminController@updateOrder')->name('order');
     Route::resource('jopAppli', 'Manager\JopApplicantController');
     Route::resource('topics', 'Manager\TopicController');
@@ -68,8 +69,6 @@ Route::middleware('user')->group(function () {
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('quiz', 'Manager\QuizController');
-
-
 Route::resource('project.images', 'Manager\ProjectImageController');
 Route::post('/contact', 'Manager\ConsultationController@send');
 Route::get('/', 'UserController@index');

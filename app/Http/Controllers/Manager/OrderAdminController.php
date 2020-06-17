@@ -103,14 +103,14 @@ class OrderAdminController extends Controller
         $updatedOrder->description = $request->description;
         $updatedOrder->cost = $request->cost;
         $updatedOrder->state = $request->state;
-        if($request->hasfile('orderImg'))
+        if($request->hasfile('contractImg'))
         {
 
-            $file = $request->file('orderImg');
+            $file = $request->file('contractImg');
             $extension = $file->getClientOriginalExtension();
             $fileName = time() . '.' . $extension;
             $file->move('images/AdminOrderImages' , $fileName);
-            $updatedOrder->image = $fileName; 
+            $updatedOrder->contractImg = $fileName; 
         }
        
         $updatedOrder->save();

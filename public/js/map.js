@@ -2,7 +2,7 @@ $(function(){
 
     ymaps.ready(function () {
 var myMap = new ymaps.Map('map404', {
-        center: [31.182921241870083,29.846314975966273],
+        center: [lat?lat:31.182921241870083,lng?lng:29.846314975966273],
         zoom: 16,
         type: 'yandex#satellite'
     }, {

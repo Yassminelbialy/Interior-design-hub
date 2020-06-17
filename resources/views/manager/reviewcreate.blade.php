@@ -7,7 +7,7 @@
     <div class="contact-info">
       <div style="display:flex;     flex-direction: column;     justify-content: center;
                 border: solid gold 2px width:100%" class="images ff">
-        <h6> uploaded-images</h6>
+        <h6> uploaded Images</h6>
         <hr>
         <div class="myim">
         </div>

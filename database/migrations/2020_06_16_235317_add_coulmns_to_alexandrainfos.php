@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddCompanyFkTpProjects extends Migration
+class AddCoulmnsToAlexandrainfos extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,12 @@ class AddCompanyFkTpProjects extends Migration
      */
     public function up()
     {
-        Schema::table('projects', function (Blueprint $table) {
-            $table->unsignedBigInteger('company_id')->nullable();
-            $table->foreign('company_id')->references('id')->on('companies');
+        Schema::table('alexandrainfos', function (Blueprint $table) {
+            $table->string('lat')->nullable();
+            $table->string('lng')->nullable();
+
+
         });
-        //
     }
 
     /**
@@ -27,6 +28,8 @@ class AddCompanyFkTpProjects extends Migration
      */
     public function down()
     {
-        //
+        Schema::table('alexandrainfos', function (Blueprint $table) {
+            //
+        });
     }
 }

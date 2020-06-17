@@ -36,9 +36,20 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-    public function instagram(){
+    public function instagram()
+    {
         return $this->hasOne(Instagram::class, 'user_id', 'id');
     }
+    public function company()
+    {
+        return $this->hasOne('App\Company','id','company_id');
+    }
+
+    public function mycompany()
+    {
+        return $this->hasOne('App\Company');
+    }
+
 
 
 }

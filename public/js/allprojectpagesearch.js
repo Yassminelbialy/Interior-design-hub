@@ -16,7 +16,6 @@ $(function(){
            success:function(data)
            {
                x=JSON.parse(data);
-               console.log(x.data);
                console.log(x.data,'ssss');
                $('#alldata').html('');
                $('#before').html('');

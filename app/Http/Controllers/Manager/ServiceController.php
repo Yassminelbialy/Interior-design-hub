@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Manager;
 use App\Http\Controllers\Controller;
-
+use Uuid ;
 use App\Service;
 use Illuminate\Http\Request;
 
@@ -15,7 +15,8 @@ class ServiceController extends Controller
      */
     public function index()
     {
-
+        $services= Service::all();
+        return view('manager/serviceIndex',["services"=>$services]);
     }
 
     /**
@@ -25,7 +26,7 @@ class ServiceController extends Controller
      */
     public function create()
     {
-        //
+        return view ('manager.serviceAdd');
     }
 
     /**
@@ -36,7 +37,20 @@ class ServiceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+           $req=$request->all();
+
+        if ($files = $request->file('image'))
+        {
+            $uuid =Uuid::generate()->string;
+            $path=$uuid.".".$request->file('image')->getClientOriginalExtension();
+            $desti='images/service/';
+            $files->move($desti,$path);
+            $req['image']=$path;
+        }
+    
+            $service = Service::create($req);
+            
+            return redirect('/manager/service');
     }
 
     /**

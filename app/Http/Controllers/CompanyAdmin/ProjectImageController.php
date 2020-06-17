@@ -6,6 +6,8 @@ use App\ProjectImage;
 use App\Project;
 use Illuminate\Http\Request;
 use Uuid ;
+use Illuminate\Support\Facades\Auth;
+
 
 use App\File;
 // add this
@@ -21,10 +23,12 @@ class ProjectImageController extends Controller
      */
     public function index(Request $request,$id)
     {
-        if(session('COMPANY'))
+        $company =Auth::user()->company ;
+
+        if($company)
         {
 
-            $projectImages=session('COMPANY')->projects()->find($id)->images()->paginate(3);
+            $projectImages=$company->projects()->find($id)->images()->paginate(3);
 
             return view('CompanyAdmin.projectimages',['id'=>$id,'data'=>$projectImages]) ;
         }//getting projects for session user company
@@ -50,10 +54,12 @@ class ProjectImageController extends Controller
      */
     public function store(Request $request,$id)
     {
-        if (session('COMPANY'))
+        $company =Auth::user()->company ;
+
+        if ($company)
         {
                    // dd(Project::find($id));
-        $project=session('COMPANY')->projects()->find($id);
+        $project=$company->projects()->find($id);
         $req=$request->all();
 
         if ($files = $request->file('image'))
@@ -142,9 +148,15 @@ class ProjectImageController extends Controller
      */
     public function destroy(ProjectImage $projectImage,$id,$iid)
     {
+        $company =Auth::user()->company ;
+        $project =$company->projects()->find($id) ;
 
-        ProjectImage::find($iid)->delete();
+       if( $project->id == $id)
+       {
+       $project->images()->find($iid)->delete();
         return redirect(route('company.project.images.index',$id));
+       }
+
 
         //
     }
