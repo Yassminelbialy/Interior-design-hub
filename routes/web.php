@@ -50,10 +50,11 @@ Route::middleware('manager')->prefix('manager')->name('manager.')->group(functio
     Route::resource('analytics' ,'Manager\AnalyticsController');
     Route::resource('AdminOrder' , 'Manager\OrderAdminController');
     Route::get('users/{users}/order', 'Manager\OrderAdminController@updateOrder')->name('order');
-    Route::resource('jopAppli', 'Manager\JopApplicantController');
-    Route::resource('topics', 'Manager\TopicController');
-    Route::resource('chatList', 'Manager\ChatAdminController');
-    Route::resource('company', 'CompanyController');
+    Route::resource('jopAppli' , 'Manager\JopApplicantController');
+    Route::resource('topics' , 'Manager\TopicController');
+    Route::resource('chatList' , 'Manager\ChatAdminController');
+    Route::resource('sliderImage' , 'Manager\SliderImageController');
+    Route::resource('company' , 'CompanyController');
     Route::get('users/{users}/company', 'CompanyController@ConfirmCompany')->name('company');
 });
 }); //manager routes
