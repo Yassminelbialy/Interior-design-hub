@@ -53,6 +53,7 @@ class CompanyController extends Controller
         $company = new Company ();
         $company->companyName =$request->companyName;
         $company->location=$request->location;
+        $company->phoneNum =$request->phoneNum;
         $company->acceptConditions=$request->acceptConditions;
         $company->user_id=Auth::id();
         $company->save();
