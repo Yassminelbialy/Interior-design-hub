@@ -50,17 +50,14 @@ class ProjectController extends Controller
 
     if ($files = $request->file('mainimage'))
     {
-                    $uuid =Uuid::generate()->string;
-                    $path=$uuid.".".$request->file('mainimage')->getClientOriginalExtension();
-                    $desti='projectimages/';
-                    $files->move($desti,$path);
-                    $req['mainimage']=$path;
-                    // dd('dd');
-    }
+        $uuid =Uuid::generate()->string;
+        $path=$uuid.".".$request->file('mainimage')->getClientOriginalExtension();
+        $desti='projectimages/';
+        $files->move($desti,$path);
+        $req['mainimage']=$path;
+}
 
     $project = Project::create($req);
-        //
-        // dd($project);
         return redirect(route('manager.project.index'));
     }
 

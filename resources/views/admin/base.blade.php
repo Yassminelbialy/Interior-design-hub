@@ -88,6 +88,7 @@
                                 <a class="nav-link" href="/manager/AdminOrder">Users Orders</a>
                                 <a class="nav-link" href="/manager/fbPosts">FaceBook Posts</a>
                                 <a class="nav-link" href="/manager/topics">Topics</a>
+                                <a class="nav-link" href="/manager/service">Service</a>
                                 <a class="nav-link" href="/manager/jops">Jobs</a>
                                 <a class="nav-link" href="/manager/counter/info">Number Of Clients For Companies</a>
                                 <a class="nav-link" href="/manager/company">All Company</a>

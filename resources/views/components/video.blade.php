@@ -37,7 +37,7 @@
         </div>
         <div class="col-lg-6">
             <div class="stats">
-                <h2 class="h1">Our Main Statistics</h2>
+                <h1 class="h1">Our Main Statistics</h1>
 
                 <p>
                     {{$ceo->hint}}
@@ -50,4 +50,8 @@
 
         </div>
     </div>
+    <script>
+            lat={{$ceoInfo[0]->lat}}
+            lng={{$ceoInfo[0]->lng}}
+    </script>
 </section>

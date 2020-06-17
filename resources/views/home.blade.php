@@ -26,10 +26,7 @@
     </div>
 @endif
 
-<script>
-    xxx=90
-    console.log(xxx)
-</script>
+
 
 
 @component('components.loading')
@@ -93,6 +90,10 @@
 
 @component('components.contact',['contact' => $contact,'ceoInfo' => $ceoInfo])
 @endcomponent
+
+{{-- @component('components.matterport')
+
+@endcomponent --}}
 
 @component('components.map')
 
