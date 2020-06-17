@@ -26,17 +26,6 @@
         <div class="menu text-center d-flex justify-content-around">
             <a class="navbar-brand" href="#"><img data-src="/images/company_logo.PNG" alt="logo image"> </a>
 
-            <div class="color_container">
-                <h2>Change Theme</h2>
-                <ul class="list-unstyled">
-                    <li data-value="orange"></li>
-                    <li data-value="#4cd137"></li>
-                    <li data-value="#a55eea"></li>
-                    <li data-value="#2bcbba"></li>
-                    <li data-value="#c19e70"></li>
-                </ul>
-            </div>
-
             <a href="#" class="nav-toggle closed" data-cube="close-switch">
                 <span>+</span>
             </a>
@@ -60,9 +49,9 @@
         <h1>
           <span class="text-info">ProjectTitle: </span>{{$project->title}}
         </h1>
-        <h1>
+        <h2>
           <span class="text-info">ProjectHint: </span>{{$project->hint}}
-        </h1>
+        </h2>
         <p class="text-light lead"> <strong class="text-info">Description: </strong>{{$project->description}}</p>
         <a class=" mb-1 text-info" style="text-decoration:underline" href="#">{{$project->company->companyName}}</a>
 
@@ -80,10 +69,6 @@
           <div class="card-header" style="width:100%;padding:10px">
             <img data-src="/projectimages/{{$relProject->image}}" alt="project" class="card-img-top" style="height:300px">
           </div>
-          <div class="card-body">
-            <h3 class="card-title text-light"><strong class="text-info">ProjectKewWords: </strong>{{$relProject->keyWords}}</h3>
-
-          </div>
           <div class="card-footer">
             <p class="card-text text-light"><strong class="text-info">Description: </strong>{{substr($relProject->description,0,30)."... "}}</p>
             <button class="btn btn-info" data-toggle="modal" data-target="#modalLoginForm{{$relProject->id}}">View More</button>
@@ -97,7 +82,6 @@
                   </div>
                   <img class="card-img-top" data-src="/projectimages/{{$relProject->image}}" alt="project" style="height:350px">
                   <div class="projectDetails mt-5">
-                    <h3 class="card-title text-light"><strong class="text-info">ProjectKewWords: </strong>{{$relProject->keyWords}}</h3>
                     <p class="card-text text-light"><strong class="text-info">Description: </strong>{{$relProject->description}}</p>
 
                   </div>

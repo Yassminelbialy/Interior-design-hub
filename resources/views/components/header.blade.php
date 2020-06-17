@@ -40,17 +40,6 @@
                 <a href="{{$cont->wLink}}" ><i class="fa fa-vk ml-2"></i></a>               
             </div>
             @endforeach
-            <!--
-            <div class="color_container">
-                <h2>Change Theme</h2>
-                <ul class="list-unstyled">
-                    <li data-value="orange"></li>
-                    <li data-value="#4cd137"></li>
-                    <li data-value="#a55eea"></li>
-                    <li data-value="#2bcbba"></li>
-                    <li data-value="#c19e70"></li>
-                </ul>
-            </div> -->
             <a class="btn btn-success login" href="{{ route('login') }}">login</a>
 
             <a href="#" class="nav-toggle closed" data-cube="close-switch">
@@ -81,7 +70,7 @@
                     <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
                 </svg>
                 <div class="slide__text">
-                    <h2 class="slide__text-heading">{{ $slide_imgg->title }}</h2>
+                    <h1 class="slide__text-heading">{{ $slide_imgg->title }}</h1>
                     <p class="slide__text-desc">{{ $slide_imgg->description  }}</p>
                     <a class="slide__text-link" href="{{ url('view/'.$slide_imgg->project_id)}}">Project link</a>
                 </div>
@@ -95,45 +84,6 @@
          
          </div>
     @endforelse
-        <!-- <div class="slide slide-1 ">
-            <div class="slide__bg"></div>
-            <div class="slide__content">
-                <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
-                    <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
-                </svg>
-                <div class="slide__text">
-                    <h2 class="slide__text-heading">Project name 2</h2>
-                    <p class="slide__text-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia.</p>
-                    <a class="slide__text-link">Project link</a>
-                </div>
-            </div>
-        </div>
-        <div class="slide slide-2">
-            <div class="slide__bg"></div>
-            <div class="slide__content">
-                <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
-                    <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
-                </svg>
-                <div class="slide__text">
-                    <h2 class="slide__text-heading">Project name 3</h2>
-                    <p class="slide__text-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia.</p>
-                    <a class="slide__text-link">Project link</a>
-                </div>
-            </div>
-        </div>
-        <div class="slide slide-3">
-            <div class="slide__bg"></div>
-            <div class="slide__content">
-                <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
-                    <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
-                </svg>
-                <div class="slide__text">
-                    <h2 class="slide__text-heading">Project name 4</h2>
-                    <p class="slide__text-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia.</p>
-                    <a class="slide__text-link">Project link</a>
-                </div>
-            </div>
-        </div> -->
     </div>
 
 

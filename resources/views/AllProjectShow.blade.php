@@ -63,9 +63,9 @@
                         </div>
                         <div class="face face2">
                             <div class="content">
-                                <h2>
+                                <h3>
                                 {{$project->title}}
-                                </h2>
+                                </h3>
                                 <p>
                                 {{$project->hint}}
                                 </p>
@@ -78,7 +78,7 @@
 
                 @empty
                 <div class="alert alert-info text-center" style="margin:0 auto;width:50%">
-                    <h1>No Projects Yet</h1>
+                    <h2>No Projects Yet</h2>
                 </div>
                 @endforelse
             </div>

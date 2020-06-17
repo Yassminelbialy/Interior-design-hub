@@ -1,13 +1,13 @@
 
  <section class="projects_container text-center">
-     <h2> Last Projects</h2>
+     <h1> Last Projects</h1>
      <div class="container-fluid">
          <div class="row">
              @forelse($projects as $project)
              <div class="col-md-6">
                  <div class="project_card">
                      <div class="face face1">
-                         <img src="/projectimages/{{$project->mainImage}}" alt="" />
+                         <img src="/projectimages/{{$project->mainImage}}" alt="mainImage" />
                      </div>
                      <div class="face face2">
                          <div class="content">
@@ -32,7 +32,7 @@
              <div class="col-md-6">
                  <div class="project_card">
                      <div class="face face1">
-                         <img src="./images/pictures_projects/2.jpeg" alt="" />
+                         <img src="./images/pictures_projects/2.jpeg" alt="mainImage" />
                      </div>
                      <div class="face face2">
                          <div class="content">
@@ -55,7 +55,7 @@
              <div class="col-md-6">
                  <div class="project_card">
                      <div class="face face1">
-                         <img src="/images/pictures_projects/3.jpeg" alt="" />
+                         <img src="/images/pictures_projects/3.jpeg" alt="mainImage" />
                      </div>
                      <div class="face face2">
                          <div class="content">
@@ -78,7 +78,7 @@
              <div class="col-md-6">
                  <div class="project_card">
                      <div class="face face1">
-                         <img src="/images/pictures_projects/4.jpeg" alt="" />
+                         <img src="/images/pictures_projects/4.jpeg" alt="mainImage" />
                      </div>
                      <div class="face face2">
                          <div class="content">
@@ -101,7 +101,7 @@
              <div class="col-md-6">
                  <div class="project_card">
                      <div class="face face1">
-                         <img src="/images/pictures_projects/5.jpeg" alt="" />
+                         <img src="/images/pictures_projects/5.jpeg" alt="mainImage" />
                      </div>
                      <div class="face face2">
                          <div class="content">
@@ -124,7 +124,7 @@
              <div class="col-md-6">
                  <div class="project_card">
                      <div class="face face1">
-                         <img src="/images/pictures_projects/1.jpeg" alt="" />
+                         <img src="/images/pictures_projects/1.jpeg" alt="mainImage" />
                      </div>
                      <div class="face face2">
                          <div class="content">
