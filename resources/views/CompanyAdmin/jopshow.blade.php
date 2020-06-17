@@ -22,28 +22,28 @@
         </thead>
         <tbody>
             @foreach ($applicants as $applicant)
-            <tr>
-            <th scope="row">{{$applicant->id}}</th>
-              <td>{{$applicant->fullName}}</td>
-              <td>{{$applicant->email}}</td>
-              <td>{{$applicant->age}}</td>
-              <td>
-                   <embed src="/cvs/{{$applicant->cv}}" style="width:50px; height:50px;" frameborder="0">
-                   
-                </td>
-                </td>
-              <td>{{$applicant->urlProtofolio}}</td>
-              <td>{{$applicant->phone}}</td>
+            <tr>              
+                <th scope="row">{{$applicant->id}}</th>
+                <td>{{$applicant->fullName}}</td>
+                <td>{{$applicant->email}}</td>
+                <td>{{$applicant->age}}</td>
+                <td>
+                    <embed src="/cvs/{{$applicant->cv}}" style="width:50px; height:50px;" frameborder="0">
+                    
+                  </td>
+                  </td>
+                <td>{{$applicant->urlProtofolio}}</td>
+                <td>{{$applicant->phone}}</td>
 
-              <td>
-                <a href="{{route('company.jopAppli.show',$applicant->id)}}"> 
-                  <i class="fas fa-binoculars fa-2x" style="color: green"></i>
-                </a>
+                <td>
+                  <a href="{{route('company.jopAppli.show',$applicant->id)}}"> 
+                    <i class="fas fa-binoculars fa-2x" style="color: green"></i>
+                  </a>
 
-              </td>
+                </td>
               
               
-      </tr>
+            </tr>
       @endforeach
            
    

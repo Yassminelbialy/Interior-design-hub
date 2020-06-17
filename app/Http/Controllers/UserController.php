@@ -31,10 +31,6 @@ class UserController extends Controller
         $slider_image_project = DB::table('projects')
         ->join('sliderimages','projects.id' ,'sliderimages.project_id')
         ->get();
-
-
-
-
         return view('home',['projects'=>$projects,'ceoInfo'=>$ceoInfo,'contact'=>$contact,'logos'=>$logos,'reviews'=>$reviews , 'topics'=>$topics ,'slider_projcts'=>$slider_image_project]);
     }
     public function view($id){
