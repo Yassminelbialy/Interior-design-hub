@@ -517,13 +517,18 @@ i {
     font-size: 30px;
     color: #aa8f63;
 }
-<<<<<<< HEAD
+
+/* start style dashboard */
+.languages li {
+    display: inline-block;
+}
+
+
 
 .modal-backdrop.show
 {
     display: none;
 }
-=======
 .all_project{
     padding: 10px 100px;
     background-color: var(--secondColor);
@@ -535,4 +540,6 @@ i {
     margin: 0;
     padding: 0;
 }
->>>>>>> c322947eddd200912d747075a5e3e9c64fb0e2b7
+
+
+

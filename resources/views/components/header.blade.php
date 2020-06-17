@@ -85,7 +85,7 @@
 
     <ul class="slider-pagi"></ul>
     <div class="slider">
-        <div class="slide slide-0 active">
+        <div  class="slide slide-0 active">
             <div class="slide__bg"></div>
             <div class="slide__content">
                 <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">

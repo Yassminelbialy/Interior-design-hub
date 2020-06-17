@@ -1,8 +1,7 @@
     <!-- start clients -->
     <section class="clients text-center">
-      <div class="custom_border">
-        <h2>Our Clients</h2>
-      </div>
+    <h2>Our Clients</h2>
+      <div class="custom_border"></div>
 
       <div class="container">
         <div class="row">
