@@ -27,7 +27,7 @@ class UserController extends Controller
         $logos= Logo::all();
         $reviews= Review::all();
         $topics = Topic::limit(6)->get();
-dd($ceoInfo);
+// dd($ceoInfo);
         $slider_image_project = DB::table('projects')
         ->join('sliderimages','projects.id' ,'sliderimages.project_id')
         ->get();
