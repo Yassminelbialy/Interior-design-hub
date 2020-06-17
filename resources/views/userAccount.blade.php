@@ -4,7 +4,7 @@
 
 
 
-<a href="{{ route('logout') }}" class="btn btn-danger" style="color:white !important;margin:10px;padding:10px;font-size:20px;float:right;border-radius:10px" onclick="event.preventDefault();
+<a href="{{ route('logout') }}" class="btn btn-danger" rel="nofollow" style="color:white !important;margin:10px;padding:10px;font-size:20px;float:right;border-radius:10px" onclick="event.preventDefault();
                 document.getElementById('logout-form').submit();">Logout</a>
 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
     @csrf
@@ -26,7 +26,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header text-center">
-                <h4 class="modal-title w-100 font-weight-bold">Confirm</h4>
+                <h1 class="modal-title w-100 font-weight-bold">Confirm</h1>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
                 </button>
@@ -98,7 +98,7 @@
                                         <div class="media-body " style="margin:10px">
                                             <h5 class="bold">Description: {{ $order->description }}</h5>
                                             <p class="text-muted">Cost: {{ $order->cost }}$</p>
-                                        </div><img class="align-self-center img-fluid" src="/images/AdminOrderImages/{{$order->contractImg}}" width="180 " height="180">
+                                        </div><img class="align-self-center img-fluid" src="/images/AdminOrderImages/{{$order->contractImg}}" alt="contractImage" width="180 " height="180">
                                     </div>
                                 </div>
                                 <div class="row px-3">
@@ -144,7 +144,7 @@
                     </div>
 
                     @else
-                    <h4 style="color:0000FF;font-weight: bold;"> You Didn't Apply the Quiz , apply <a href="/"> Now </a></h4>
+                    <h3 style="color:0000FF;font-weight: bold;"> You Didn't Apply the Quiz , apply <a href="/"> Now </a></h3>
                     @endif
                     <div class="tab-pane fade" id="tab2default">Default 2</div>
 
@@ -173,13 +173,13 @@
                 <div id="frame">
                     <div class="content">
                         <div class="contact-profile">
-                            <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
+                            <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="chat" />
                             <p>Admin</p>
                         </div>
                         <div class="messages">
                             <ul>
                                 <li class="replies">
-                                    <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
+                                    <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="chat" />
                                     <p>Hello, Iam the admin .. You can talk to me ; i will reply soon</p>
                                 </li>
                                 @forelse ($chatData as $item)
@@ -188,13 +188,13 @@
                                     <img src="/chatfiles/{{$item->img}}" alt="" />
 
                                     <p style="font-size:22; ">
-                                        <img src="/chatfiles/{{$item->img}}" style="width: 200px;height:200px;" alt="" srcset="">
+                                        <img src="/chatfiles/{{$item->img}}" style="width: 200px;height:200px;" alt="chat" srcset="">
                                         <br>
                                         {{$item->body}}</br>
                                 </li>
                                 @else
                                 <li class="sent">
-                                    <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
+                                    <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="chat" />
                                     <p>{{$item->body}}</p>
                                 </li>
                                 @endif

@@ -18,6 +18,11 @@ class Project extends Model
     {
         return $this->hasOne('App\Category','id','category_id');
     }
+
+    public function company()
+    {
+        return $this->hasOne('App\Company','id','company_id');
+    }
     protected $guarded = [];
 
 }
