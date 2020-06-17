@@ -60,10 +60,12 @@
         <h1>
           <span class="text-info">ProjectTitle: </span>{{$project->title}}
         </h1>
-        <h2>
+        <h1>
           <span class="text-info">ProjectHint: </span>{{$project->hint}}
-        </h2>
+        </h1>
         <p class="text-light lead"> <strong class="text-info">Description: </strong>{{$project->description}}</p>
+        <a class=" mb-1 text-info" style="text-decoration:underline" href="#">{{$project->company->companyName}}</a>
+
       </div>
     </div>
   </div>
