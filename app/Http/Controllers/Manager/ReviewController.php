@@ -49,8 +49,7 @@ class ReviewController extends Controller
 }
 
     $review = Review::create($req);
-        //
-        // dd($project);
+        
         return redirect('/manager/review');
     }
 
