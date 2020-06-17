@@ -91,6 +91,10 @@
 @component('components.contact',['contact' => $contact,'ceoInfo' => $ceoInfo])
 @endcomponent
 
+{{-- @component('components.matterport')
+
+@endcomponent --}}
+
 @component('components.map')
 
 @endcomponent

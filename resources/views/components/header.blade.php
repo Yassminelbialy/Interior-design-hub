@@ -27,7 +27,7 @@
             <a class="navbar-brand" href="#"><img data-src="/images/company_logo.PNG" alt="logo image"> </a>
       @foreach ($contact as $cont )
             <div class="contact_us">
-                
+
                 <i class="fas ml-3 fa-mobile-alt"></i>
                 <span class="ml-2">{{$cont->phoneNo}}</span>
                 <i class="far ml-3 fa-envelope"></i>
@@ -37,7 +37,7 @@
                 <a href="{{$cont->instaLink}}"><i class="fab fa-instagram ml-2"></i></a>
                 <a href="{{$cont->facebookLink}}"><i class="fab fa-facebook-f ml-2"></i></a>
                 <a href="{{$cont->pinterestLink}}"><i class="fab fa-pinterest ml-2"></i></a>
-                <a href="{{$cont->wLink}}" ><i class="fa fa-vk ml-2"></i></a>               
+                <a href="{{$cont->wLink}}" ><i class="fa fa-vk ml-2"></i></a>
             </div>
             @endforeach
             <a class="btn btn-success login" href="{{ route('login') }}">login</a>
@@ -60,19 +60,11 @@
     <div class="slider">
 
 
-<<<<<<< HEAD
-    @foreach([] as $slide_imgg)
-        <div  class="slide slide-0 active">
-
-
-            <div style="background:url({{ asset('images/projectsSlider/'. $slide_imgg->img)}})" class="slide__bg"></div>
-=======
     @forelse($slide_img as $slide_imgg)
         <div  class="slide slide-0 active">
-           
-           
+
+
             <div style="background:url({{ asset('images/projectsSlider/'. $slide_imgg->img)}}); no-repeat  " class="slide__bg"></div>
->>>>>>> 0c2bcf6038a1eb3bbe88a1987e2e809a3e8d1103
             <div class="slide__content">
                 <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
                     <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
@@ -87,9 +79,9 @@
     @empty
 
         <div class='alert btn_info'>
-                
-                <p class="text-center" style="margin-top:200px">No Projects</p> 
-         
+
+                <p class="text-center" style="margin-top:200px">No Projects</p>
+
          </div>
     @endforelse
     </div>
