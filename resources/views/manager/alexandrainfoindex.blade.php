@@ -8,12 +8,12 @@
 
             <tr>
                 <th scope="col" class="text-light h6" style="font-weight:700">#</th>
-                <th scope="col" class="text-light h6" style="font-weight:700">image</th>
-                <th scope="col" class="text-light h6" style="font-weight:700">Name</th>
-                <th scope="col" class="text-light h6" style="font-weight:700">Hint</th>
-                <th scope="col" class="text-light h6" style="font-weight:700">Statement</th>
-                <th scope="col" class="text-light h6" style="font-weight:700">video</th>
-                <th scope="col" class="text-light h6" style="font-weight:700">Action</th>
+                <th scope="col" class="text-light h6" style="font-weight:700">{{trans('messages.manager_project_index_image')}}</th>
+                <th scope="col" class="text-light h6" style="font-weight:700">{{trans('messages.manager_project_index_name')}}</th>
+                <th scope="col" class="text-light h6" style="font-weight:700">{{trans('messages.manager_project_index_hint')}}</th>
+                <th scope="col" class="text-light h6" style="font-weight:700">{{trans('messages.manager_project_index_statement')}}</th>
+                <th scope="col" class="text-light h6" style="font-weight:700">{{trans('messages.manager_project_index_video')}}</th>
+                <th scope="col" class="text-light h6" style="font-weight:700">{{trans('messages.manager_project_index_action')}}</th>
 
             </tr>
         </thead>
@@ -26,7 +26,7 @@
                 <td>{{$ceo->hint}}</td>
                 <td style="width: 30%" class="justify-content: center;">{{$ceo->statement}}</td>
                 <td>
-                    <div class="stats_video">                    
+                    <div class="stats_video">
                         <div class="wrapper">
                             <div class="icon-wrapper">
                                 <div class="icon">

@@ -4,10 +4,10 @@
   <thead>
     <tr>
       <th scope="col" class="text-light h6" style="font-weight:700">#</th>
-      <th scope="col" class="text-light h6" style="font-weight:700">Name </th>
-      <th scope="col" class="text-light h6" style="font-weight:700">Phone</th>
-      <th scope="col" class="text-light h6" style="font-weight:700">Comment</th>
-      <th scope="col" class="text-light h6" style="font-weight:700"> Time to call </th>
+      <th scope="col" class="text-light h6" style="font-weight:700">{{trans('messages.manager_project_index_name')}} </th>
+      <th scope="col" class="text-light h6" style="font-weight:700">{{trans('messages.manager_user_index_phone')}}</th>
+      <th scope="col" class="text-light h6" style="font-weight:700">{{trans('messages.manager_project_index_comment')}}</th>
+      <th scope="col" class="text-light h6" style="font-weight:700"> {{trans('messages.manager_project_index_timetocall')}} </th>
     </tr>
     @foreach( $data as $instance )
     <tr>

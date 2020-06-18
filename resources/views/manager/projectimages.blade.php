@@ -10,10 +10,10 @@
       </tr>
       <tr>
         <th scope="col" class="text-light h6" style="font-weight:700">#</th>
-        <th scope="col" class="text-light h6" style="font-weight:700">image </th>
-        <th scope="col" class="text-light h6" style="font-weight:700">description</th>
-        <th scope="col" class="text-light h6" style="font-weight:700">keywords</th>
-        <th scope="col" class="text-warning h6" style="font-weight:700">actions</th>
+        <th scope="col" class="text-light h6" style="font-weight:700">{{trans('messages.manager_project_index_image')}} </th>
+        <th scope="col" class="text-light h6" style="font-weight:700">{{trans('messages.manager_project_images_description')}}</th>
+        <th scope="col" class="text-light h6" style="font-weight:700">{{trans('messages.manager_project_images_keywords')}}</th>
+        <th scope="col" class="text-warning h6" style="font-weight:700">{{trans('messages.manager_project_index_action')}}</th>
       </tr>
     </thead>
     <tbody>

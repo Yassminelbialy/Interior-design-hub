@@ -10,8 +10,8 @@
       </tr>
       <tr>
         <th scope="col" class="text-light h3">#</th>
-        <th scope="col" class="text-light h3">image</th>
-        <th scope="col" class="text-light h3" colspan="2">Actions</th>
+        <th scope="col" class="text-light h3">{{trans('messages.manager_project_index_image')}}</th>
+        <th scope="col" class="text-light h3" colspan="2">{{trans('messages.manager_project_index_action')}}</th>
 
       </tr>
     </thead>

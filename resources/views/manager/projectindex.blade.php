@@ -73,16 +73,16 @@
             </tr>
             <tr>
                 <th scope="col" class="text-light h6" style="font-weight:700">#</th>
-                <th scope="col" class="text-light h6" style="font-weight:700">image</th>
-                <th scope="col" class="text-light h6" style="font-weight:700">title</th>
-                <th scope="col" class="text-light h6" style="font-weight:700">category</th>
-                <th scope="col" class="text-light h6" style="font-weight:700">hint</th>
-                <th scope="col" class="text-danger h6" style="font-weight:700">actions</th>
+                <th scope="col" class="text-light h6" style="font-weight:700">{{trans('messages.manager_project_index_image')}}</th>
+                <th scope="col" class="text-light h6" style="font-weight:700">{{trans('messages.manager_project_index_title')}}</th>
+                <th scope="col" class="text-light h6" style="font-weight:700">{{trans('messages.manager_project_index_category')}}</th>
+                <th scope="col" class="text-light h6" style="font-weight:700">{{trans('messages.manager_project_index_hint')}}</th>
+                <th scope="col" class="text-danger h6" style="font-weight:700">{{trans('messages.manager_project_index_action')}}</th>
 
             </tr>
         </thead>
         <tbody>
-            @forelse ($data as $item) 
+            @forelse ($data as $item)
             <tr>
                 <th scope="row">{{$item->id}}</th>
                 <td><img src="/projectimages/{{$item->mainImage}}" style="display: inline-block; height: 100px ; width:100px ; background-color:red;"></img></td>

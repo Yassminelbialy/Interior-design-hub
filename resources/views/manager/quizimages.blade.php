@@ -76,9 +76,9 @@
             </tr>
             <tr>
                 <th scope="col" class="text-light h6" style="font-weight:700">#</th>
-                <th scope="col" class="text-light h6" style="font-weight:700">Image</th>
+                <th scope="col" class="text-light h6" style="font-weight:700">{{trans('messages.manager_project_index_image')}}</th>
 
-                <th scope="col" class="text-light h6" style="font-weight:700">Actions</th>
+                <th scope="col" class="text-light h6" style="font-weight:700">{{trans('messages.manager_project_index_action')}}</th>
             </tr>
         </thead>
         <tbody>

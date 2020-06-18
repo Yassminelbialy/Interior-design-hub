@@ -6,10 +6,10 @@
   <thead>
     <tr>
       <th scope="col" class="text-light h6" style="font-weight:700">#</th>
-      <th scope="col" class="text-light h6" style="font-weight:700">Name </th>
-      <th scope="col" class="text-light h6" style="font-weight:700">Phone</th>
-      <th scope="col" class="text-light h6" style="font-weight:700">Email</th>
-      <th scope="col" class="text-light h6" style="font-weight:700">State</th>
+      <th scope="col" class="text-light h6" style="font-weight:700">{{trans('messages.manager_user_index_name')}} </th>
+      <th scope="col" class="text-light h6" style="font-weight:700">{{trans('messages.manager_user_index_phone')}}</th>
+      <th scope="col" class="text-light h6" style="font-weight:700">{{trans('messages.manager_user_index_email')}}</th>
+      <th scope="col" class="text-light h6" style="font-weight:700">{{trans('messages.manager_user_index_state')}}</th>
     </tr>
     @foreach( $data as $instance )
     @if($instance->adminRole != 1 && $instance->adminRole != 2)
