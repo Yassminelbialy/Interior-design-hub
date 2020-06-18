@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\SendQuizMail;
 use Uuid;
+use App\Company ;
 
 class QuizController extends Controller
 {
@@ -43,8 +44,12 @@ class QuizController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function store(Request $request)
+    public function store(Request $request,$id=null)
     {
+
+        $company =Company::find($id);
+
+
 
            $quiz =  new Quiz ;
 
@@ -65,7 +70,7 @@ class QuizController extends Controller
            $quiz->styles =implode(" \n ", $request->styles);
            $quiz->design = $request->design ;
 
-
+            $quiz->company_id = $id ;
                 $response1='';
               if ($files = $request->file('file'))
               {
@@ -85,7 +90,7 @@ class QuizController extends Controller
             //   Mail::to('yassminelbialy@gmail.com')
             //   ->send(new SendQuizMail ($quiz));
 
-         return response()->json( ['mydata'=> $request->all(),'myresponse'=> $response,'opject'=>$quiz,'images'=>$quiz->images] );
+         return response()->json( ['mydata'=> $request->all(),'myresponse'=> $response,'opject'=>$quiz,'images'=>$id] );
 
         }
 

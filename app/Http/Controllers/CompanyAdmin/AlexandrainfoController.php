@@ -49,21 +49,23 @@ class AlexandrainfoController extends Controller
     public function store(Request $request)
     {
         // dd($request);
-      $z=  Auth::user()->company->info()->create($request->all());
-      if ($files = $request->file('image')) {
+      if ($files = $request->file('cimage')) {
         $destinationPath = 'images/';
         $Image = $files->getClientOriginalName();
         $files->move($destinationPath, $Image);
-        $z->image=$Image;
+        $request['image'] =$Image;
     }
 
 
-    if ($files = $request->file('video')) {
+    if ($files = $request->file('cvideo')) {
         $destinationPath = 'videos/';
         $Video = $files->getClientOriginalName();
         $files->move($destinationPath, $Video);
-        $z->video=$Video;
+        $request['video']=$Video;
     }
+    // dd($request->all());
+    $z=  Auth::user()->company->info()->create($request->except(['cimage', 'cvideo']));
+
         return redirect(route('company.alexandra.index'));
     }
 

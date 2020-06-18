@@ -82,7 +82,7 @@ $(function() {
         <br>
         <div class="custom-file form-control " style="width: 50%">
           <br>
-          {!! Form::file('image', ['class'=>'custom-file-input form-control','id'=>"validatedCustomFile1"]) !!}
+          {!! Form::file('cimage', ['class'=>'custom-file-input form-control','id'=>"validatedCustomFile1"]) !!}
           <label class="custom-file-label" for="validatedCustomFile1">Choose file...</label>
 
         </div>
@@ -93,7 +93,7 @@ $(function() {
         <br>
         <div class="custom-file form-control " style="width: 50%">
           <br>
-          {!! Form::file('video', ['class'=>'custom-file-input form-control','id'=>"validatedCustomFile"]) !!}
+          {!! Form::file('cvideo', ['class'=>'custom-file-input form-control','id'=>"validatedCustomFile"]) !!}
           <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
 
         </div>

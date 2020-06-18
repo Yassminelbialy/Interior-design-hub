@@ -74,7 +74,7 @@
                 <div class="tab-content" id="pills-tabContent">
                   <div class="tab-pane quiz1  tab_select fade show active" id="pills-quiz1" role="tabpanel" aria-labelledby="pills-quiz1-tab">
                     <form action="">
-                      <h2 class="mb-4">Which Design You Enjoy ? ?</h2>
+                      <h2 class="mb-4">Which Design You Enjoy ?</h2>
                       <div class="container">
                         <div class="row">
                           <div class="col-md-4 col-sm-6">
@@ -349,28 +349,31 @@
 
                             <div class="border choose_multi mt-3">
                               <label class="checkbox_container">
-                                <input type="radio" class="q5 " value="1">
+                                <input type="radio" class="q5 " value="1" name="check_quiz5">
                                 <span class="checkmark "></span>
                               </label>
                               <p> Yes My Requesr is Very Urgent </p>
                             </div>
+
+
+
                             <div class="border choose_multi mt-3">
                               <label class="checkbox_container">
-                                <input type="radio" class="q5 " value="2">
+                                <input type="radio" class="q5 "name="check_quiz5" value="2">
                                 <span class="checkmark"></span>
                               </label>
                               <p> Yes My Requesr is Slightly Urgent</p>
                             </div>
                             <div class="border choose_multi mt-3">
                               <label class="checkbox_container">
-                                <input type="radio" class="q5 " value="3">
+                                <input type="radio" class="q5 " name="check_quiz5"  value="3">
                                 <span class="checkmark"></span>
                               </label>
                               <p> Not Mattar . </p>
                             </div>
                             <div class="border choose_multi mt-3">
                               <label class="checkbox_container">
-                                <input type="radio" class="q5 " value="4">
+                                <input type="radio" class="q5 " name="check_quiz5" value="4">
                                 <span class="checkmark"></span>
                               </label>
                               <p> No My Requesr is Not Important Instant. </p>
@@ -402,7 +405,7 @@
                                   <div class="calls_container">
                                     <span>Viber</span><img class="viber_image" src="images/viber.png" alt="">
                                     <label class="checkbox_container">
-                                      <input type="radio" class="q6" value="viber" name="viber">
+                                      <input type="radio" class="q6" value="viber" name="methodcall">
                                       <span class="checkmark"></span>
                                     </label>
                                   </div>
@@ -411,7 +414,7 @@
                                   <div class="calls_container">
                                     <span>Telegram</span><i class="fab fa-telegram-plane"></i>
                                     <label class="checkbox_container">
-                                      <input type="radio" class="q6" value="telegram" name="telegram">
+                                      <input type="radio" class="q6" value="telegram" name="methodcall">
                                       <span class="checkmark"></span>
                                     </label>
                                   </div>
@@ -420,7 +423,7 @@
                                   <div class="calls_container">
                                     <span>Whatsapp</span><img class="viber_image" src="images/whatsapp1.png" alt="">
                                     <label class="checkbox_container">
-                                      <input type="radio" class="q6" value="whatsapp" name="whatsapp">
+                                      <input type="radio" class="q6" value="whatsapp" name="methodcall">
                                       <span class="checkmark"></span>
                                     </label>
                                   </div>
@@ -429,7 +432,7 @@
                                   <div class="calls_container">
                                     <span>Normal</span><img class="viber_image" src="images/viber.png" alt="">
                                     <label class="checkbox_container">
-                                      <input type="radio" class="q6" value="normal" name="normal">
+                                      <input type="radio" class="q6" value="normal" name="methodcall">
                                       <span class="checkmark"></span>
                                     </label>
                                   </div>

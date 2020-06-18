@@ -71,14 +71,14 @@ Route::middleware('user')->group(function () {
 });
 
 Route::get('/home', 'HomeController@index')->name('home');
-<<<<<<< HEAD
 // Route::resource('quiz/{id?}', 'Manager\QuizController')->name('quiz');
-=======
->>>>>>> a53965f3d9158e56f7fb7fa30704ab20c391b0f0
-Route::resource('quiz', 'Manager\QuizController');
+Route::resource('quiz', 'Manager\QuizController')->except(['store']);
+Route::post('quiz/{id?}', 'Manager\QuizController@store');
 Route::resource('project.images', 'Manager\ProjectImageController');
 Route::post('/contact', 'Manager\ConsultationController@send');
 Route::get('/', 'UserController@index');
+Route::get('/{id?}', 'UserController@indexCompany');
+
 Route::get('/allproject/{category?}', 'UserController@allprojects')->where('category', '[A-Za-z1-9]+')->name('listAllProjects');
 Route::get('/allprojectcustomsearch', 'UserController@customsearch');
 

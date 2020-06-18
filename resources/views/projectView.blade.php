@@ -53,7 +53,10 @@
           <span class="text-info">ProjectHint: </span>{{$project->hint}}
         </h2>
         <p class="text-light lead"> <strong class="text-info">Description: </strong>{{$project->description}}</p>
-        <a class=" mb-1 text-info" style="text-decoration:underline" rel="nofollow" href="#">{{$project->company->companyName}}</a>
+
+        @isset($project->company->companyName)
+              <a class=" mb-1 text-info" style="text-decoration:underline" rel="nofollow" href="/{{$project->company->id}}">{{$project->company->companyName}}</a>
+        @endisset
 
       </div>
     </div>

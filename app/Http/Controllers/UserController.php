@@ -33,6 +33,24 @@ class UserController extends Controller
         ->get();
         return view('home',['projects'=>$projects,'ceoInfo'=>$ceoInfo,'contact'=>$contact,'logos'=>$logos,'reviews'=>$reviews , 'topics'=>$topics ,'slider_projcts'=>$slider_image_project]);
     }
+    public function indexCompany($id)
+    {
+        // dd($id);
+        $company =  Company::find($id)   ;
+        $projects = $company->projects()->limit(2)->get();
+        $ceoInfo= $company->info()->get();
+        // dd($company,$ceoInfo);
+        $contact= Contact::limit(1)->get();
+        // $logos= Logo::all();
+        $reviews= $company->reviews;
+
+        $topics = Topic::limit(6)->get();
+// dd($ceoInfo);
+        $slider_image_project = DB::table('projects')
+        ->join('sliderimages','projects.id' ,'sliderimages.project_id')
+        ->get();
+        return view('homeCompany',['projects'=>$projects,'ceoInfo'=>$ceoInfo,'reviews'=>$reviews ,'contact'=>$contact, 'slider_projcts'=>$slider_image_project,'company'=>$id]);
+    }
     public function view($id){
         $project = Project::find($id);
         $relProjects=ProjectImage::where('project_id','=',$id)->get();
