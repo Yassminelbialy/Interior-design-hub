@@ -23,7 +23,6 @@ class CreateJopsTable extends Migration
 
 
             $table->softDeletes();
-
             $table->timestamps();
         });
     }

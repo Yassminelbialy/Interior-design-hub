@@ -46,6 +46,7 @@ Route::middleware('manager')->prefix('manager')->name('manager.')->group(functio
     Route::resource('logoTrash' ,'Manager\LogoTrashController');
     Route::resource('reviewTrash' ,'Manager\ReviewTrashController');
     Route::resource('service', 'Manager\ServiceController');
+    Route::resource('serviceTrash' ,'Manager\ServiceTrashController');
     Route::resource('quizzes' , 'Manager\QuizController');
     Route::resource('quizzes.images' , 'Manager\QuizImageController');
     Route::resource('analytics' ,'Manager\AnalyticsController');
