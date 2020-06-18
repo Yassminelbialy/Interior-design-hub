@@ -17,6 +17,7 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 Auth::routes();
 
+
 Route::get('/', function () {
 
     return view('auth.login');
@@ -69,7 +70,7 @@ Route::middleware('user')->group(function () {
 });
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::resource('quiz/{id?}', 'Manager\QuizController')->name('quiz');
+Route::resource('quiz', 'Manager\QuizController');
 Route::resource('project.images', 'Manager\ProjectImageController');
 Route::post('/contact', 'Manager\ConsultationController@send');
 Route::get('/', 'UserController@index');
