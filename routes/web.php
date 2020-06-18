@@ -44,7 +44,8 @@ Route::middleware('manager')->prefix('manager')->name('manager.')->group(functio
     Route::resource('jobTrash' ,'Manager\JobTrashController');
     Route::resource('logoTrash' ,'Manager\LogoTrashController');
     Route::resource('reviewTrash' ,'Manager\ReviewTrashController');
-    Route::resource('service', 'Manager\ServiceController');
+    Route::resource('service', 'Manager\ServiceController');   
+    Route::resource('serviceTrash' ,'Manager\ServiceTrashController');
     Route::resource('quizzes' , 'Manager\QuizController');
     Route::resource('quizzes.images' , 'Manager\QuizImageController');
     Route::resource('analytics' ,'Manager\AnalyticsController');
@@ -69,7 +70,8 @@ Route::middleware('user')->group(function () {
 });
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::resource('quiz/{id?}', 'Manager\QuizController')->name('quiz');
+// Route::resource('quiz/{id?}', 'Manager\QuizController')->name('quiz');
+Route::resource('quiz/{id?}', 'Manager\QuizController');
 Route::resource('project.images', 'Manager\ProjectImageController');
 Route::post('/contact', 'Manager\ConsultationController@send');
 Route::get('/', 'UserController@index');

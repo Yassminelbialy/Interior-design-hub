@@ -89,16 +89,6 @@ class LogoController extends Controller
         $logo=Logo::find($id);
         $path = public_path()."/images/logo/".$logo->image;
         unlink($path);      
-        // if ($files = $request->file('image')) {
-        //     $destinationPath = 'images/logo'; 
-        //     $Image = $files->getClientOriginalName();
-        //     $files->move($destinationPath, $Image);
-        //     $logo->image=$Image; 
-        // }
-
-        // $logo->save();
-        // return redirect('/manager/logo');
-        
         $req=$request->all();
         if ($files = $request->file('image'))
         {

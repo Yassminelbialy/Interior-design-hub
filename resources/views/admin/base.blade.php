@@ -98,7 +98,6 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
                                 <a class="nav-link" href="/manager/category">{{trans('messages.categories')}} </a>
                                 <a class="nav-link" href="/manager/user">{{trans('messages.users')}} </a>
-
                                 <a class="nav-link" href="/manager/logo">{{trans('messages.logos')}}</a>
                                 <a class="nav-link" href="/manager/review">{{trans('messages.reviews')}}</a>
                                 <a class="nav-link" href="/manager/alexandra">{{trans('messages.company_info')}}</a>
@@ -109,6 +108,7 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
                                 <a class="nav-link" href="/manager/topics">{{trans('messages.topics')}}</a>
                                 <a class="nav-link" href="/manager/jops">{{trans('messages.jobs')}}</a>
                                 <a class="nav-link" href="/manager/company">{{trans('messages.all_companies')}}</a>
+                                <a class="nav-link" href="/manager/service">{{trans('messages.services')}} </a>
 
                                 {{-- <a class="nav-link" href="/manager/project">projects</a>
                                     <a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a></nav> --}}
