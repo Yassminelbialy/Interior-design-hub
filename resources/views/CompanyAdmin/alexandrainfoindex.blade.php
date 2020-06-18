@@ -5,13 +5,13 @@
         <thead>
 
             <tr>
-                <th scope="col" class="text-light h3">#</th>
-                <th scope="col" class="text-light h3">image</th>
-                <th scope="col" class="text-light h3">Name</th>
-                <th scope="col" class="text-light h3">Hint</th>
-                <th scope="col" class="text-light h3">Statement</th>
-                <th scope="col" class="text-light h3">video</th>
-                <th scope="col" class="text-light h3">Action</th>
+                <th scope="col" class="text-light h7" style="font-weight:700">#</th>
+                <th scope="col" class="text-light h7" style="font-weight:700">image</th>
+                <th scope="col" class="text-light h7" style="font-weight:700">Name</th>
+                <th scope="col" class="text-light h7" style="font-weight:700">Hint</th>
+                <th scope="col" class="text-light h7" style="font-weight:700">Statement</th>
+                <th scope="col" class="text-light h7" style="font-weight:700">video</th>
+                <th scope="col" class="text-light h7" style="font-weight:700">Action</th>
 
             </tr>
         </thead>

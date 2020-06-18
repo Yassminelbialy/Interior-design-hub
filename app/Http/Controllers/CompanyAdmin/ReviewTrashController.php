@@ -16,7 +16,7 @@ class ReviewTrashController extends Controller
     public function index()
     {
         $reviews=Review::onlyTrashed()->get();
-        
+        // $reviews= Auth::user()->company->reviews::onlyTrashed()->get();
         return view('CompanyAdmin.reviewTrash', ["reviews"=>$reviews]);
     }
 

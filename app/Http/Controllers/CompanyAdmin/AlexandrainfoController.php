@@ -50,6 +50,20 @@ class AlexandrainfoController extends Controller
     {
         // dd($request);
       $z=  Auth::user()->company->info()->create($request->all());
+      if ($files = $request->file('image')) {
+        $destinationPath = 'images/';
+        $Image = $files->getClientOriginalName();
+        $files->move($destinationPath, $Image);
+        $z->image=$Image;
+    }
+
+
+    if ($files = $request->file('video')) {
+        $destinationPath = 'videos/';
+        $Video = $files->getClientOriginalName();
+        $files->move($destinationPath, $Video);
+        $z->video=$Video;
+    }
         return redirect(route('company.alexandra.index'));
     }
 
