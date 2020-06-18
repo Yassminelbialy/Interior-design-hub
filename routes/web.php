@@ -17,6 +17,7 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 Auth::routes();
 
+
 Route::get('/', function () {
 
     return view('auth.login');
@@ -44,7 +45,7 @@ Route::middleware('manager')->prefix('manager')->name('manager.')->group(functio
     Route::resource('jobTrash' ,'Manager\JobTrashController');
     Route::resource('logoTrash' ,'Manager\LogoTrashController');
     Route::resource('reviewTrash' ,'Manager\ReviewTrashController');
-    Route::resource('service', 'Manager\ServiceController');   
+    Route::resource('service', 'Manager\ServiceController');
     Route::resource('serviceTrash' ,'Manager\ServiceTrashController');
     Route::resource('quizzes' , 'Manager\QuizController');
     Route::resource('quizzes.images' , 'Manager\QuizImageController');
@@ -70,7 +71,10 @@ Route::middleware('user')->group(function () {
 });
 
 Route::get('/home', 'HomeController@index')->name('home');
+<<<<<<< HEAD
 // Route::resource('quiz/{id?}', 'Manager\QuizController')->name('quiz');
+=======
+>>>>>>> a53965f3d9158e56f7fb7fa30704ab20c391b0f0
 Route::resource('quiz', 'Manager\QuizController');
 Route::resource('project.images', 'Manager\ProjectImageController');
 Route::post('/contact', 'Manager\ConsultationController@send');
