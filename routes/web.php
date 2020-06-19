@@ -115,7 +115,7 @@ Route::get('jops', 'Manager\JopApplicantController@index')->name('jops');
         Route::resource('AdminOrder', 'CompanyAdmin\OrderAdminController');
         Route::get('users/{users}/order', 'CompanyAdmin\OrderAdminController@updateOrder')->name('order');
         Route::resource('jopAppli', 'CompanyAdmin\JopApplicantController');
-        Route::resource('chatList', 'CompanyAdmin\ChatAdminController');       
+        Route::resource('chatList', 'CompanyAdmin\ChatAdminController');
         Route::resource('service', 'CompanyAdmin\ServiceController');
         Route::resource('serviceTrash' ,'CompanyAdmin\ServiceTrashController');
         Route::get('/{id?}', 'UserController@indexCompany');

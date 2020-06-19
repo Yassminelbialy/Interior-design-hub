@@ -80,11 +80,30 @@
         </div>
     @empty
 
-        <div class='alert btn_info'>
-
-                <p class="text-center" style="margin-top:200px">No Projects</p>
-
-         </div>
+    <div  class="slide slide-0 active">
+        <div style="background:url({{ asset('images/projectsSlider/0000.jpg')}}); no-repeat  " class="slide__bg"></div>
+        <div class="slide__content">
+            <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+                <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+            </svg>
+        </div>
+    </div>
+    <div  class="slide slide-0 active">
+        <div style="background:url({{ asset('images/projectsSlider/1.jpg')}}); no-repeat  " class="slide__bg"></div>
+        <div class="slide__content">
+            <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+                <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+            </svg>
+        </div>
+    </div>
+    <div  class="slide slide-0 active">
+        <div style="background:url({{ asset('images/projectsSlider/12.jpg')}}); no-repeat  " class="slide__bg"></div>
+        <div class="slide__content">
+            <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+                <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+            </svg>
+        </div>
+    </div>
     @endforelse
     </div>
 

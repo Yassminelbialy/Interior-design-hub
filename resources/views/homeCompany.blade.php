@@ -40,8 +40,8 @@
 @component('components.header',['contact' => $contact ,'slide_img'=>$slider_projcts])
 @endcomponent
 
-@component('components.who_us')
-@endcomponent
+{{-- @component('components.who_us')
+@endcomponent --}}
 {{--
 @component('components.steps_working')
 @endcomponent --}}
@@ -60,24 +60,24 @@
 @component('components.services')
 @endcomponent
 
-@component('components.3d_projects')
-@endcomponent
+{{-- @component('components.3d_projects')
+@endcomponent --}}
 
 
 @component('components.quiz_tabs')
 @endcomponent
 
-@component('components.information_plus')
+{{--@component('components.information_plus')
 @endcomponent
 
 @component('components.our_team')
-@endcomponent
+@endcomponent -->
 
-{{-- @component('components.clients',['logos' => $logos])
-@endcomponent --}}
-{{--
+  @component('components.clients',['logos' => $logos])
+@endcomponent 
+
 @component('components.state' ,['topics'=>$topics])
-@endcomponent --}}
+@endcomponent
 
 @component('components.video',['ceoInfo' => $ceoInfo])
 @endcomponent
@@ -86,7 +86,7 @@
 @endcomponent
 
 @component('components.worldWide')
-@endcomponent
+@endcomponent --}}
 
 
 @component('components.testimonial',['reviews' => $reviews])

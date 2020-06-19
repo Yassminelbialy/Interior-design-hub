@@ -107,6 +107,7 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
                                 <a class="nav-link" href="/manager/fbPosts">{{trans('messages.facebook_posts')}}</a>
                                 <a class="nav-link" href="/manager/topics">{{trans('messages.topics')}}</a>
                                 <a class="nav-link" href="/manager/jops">{{trans('messages.jobs')}}</a>
+                                <a class="nav-link" href="/manager/sliderImage">{{trans('messages.slider')}}</a>
                                 <a class="nav-link" href="/manager/company">{{trans('messages.all_companies')}}</a>
                                 <a class="nav-link" href="/manager/service">{{trans('messages.services')}} </a>
 
