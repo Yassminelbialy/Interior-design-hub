@@ -4,8 +4,8 @@
         <div class="row">
             <div class="col-md-6" >
                 <div class="container_image">
-                    <img src="images/frame.png" alt="image who us">
-                    <img src="images/who_us2.jpeg" alt="image who us">
+                    <img src="/images/frame.png" alt="image who us">
+                    <img src="/images/who_us2.jpeg" alt="image who us">
                 </div>
             </div>
             <div class="inf col-md-6 " >

@@ -46,7 +46,7 @@ function newMessage() {
 		+ message + '</p></li>').appendTo($('.messages ul'));
 	    console.log(e.target.result)}
 		reader.readAsDataURL(myfile);
-		
+
 	}else{
 		$('<li class="sent"><img src="http://emilcarlsson.se/assets/mikeross.png" alt="" /><p>'+
 		 message + '</p></li>').appendTo($('.messages ul'));

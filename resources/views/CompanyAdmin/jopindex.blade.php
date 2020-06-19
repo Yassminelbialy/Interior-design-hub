@@ -9,13 +9,13 @@
                 <td colspan="4"><a href="{{route('company.jops.create')}}"><i class="fas fa-plus fa-4x" style="color: blue"></i></a></td>
              </tr>
           <tr>
-            <th scope="col" class="text-light h3">#</th>
-            <th scope="col" class="text-light h3">Title</th>
-            <th scope="col" class="text-light h3">Description</th>
-            <th scope="col" class="text-light h3">Requirements</th>
-            <th scope="col" class="text-light h3">Jop Type</th>
-            <th scope="col" class="text-light h3">Location</th>  
-            <th scope="col" class="text-light h3" colspan="3">Actions</th>
+            <th scope="col" class="text-light h6" style="font-weight:700">#</th>
+            <th scope="col" class="text-light h6" style="font-weight:700">Title</th>
+            <th scope="col" class="text-light h6" style="font-weight:700">Description</th>
+            <th scope="col" class="text-light h6" style="font-weight:700">Requirements</th>
+            <th scope="col" class="text-light h6" style="font-weight:700">Jop Type</th>
+            <th scope="col" class="text-light h6" style="font-weight:700">Location</th>  
+            <th scope="col" class="text-danger h6" style="font-weight:700" colspan="3">Actions</th>
           </tr>
         </thead>
         <tbody>

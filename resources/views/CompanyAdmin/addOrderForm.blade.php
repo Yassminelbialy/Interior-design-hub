@@ -6,7 +6,7 @@
 <div class="container mt-4">
     <div class="row">
         <div class="col-lg-8">
-            {{ Form::open(['route' => 'manager.AdminOrder.store','enctype' => 'multipart/form-data','method'=>'post'])}}
+            {{ Form::open(['route' => 'company.AdminOrder.store','enctype' => 'multipart/form-data','method'=>'post'])}}
             <div class="form-group">
                 <label for="exampleFormControlFile1" class="text-light">Enter Description of Order</label>
                 {!! Form::text('description', null, ['required'=>'true','class'=>"form-control",'placeholder'=>'orderDesc']) !!}

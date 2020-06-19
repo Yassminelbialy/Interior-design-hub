@@ -56,7 +56,7 @@
                             <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                             Dashboard
                         </a>
-                        <a class="nav-link" href="/manager/quizzes">
+                        <a class="nav-link" href="/companypanel/quizzes">
                             <div class="sb-nav-link-icon"><i class="fas fa-file-contract"></i></div>
                             QuiZZes Requests
                         </a>
@@ -81,7 +81,8 @@
                                 <a class="nav-link" href="/companypanel/AdminOrder">Users Orders</a>
                                 <!-- <a class="nav-link" href="/companypanel/fbPosts">FaceBook Posts</a> -->
                                 <a class="nav-link" href="/companypanel/jops">Jobs</a>
-    
+                            </nav>
+
                         </div>
 
                         <!-- <div class="sb-sidenav-menu-heading">Addons</div>
@@ -97,9 +98,11 @@
                 </div>
             </nav>
         </div>
-        <div id="layoutSidenav_content">
+        <div id="layoutSidenav_content" style="padding-left: 225px;">
             <main>
                 @yield('CompanyAdminBase')
+
+
             </main>
             <footer class="py-4 bg-light mt-auto">
                 <div class="container-fluid">

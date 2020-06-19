@@ -18,8 +18,7 @@
                                  {{$project->hint}}
                              </p>
                              @isset($project->company->companyName)
-                                         <a class="btn btn-info mb-1 text-light" rel="nofollow" href="#">{{$project->company->companyName}}</a>
-
+                                <a class="btn btn-info mb-1 text-light" rel="nofollow" href="/company/{{$project->company->id}}">{{$project->company->companyName}}</a>
                              @endisset
                              <a class="btn btn-dark mb-1 text-light" rel="nofollow" href="{{ url('view/'.$project->id)}}">View Project</a>
 

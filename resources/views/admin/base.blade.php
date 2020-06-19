@@ -33,7 +33,7 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 <body class="sb-nav-fixed">
 
     <nav id="admin_nav" class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.html"> {{trans('messages.admin_controll')}} </a><button style="display: none;" class="btn btn-link btn-sm order-1 order-lg-0 " id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button><!-- Navbar Search-->
+        <a class="navbar-brand" href="index.html"> {{trans('messages.admin_controll')}} </a><button class="btn btn-link btn-sm order-1 order-lg-0 " id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button><!-- Navbar Search-->
         <ul class="languages">
             @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
             <li <?php if  ($localeCode == LaravelLocalization::setLocale())  {echo "class=active" ;}  ?> >
@@ -81,10 +81,10 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
                             {{trans('messages.quiz_requests')}}
                         </a>
-                        <a class="nav-link" href="/manager/chatList">
+                        <!-- <a class="nav-link" href="/manager/chatList">
                             <div class="sb-nav-link-icon"><i class="fas fa-file-contract"></i></div>
                             {{trans('messages.chat_list')}}
-                        </a>
+                        </a> -->
                         <div class="sb-sidenav-menu-heading">Interface</div>
                         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                             <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
@@ -111,7 +111,8 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
                                 <a class="nav-link" href="/manager/service">{{trans('messages.services')}} </a>
 
                                 {{-- <a class="nav-link" href="/manager/project">projects</a>
-                                    <a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a></nav> --}}
+                                    <a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a> --}}
+                                </nav>
                         </div>
 
                         <div class="sb-sidenav-menu-heading">Addons</div>

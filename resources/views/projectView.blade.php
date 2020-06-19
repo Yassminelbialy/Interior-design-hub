@@ -55,7 +55,7 @@
         <p class="text-light lead"> <strong class="text-info">Description: </strong>{{$project->description}}</p>
 
         @isset($project->company->companyName)
-              <a class=" mb-1 text-info" style="text-decoration:underline" rel="nofollow" href="/{{$project->company->id}}">{{$project->company->companyName}}</a>
+              <a class=" mb-1 text-info" style="text-decoration:underline" rel="nofollow" href="/company/{{$project->company->id}}">{{$project->company->companyName}}</a>
         @endisset
 
       </div>
