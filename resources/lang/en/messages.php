@@ -44,6 +44,7 @@ return [
      'manager_user_index_phone'=>'Phone',
      'manager_user_index_email'=>'Email',
      'manager_user_index_state'=>'State',
+     'manager_user_index_delete'=>'Delete',
 
      'manager_project_index_statement'=>'Statement',
      'manager_project_index_name'=>'Name',

@@ -45,6 +45,7 @@ return [
     'manager_user_index_phone'=>'رقم التليفون',
     'manager_user_index_email'=>'البريد الالكتروني',
     'manager_user_index_state'=>'الحاله',
+    'manager_user_index_delete'=>'مسح',
 
     'manager_project_index_statement'=>'عباره نصيه صغيره',
     'manager_project_index_name'=>'الاسم',

@@ -74,10 +74,10 @@
                 <td colspan="6"><a href="{{route('manager.quizzes.create')}}"><i class="fas fa-plus fa-4x" style="color: blue"></i></a></td>
             </tr>
             <tr>
-                <th scope="col" class="text-light h3">#</th>
-                <th scope="col" class="text-light h3">Image</th>
+                <th scope="col" class="text-light h6" style="font-weight:700">#</th>
+                <th scope="col" class="text-light h6" style="font-weight:700">Image</th>
 
-                <th scope="col" class="text-light h3">Actions</th>
+                <th scope="col" class="text-light h6" style="font-weight:700">Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -86,10 +86,10 @@
                 <th scope="row">{{$item->id}}</th>
                 <td><img src="/quizimages/{{$item->image}}" style="display: inline-block; height: 100px ; width:100px ; background-color:red;"></img></td>
                 <td> &ensp;
-                    <a href="{{route('manager.quizzes.images.index',$item->id)}}"> <i class="fas fa-binoculars fa-2x" style="color: green"></i></a>
+                    <a href="{{route('company.quizzes.images.index',$item->id)}}"> <i class="fas fa-binoculars fa-2x" style="color: green"></i></a>
                     &ensp;
                     &ensp;
-                    {!!Form::open(['route'=>[ 'manager.quizzes.destroy' , $item->id],'method'=>'delete','style'=>' display: inline-block '])!!}
+                    {!!Form::open(['route'=>[ 'company.quizzes.destroy' , $item->id],'method'=>'delete','style'=>' display: inline-block '])!!}
                     {{ Form::button('<i style="color:red"class="fa fa-trash fa-2x"></i>', ['type' => 'submit'] )  }}
 
                     {!! Form::close() !!}
