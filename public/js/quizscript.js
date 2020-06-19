@@ -111,7 +111,13 @@ $('.submitquiz').on('click',(event)=>
                     myform.append('file[]',quizform.images[i]);
                 }
         }
-        var mycomp =quiz_id?quiz_id:'';
+        if (typeof quiz_id === 'undefined')
+         {
+            var mycomp ='';
+
+        }else{
+            var mycomp =quiz_id?quiz_id:'';
+        }
     $.ajax({
                 url: "http://localhost:8000/quiz/"+mycomp,
                 dataType: 'script',
