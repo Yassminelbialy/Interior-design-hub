@@ -51,6 +51,10 @@ class UserController extends Controller
         ->get();
         return view('homeCompany',['projects'=>$projects,'ceoInfo'=>$ceoInfo,'reviews'=>$reviews ,'contact'=>$contact, 'slider_projcts'=>$slider_image_project,'company'=>$id]);
     }
+
+
+
+
     public function view($id){
         $project = Project::find($id);
         $relProjects=ProjectImage::where('project_id','=',$id)->get();

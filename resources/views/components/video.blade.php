@@ -48,10 +48,20 @@
                 @endforeach
             </div>
 
+
         </div>
     </div>
     <script>
+        lat=30
+        lng=30
+    </script>
+    {{-- @isset($ceoInfo[0]->lat}) --}}
+    {{-- <script>
             lat={{$ceoInfo[0]->lat}}
             lng={{$ceoInfo[0]->lng}}
-    </script>
+    </script> --}}
+
+    {{-- @endisset --}}
+
+
 </section>
