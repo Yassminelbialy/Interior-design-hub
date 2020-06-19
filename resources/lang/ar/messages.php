@@ -23,6 +23,7 @@ return [
     "categories"=>"الأقسام",
     "users"=>"المستخدمين",
     "logos"=>"الشعارات",
+    "slider"=>"عرض",
     "charts"=>"الخرائط",
     "reviews"=>"المراجعات",
     "company_info"=>"معلومات عن الشركة",
