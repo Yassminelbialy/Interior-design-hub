@@ -47,6 +47,8 @@
 
   @stack('quizscript')
 
+  @stack('consultation')
+
 
 </body>
 

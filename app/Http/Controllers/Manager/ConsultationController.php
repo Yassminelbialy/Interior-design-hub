@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\SendEmail;
 use App\Consultation;
+use \Validator;
+
 
 class ConsultationController extends Controller
 {
@@ -21,17 +23,20 @@ class ConsultationController extends Controller
      {
 
         // dd($request->all());
+        // return response()->json(['message' => 'User status updated successfully.']);
 
 
-            $this->validate($request ,[
-
-                'username'   =>     'required',
-                'phone'      =>     'required',
-                'date' => 'date '
-                ,
 
 
-                ]);
+
+                $validator = Validator::make($request->all(), [
+                    'username'   =>     'required',
+                    'phone'      =>     'required',
+                    'date' => 'date '
+                     ]);
+                if ($validator->fails()) {
+                    return response()->json(['erors'=>$validator->messages()->all()]);
+                }
 
 
             $consultation = new Consultation ();
@@ -46,9 +51,10 @@ class ConsultationController extends Controller
                     'date'      =>  $request->date
             );
 
-            Mail::to('yassminelbialy@gmail.com')
-            ->send(new SendEmail($usersData));
-            return back()->with('success' , 'thanx for contacting us :)');
+            // Mail::to('yassminelbialy@gmail.com')
+            // ->send(new SendEmail($usersData));
+            // return back()->with('success' , 'thanx for contacting us :)');
+            return response()->json(['message' => 'User status added successfully.']);
 
      }
     // ************ Yassmin Part *************************
