@@ -59,8 +59,8 @@
 @endcomponent
 
 
-@component('components.quiz_tabs')
-@endcomponent
+<!-- @component('components.quiz_tabs')
+@endcomponent -->
 
 @component('components.information_plus')
 @endcomponent
@@ -80,8 +80,8 @@
 @component('components.details')
 @endcomponent
 
-@component('components.worldWide')
-@endcomponent
+<!-- @component('components.worldWide')
+@endcomponent -->
 
 
 @component('components.testimonial',['reviews' => $reviews])
