@@ -51,9 +51,10 @@
 
 @component('components.statitics')
 @endcomponent
-{{--
+
+
 @component('components.projects',['projects'=>$projects])
-@endcomponent --}}
+@endcomponent
 
 
 @component('components.services')
