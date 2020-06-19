@@ -38,18 +38,7 @@ class ServiceController extends Controller
     public function store(Request $request)
     {
            $req=$request->all();
-
-        if ($files = $request->file('image'))
-        {
-            $uuid =Uuid::generate()->string;
-            $path=$uuid.".".$request->file('image')->getClientOriginalExtension();
-            $desti='images/service/';
-            $files->move($desti,$path);
-            $req['image']=$path;
-        }
-    
-            $service = Service::create($req);
-            
+            $service = Service::create($req);           
             return redirect('/manager/service');
     }
 
@@ -86,18 +75,7 @@ class ServiceController extends Controller
     public function update(Request $request, Service $service)
     {
         $req=$request->all();        
-        $path = public_path()."/images/service/".$service->image;
-        unlink($path);       
-        if ($files = $request->file('image'))
-       {
-            $uuid =Uuid::generate()->string;
-            $path=$uuid.".".$request->file('image')->getClientOriginalExtension();
-            $desti='images/service/';
-            $files->move($desti,$path);
-            $req['image']=$path;                        
-        }
-        $service = $service->update($req);
-                  
+        $service = $service->update($req);                 
         return redirect(route('manager.service.index'));
     }
 
@@ -109,7 +87,6 @@ class ServiceController extends Controller
      */
     public function destroy(Service $service)
     {
-        
         $service->delete();
         return redirect('/manager/service');
     }

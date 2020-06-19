@@ -11,25 +11,25 @@
 					{!! Form::text('title', null, ['required'=>'true','class'=>"form-control",'id'=>"title"]) !!}
 				</div>
 			</div>
-			<div class="form-group">
+			{{-- <div class="form-group">
 				<label class="control-label col-sm-4" for="lname">Service Hint:</label>
 				<div class="col-sm-10">
 					{!! Form::text('hint', null, ['required'=>'true','class'=>"form-control",'id'=>"hint"]) !!}
 				</div>
-			</div>
+			</div> --}}
 			<div class="form-group">
 				<label class="control-label col-sm-2" for="comment">Description:</label>
 				<div class="col-sm-10">
 					{!! Form::textarea('description', null, ['class'=>'form-control','rows'=>"5", 'id'=>"description",'required']) !!}
 				</div>
 			</div>
-			<div class="form-group">
+			{{-- <div class="form-group">
 				<label class="control-label col-sm-2" for="comment">Price:</label>
 				<div class="col-sm-10">
 					{!! Form::text('price', null, ['class'=>'form-control','id'=>"price",'required']) !!}
 				</div>
-			</div>
-			<div class="form-group">
+			</div> --}}
+			{{-- <div class="form-group">
 				<label class="control-label col-sm-4" for="image">Image:</label>
 				<br>
 				<div class="custom-file form-control " style="width: 50%">
@@ -37,7 +37,7 @@
 				  {!! Form::file('image', ['class'=>'custom-file-input form-control','id'=>"validatedCustomFile1"]) !!}
 				  <label class="custom-file-label" for="validatedCustomFile1">Choose file...</label>	
 				</div>
-			  </div>
+			  </div> --}}
 			<div class="form-group">
 				<div class="col-sm-offset-2 col-sm-10">
 					{!! Form::submit('Update Service', ['class'=>'btn btn-default btn btn-outline-secondary']) !!}
