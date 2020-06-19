@@ -17,7 +17,7 @@ class JopApplicantController extends Controller
      */
     public function index()
     {
-        
+
         return view('jopApp.jops',['data'=>Jop::all()]);
 
 
@@ -66,7 +66,7 @@ class JopApplicantController extends Controller
 
 }
 
-        return redirect(route('applyjop'))->with('success', 'Done');
+        return redirect('/')->with('success', 'Done');
     }
 
     /**
