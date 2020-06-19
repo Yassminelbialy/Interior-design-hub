@@ -11,7 +11,7 @@
             
             <label for="exampleFormControlFile1" >Select Project Name</label>
             <br>
-                <select name="title">
+                <select name="title" class="form-control">
 
                         @foreach($projectsName as $pname)
                             <option  value="{{$pname->id}}">{{$pname->title}}</option>
