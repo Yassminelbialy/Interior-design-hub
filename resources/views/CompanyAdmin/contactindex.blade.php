@@ -32,7 +32,7 @@
         <td>{{$contact->instaLink}}</td>
         <td>{{$contact->wLink}}</td>
         <td>
-          <a href="{{ route('manager.contacts.edit', $contact->id) }}"> <i class="fas fa-edit fa-2x" style="color: blue"></i></a>
+          <a href="{{ route('company.contacts.edit', $contact->id) }}"> <i class="fas fa-edit fa-2x" style="color: blue"></i></a>
         </td>
       </tr>
       @endforeach

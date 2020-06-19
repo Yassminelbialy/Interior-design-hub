@@ -12,7 +12,7 @@
       <th scope="col" class="text-danger h6" style="font-weight:700">Action</th>
     </tr>
     @foreach( $data as $instance )
-    @if($instance->adminRole != 1)
+    @if($instance->adminRole != 1 && $instance->adminRole != 2)
     <tr>
       <td scope="col"></td>
       <td scope="col">{{ $instance->name }}</td>

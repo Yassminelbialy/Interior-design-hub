@@ -2,7 +2,7 @@
 @section('CompanyAdminBase')
 <link rel="stylesheet" type="text/css" href="{{ asset('css/styles.css') }}">
 
-{{ Form::model($contact,['route' => ['manager.contacts.update',$contact],'method'=>'PUT'])}}
+{{ Form::model($contact,['route' => ['company.contacts.update',$contact],'method'=>'PUT'])}}
 <div class="row">
   <div class="col-md-9">
     <div class="contact-form">

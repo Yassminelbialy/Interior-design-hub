@@ -15,7 +15,7 @@
       <td scope="col">{{ $instance->name }}</td>
       <td scope="col">{{ $instance->phone }}</td>
       <td>
-        {!! Form::open(['route' => ['manager.consultations.destroy', $instance->id] , 'method'=>'delete']) !!}
+        {!! Form::open(['route' => ['company.consultations.destroy', $instance->id] , 'method'=>'delete']) !!}
         {!! Form::submit('Delete !' , ['class'=>'btn btn-danger']) !!}
         {!! Form::close() !!}
       </td>

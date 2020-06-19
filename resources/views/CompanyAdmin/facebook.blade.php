@@ -15,12 +15,12 @@
       <td scope="col"><img src="{{ asset('images/fbimages/'. $instance->image) }}" alt="image" width="150px" height="80px" /></td>
       <td scope="col">{{ $instance->fbLink }}</td>
       <td>
-        {!! Form::open(['route' => ['manager.fbPosts.destroy', $instance->id] , 'method'=>'delete']) !!}
+        {!! Form::open(['route' => ['company.fbPosts.destroy', $instance->id] , 'method'=>'delete']) !!}
         {!! Form::submit('Delete !' , ['class'=>'btn btn-danger']) !!}
         {!! Form::close() !!}
       </td>
       <td>
-        <a href="{{ route('manager.fbPosts.edit' , $instance->id) }}" class="btn btn-success">Update !</a>
+        <a href="{{ route('company.fbPosts.edit' , $instance->id) }}" class="btn btn-success">Update !</a>
       </td>
     </tr>
     @endforeach

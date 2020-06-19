@@ -5,7 +5,7 @@
     <div class="container mt-4">
             <div class="row">
                     <div class="col-lg-8">
-                    {{ Form::model( $orderUpdated ,['route' => ['manager.AdminOrder.update' , $orderUpdated],'enctype' => 'multipart/form-data','method'=>'put'])}}
+                    {{ Form::model( $orderUpdated ,['route' => ['company.AdminOrder.update' , $orderUpdated],'enctype' => 'multipart/form-data','method'=>'put'])}}
                   
                     <div class="form-group">
                             <label for="exampleFormControlFile1" class="text-light">Enter Description of Order</label>
