@@ -5,7 +5,7 @@ use App\Http\Controllers\Controller;
 
 use App\Service;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Auth;
 class ServiceController extends Controller
 {
     /**
@@ -15,7 +15,8 @@ class ServiceController extends Controller
      */
     public function index()
     {
-
+        $services= Auth::user()->company->services;
+        return view('CompanyAdmin/serviceIndex',["services"=>$services]);
     }
 
     /**
@@ -25,7 +26,7 @@ class ServiceController extends Controller
      */
     public function create()
     {
-        //
+        return view ('CompanyAdmin.serviceCreate');
     }
 
     /**
@@ -36,7 +37,22 @@ class ServiceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $req=$request->all();
+
+        if ($files = $request->file('image'))
+        {
+            $uuid =Uuid::generate()->string;
+            $path=$uuid.".".$request->file('image')->getClientOriginalExtension();
+            $desti='images/service/';
+            $files->move($desti,$path);
+            $req['image']=$path;
+    
+        }
+        $review = Auth::user()->company->reviews()->create($req);
+    
+        // $review = Review::create($req);
+            
+            return redirect('/companypanel/service');
     }
 
     /**
