@@ -30,6 +30,7 @@ return [
      "facebook_posts"=>"Facebook Posts",
      "topics"=>"Topics",
      "jobs"=>"Jobs",
+     "slider"=>"Slider",
      "all_companies"=>"All Companies",
      "copyright"=>"Copyright ITI Mansoura Branch Open Source",
      'manager_project_index_image'=>'Image',

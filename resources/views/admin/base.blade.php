@@ -81,10 +81,10 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
                             {{trans('messages.quiz_requests')}}
                         </a>
-                        <a class="nav-link" href="/manager/chatList">
+                        <!-- <a class="nav-link" href="/manager/chatList">
                             <div class="sb-nav-link-icon"><i class="fas fa-file-contract"></i></div>
                             {{trans('messages.chat_list')}}
-                        </a>
+                        </a> -->
                         <div class="sb-sidenav-menu-heading">Interface</div>
                         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                             <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
@@ -107,6 +107,7 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
                                 <a class="nav-link" href="/manager/fbPosts">{{trans('messages.facebook_posts')}}</a>
                                 <a class="nav-link" href="/manager/topics">{{trans('messages.topics')}}</a>
                                 <a class="nav-link" href="/manager/jops">{{trans('messages.jobs')}}</a>
+                                <a class="nav-link" href="/manager/sliderImage">{{trans('messages.slider')}}</a>
                                 <a class="nav-link" href="/manager/company">{{trans('messages.all_companies')}}</a>
                                 <a class="nav-link" href="/manager/service">{{trans('messages.services')}} </a>
 

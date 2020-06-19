@@ -76,7 +76,6 @@ class ReviewController extends Controller
      */
     public function edit($id)
     {
-        // $review=Review::findOrFail($id);
         $review= Auth::user()->company->reviews()->find($id) ;
         return view('CompanyAdmin.reviewedit',['review'=>$review]);
     }

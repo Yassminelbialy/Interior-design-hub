@@ -32,7 +32,7 @@ class Company extends Model
     {
         return $this->hasMany('App\Message');
     }
-    public function servises()
+    public function services()
     {
         return $this->hasMany('App\Service');
     }

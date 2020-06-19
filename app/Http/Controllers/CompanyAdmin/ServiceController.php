@@ -5,7 +5,7 @@ use App\Http\Controllers\Controller;
 
 use App\Service;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Auth;
 class ServiceController extends Controller
 {
     /**
@@ -15,7 +15,8 @@ class ServiceController extends Controller
      */
     public function index()
     {
-
+        $services= Auth::user()->company->services;
+        return view('CompanyAdmin/serviceIndex',["services"=>$services]);
     }
 
     /**
@@ -25,7 +26,7 @@ class ServiceController extends Controller
      */
     public function create()
     {
-        //
+        return view ('CompanyAdmin.serviceCreate');
     }
 
     /**
@@ -35,8 +36,10 @@ class ServiceController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        //
+    {      
+        $req=$request->all(); 
+        $review = Auth::user()->company->services()->create($req);
+        return redirect('/companypanel/service');
     }
 
     /**
@@ -56,9 +59,10 @@ class ServiceController extends Controller
      * @param  \App\Service  $service
      * @return \Illuminate\Http\Response
      */
-    public function edit(Service $service)
+    public function edit($id)
     {
-        //
+        $service= Auth::user()->company->services()->find($id) ;
+        return view('CompanyAdmin.serviceEdit',['service'=>$service]);
     }
 
     /**
@@ -68,9 +72,12 @@ class ServiceController extends Controller
      * @param  \App\Service  $service
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Service $service)
+    public function update(Request $request, $id)
     {
-        //
+        $service= Auth::user()->company->services()->find($id);      
+        $req=$request->all();
+        $service = $service->update($req);
+        return redirect(route('company.service.index'));
     }
 
     /**
@@ -79,8 +86,10 @@ class ServiceController extends Controller
      * @param  \App\Service  $service
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Service $service)
+    public function destroy($id)
     {
-        //
+        $service= Auth::user()->company->services()->find($id) ;
+        $service->delete();
+        return redirect('/companypanel/service');
     }
 }

@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Manager;
+namespace App\Http\Controllers\CompanyAdmin;
 use App\Http\Controllers\Controller;
-use Uuid ;
-use App\Service;
 use Illuminate\Http\Request;
+use App\Service;
+use Illuminate\Support\Facades\Redirect;
 
-class ServiceController extends Controller
+class ServiceTrashController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +15,9 @@ class ServiceController extends Controller
      */
     public function index()
     {
-        $services= Service::all();
-        return view('manager/serviceIndex',["services"=>$services]);
+        $services=Service::onlyTrashed()->get();
+        // $reviews= Auth::user()->company->reviews::onlyTrashed()->get();
+        return view('CompanyAdmin.serviceTrash', ["services"=>$services]);
     }
 
     /**
@@ -26,7 +27,7 @@ class ServiceController extends Controller
      */
     public function create()
     {
-        return view ('manager.serviceAdd');
+        //
     }
 
     /**
@@ -37,18 +38,16 @@ class ServiceController extends Controller
      */
     public function store(Request $request)
     {
-           $req=$request->all();
-            $service = Service::create($req);           
-            return redirect('/manager/service');
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Service  $service
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Service $service)
+    public function show($id)
     {
         //
     }
@@ -56,38 +55,39 @@ class ServiceController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Service  $service
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
-        $service=Service::findOrFail($id);
-        return view('manager.serviceEdit',['service'=>$service]);
+        $service=Service::withTrashed()->where('id',$id)->first();
+        $service->restore();
+        return Redirect()->back();  
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Service  $service
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Service $service)
+    public function update(Request $request, $id)
     {
-        $req=$request->all();        
-        $service = $service->update($req);                 
-        return redirect(route('manager.service.index'));
+        //
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Service  $service
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Service $service)
+    public function destroy($id)
     {
-        $service->delete();
-        return redirect('/manager/service');
+        $service=Service::withTrashed()->where('id',$id)->first();      
+        $service->forceDelete();
+        return Redirect()->back();
+
     }
 }
