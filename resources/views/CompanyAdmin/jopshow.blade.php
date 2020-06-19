@@ -9,14 +9,14 @@
                 <td colspan="6"><h1>{{$jop->id}} _ ({{$jop->title}}) </h1></td>
              </tr>
              <tr>
-                <th scope="col" class="text-light h3">#</th>
-                <th scope="col" class="text-light h3">fullName</th>
-                <th scope="col" class="text-light h3">Email</th>
-                <th scope="col" class="text-light h3">Age</th>
-                <th scope="col" class="text-light h3">CV</th>  
-                <th scope="col" class="text-light h3">Portofolio</th>  
-                <th scope="col" class="text-light h3">Phone</th>  
-                <th scope="col" class="text-light h3" colspan="2">Actions</th>
+                <th scope="col" class="text-light h6" style="font-weight:700">#</th>
+                <th scope="col" class="text-light h6" style="font-weight:700">fullName</th>
+                <th scope="col" class="text-light h6" style="font-weight:700">Email</th>
+                <th scope="col" class="text-light h6" style="font-weight:700">Age</th>
+                <th scope="col" class="text-light h6" style="font-weight:700">CV</th>  
+                <th scope="col" class="text-light h6" style="font-weight:700">Portofolio</th>  
+                <th scope="col" class="text-light h6" style="font-weight:700">Phone</th>  
+                <th scope="col" class="text-light h6" style="font-weight:700" colspan="2">Actions</th>
               </tr>
          
         </thead>

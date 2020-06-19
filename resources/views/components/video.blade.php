@@ -55,7 +55,7 @@
         lat=30
         lng=30
     </script>
-    {{-- @isset($ceoInfo[0]->lat}) --}}
+    {{-- @isset($ceoInfo[0]}) --}}
     {{-- <script>
             lat={{$ceoInfo[0]->lat}}
             lng={{$ceoInfo[0]->lng}}

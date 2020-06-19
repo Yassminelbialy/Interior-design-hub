@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-lg-8">
 
-            {!! Form::model($facebppkImage, ['route' => ['manager.fbPosts.update', $facebppkImage] , 'method'=>'put' , 'enctype'=>'multipart/form-data' ])!!}
+            {!! Form::model($facebppkImage, ['route' => ['company.fbPosts.update', $facebppkImage] , 'method'=>'put' , 'enctype'=>'multipart/form-data' ])!!}
             @csrf
             <div class="form-group">
                 {!! Form::text('fbLink', null,['class'=>'form-control']) !!}

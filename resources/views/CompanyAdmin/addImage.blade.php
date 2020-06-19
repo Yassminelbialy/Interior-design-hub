@@ -6,7 +6,7 @@
 <div class="container mt-4">
     <div class="row">
         <div class="col-lg-8">
-            {{ Form::open(['route' => 'manager.fbPosts.store','enctype' => 'multipart/form-data','method'=>'post'])}}
+            {{ Form::open(['route' => 'company.fbPosts.store','enctype' => 'multipart/form-data','method'=>'post'])}}
             <div class="form-group">
                 <label for="exampleFormControlFile1" class="text-light">Enter Your Link</label>
                 <input type="text" class="form-control" name="linkinput">

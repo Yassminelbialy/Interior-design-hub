@@ -81,6 +81,7 @@
                                 <a class="nav-link" href="/companypanel/AdminOrder">Users Orders</a>
                                 <!-- <a class="nav-link" href="/companypanel/fbPosts">FaceBook Posts</a> -->
                                 <a class="nav-link" href="/companypanel/jops">Jobs</a>
+                            </nav>
     
                         </div>
 
@@ -97,9 +98,11 @@
                 </div>
             </nav>
         </div>
-        <div id="layoutSidenav_content">
+        <div id="layoutSidenav_content" style="padding-left: 225px;">
             <main>
                 @yield('CompanyAdminBase')
+
+                
             </main>
             <footer class="py-4 bg-light mt-auto">
                 <div class="container-fluid">

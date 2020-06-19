@@ -112,10 +112,10 @@
                     <h5>{{$item->styles}}</h5>
                 </td>
                 <td> &ensp;
-                    <a href="{{route('manager.quizzes.images.index',$item->id)}}"> <i class="fas fa-binoculars fa-2x" style="color: green"></i></a>
+                    <a href="{{route('company.quizzes.images.index',$item->id)}}"> <i class="fas fa-binoculars fa-2x" style="color: green"></i></a>
                     &ensp;
                     &ensp;
-                    {!!Form::open(['route'=>[ 'manager.quizzes.destroy' , $item->id],'method'=>'delete','style'=>' display: inline-block '])!!}
+                    {!!Form::open(['route'=>[ 'company.quizzes.destroy' , $item->id],'method'=>'delete','style'=>' display: inline-block '])!!}
                     {{ Form::button('<i style="color:red"class="fa fa-trash fa-2x"></i>', ['type' => 'submit'] )  }}
 
                     {!! Form::close() !!}

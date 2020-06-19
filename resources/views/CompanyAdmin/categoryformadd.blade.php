@@ -4,7 +4,7 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('css/styles.css') }}">
 <script type="text/javascript" src="{{ asset('css/scribt.js') }}"></script>
 <div class="container">
-	{{ Form::open(['route' => 'manager.category.store','enctype' => 'multipart/form-data','method'=>'post'])}}
+	{{ Form::open(['route' => 'company.category.store','enctype' => 'multipart/form-data','method'=>'post'])}}
 	<div class="container contact text-light">
 		<div class="row">
 			<div class="col-md-3">
