@@ -21,7 +21,7 @@ class UserController extends Controller
     //
     public function index()
     {
-        $projects = Project::limit(2)->get();
+        $projects = Project::limit(6)->get();
         $ceoInfo= Alexandrainfo::limit(1)->get();
         $contact= Contact::limit(1)->get();
         $logos= Logo::all();
@@ -37,7 +37,7 @@ class UserController extends Controller
     {
         // dd($id);
         $company =  Company::find($id)   ;
-        $projects = $company->projects()->limit(2)->get();
+        $projects = $company->projects()->limit(6)->get();
         $ceoInfo= $company->info()->get();
         // dd($company,$ceoInfo);
         $contact= Contact::limit(1)->get();
