@@ -77,7 +77,7 @@ Route::post('quiz/{id?}', 'Manager\QuizController@store');
 Route::resource('project.images', 'Manager\ProjectImageController');
 Route::post('/contact', 'Manager\ConsultationController@send');
 Route::get('/', 'UserController@index');
-Route::get('/{id?}', 'UserController@indexCompany');
+
 
 Route::get('/allproject/{category?}', 'UserController@allprojects')->where('category', '[A-Za-z1-9]+')->name('listAllProjects');
 Route::get('/allprojectcustomsearch', 'UserController@customsearch');
@@ -116,6 +116,7 @@ Route::get('jops', 'Manager\JopApplicantController@index')->name('jops');
         Route::get('users/{users}/order', 'CompanyAdmin\OrderAdminController@updateOrder')->name('order');
         Route::resource('jopAppli', 'CompanyAdmin\JopApplicantController');
         Route::resource('chatList', 'CompanyAdmin\ChatAdminController');
+        Route::get('/{id?}', 'UserController@indexCompany');
 
 }); //manager routes
 
