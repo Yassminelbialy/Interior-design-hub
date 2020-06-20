@@ -25,6 +25,7 @@ return [
      "reviews"=>"Reviews",
      "company_info"=>"Company Information",
      "consultations"=>"Consultations",
+     "counterOfClients" =>"Counter Of Clients",
      "contacts"=>"Contacts",
      "users_order"=>"Users Orders",
      "facebook_posts"=>"Facebook Posts",

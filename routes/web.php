@@ -49,6 +49,7 @@ Route::middleware('manager')->prefix('manager')->name('manager.')->group(functio
     Route::resource('serviceTrash' ,'Manager\ServiceTrashController');
     Route::resource('quizzes' , 'Manager\QuizController');
     Route::resource('quizzes.images' , 'Manager\QuizImageController');
+    Route::get('/counter/info' ,'Manager\CounterController@getCounterOfSpecificCompany');
     Route::resource('analytics' ,'Manager\AnalyticsController');
     Route::resource('AdminOrder' , 'Manager\OrderAdminController');
     Route::get('users/{users}/order', 'Manager\OrderAdminController@updateOrder')->name('order');

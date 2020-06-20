@@ -24,6 +24,7 @@ return [
     "users"=>"المستخدمين",
     "logos"=>"الشعارات",
     "slider"=>"عرض",
+    "counterOfClients"=>"عدد عملاء الشركات",
     "charts"=>"الخرائط",
     "reviews"=>"المراجعات",
     "company_info"=>"معلومات عن الشركة",

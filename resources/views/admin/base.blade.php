@@ -110,6 +110,7 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
                                 <a class="nav-link" href="/manager/sliderImage">{{trans('messages.slider')}}</a>
                                 <a class="nav-link" href="/manager/company">{{trans('messages.all_companies')}}</a>
                                 <a class="nav-link" href="/manager/service">{{trans('messages.services')}} </a>
+                                <a class="nav-link" href="/manager/counter/info">{{ trans('message.counterOfClients')}}</a>
 
                                 {{-- <a class="nav-link" href="/manager/project">projects</a>
                                     <a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a> --}}
