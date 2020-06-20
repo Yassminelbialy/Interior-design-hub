@@ -55,11 +55,6 @@ return [
      'manager_project_index_comment'=>'Comment',
      'manager_project_index_timetocall'=> 'Time To Call' ,
 
-
-
-
-
-
-
-
+     "CompanyName"=>"Company Name",
+    "NumberOfClients"     =>"Number Of Clients"
 ];
