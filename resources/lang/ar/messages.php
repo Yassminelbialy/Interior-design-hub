@@ -56,5 +56,8 @@ return [
     'manager_project_index_comment'=>'تعليق',
     'manager_project_index_timetocall'=> 'وقت الاتصال' ,
 
+    "CompanyName"=>"اسم الشركه",
+    "NumberOfClients"     => "عدد العملاء"
+
 
 ];
