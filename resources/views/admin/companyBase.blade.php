@@ -56,10 +56,10 @@
                             <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                             Dashboard
                         </a>
-                        <a class="nav-link" href="/companypanel/quizzes">
+                        <!-- <a class="nav-link" href="/companypanel/quizzes">
                             <div class="sb-nav-link-icon"><i class="fas fa-file-contract"></i></div>
                             QuiZZes Requests
-                        </a>
+                        </a> -->
                         <a class="nav-link" href="/manager/chatList">
                             <div class="sb-nav-link-icon"><i class="fas fa-file-contract"></i></div>
                             Chat List
