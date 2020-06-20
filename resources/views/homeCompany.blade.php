@@ -71,7 +71,7 @@
 @endcomponent
 
 @component('components.our_team')
-@endcomponent -->
+@endcomponent
 
   @component('components.clients',['logos' => $logos])
 @endcomponent 
@@ -93,16 +93,16 @@
 @endcomponent
 
 
-@component('components.contact',['contact' => $contact,'ceoInfo' => $ceoInfo])
-@endcomponent
+{{--@component('components.contact',['contact' => $contact,'ceoInfo' => $ceoInfo])
+@endcomponent --}}
 
 {{-- @component('components.matterport')
 
 @endcomponent --}}
 
-@component('components.map')
+{{--@component('components.map')
 
-@endcomponent
+@endcomponent --}}
 
 @component('components.footer')
 @endcomponent

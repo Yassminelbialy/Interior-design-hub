@@ -15,7 +15,9 @@ class ReviewController extends Controller
      */
     public function index()
     {
-        $reviews= Review::all();
+        // $reviews= Review::all(); 
+        $reviews = Review::where('company_id', '=',null)->get(); 
+        // dd($chatData);
         return view('manager/reviewindex',["reviews"=>$reviews]);
     }
 
