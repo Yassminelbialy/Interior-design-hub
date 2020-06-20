@@ -25,6 +25,7 @@ return [
      "reviews"=>"Reviews",
      "company_info"=>"Company Information",
      "consultations"=>"Consultations",
+     "counterOfClients" =>"Counter Of Clients",
      "contacts"=>"Contacts",
      "users_order"=>"Users Orders",
      "facebook_posts"=>"Facebook Posts",
@@ -54,11 +55,6 @@ return [
      'manager_project_index_comment'=>'Comment',
      'manager_project_index_timetocall'=> 'Time To Call' ,
 
-
-
-
-
-
-
-
+     "CompanyName"=>"Company Name",
+    "NumberOfClients"     =>"Number Of Clients"
 ];

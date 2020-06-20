@@ -86,8 +86,6 @@ class ServiceTrashController extends Controller
     public function destroy($id)
     {
         $service=Service::withTrashed()->where('id',$id)->first();
-        $path = public_path()."/images/service/".$service->image;
-        unlink($path);
         $service->forceDelete();
         return Redirect()->back();
 

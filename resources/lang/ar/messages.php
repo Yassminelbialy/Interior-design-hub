@@ -24,6 +24,7 @@ return [
     "users"=>"المستخدمين",
     "logos"=>"الشعارات",
     "slider"=>"عرض",
+    "counterOfClients"=>"عدد عملاء الشركات",
     "charts"=>"الخرائط",
     "reviews"=>"المراجعات",
     "company_info"=>"معلومات عن الشركة",
@@ -54,6 +55,9 @@ return [
 
     'manager_project_index_comment'=>'تعليق',
     'manager_project_index_timetocall'=> 'وقت الاتصال' ,
+
+    "CompanyName"=>"اسم الشركه",
+    "NumberOfClients"     => "عدد العملاء"
 
 
 ];

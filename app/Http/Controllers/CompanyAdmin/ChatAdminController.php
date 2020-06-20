@@ -1,9 +1,13 @@
 <?php
 
 namespace App\Http\Controllers\CompanyAdmin;
+
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
+use App\User;
+use App\Message;
+use Auth;
+use Uuid;
 class ChatAdminController extends Controller
 {
     /**
@@ -11,9 +15,17 @@ class ChatAdminController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id = null)
     {
-        return view('CompanyAdmin.adminChat',['data'=>[]]);
+        $users = User::where('id', '!=', auth()->id())->get();
+
+        $chatData = Message::where('user_id', '=', $id)->get();
+        // dd($id);
+        return view('manager.adminChat', [
+            'users' => $users, 'data' => [],
+            'chatData' => $chatData,
+            'userID' => $id
+        ]);
     }
 
     /**
@@ -23,7 +35,10 @@ class ChatAdminController extends Controller
      */
     public function create()
     {
-        //
+        return response()->json([
+            'message' => $request->all(),
+
+        ]);
     }
 
     /**
@@ -34,7 +49,27 @@ class ChatAdminController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $message = new Message;
+
+        if ($files = $request->file('file')) {
+            $uuid = Uuid::generate()->string;
+            $path = $uuid . "." . $request->file('file')->getClientOriginalExtension();
+            $desti = 'chatfiles/';
+            $files->move($desti, $path);
+            $message->img = $path;
+        }
+
+        $message->writter = 'admin';
+        $message->body = $request->body;
+        $message->user_id = $request->writter;
+        $message->type = 'admin';
+
+        $res = $message->save();
+
+        return response()->json([
+            'message' => 'User status updated successfully',
+            'data' => $res
+        ]);
     }
 
     /**

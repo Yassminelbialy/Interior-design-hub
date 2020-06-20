@@ -60,18 +60,19 @@
 @component('components.services')
 @endcomponent
 
-{{-- @component('components.3d_projects')
-@endcomponent --}}
+ @component('components.3d_projects')
+@endcomponent 
 
-
+@component('components.video',['ceoInfo' => $ceoInfo])
+@endcomponent
 @component('components.quiz_tabs')
 @endcomponent
 
-{{--@component('components.information_plus')
+@component('components.information_plus')
 @endcomponent
-
+{{--
 @component('components.our_team')
-@endcomponent -->
+@endcomponent
 
   @component('components.clients',['logos' => $logos])
 @endcomponent 
@@ -79,8 +80,7 @@
 @component('components.state' ,['topics'=>$topics])
 @endcomponent
 
-@component('components.video',['ceoInfo' => $ceoInfo])
-@endcomponent
+
 
 @component('components.details')
 @endcomponent
@@ -93,8 +93,8 @@
 @endcomponent
 
 
-@component('components.contact',['contact' => $contact,'ceoInfo' => $ceoInfo])
-@endcomponent
+{{--@component('components.contact',['contact' => $contact,'ceoInfo' => $ceoInfo])
+@endcomponent --}}
 
 {{-- @component('components.matterport')
 
@@ -102,7 +102,7 @@
 
 @component('components.map')
 
-@endcomponent
+@endcomponent 
 
 @component('components.footer')
 @endcomponent

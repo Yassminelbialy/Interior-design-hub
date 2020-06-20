@@ -1,5 +1,5 @@
     <!-- start statitics -->
-    <section class="statitics text-center" id="statitics">
+    <section class="statitics text-center">
       <div class="border_box"></div>
       <div class="border_box"></div>
       <div class="container">
@@ -10,34 +10,34 @@
                 <span>+</span>
                 <span>250</span>
               </div>
-              <p>projects</p>
+              <p> Projects</p>
             </div>
           </div>
           <div class="col-md-3 col-sm-6">
             <div class="counter">
               <div class="counter_content">
                 <span>+</span>
-                <span>250</span>
+                <span>350</span>
               </div>
-              <p>projects</p>
+              <p>Clients</p>
             </div>
           </div>
           <div class="col-md-3 col-sm-6">
             <div class="counter">
               <div class="counter_content">
                 <span>+</span>
-                <span>250</span>
+                <span>150</span>
               </div>
-              <p>projects</p>
+              <p>Reviews</p>
             </div>
           </div>
           <div class="col-md-3 col-sm-6">
             <div class="counter">
               <div class="counter_content">
                 <span>+</span>
-                <span>250</span>
+                <span>550</span>
               </div>
-              <p>projects</p>
+              <p>Designs</p>
             </div>
           </div>
         </div>

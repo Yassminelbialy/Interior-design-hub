@@ -1,7 +1,9 @@
-@extends('admin.base')
-@section('adminbase')
+@extends('admin.companyBase')
+@section('CompanyAdminBase')
+
+
 <link rel="stylesheet" type="text/css" href="{{ asset('css/styles.css') }}">
-{{ Form::model($service,['route' => ['manager.service.update',$service],'enctype' => 'multipart/form-data','method'=>'PUT'])}}
+{{ Form::model($service,['route' => ['company.service.update',$service],'enctype' => 'multipart/form-data','method'=>'PUT'])}}
 <div class="row text-light">
 	<div class="col-md-9">
 		<div class="contact-form">

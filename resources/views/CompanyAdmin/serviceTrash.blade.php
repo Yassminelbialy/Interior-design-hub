@@ -1,5 +1,5 @@
-@extends('admin.base')
-@section('adminbase')
+@extends('admin.companyBase')
+@section('CompanyAdminBase')
 
 <div class="text-center">
   <table class="table table-dark" style="background-color: rgba(0,0,0,0.5);">
@@ -19,10 +19,10 @@
         <td>{{$service->title}}</td>
         <td>{{$service->description}}</td>
         <td>
-            <a href="{{ route('manager.serviceTrash.edit', $service->id) }}"class="btn btn-success">Active</a>
+            <a href="{{ route('company.serviceTrash.edit', $service->id) }}"class="btn btn-success">Active</a>
           </td>
           <td>
-            {!! Form::open(['route' => ['manager.serviceTrash.destroy',$service->id] ,'method' => 'delete', 'style'=>'display:inline-block']) !!}
+            {!! Form::open(['route' => ['company.serviceTrash.destroy',$service->id] ,'method' => 'delete', 'style'=>'display:inline-block']) !!}
             {!! Form::submit('Delete',['class'=>'btn btn-secondary']) !!}
             {!! Form::close() !!}
           </td>

@@ -129,7 +129,11 @@
                 </div>
             </div>
         </div>
+        @component('components.footer')
+        @endcomponent
     </div>
+
+
 
     <!-- Jquery JS-->
     <script src="/applyjop/vendor/jquery/jquery.min.js"></script>
