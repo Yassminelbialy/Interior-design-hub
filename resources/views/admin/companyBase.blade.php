@@ -77,6 +77,7 @@
                                 <a class="nav-link" href="/companypanel/review">Reviews</a>
                                 <a class="nav-link" href="/companypanel/alexandra">Company info</a>
                                 <a class="nav-link" href="/companypanel/consultations">Consultations</a>
+                                <a class="nav-link" href="/companypanel/sliderImage">Slider</a>
                                 <a class="nav-link" href="/companypanel/contacts">Contacts</a>
                                 <a class="nav-link" href="/companypanel/AdminOrder">Users Orders</a>
                                 <!-- <a class="nav-link" href="/companypanel/fbPosts">FaceBook Posts</a> -->
