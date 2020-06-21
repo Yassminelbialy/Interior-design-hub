@@ -34,6 +34,7 @@ return [
     "facebook_posts"=>"منشورات الفيسبوك",
     "topics"=>"المقالات",
     "jobs"=>"الوظائف",
+    "services"=>'الخدمات',
     "all_companies"=>"كل الشركات",
     "copyright"=>"جميع الحقوقه محفوظة لدى فريق مفتوح المصدر الفرع الخاص بالمنصورة",
     'manager_project_index_image'=>'صوره',
