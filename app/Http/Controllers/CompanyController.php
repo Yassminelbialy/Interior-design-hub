@@ -7,7 +7,7 @@ use Auth;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth as FacadesAuth;
-
+use App\Quiz;
 class CompanyController extends Controller
 {
     /**
@@ -17,8 +17,7 @@ class CompanyController extends Controller
      */
     public function index()
     {
-        $company = Company::paginate(4);
-
+       $company = Company::paginate(4);
         return view('manager.companyIndex',['companies'=>$company]);
     }
 
