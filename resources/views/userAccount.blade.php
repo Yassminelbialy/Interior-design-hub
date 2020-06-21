@@ -72,10 +72,17 @@
                         </span>
                         @enderror
                     </div>
-
+                    <a class="btn btn-info terms mb-2" style="color: white !important">Show Terms of service</a>
+                    <ul class="list-group show_more mt-2" style="display: none">
+                        <li class="list-group-item">Cras justo odio</li>
+                        <li class="list-group-item">Dapibus ac facilisis in</li>
+                        <li class="list-group-item">Morbi leo risus</li>
+                        <li class="list-group-item">Porta ac consectetur ac</li>
+                        <li class="list-group-item">Vestibulum at eros</li>
+                    </ul>
                 </div>
                 <div class="modal-footer d-flex justify-content-center">
-                <button class="btn btn-success btn-block">Submit</button>
+                    <button class="btn btn-success btn-block">Submit</button>
                 </div>
             </form>
         </div>

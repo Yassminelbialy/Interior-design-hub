@@ -12,15 +12,15 @@ var consform ={
 
 }
 console.log('ssssssssssaaaaaaaaa')
-$('#consmodal').on('change','#username',(event)=>
+$(document).on('change','#username',(event)=>
     {
             console.log(event.target)
             q1=$(event.target);// get element
             consform.name  = q1.prop('value'); //get value
 
         });//question 1 answer
-    
-        $('#consmodal').on('change','#phoneno',(event)=>
+
+        $(document).on('change','#phoneno',(event)=>
     {
             console.log(event.target)
             q1=$(event.target);// get element
@@ -28,7 +28,7 @@ $('#consmodal').on('change','#username',(event)=>
 
         });//question 1 answer
 
-        $('#consmodal').on('change','#calldate',(event)=>
+        $(document).on('change','#calldate',(event)=>
            {
             console.log(event.target)
             q1=$(event.target);// get element
@@ -36,7 +36,7 @@ $('#consmodal').on('change','#username',(event)=>
 
         });//question 1 answer
 
-$('#conssubmit').on('click',(event)=>
+$(document).on('click','#jobsubmit',(event)=>
 {
     var myform =new FormData ();
 
@@ -57,19 +57,19 @@ $('#conssubmit').on('click',(event)=>
                 {
                     x=JSON.parse(data);
                     if(x.erors)
-                    {   
+                    {
                         x.erors.forEach(element => {
                              $(`<li>${element}</li>`).appendTo($('.alerts ul'));
                         });
-                       
-                       console.log(x.erors); 
+
+                       console.log(x.erors);
                     }
                     if(x.message)
                     {
-                     
+
                             $(`<li>${x.message}</li>`).appendTo($('.alerts ul'));
-                     
-                        console.log(x.message,'sssss'); 
+
+                        console.log(x.message,'sssss');
                     }
 
                 }

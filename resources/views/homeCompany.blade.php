@@ -63,11 +63,11 @@
  @component('components.3d_projects')
 @endcomponent 
 
-
-@component('components.quiz_tabs')
-@endcomponent
 @component('components.video',['ceoInfo' => $ceoInfo])
 @endcomponent
+@component('components.quiz_tabs')
+@endcomponent
+
 @component('components.information_plus')
 @endcomponent
 {{--

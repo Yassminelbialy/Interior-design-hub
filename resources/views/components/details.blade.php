@@ -5,7 +5,7 @@
 @endpush
 
 <div class="details" id="contact">
-    <!-- Button trigger modal -->
+
     <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -36,7 +36,7 @@
                         <ul>
                         </ul>
                     </div>
-                {{-- <form action="{{ url('/contact') }}" method="post"> --}}
+
 
                     @csrf
 
@@ -65,7 +65,7 @@
                     <div class="modal-footer d-flex justify-content-center">
                         <button id='conssubmit' class="btn btn-success btn-block">Submit</button>
                     </div>
-                {{-- </form> --}}
+
             </div>
         </div>
     </div>

@@ -12,6 +12,7 @@ use App\ProjectImage;
 use App\Topic;
 use App\Company;
 use App\Sliderimages;
+use App\Service;
 use Illuminate\Support\Facades\DB;
 
 use function GuzzleHttp\Promise\all;
@@ -27,25 +28,23 @@ class UserController extends Controller
         $logos= Logo::all();
         $reviews= Review::all();
         $topics = Topic::limit(6)->get();
-// dd($ceoInfo);
+        $services = Service::limit(6)->get();
+
         $slider_image_project = DB::table('projects')
         ->join('sliderimages','projects.id' ,'sliderimages.project_id')
         ->get();
-        return view('home',['projects'=>$projects,'ceoInfo'=>$ceoInfo,'contact'=>$contact,'logos'=>$logos,'reviews'=>$reviews , 'topics'=>$topics ,'slider_projcts'=>$slider_image_project]);
+        return view('home',['projects'=>$projects,'ceoInfo'=>$ceoInfo,'contact'=>$contact,'logos'=>$logos,'reviews'=>$reviews , 'topics'=>$topics ,'slider_projcts'=>$slider_image_project,'services'=>$services]);
     }
     public function indexCompany($id)
     {
-        // dd($id);
+      
         $company =  Company::find($id)   ;
         $projects = $company->projects()->limit(6)->get();
-        $ceoInfo= $company->info()->get();
-        // dd($company,$ceoInfo);
-        $contact= Contact::limit(1)->get();
-        // $logos= Logo::all();
+        $ceoInfo= $company->info()->get();       
+        $contact= Contact::limit(1)->get();     
         $reviews= $company->reviews;
-
         $topics = Topic::limit(6)->get();
-// dd($ceoInfo);
+
         $slider_image_project = DB::table('projects')
         ->join('sliderimages','projects.id' ,'sliderimages.project_id')
         ->get();
