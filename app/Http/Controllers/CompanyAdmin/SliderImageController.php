@@ -1,31 +1,26 @@
 <?php
 
 namespace App\Http\Controllers\CompanyAdmin;
-
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\User;
-use App\Message;
-use Auth;
-use Uuid;
-class ChatAdminController extends Controller
+use App\Project;
+use App\Sliderimages;
+use DB;
+
+class SliderImageController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($id = null)
+    public function index()
     {
-        $users = User::where('id', '!=', auth()->id())->get();
 
-        $chatData = Message::where('user_id', '=', $id)->get();
-        // dd($id);
-        return view('manager.adminChat', [
-            'users' => $users, 'data' => [],
-            'chatData' => $chatData,
-            'userID' => $id
-        ]);
+        $data_slider = DB::table('projects')
+        ->join('sliderimages','projects.id' ,'sliderimages.project_id')
+        ->get();
+        return view ('CompanyAdmin.slider' ,['slider'=>$data_slider]);
     }
 
     /**
@@ -35,10 +30,8 @@ class ChatAdminController extends Controller
      */
     public function create()
     {
-        return response()->json([
-            'message' => $request->all(),
-
-        ]);
+        $project_name = Project::all();
+        return view('CompanyAdmin.addImageSlider' , ['projectsName'=>$project_name]);
     }
 
     /**
@@ -49,27 +42,24 @@ class ChatAdminController extends Controller
      */
     public function store(Request $request)
     {
-        $message = new Message;
+        $proj_image = new Sliderimages();
+        
+        $proj_image->project_id = $request->title;
 
-        if ($files = $request->file('file')) {
-            $uuid = Uuid::generate()->string;
-            $path = $uuid . "." . $request->file('file')->getClientOriginalExtension();
-            $desti = 'chatfiles/';
-            $files->move($desti, $path);
-            $message->img = $path;
+        
+        if($request->hasfile('proImg'))
+        {
+
+            $file = $request->file('proImg');
+            $extension = $file->getClientOriginalExtension();
+            $fileName = time() . '.' . $extension;
+            $file->move('images/projectsSlider' , $fileName);
+            $proj_image->img = $fileName; 
         }
+       
+        $proj_image->save();
 
-        $message->writter = 'admin';
-        $message->body = $request->body;
-        $message->user_id = $request->writter;
-        $message->type = 'admin';
-
-        $res = $message->save();
-
-        return response()->json([
-            'message' => 'User status updated successfully',
-            'data' => $res
-        ]);
+        return redirect('/companypanel/sliderImage');
     }
 
     /**
@@ -114,6 +104,8 @@ class ChatAdminController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $deleted_pro = Sliderimages::find($id);
+        $deleted_pro->delete();
+        return redirect('/companypanel/sliderImage');
     }
 }

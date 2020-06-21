@@ -49,6 +49,7 @@ Route::middleware('manager')->prefix('manager')->name('manager.')->group(functio
     Route::resource('serviceTrash' ,'Manager\ServiceTrashController');
     Route::resource('quizzes' , 'Manager\QuizController');
     Route::resource('quizzes.images' , 'Manager\QuizImageController');
+    Route::get('/counter/info' ,'Manager\CounterController@getCounterOfSpecificCompany');
     Route::resource('analytics' ,'Manager\AnalyticsController');
     Route::resource('AdminOrder' , 'Manager\OrderAdminController');
     Route::get('users/{users}/order', 'Manager\OrderAdminController@updateOrder')->name('order');
@@ -113,12 +114,14 @@ Route::get('jops', 'Manager\JopApplicantController@index')->name('jops');
         Route::resource('quizzes', 'CompanyAdmin\QuizController');
         Route::resource('quizzes.images', 'CompanyAdmin\QuizImageController');
         Route::resource('AdminOrder', 'CompanyAdmin\OrderAdminController');
+        Route::resource('sliderImage' , 'CompanyAdmin\SliderImageController');
         Route::get('users/{users}/order', 'CompanyAdmin\OrderAdminController@updateOrder')->name('order');
         Route::resource('jopAppli', 'CompanyAdmin\JopApplicantController');
         Route::resource('chatList', 'CompanyAdmin\ChatAdminController');
         Route::resource('service', 'CompanyAdmin\ServiceController');
         Route::resource('serviceTrash' ,'CompanyAdmin\ServiceTrashController');
         Route::get('/{id?}', 'UserController@indexCompany');
+
 
 }); 
 

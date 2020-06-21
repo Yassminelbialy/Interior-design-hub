@@ -59,8 +59,8 @@
 @endcomponent
 
 
-<!-- @component('components.quiz_tabs')
-@endcomponent -->
+@component('components.quiz_tabs')
+@endcomponent
 
 @component('components.information_plus')
 @endcomponent

@@ -1,3 +1,4 @@
+
     <section class="services text-center">
 
         <h2 class="mt-5">Our Services</h2>
@@ -15,7 +16,9 @@
                     </div>
                 </div>  
                 @endforeach              
-            </div>
+
+            </div>           
         </div>
+    
     </section>
-    <!-- end services -->
+<!-- end services -->
