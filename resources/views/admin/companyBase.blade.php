@@ -56,10 +56,10 @@
                             <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                             Dashboard
                         </a>
-                        <a class="nav-link" href="/companypanel/quizzes">
+                        <!-- <a class="nav-link" href="/companypanel/quizzes">
                             <div class="sb-nav-link-icon"><i class="fas fa-file-contract"></i></div>
                             QuiZZes Requests
-                        </a>
+                        </a> -->
                         <a class="nav-link" href="/manager/chatList">
                             <div class="sb-nav-link-icon"><i class="fas fa-file-contract"></i></div>
                             Chat List
@@ -77,6 +77,7 @@
                                 <a class="nav-link" href="/companypanel/review">Reviews</a>
                                 <a class="nav-link" href="/companypanel/alexandra">Company info</a>
                                 <a class="nav-link" href="/companypanel/consultations">Consultations</a>
+                                <a class="nav-link" href="/companypanel/sliderImage">Slider</a>
                                 <a class="nav-link" href="/companypanel/contacts">Contacts</a>
                                 <a class="nav-link" href="/companypanel/AdminOrder">Users Orders</a>
                                 <!-- <a class="nav-link" href="/companypanel/fbPosts">FaceBook Posts</a> -->

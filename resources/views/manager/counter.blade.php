@@ -5,8 +5,8 @@
   <thead>
     <tr>
      
-      <th scope="col" class="text-light h6" style="font-weight:700">Company Name</th>
-      <th scope="col" class="text-light h6" style="font-weight:700">Number Of Clients</th>
+      <th scope="col" class="text-light h6" style="font-weight:700">{{trans('messages.CompanyName')}}</th>
+      <th scope="col" class="text-light h6" style="font-weight:700">{{trans('messages.NumberOfClients')}}</th>
      
       
     </tr>
