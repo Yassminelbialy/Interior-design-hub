@@ -42,7 +42,7 @@
 @component('components.steps_working')
 @endcomponent
 
-@component('components.all_services')
+@component('components.all_services',['services' => $services ])
 @endcomponent
 
 @component('components.statitics')

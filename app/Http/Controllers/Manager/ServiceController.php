@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\Manager;
 use App\Http\Controllers\Controller;
-use Uuid ;
 use App\Service;
 use Illuminate\Http\Request;
 
@@ -13,6 +12,8 @@ class ServiceController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+     
     public function index()
     {
         $services= Service::all();
