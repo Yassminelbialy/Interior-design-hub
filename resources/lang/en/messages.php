@@ -32,6 +32,7 @@ return [
      "topics"=>"Topics",
      "jobs"=>"Jobs",
      "slider"=>"Slider",
+     'services'=>"All Services",
      "all_companies"=>"All Companies",
      "copyright"=>"Copyright ITI Mansoura Branch Open Source",
      'manager_project_index_image'=>'Image',

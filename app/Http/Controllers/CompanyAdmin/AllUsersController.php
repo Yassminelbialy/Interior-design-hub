@@ -4,6 +4,7 @@ namespace App\Http\Controllers\CompanyAdmin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\User;
+use App\Quiz;
 use Auth;
 class AllUsersController extends Controller
 {
@@ -14,8 +15,16 @@ class AllUsersController extends Controller
      */
     public function index()
     {
-        $users = Auth::user()->company->users;
-        return view('CompanyAdmin.user',['data'=>$users]);
+        $company_id = Auth::user()->company_id;
+        //dd($company_id);
+        if($company_id)
+        {
+            $quiz_info = Quiz::where('company_id',$company_id)->pluck('customerPhoneNo');
+            // dd($quiz_info);
+            $user = User::whereIn('phone',$quiz_info)->get();
+             //dd($user);
+        }
+         return view('CompanyAdmin.user',['data'=>$user]);
 
     }
 
