@@ -27,7 +27,10 @@ class CategoryController extends Controller
 
     public function store(Request $request)
     {
-
+        $request->validate([
+            'name' => 'required|unique:categories|max:50',
+            'image' => 'required|image',
+        ]);
         // dd(Uuid::generate()->string);
         $path = '';
 
@@ -75,5 +78,5 @@ class CategoryController extends Controller
         $category->update($req);
         return redirect(route('manager.category.index'));
     }
-   
+
 }

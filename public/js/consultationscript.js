@@ -36,7 +36,7 @@ $(document).on('change','#username',(event)=>
 
         });//question 1 answer
 
-$(document).on('click','#jobsubmit',(event)=>
+$(document).on('click','#conssubmit',(event)=>
 {
     var myform =new FormData ();
 

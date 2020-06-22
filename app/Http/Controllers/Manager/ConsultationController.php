@@ -35,12 +35,11 @@ class ConsultationController extends Controller
 
             'username'  =>  $request->username,
             'phone'     =>  $request->phone,
-            'date'      =>  $request->date
         );
 
-        Mail::to('yassminelbialy@gmail.com')
-            ->send(new SendEmail($usersData));
-        return back()->with('success', 'thanx for contacting us :)');
+        // Mail::to('yassminelbialy@gmail.com')
+            // ->send(new SendEmail($usersData));
+        // return back()->with('success', 'thanx for contacting us :)');
         return response()->json(['message' => 'User status added successfully.']);
     }
     // ************ Yassmin Part *************************

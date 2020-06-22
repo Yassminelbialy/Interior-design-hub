@@ -9,7 +9,7 @@ use App\ProjectImage;
 use Illuminate\Http\Request;
 use Uuid;
 use Illuminate\Support\Facades\File as LaraFile;
-
+use App\Http\Requests\ProjectPost;
 
 class ProjectController extends Controller
 {
@@ -29,8 +29,10 @@ class ProjectController extends Controller
         return view('manager.projectformadd', ['category' => $categories]);
     }
 
-    public function store(Request $request)
+    public function store(ProjectPost $request)
     {
+        // dd($request->all());
+
         $req = $request->all();
 
         if ($files = $request->file('mainimage')) {
