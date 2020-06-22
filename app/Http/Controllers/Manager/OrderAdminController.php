@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Manager;
+
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Order;
@@ -9,126 +10,76 @@ use App\User;
 
 class OrderAdminController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
 
         $OrderDetails = Order::all();
-        return view('manager.orderViewAdmin',['OrdersDetails'=>$OrderDetails]);
+        return view('manager.orderViewAdmin', ['OrdersDetails' => $OrderDetails]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         $quiz = Quiz::pluck('customerPhoneNo')->all();
-        $user = User::whereIn('phone' ,$quiz)->whereIn('state',[0])->where('adminRole','=',NULL)->pluck('name','id')->toArray();
-        return view('manager.addOrderForm',compact('user'));
+        $user = User::whereIn('phone', $quiz)->whereIn('state', [0])->where('adminRole', '=', NULL)->pluck('name', 'id')->toArray();
+        return view('manager.addOrderForm', compact('user'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        
-        $req=$request->all();
-        
-        if($request->file('contractImg')){
+
+        $req = $request->all();
+
+        if ($request->file('contractImg')) {
 
             $file = $request->file('contractImg');
             $extension = $file->getClientOriginalExtension();
             $fileName = time() . '.' . $extension;
-            $file->move('images/AdminOrderImages' , $fileName);
-            $req['contractImg']=$fileName;
+            $file->move('images/AdminOrderImages', $fileName);
+            $req['contractImg'] = $fileName;
         }
 
         $order = Order::create($req);
 
         return redirect('/manager/AdminOrder');
-
     }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
-        return view('manager.editAdminOrder' , ['orderUpdated'=>Order::find($id)]);
+        return view('manager.editAdminOrder', ['orderUpdated' => Order::find($id)]);
     }
-    public function updateOrder(User $users){
+    public function updateOrder(User $users)
+    {
         $id = $users->id;
-        $user=User::find($id);
-        if($user){
-            $user->state = 1 ;
+        $user = User::find($id);
+        if ($user) {
+            $user->state = 1;
             $user->save();
         }
-        return redirect()->back();   
+        return redirect()->back();
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id)
     {
         $updatedOrder = Order::find($id);
         $updatedOrder->description = $request->description;
         $updatedOrder->cost = $request->cost;
         $updatedOrder->state = $request->state;
-        if($request->hasfile('contractImg'))
-        {
+        if ($request->hasfile('contractImg')) {
 
             $file = $request->file('contractImg');
             $extension = $file->getClientOriginalExtension();
             $fileName = time() . '.' . $extension;
-            $file->move('images/AdminOrderImages' , $fileName);
-            $updatedOrder->contractImg = $fileName; 
+            $file->move('images/AdminOrderImages', $fileName);
+            $updatedOrder->contractImg = $fileName;
         }
-       
+
         $updatedOrder->save();
         return redirect('/manager/AdminOrder');
-        
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
         $trashOrder = Order::find($id);
         $trashOrder->delete();
         return redirect('/manager/AdminOrder');
-        
     }
 }
