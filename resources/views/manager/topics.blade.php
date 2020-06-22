@@ -11,7 +11,7 @@
       <th scope="col" class="text-light h6" style="font-weight:700">hint</th>
       <th scope="col" class="text-light h6" style="font-weight:700">image</th>
       <th scope="col" class="text-light h6" style="font-weight:700">description</th>
-      <th scope="col" class="text-light h6" style="font-weight:700">KeyWord</th>
+      <!-- <th scope="col" class="text-light h6" style="font-weight:700">KeyWord</th> -->
       
     </tr>
     
@@ -27,7 +27,7 @@
                         <img src="{{ asset('images/topicImages/'. $topicsData->image) }}" width="100px" height="100" style="border-radius:50%" alt="topicsImage"/>
                     </td>
                     <td>{{ $topicsData->description }}</td>
-                    <td>{{ $topicsData->keyWords }}</td>
+                    <!-- <td>{{ $topicsData->keyWords }}</td> -->
                     
 
                     <td>

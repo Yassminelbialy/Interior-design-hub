@@ -4,7 +4,7 @@
         <h2 class="mt-5">Our Services</h2>
         <div class="services_content">
             <div class="service_box">
-                @foreach ($services as $service )
+                @foreach ($errors as $service )
                 <div class="box">
                     <div class="icon">{{$service->id}}</div>
                     <div class="content">
