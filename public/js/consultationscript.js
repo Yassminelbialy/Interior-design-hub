@@ -9,6 +9,7 @@ var consform ={
     phone:'',
     name:'',
     time:'',
+    comment:''
 
 }
 console.log('ssssssssssaaaaaaaaa')
@@ -27,8 +28,12 @@ $(document).on('change','#username',(event)=>
             consform.phone  = q1.prop('value'); //get value
 
         });//question 1 answer
-
-        $(document).on('change','#calldate',(event)=>
+    $('#consmodal').on('change','#comment',(event)=>
+    {
+            q1=$(event.target);
+            consform.comment  = q1.prop('value'); 
+    });//question 1 answer
+        $(document).on('change','#date',(event)=>
            {
             console.log(event.target)
             q1=$(event.target);// get element
@@ -43,6 +48,7 @@ $(document).on('click','#jobsubmit',(event)=>
 
     myform.append('username',consform.name);
     myform.append('phone',consform.phone);
+    myform.append('comment',consform.comment);
     myform.append('date',consform.time);
     $('.alerts ul').html('');
     $.ajax({

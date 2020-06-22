@@ -21,7 +21,8 @@ class ConsultationController extends Controller
         $validator = Validator::make($request->all(), [
             'username'   =>     'required',
             'phone'      =>     'required',
-            // 'date' => 'date '
+            'comment' => 'required',
+            'date' => 'date '
         ]);
         if ($validator->fails()) {
             return response()->json(['erors' => $validator->messages()->all()]);
@@ -29,12 +30,14 @@ class ConsultationController extends Controller
         $consultation = new Consultation();
         $consultation->name = $request->username;
         $consultation->timeToCall = $request->date;
+        $consultation->comment = $request->comment;
         $consultation->phone = $request->phone;
         $consultation->save();
         $usersData = array(
 
             'username'  =>  $request->username,
             'phone'     =>  $request->phone,
+            'comment' => $request->comment,
             'date'      =>  $request->date
         );
 

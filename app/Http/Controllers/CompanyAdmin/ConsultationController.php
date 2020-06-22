@@ -24,17 +24,20 @@ class ConsultationController extends Controller
 
             'username'   =>     'required',
             'phone'      =>     'required',
+            'comment' => 'required',
             'date' => 'date ',
         ]);
         $consultation = new Consultation();
         $consultation->name = $request->username;
         $consultation->timeToCall = $request->date;
+        $consultation->comment = $request->comment;
         $consultation->phone = $request->phone;
         $consultation->save();
         $usersData = array(
 
             'username'  =>  $request->username,
             'phone'     =>  $request->phone,
+            'comment' => $request->comment,
             'date'      =>  $request->date
         );
 
