@@ -13,6 +13,7 @@
         <title>Interior Design</title>
         <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
         <link href="{{ asset('css/userProfileStyle.css')}}" rel="stylesheet">
+        
         <!-- chat liks -->
         <link rel="stylesheet" href="{{ asset('css/chatstyle.css')}}">
         <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,300' rel='stylesheet' type='text/css'>
