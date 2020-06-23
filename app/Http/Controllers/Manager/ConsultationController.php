@@ -15,14 +15,14 @@ class ConsultationController extends Controller
 {
     public function send(Request $request)
     {
-        return response()->json(['message' => 'User status added successfully.']);
+        // return response()->json(['message' => $request->all()]);
 
         // dd($request->all());
         // return response()->json(['message' => 'User status updated successfully.']);
         $validator = Validator::make($request->all(), [
             'username'   =>     'required',
             'phone'      =>     'required',
-            'comment' => 'required',
+            // 'comment' => 'required',
             'date' => 'date '
         ]);
         if ($validator->fails()) {
@@ -31,16 +31,16 @@ class ConsultationController extends Controller
         $consultation = new Consultation();
         $consultation->name = $request->username;
         $consultation->timeToCall = $request->date;
-        $consultation->comment = $request->comment;
+        // $consultation->comment = $request->comment;
         $consultation->phone = $request->phone;
         $consultation->save();
-        $usersData = array(
+        // $usersData = array(
 
-            'username'  =>  $request->username,
-            'phone'     =>  $request->phone,
-            'comment' => $request->comment,
-            'date'      =>  $request->date
-        );
+        //     'username'  =>  $request->username,
+        //     'phone'     =>  $request->phone,
+        //     'comment' => $request->comment,
+        //     'date'      =>  $request->date
+        // );
 
         // Mail::to('yassminelbialy@gmail.com')
             // ->send(new SendEmail($usersData));

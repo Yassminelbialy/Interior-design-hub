@@ -43,7 +43,7 @@ $(document).on('change','#username',(event)=>
 
 $(document).on('click','#conssubmit',(event)=>
 {
-    console.log('jjj')
+    console.log('jhjhjhjh')
     var myform =new FormData ();
 
 
@@ -55,9 +55,9 @@ $(document).on('click','#conssubmit',(event)=>
     $.ajax({
                 url: "http://localhost:8000/contact",
                 dataType: 'script',
-                cache: true,
-                contentType: true,
-                processData: true,
+
+                contentType: false,
+                processData: false,
                 data: myform,                         // Setting the data attribute of ajax with file_data
                 type: 'POST',
                 success:function(data)
