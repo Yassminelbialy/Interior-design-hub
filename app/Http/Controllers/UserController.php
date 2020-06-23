@@ -44,16 +44,14 @@ class UserController extends Controller
         $ceoInfo = $company->info()->get();
         $contact = Contact::limit(1)->get();
         $reviews = $company->reviews;
+        $services = $company->services()->limit(6)->get();
         $topics = Topic::limit(6)->get();
 
         $slider_image_project = DB::table('projects')
             ->join('sliderimages', 'projects.id', 'sliderimages.project_id')
             ->get();
-        return view('homeCompany', ['projects' => $projects, 'ceoInfo' => $ceoInfo, 'reviews' => $reviews, 'contact' => $contact, 'slider_projcts' => $slider_image_project, 'company' => $id]);
+        return view('homeCompany', ['projects' => $projects,'services' => $services, 'ceoInfo' => $ceoInfo, 'reviews' => $reviews, 'contact' => $contact, 'slider_projcts' => $slider_image_project, 'company' => $id]);
     }
-
-
-
 
     public function view($id)
     {
