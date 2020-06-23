@@ -53,9 +53,6 @@ class UserController extends Controller
         return view('homeCompany', ['projects' => $projects,'services' => $services, 'ceoInfo' => $ceoInfo, 'reviews' => $reviews, 'contact' => $contact, 'slider_projcts' => $slider_image_project, 'company' => $id]);
     }
 
-
-
-
     public function view($id)
     {
         $project = Project::find($id);
