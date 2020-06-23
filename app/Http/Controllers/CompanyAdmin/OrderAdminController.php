@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Order;
 use App\Quiz;
 use App\User;
+use Auth;
 
 class OrderAdminController extends Controller
 {
@@ -28,8 +29,15 @@ class OrderAdminController extends Controller
      */
     public function create()
     {
-        $quiz = Quiz::pluck('customerPhoneNo')->all();
-        $user = User::whereIn('phone' ,$quiz)->whereIn('state',[0])->where('adminRole','=',NULL)->pluck('name','id')->toArray();
+        // $quiz = Quiz::pluck('customerPhoneNo')->all();
+         $company_id = Auth::user()->company_id;
+         
+         if($company_id){
+
+            $quiz = Quiz::where('company_id',$company_id)->pluck('customerPhoneNo');
+            $user = User::whereIn('phone' ,$quiz)->whereIn('state',[0])->where('adminRole','=',NULL)->pluck('name','id')->toArray();
+         }
+        
         return view('CompanyAdmin.addOrderForm',compact('user'));
     }
 

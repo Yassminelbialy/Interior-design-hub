@@ -32,6 +32,7 @@ return [
      "topics"=>"Topics",
      "jobs"=>"Jobs",
      "slider"=>"Slider",
+     'services'=>"All Services",
      "all_companies"=>"All Companies",
      "copyright"=>"Copyright ITI Mansoura Branch Open Source",
      'manager_project_index_image'=>'Image',
@@ -56,5 +57,15 @@ return [
      'manager_project_index_timetocall'=> 'Time To Call' ,
 
      "CompanyName"=>"Company Name",
-    "NumberOfClients"     =>"Number Of Clients"
+    "NumberOfClients"     =>"Number Of Clients",
+        'Area'	=>'Area',
+        'timeOfRsponse'=>'TimeOfRsponse',
+        'participateState'=>'participateState',
+        'contactTybe'	=>'contactTybe',
+        'customerName'=>'customerName',
+        'customerPhoneNo'=>'customerPhoneNo',
+        'design'=>'design',
+        'styles'=>'styles',
+        'Actions'=>'Actions',
+
 ];

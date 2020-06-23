@@ -9,10 +9,10 @@
     <div class="row">
         <div class="col-lg-8">
             {{ Form::open(['route' => 'manager.topics.store','enctype' => 'multipart/form-data','method'=>'post'])}}
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <label for="exampleFormControlFile1" class="text-light">Enter Topic Id</label>
                 <input type="text" class="form-control" name="topicId">
-            </div>
+            </div> -->
             <div class="form-group text-light">
                 <label for="exampleFormControlFile1">Enter Topic Title </label>
                 <input type="text" class="form-control-file" id="exampleFormControlFile1" name="topicTitle">
@@ -29,18 +29,18 @@
                 <label for="exampleFormControlFile1">Enter Topic Description </label>
                 <input type="text" class="form-control-file" id="exampleFormControlFile1" name="topicDesc">
             </div>
-            <div class="form-group text-light">
+            <!-- <div class="form-group text-light">
                 <label for="exampleFormControlFile1">Enter Topic Price </label>
                 <input type="text" class="form-control-file" id="exampleFormControlFile1" name="topicPrice">
-            </div>
-            <div class="form-group text-light">
+            </div> -->
+            <!-- <div class="form-group text-light">
                 <label for="exampleFormControlFile1">Enter Topic KeyWord </label>
                 <input type="text" class="form-control-file" id="exampleFormControlFile1" name="topicKeyword">
-            </div>
-            <div class="form-group text-light">
+            </div> -->
+            <!-- <div class="form-group text-light">
                 <label for="exampleFormControlFile1">Enter Topic URL </label>
                 <input type="text" class="form-control-file" id="exampleFormControlFile1" name="topicUrl">
-            </div>
+            </div> -->
 
             <button type="submit" class="btn btn-info btn-block mb-2">Submit</button>
             </form>
