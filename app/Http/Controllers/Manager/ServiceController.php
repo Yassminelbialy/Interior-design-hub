@@ -11,7 +11,7 @@ class ServiceController extends Controller
 
     public function index()
     {
-        $services = Service::all();
+        $services = Service::where('company_id', '=', null)->get();
         return view('manager/serviceIndex', ["services" => $services]);
     }
 
