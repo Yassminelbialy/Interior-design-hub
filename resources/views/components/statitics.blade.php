@@ -8,7 +8,7 @@
             <div class="counter">
               <div class="counter_content">
                 <span>+</span>
-                <span>250</span>
+                <span class="number_c">250</span>
               </div>
               <p> Projects</p>
             </div>
@@ -17,7 +17,7 @@
             <div class="counter">
               <div class="counter_content">
                 <span>+</span>
-                <span>350</span>
+                <span class="number_c" >350</span>
               </div>
               <p>Clients</p>
             </div>
@@ -26,7 +26,7 @@
             <div class="counter">
               <div class="counter_content">
                 <span>+</span>
-                <span>150</span>
+                <span class="number_c">150</span>
               </div>
               <p>Reviews</p>
             </div>
@@ -35,7 +35,7 @@
             <div class="counter">
               <div class="counter_content">
                 <span>+</span>
-                <span>550</span>
+                <span class="number_c">550</span>
               </div>
               <p>Designs</p>
             </div>

@@ -1456,12 +1456,14 @@ nav .contact_us i {
 
 .statitics .counter {
     margin: 0 33%;
+    transform: scale(0);
 }
 
 .statitics .counter .counter_content {
     background-color: black;
     font-size: 20px;
     padding: 15px 0;
+
 }
 
 .statitics .counter p {
@@ -1749,7 +1751,7 @@ nav .contact_us i {
 .service_box .icon {
     /* box-shadow: 0 0 0 0 #c19e70; */
     background: #c19e70;
-    
+
 }
 
 .service_box .box .content {
