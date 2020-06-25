@@ -40,11 +40,7 @@
 @component('components.header',['contact' => $contact ,'slide_img'=>$slider_projcts])
 @endcomponent
 
-{{-- @component('components.who_us')
-@endcomponent --}}
-{{--
-@component('components.steps_working')
-@endcomponent --}}
+
 
 @component('components.all_services',['services' => $services ])
 @endcomponent
@@ -70,31 +66,16 @@
 
 @component('components.information_plus')
 @endcomponent
-{{--
-@component('components.our_team')
-@endcomponent
-
-  @component('components.clients',['logos' => $logos])
-@endcomponent 
-
-@component('components.state' ,['topics'=>$topics])
-@endcomponent
-
-
 
 @component('components.details')
 @endcomponent
-
-@component('components.worldWide')
-@endcomponent --}}
-
 
 @component('components.testimonial',['reviews' => $reviews])
 @endcomponent
 
 
-{{--@component('components.contact',['contact' => $contact,'ceoInfo' => $ceoInfo])
-@endcomponent --}}
+@component('components.contact',['contact' => $contact,'ceoInfo' => $ceoInfo])
+@endcomponent 
 
 {{-- @component('components.matterport')
 

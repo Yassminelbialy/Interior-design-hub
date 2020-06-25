@@ -29,7 +29,7 @@ class UserController extends Controller
         $logos = Logo::all();
         $reviews = Review::all();
         $topics = Topic::limit(6)->get();
-        $services = Service::limit(6)->get();
+        $services =Service::where('company_id', '=', null)->limit(6)->get();
 
         $slider_image_project = DB::table('projects')
             ->join('sliderimages', 'projects.id', 'sliderimages.project_id')

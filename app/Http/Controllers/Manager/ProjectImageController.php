@@ -17,7 +17,7 @@ class ProjectImageController extends Controller
 {
     public function index(Request $request, $id)
     {
-        // dd($id);
+    // dd($id);
         $projectImages = Project::find($id)->images()->paginate(3);
 
         return view('manager.projectimages', ['id' => $id, 'data' => $projectImages]);
@@ -33,6 +33,11 @@ class ProjectImageController extends Controller
     public function store(Request $request, $id)
     {
         // dd(Project::find($id));
+        $request->validate([
+            'description' => 'required|max:150',
+            'keyWords' => 'required',
+            'image' => 'image|required',
+        ]);
         $project = Project::find($id);
         $req = $request->all();
 
@@ -47,7 +52,7 @@ class ProjectImageController extends Controller
         }
         $image = $project->images()->create($req);
         //     //
-        return redirect(route('manager.project.images.index', $id));
+        return redirect(route('manager.project.images.index', $id))->with('success','done');
     }
 
 
