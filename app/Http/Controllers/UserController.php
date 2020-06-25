@@ -33,7 +33,7 @@ class UserController extends Controller
 
         $slider_image_project = DB::table('projects')
             ->join('sliderimages', 'projects.id', 'sliderimages.project_id')
-            ->where('company_id',NULL)->get();
+            ->get();
         return view('home', ['projects' => $projects, 'ceoInfo' => $ceoInfo, 'contact' => $contact, 'logos' => $logos, 'reviews' => $reviews, 'topics' => $topics, 'slider_projcts' => $slider_image_project, 'services' => $services]);
     }
     public function indexCompany($id)
