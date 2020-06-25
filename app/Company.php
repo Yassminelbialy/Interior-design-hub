@@ -49,6 +49,10 @@ class Company extends Model
     {
         return $this->hasMany('App\Review');
     }
+    public function sliderImages()
+    {
+        return $this->hasMany('App\Sliderimages');
+    }
 
     public function info()
     {
