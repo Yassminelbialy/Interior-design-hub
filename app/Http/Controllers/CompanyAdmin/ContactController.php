@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 class ContactController extends Controller
 {
+    // User::find(2)->company->contact()->create(['email'=>'ahmdd hazem','company_id'=>1])
     /**
      * Display a listing of the resource.
      *
@@ -14,6 +15,14 @@ class ContactController extends Controller
      */
     public function index()
     {
+        // $contact =Auth::user()->company->contact;
+        // if($info)
+        // {
+        //     return view('CompanyAdmin/alexandrainfoindex',["ceoInfo"=>[$info] ]);
+        // }else{
+        //     return view('CompanyAdmin.alexandrainfoadd');
+        // }
+        // // Auth::user()->company->contact
         $contacts= Contact::all();
         return view('CompanyAdmin/contactindex',["contacts"=>$contacts]);
     }
