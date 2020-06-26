@@ -7,4 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class Image3d extends Model
 {
     //
+    protected $guarded = [];
+
 }

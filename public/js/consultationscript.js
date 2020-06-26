@@ -52,6 +52,15 @@ $(document).on('click','#conssubmit',(event)=>
     myform.append('comment',consform.comment);
     myform.append('date',consform.time);
     $('.alerts ul').html('');
+    if (typeof quiz_id === 'undefined')
+    {
+       var mycomp ='';
+
+   }else{
+       var mycomp =quiz_id?quiz_id:'';
+       myform.append('company',mycomp);
+
+   }
     $.ajax({
                 url: "http://localhost:8000/contact",
                 dataType: 'script',

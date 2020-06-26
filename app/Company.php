@@ -58,6 +58,10 @@ class Company extends Model
     {
         return $this->hasOne('App\Alexandrainfo');
     }
+    public function contact()
+    {
+        return $this->hasOne('App\Contact');
+    }
 
     protected $guarded = [];
 
