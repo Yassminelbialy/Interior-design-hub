@@ -183,7 +183,7 @@
                           <div class="row">
                             <div class="col-md-3 col-sm-6">
                               <div class="check_style">
-                                <img class="w-100 h-100" src="/images/decore1.jpeg" alt="picture_style" />
+                                <img src="/images/decore1.jpeg" alt="picture_style" />
                                 <label class="checkbox_container">
                                   <input type="checkbox" name="check_quiz3" value="1">
                                   <span class="checkmark"></span>
@@ -193,7 +193,7 @@
                             </div>
                             <div class="col-md-3 col-sm-6">
                               <div class="check_style">
-                                <img class="w-100 h-100" src="/images/decore2.jpeg" alt="picture_style" />
+                                <img c" src="/images/decore2.jpeg" alt="picture_style" />
                                 <label class="checkbox_container">
                                   <input type="checkbox" name="check_quiz3" value="2">
                                   <span class="checkmark"></span>
@@ -204,7 +204,7 @@
                             </div>
                             <div class="col-md-3 col-sm-6">
                               <div class="check_style">
-                                <img class="w-100 h-100" src="/images/decore3.jpeg" alt="picture_style" />
+                                <img  src="/images/decore3.jpeg" alt="picture_style" />
                                 <label class="checkbox_container">
                                   <input type="checkbox" name="check_quiz3" value="3">
                                   <span class="checkmark"></span>
@@ -214,7 +214,7 @@
                             </div>
                             <div class="col-md-3 col-sm-6">
                               <div class="check_style">
-                                <img class="w-100 h-100" src="/images/decore2.jpeg" alt="picture_style" />
+                                <img  src="/images/decore2.jpeg" alt="picture_style" />
                                 <label class="checkbox_container">
                                   <input type="checkbox" name="check_quiz3" value="4">
                                   <span class="checkmark"></span>
@@ -224,7 +224,7 @@
                             </div>
                             <div class="col-md-3 col-sm-6">
                               <div class="check_style">
-                                <img class="w-100 h-100" src="/images/decore4.jpeg" alt="picture_style" />
+                                <img  src="/images/decore4.jpeg" alt="picture_style" />
                                 <label class="checkbox_container">
                                   <input type="checkbox" name="check_quiz3" value="5">
                                   <span class="checkmark"></span>
@@ -234,7 +234,7 @@
                             </div>
                             <div class="col-md-3 col-sm-6">
                               <div class="check_style">
-                                <img class="w-100 h-100" src="/images/decore6.jpeg" alt="picture_style" />
+                                <img  src="/images/decore6.jpeg" alt="picture_style" />
                                 <label class="checkbox_container">
                                   <input type="checkbox" name="check_quiz3" value="6">
                                   <span class="checkmark"></span>
@@ -244,7 +244,7 @@
                             </div>
                             <div class="col-md-3 col-sm-6">
                               <div class="check_style">
-                                <img class="w-100 h-100" src="/images/decore3.jpeg" alt="picture_style" />
+                                <img  src="/images/decore3.jpeg" alt="picture_style" />
                                 <label class="checkbox_container">
                                   <input type="checkbox" name="check_quiz3" value="7">
                                   <span class="checkmark"></span>
@@ -254,7 +254,7 @@
                             </div>
                             <div class="col-md-3 col-sm-6">
                               <div class="check_style">
-                                <img class="w-100 h-100" src="/images/decore1.jpeg" alt="picture_style" />
+                                <img src="/images/decore1.jpeg" alt="picture_style" />
                                 <label class="checkbox_container">
                                   <input type="checkbox" name="check_quiz3" value="8">
                                   <span class="checkmark"></span>
@@ -459,7 +459,7 @@
                 <br><br>
                 <div class="row other_info">
                   <div class="col-sm-4 ">
-                    <img class="h-75" src="/images/quiz1.1.PNG" alt="image quiz">
+                    <img  src="/images/quiz1.1.PNG" alt="image quiz">
                   </div>
                   <div class="text-left col-sm-8">
                     <p>designa8</p>
