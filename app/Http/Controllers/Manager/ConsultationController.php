@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Mail;
 use App\Mail\SendEmail;
 use App\Consultation;
 use \Validator;
+use App\Company;
 
 
 class ConsultationController extends Controller
@@ -16,9 +17,8 @@ class ConsultationController extends Controller
     public function send(Request $request)
     {
         // return response()->json(['message' => $request->all()]);
+        $company =   Company::find($request->company);
 
-        // dd($request->all());
-        // return response()->json(['message' => 'User status updated successfully.']);
         $validator = Validator::make($request->all(), [
             'username'   =>     'required',
             'phone'      =>     'required',
@@ -33,6 +33,11 @@ class ConsultationController extends Controller
         $consultation->timeToCall = $request->date;
         // $consultation->comment = $request->comment;
         $consultation->phone = $request->phone;
+        if ($company)
+        {
+            $consultation->company_id =$company->id ;
+        }
+
         $consultation->save();
         // $usersData = array(
 

@@ -123,7 +123,7 @@ Route::get('jops', 'Manager\JopApplicantController@index')->name('jops');
         Route::get('/{id?}', 'UserController@indexCompany');
 
 
-}); 
+});
 
 
 Route::get('dddd', function () {
