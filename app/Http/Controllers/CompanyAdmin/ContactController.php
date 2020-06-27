@@ -41,7 +41,7 @@ class ContactController extends Controller
 
         }
 
-        if($company->reviews)
+        if($company->reviews->count()>0)
         {
 
         }else{
@@ -49,7 +49,7 @@ class ContactController extends Controller
             array_push($data,'please add review <a href="/companypanel/review">#here</a>');
 
         }
-        if($company->services)
+        if($company->services->count()>0)
         {
 
         }else{

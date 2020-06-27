@@ -47,8 +47,8 @@ class ConsultationController extends Controller
         //     'date'      =>  $request->date
         // );
 
-        // Mail::to('yassminelbialy@gmail.com')
-            // ->send(new SendEmail($usersData));
+        Mail::to('yassminelbialy@gmail.com')
+            ->send(new SendEmail($consultation));
         // return back()->with('success', 'thanx for contacting us :)');
         return response()->json(['message' => 'User status added successfully.']);
     }

@@ -3,7 +3,7 @@
 <!------ Include the above in your HEAD tag ---------->
 {{-- <link rel="stylesheet" type="text/css" href="{{ asset('css/projectshowstyles.css') }}" --}}
 {{-- {{-- {{$data}} --}}
-<!-- Team -->
+
 {{-- <section id="team" class="pb-5">
     <div class="container">
         <h5 class="section-title h1">OUR TEAM</h5>
