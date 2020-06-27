@@ -22,12 +22,6 @@ class ConsultationController extends Controller
      public function send(Request $request)
      {
 
-        // dd($request->all());
-        // return response()->json(['message' => 'User status updated successfully.']);
-
-
-
-
 
                 $validator = Validator::make($request->all(), [
                     'username'   =>     'required',
@@ -54,7 +48,7 @@ class ConsultationController extends Controller
             Mail::to('yassminelbialy@gmail.com')
             ->send(new SendEmail($usersData));
             return back()->with('success' , 'thanx for contacting us :)');
-            return response()->json(['message' => 'User status added successfully.']);
+            //return response()->json(['message' => 'User status added successfully.']);
 
      }
     // ************ Yassmin Part *************************
