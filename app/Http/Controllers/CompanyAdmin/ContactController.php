@@ -24,6 +24,58 @@ class ContactController extends Controller
         }
     }
 
+    public function login()
+    {
+
+        $company=Auth::user()->company;
+        // dd($company);
+        $length=0;
+
+        $data=[];
+        if($company->info)
+        {
+
+        }else{
+             $length+=.25;
+             array_push($data,'please add info <a href="/companypanel/alexandra">#here</a>');
+
+        }
+
+        if($company->reviews)
+        {
+
+        }else{
+            $length+=.25;
+            array_push($data,'please add review <a href="/companypanel/review">#here</a>');
+
+        }
+        if($company->services)
+        {
+
+        }else{
+            $length+=.25;
+            array_push($data,'please add services <a href="/companypanel/service">#here</a>');
+
+        }
+        if($company->contact)
+        {
+
+        }else{
+            $length+=.25;
+            array_push($data,'please add contact <a href="/companypanel/contacts">#here</a>');
+        }
+        // dd($length);
+        if($length){
+            return view('CompanyAdmin.profilelogin',['percent'=>100-(100*$length),'data'=>$data]);
+
+        }else{
+            return view('CompanyAdmin.profilelogin',['percent'=>100,'data'=>[]]);
+
+        }
+
+
+    }
+
     /**
      * Show the form for creating a new resource.
      *

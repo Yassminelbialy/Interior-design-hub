@@ -101,9 +101,14 @@ Route::get('jops', 'Manager\JopApplicantController@index')->name('jops');
 
     Route::middleware('company')->prefix('companypanel')->name('company.')->group(function () {
         Route::any('/', function () {
-            return view('admin.companyBase');
+            // return view('admin.companyBase');
+
+            // return view('CompanyAdmin.profilelogin');
+            return redirect(route('company.companyprofile'));
+
         });
 
+        Route::get('companyprofile', 'CompanyAdmin\ContactController@login')->name('companyprofile');
 
         Route::resource('project', 'CompanyAdmin\ProjectController');
         Route::resource('project.images', 'CompanyAdmin\ProjectImageController');

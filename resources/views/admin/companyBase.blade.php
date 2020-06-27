@@ -145,10 +145,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script src="/admin/dist/js/scripts.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
-    {{-- <script src="/admin/dist/assets/demo/chart-area-demo.js"></script>
-        <script src="/admin/dist/assets/demo/chart-bar-demo.js"></script>
-        <script src="/admin/dist/assets/demo/chart-pie-demo.js"></script> --}}
-    {{-- {{$data}} --}}
+
 
 </body>
 
