@@ -12,12 +12,12 @@
                         <p>
                             {{$service->description}}
                         </p>
-                       
-                    </div>
-                </div>  
-                @endforeach              
 
-            </div>           
+                    </div>
+                </div>
+                @endforeach
+
+            </div>
         </div>
-    
+
     </section>

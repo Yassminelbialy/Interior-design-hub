@@ -1713,6 +1713,8 @@ nav .contact_us i {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    cursor: pointer;
+
 }
 
 .service_box .box {
@@ -1744,15 +1746,85 @@ nav .contact_us i {
     transition: 1s;
 }
 
-/* .service_box .box:nth-child(1) {
-    box-shadow: 10px 10px 10px 0 #e91e63, -10px -10px 10px 0 #e91e63;
-} */
-
-.service_box .icon {
-    /* box-shadow: 0 0 0 0 #c19e70; */
-    background: #c19e70;
-
+.service_box .box:nth-child(1) {
+    box-shadow: 10px 10px 10px  black, -10px -10px 10px 0 black;
 }
+
+.service_box .box:nth-child(1) .icon {
+    box-shadow: 0 0 0 0 var(--secondColor);
+    background: var(--secondColor);
+}
+
+.service_box .box:nth-child(1):hover .icon {
+    box-shadow: 0 0 0 400px   var(--secondColor);
+    background:  var(--secondColor);
+}
+
+.service_box .box:nth-child(2) {
+    box-shadow: 10px 10px 10px 0 #23e629, -10px -10px 10px 0 #23e629;
+}
+
+.service_box .box:nth-child(2) .icon {
+    box-shadow: 0 0 0 0 #23e629;
+    background: #23e629;
+}
+
+.service_box .box:nth-child(2):hover .icon {
+    box-shadow: 0 0 0 400px #23e629;
+}
+
+.service_box .box:nth-child(3) {
+    box-shadow: 10px 10px 10px 0 #2196f3, -10px -10px 10px 0 #2196f3;
+}
+
+.service_box .box:nth-child(3) .icon {
+    box-shadow: 0 0 0 0 #2196f3;
+    background: #2196f3;
+}
+
+.service_box .box:nth-child(3):hover .icon {
+    box-shadow: 0 0 0 400px #2196f3;
+}
+
+/* .service_box .box:nth-child(4) {
+    box-shadow: 10px 10px 10px 0 #ff3f34, -10px -10px 10px 0 #ff3f34;
+}
+
+.service_box .box:nth-child(4) .icon {
+    box-shadow: 0 0 0 0 #ff3f34;
+    background: #ff3f34;
+}
+
+.service_box .box:nth-child(4):hover .icon {
+    box-shadow: 0 0 0 400px #ff3f34;
+    background: #ff3f34;
+}
+
+.service_box .box:nth-child(5) {
+    box-shadow: 10px 10px 10px 0 aqua, -10px -10px 10px 0 aqua;
+}
+
+.service_box .box:nth-child(5) .icon {
+    box-shadow: 0 0 0 0 aqua;
+    background: aqua;
+}
+
+.service_box .box:nth-child(5):hover .icon {
+    box-shadow: 0 0 0 400px aqua;
+}
+
+.service_box .box:nth-child(6) {
+    box-shadow: 10px 10px 10px 0 #be2edd, -10px -10px 10px 0 #be2edd;
+}
+
+.service_box .box:nth-child(6) .icon {
+    box-shadow: 0 0 0 0 #be2edd;
+    background: #be2edd;
+}
+
+.service_box .box:nth-child(6):hover .icon {
+    box-shadow: 0 0 0 400px #be2edd;
+} */
 
 .service_box .box .content {
     position: relative;
@@ -1798,7 +1870,6 @@ nav .contact_us i {
     z-index: 2;
     pointer-events: none;
 }
-
 /* start  information plus*/
 
 .information_plus {
