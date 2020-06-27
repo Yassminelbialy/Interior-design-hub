@@ -59,6 +59,10 @@ Route::middleware('manager')->prefix('manager')->name('manager.')->group(functio
     Route::resource('sliderImage' , 'Manager\SliderImageController');
     Route::resource('company' , 'CompanyController');
     Route::get('users/{users}/company', 'CompanyController@ConfirmCompany')->name('company');
+    Route::get('/read',function(){
+        \App\User::where('adminRole','=',null)->first()->unreadNotifications->markAsRead();
+        return view('admin.base');
+    });
 });
 }); //manager routes
 
