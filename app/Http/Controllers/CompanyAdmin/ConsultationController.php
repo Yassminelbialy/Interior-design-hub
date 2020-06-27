@@ -24,18 +24,21 @@ class ConsultationController extends Controller
 
             'username'   =>     'required',
             'phone'      =>     'required',
-            'date' => 'date ',
+            'comment' => 'required',
+            'timeToCall' => 'date ',
         ]);
         $consultation = new Consultation();
         $consultation->name = $request->username;
-        $consultation->timeToCall = $request->date;
+        $consultation->timeToCall = $request->timeToCall;
+        $consultation->comment = $request->comment;
         $consultation->phone = $request->phone;
         $consultation->save();
         $usersData = array(
 
             'username'  =>  $request->username,
             'phone'     =>  $request->phone,
-            'date'      =>  $request->date
+            'comment' => $request->comment,
+            'timeToCall'      =>  $request->timeToCall
         );
 
         Mail::to('yassminelbialy@gmail.com')

@@ -2,14 +2,16 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Apply Form For Jo</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="modal-body">
+        <div class="modal-body"
+        style="
+            font-style: normal;
+            color: darkgrey;">
 
-  {{$id}}
   <div class="alerts alert alert-danger">
     <ul>
     </ul>
@@ -21,42 +23,42 @@
 <div id='consmodal'class="modal-body mx-3">
     <div class="md-form mb-2">
         <i class="fa fa-user"></i>
-        <input class="input--style-4" type="text" name="fullName">
+        <input id="jobname" class="input--style-4" type="text" name="fullName">
 
         <label data-error="wrong" data-success="right" for="defaultForm-email">Your Name</label>
     </div>
     <div class="md-form mb-2">
-        <i class="fa fa-phone"></i>
-        <input class="input--style-4" type="text" name="urlProtofolio">
+        <i class="fa fa-internet-explorer"></i>
+        <input id='joburl' class="input--style-4" type="text" name="urlProtofolio">
         <label data-error="wrong" data-success="right" for="defaultForm-pass">Your urlProtofolio</label>
     </div>
     <div class="md-form mb-2">
-        <i class="fa fa-phone"></i>
-        <input class="input--style-4" type="date" name="age">
+        <i class="fa fa-calendar-check"></i>
+        <input id='jobage'class="input--style-4" type="date" name="age">
         <label data-error="wrong" data-success="right" for="defaultForm-pass">Your Age</label>
     </div>
 
     <div class="md-form mb-2">
-        <i class="fa fa-phone"></i>
-        <input class="input--style-4" type="email" name="email">
+        <i class="fa fa-envelope-open"></i>
+        <input id="jobemail" class="input--style-4" type="email" name="email">
         <label data-error="wrong" data-success="right" for="defaultForm-pass">Your Email</label>
     </div>
     <div class="md-form mb-2">
         <i class="fa fa-phone"></i>
-        <input class="input--style-4" type="number" name="phone">
+        <input id='jobphone'class="input--style-4" type="number" name="phone">
         <label data-error="wrong" data-success="right" for="defaultForm-pass">Your Phone</label>
     </div>
     <div class="md-form mb-2">
-        <i class="fa fa-phone"></i>
-        <label data-error="wrong" data-success="right" for="defaultForm-pass">Your CV :</label>
-        <input class="input--style-4" type="file"  name="cv">
+        <i class="fa fa-file-pdf"></i>
+        <label  data-error="wrong" data-success="right" for="defaultForm-pass">Your CV :</label>
+    <input id="jobcv"  class="input--style-4" type="file"  name="cv">
     </div>
 
 
 </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button id='conssubmit' class="btn btn-success btn-block">Submit</button>
+          <button id='jobsubmit' data-job="{{$id}}"  class="btn btn-success btn-block">Submit</button>
         </div>
       </div>
     </div>

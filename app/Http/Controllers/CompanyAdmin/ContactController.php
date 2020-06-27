@@ -4,9 +4,10 @@ namespace App\Http\Controllers\CompanyAdmin;
 use App\Http\Controllers\Controller;
 use App\Contact;
 use Illuminate\Http\Request;
-
+use Auth;
 class ContactController extends Controller
 {
+    // User::find(2)->company->contact()->create(['email'=>'ahmdd hazem','company_id'=>1])
     /**
      * Display a listing of the resource.
      *
@@ -14,8 +15,65 @@ class ContactController extends Controller
      */
     public function index()
     {
-        $contacts= Contact::all();
-        return view('CompanyAdmin/contactindex',["contacts"=>$contacts]);
+        $contact =Auth::user()->company->contact;
+        if($contact)
+        {
+            return view('CompanyAdmin/contactindex',["contacts"=>[$contact] ]);
+        }else{
+            return view('CompanyAdmin.contactadd');
+        }
+    }
+
+    public function login()
+    {
+
+        $company=Auth::user()->company;
+        // dd($company);
+        $length=0;
+
+        $data=[];
+        if($company->info)
+        {
+
+        }else{
+             $length+=.25;
+             array_push($data,'please add info <a href="/companypanel/alexandra">#here</a>');
+
+        }
+
+        if($company->reviews->count()>0)
+        {
+
+        }else{
+            $length+=.25;
+            array_push($data,'please add review <a href="/companypanel/review">#here</a>');
+
+        }
+        if($company->services->count()>0)
+        {
+
+        }else{
+            $length+=.25;
+            array_push($data,'please add services <a href="/companypanel/service">#here</a>');
+
+        }
+        if($company->contact)
+        {
+
+        }else{
+            $length+=.25;
+            array_push($data,'please add contact <a href="/companypanel/contacts">#here</a>');
+        }
+        // dd($length);
+        if($length){
+            return view('CompanyAdmin.profilelogin',['percent'=>100-(100*$length),'data'=>$data]);
+
+        }else{
+            return view('CompanyAdmin.profilelogin',['percent'=>100,'data'=>[]]);
+
+        }
+
+
     }
 
     /**
@@ -25,7 +83,7 @@ class ContactController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -36,7 +94,12 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $company=Auth::user()->company;
+        if ($company)
+        {
+            $company->contact()->create($request->all());
+            return redirect(route('company.contacts.index'))->with('success','Done');
+        }
     }
 
     /**

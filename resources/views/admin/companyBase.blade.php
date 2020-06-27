@@ -24,7 +24,7 @@
 <body class="sb-nav-fixed">
 
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.html">ADMIN CONTROLL </a><button class="btn btn-link btn-sm order-1 order-lg-0 " id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button><!-- Navbar Search-->
+        <a class="navbar-brand" href="/companypanel">ADMIN CONTROLL </a><button class="btn btn-link btn-sm order-1 order-lg-0 " id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button><!-- Navbar Search-->
         <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
             <div class="input-group">
                 <div class="input-group-append">
@@ -77,6 +77,7 @@
                                 <a class="nav-link" href="/companypanel/review">Reviews</a>
                                 <a class="nav-link" href="/companypanel/alexandra">Company info</a>
                                 <a class="nav-link" href="/companypanel/consultations">Consultations</a>
+                                <a class="nav-link" href="/companypanel/service">All Service</a>
                                 <a class="nav-link" href="/companypanel/sliderImage">Slider</a>
                                 <a class="nav-link" href="/companypanel/contacts">Contacts</a>
                                 <a class="nav-link" href="/companypanel/AdminOrder">Users Orders</a>
@@ -101,7 +102,27 @@
         </div>
         <div id="layoutSidenav_content" style="padding-left: 225px;">
             <main>
-                @yield('CompanyAdminBase')
+
+
+                                        @foreach ($errors->all() as $error)
+                                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                        <strong>Holy guacamole!</strong> You should check in on some of those fields below. for {{$error}}
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                @endforeach
+
+
+
+                                    @if (\Session::has('success'))
+                                        <div class="alert alert-success">
+                                            <ul>
+                                                <li>{!! \Session::get('success') !!}</li>
+                                            </ul>
+                                        </div>
+                                    @endif
+                            @yield('CompanyAdminBase')
 
 
             </main>
@@ -124,10 +145,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script src="/admin/dist/js/scripts.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
-    {{-- <script src="/admin/dist/assets/demo/chart-area-demo.js"></script>
-        <script src="/admin/dist/assets/demo/chart-bar-demo.js"></script>
-        <script src="/admin/dist/assets/demo/chart-pie-demo.js"></script> --}}
-    {{-- {{$data}} --}}
+
 
 </body>
 

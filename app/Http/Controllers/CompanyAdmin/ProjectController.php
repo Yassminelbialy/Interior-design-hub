@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 use Uuid;
 use Illuminate\Support\Facades\File as LaraFile;
 use Illuminate\Support\Facades\Auth;
-
+use App\Http\Requests\ProjectPost;
 
 class ProjectController extends Controller
 {
@@ -48,7 +48,7 @@ class ProjectController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ProjectPost $request)
     {
         $req = $request->all();
 
@@ -58,13 +58,13 @@ class ProjectController extends Controller
             $desti = 'projectimages/';
             $files->move($desti, $path);
             $req['mainimage'] = $path;
-            // dd('dd');
+
         }
         $company =Auth::user()->company ;
         if($company)
         {
          $project =    $company->projects()->create($req);
-         return redirect(route('company.project.index'));
+         return redirect(route('company.project.index'))->with('success','done');
 
         }//getting projects for session user company
 
@@ -100,39 +100,38 @@ class ProjectController extends Controller
      * @param  \App\Project  $project
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Project $project)
+    public function update(ProjectPost $request, Project $project)
     {
-        // $categories = Category::all()->pluck('name','id')->toArray();
-// dd('ss');
-        // dd($project,'s');
+
         $company =Auth::user()->company ;
 
-if($company)
-{
-    if($company->id == $project->company_id)
-    {
-        $req = $request->all();
+            if($company)
+            {
+            if($company->id == $project->company_id)
+                {
+                  $req = $request->all();
 
-        if ($files = $request->file('mainimage')) {
-            LaraFile::delete("projectimages/{$project->mainimage}");
-            $uuid = Uuid::generate()->string;
-            $path = $uuid . "." . $request->file('mainimage')->getClientOriginalExtension();
-            $desti = 'projectimages/';
-            $files->move($desti, $path);
-            $req['mainimage'] = $path;
-            // dd('dd');
-        }
+                 if ($files = $request->file('mainimage'))
+                    {
+                        LaraFile::delete("projectimages/{$project->mainimage}");
+                        $uuid = Uuid::generate()->string;
+                        $path = $uuid . "." . $request->file('mainimage')->getClientOriginalExtension();
+                        $desti = 'projectimages/';
+                        $files->move($desti, $path);
+                        $req['mainimage'] = $path;
+                    }
 
-        $project = $project->update($req);
-        //
-        // dd($project);
-        return redirect(route('company.project.index'));
+                      $project = $project->update($req);
 
-    }else {
-        return redirect('notfonded');
-    }
-}else{
-    return redirect('/');
+                return redirect(route('company.project.index'));
+
+                 }
+                 else
+                 {
+                  return redirect('notfonded');
+                 }
+            }else{
+                 return redirect('/')->with('success','notallowed');
 }
 
     }
@@ -149,9 +148,18 @@ if($company)
 
         if ($company->id == $project->company_id)
         {
-        $project->delete();
-        // dd($project);
-        return redirect(route('company.project.index'));
+
+            $company =Auth::user()->company ;
+
+
+            if($company->id == $project->company_id)
+            {
+                $project->delete();
+                return redirect(route('company.project.index'));
+            }else{
+                return back()->with('success','not allowed');
+            }
+
         }
 
     }

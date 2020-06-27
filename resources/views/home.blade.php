@@ -3,10 +3,6 @@
 @section('content')
 
 @if ($errors->any())
-
-
-
-
 @foreach ($errors->all() as $error)
             <div class="alert alert-warning alert-dismissible fade show" role="alert">
                 <strong>Holy guacamole!</strong> You should check in on some of those fields below. for {{$error}}
@@ -15,8 +11,6 @@
                 </button>
             </div>
            @endforeach
-
-
 @endif
 @if (\Session::has('success'))
     <div class="alert alert-success">
@@ -91,9 +85,9 @@
 @component('components.contact',['contact' => $contact,'ceoInfo' => $ceoInfo])
 @endcomponent
 
-{{-- @component('components.matterport')
+@component('components.matterport')
 
-@endcomponent --}}
+@endcomponent
 
 @component('components.map')
 

@@ -54,6 +54,12 @@ class ProjectImageController extends Controller
      */
     public function store(Request $request,$id)
     {
+
+
+        $request->validate([
+            'description' => 'string|required|max:150',
+            'keyWords' => 'required|string',
+            'image' => 'image|required']);
         $company =Auth::user()->company ;
 
         if ($company)
@@ -74,7 +80,7 @@ class ProjectImageController extends Controller
         }
         $image = $project->images()->create($req);
         //     //
-        return redirect(route('company.project.images.index',$id));
+        return redirect(route('company.project.images.index',$id))->with('success','Done');
 
         }
 
@@ -117,6 +123,12 @@ class ProjectImageController extends Controller
     {
 
         // dd($projectImage,$id,$iid);
+
+        $request->validate([
+            'description' => 'string|required|max:150',
+            'keyWords' => 'required|string',
+            'image' => 'image|required']);
+
         $req=$request->all();
         $image=ProjectImage::find($iid);
 

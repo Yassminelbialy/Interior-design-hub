@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Manager;
+
 use App\Http\Controllers\Controller;
 use App\Contact;
 use Illuminate\Http\Request;
@@ -8,75 +9,53 @@ use Illuminate\Support\Facades\Mail;
 use App\Mail\SendEmail;
 use App\Consultation;
 use \Validator;
+use App\Company;
 
 
 class ConsultationController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public function send(Request $request)
+    {
+        // return response()->json(['message' => $request->all()]);
+        $company =   Company::find($request->company);
 
+        $validator = Validator::make($request->all(), [
+            'username'   =>     'required',
+            'phone'      =>     'required',
+             'comment' => 'required',
+            'timeToCall' => 'date '
+        ]);
+        if ($validator->fails()) {
+            return response()->json(['erors' => $validator->messages()->all()]);
+        }
+        $consultation = new Consultation();
+        $consultation->name = $request->username;
+        $consultation->timeToCall = $request->timeToCall;
+        $consultation->comment = $request->comment;
+        $consultation->phone = $request->phone;
+        if ($company)
+        {
+            $consultation->company_id =$company->id ;
+        }
 
-     public function send(Request $request)
-     {
+        $consultation->save();
+        // $usersData = array(
 
+        //     'username'  =>  $request->username,
+        //     'phone'     =>  $request->phone,
+        //     'comment' => $request->comment,
+        //     'date'      =>  $request->date
+        // );
 
-                $validator = Validator::make($request->all(), [
-                    'username'   =>     'required',
-                    'phone'      =>     'required',
-                    'date' => 'date '
-                     ]);
-                if ($validator->fails()) {
-                    return response()->json(['erors'=>$validator->messages()->all()]);
-                }
-
-
-            $consultation = new Consultation ();
-            $consultation->name =$request->username;
-            $consultation->timeToCall=$request->date;
-            $consultation->phone=$request->phone;
-            $consultation->save();
-            $usersData = array(
-
-                    'username'  =>  $request->username,
-                    'phone'     =>  $request->phone,
-                    'date'      =>  $request->date
-            );
-
-            Mail::to('yassminelbialy@gmail.com')
-            ->send(new SendEmail($usersData));
-            return back()->with('success' , 'thanx for contacting us :)');
-            //return response()->json(['message' => 'User status added successfully.']);
-
-     }
+        Mail::to('yassminelbialy@gmail.com')
+            ->send(new SendEmail($consultation));
+        // return back()->with('success', 'thanx for contacting us :)');
+        return response()->json(['message' => 'User status added successfully.']);
+    }
     // ************ Yassmin Part *************************
-     public function index()
+    public function index()
     {
-        return view('manager.consultations',['data'=>Consultation::all()]);
-
-    }
-
-     public function create()
-    {
-        //
-    }
-    public function store(Request $request)
-    {
-        //
-    }
-    public function show(Contact $contact)
-    {
-        //
-    }
-    public function edit(Contact $contact)
-    {
-        //
-    }
-    public function update(Request $request, Contact $contact)
-    {
-        //
+        return view('manager.consultations', ['data' => Consultation::all()]);
     }
     public function destroy($id)
     {
@@ -85,5 +64,4 @@ class ConsultationController extends Controller
 
         return redirect('/manager/consultations');
     }
-
 }

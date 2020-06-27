@@ -62,9 +62,9 @@
                           <div class="col-md-4 col-sm-6">
 
                             <div class="check_style">
-                              <img src="images/decore1.jpeg" alt="picture_style" />
+                              <img src="/images/decore1.jpeg" alt="picture_style" />
                               <label class="checkbox_container">
-                                <input type="radio" class="q1 x" name="check_quiz1" value="q1 1">
+                                <input type="radio" class="q1 x" name="Classic" value="Classic">
                                 <span class="checkmark"></span>
                               </label>
                               <p>Classic</p>
@@ -72,9 +72,9 @@
                           </div>
                           <div class="col-md-4 col-sm-6">
                             <div class="check_style">
-                              <img src="images/decore2.jpeg" alt="picture_style" />
+                              <img src="/images/decore2.jpeg" alt="picture_style" />
                               <label class="checkbox_container">
-                                <input type="radio" class="q1 x" name="check_quiz1" value="q1 2">
+                                <input type="radio" class="q1 x" name="Modern" value="Modern">
                                 <span class="checkmark"></span>
                               </label>
                               <p>Modern</p>
@@ -83,9 +83,9 @@
                           </div>
                           <div class="col-md-4 col-sm-6">
                             <div class="check_style">
-                              <img src="images/decore3.jpeg" alt="picture_style" />
+                              <img src="/images/decore3.jpeg" alt="picture_style" />
                               <label class="checkbox_container">
-                                <input type="radio" class="q1 x" name="check_quiz1" value="q1 3">
+                                <input type="radio" class="q1 x" name="Coastal" value="Coastal">
                                 <span class="checkmark"></span>
                               </label>
                               <p>Coastal</p>
@@ -93,9 +93,9 @@
                           </div>
                           <div class="col-md-4 col-sm-6">
                             <div class="check_style">
-                              <img src="images/decore4.jpeg" alt="picture_style" />
+                              <img src="/images/decore4.jpeg" alt="picture_style" />
                               <label class="checkbox_container">
-                                <input type="radio" class="q1 x" name="check_quiz1" value="q1 4">
+                                <input type="radio" class="q1 x" name="Farmhouse" value="Farmhouse">
                                 <span class="checkmark"></span>
                               </label>
                               <p>Farmhouse</p>
@@ -103,9 +103,9 @@
                           </div>
                           <div class="col-md-4 col-sm-6">
                             <div class="check_style">
-                              <img src="images/decore6.jpeg" alt="picture_style" />
+                              <img src="/images/decore6.jpeg" alt="picture_style" />
                               <label class="checkbox_container">
-                                <input type="radio" class="q1 x" name="check_quiz1" value="q1 5">
+                                <input type="radio" class="q1 x" name="Minimalist" value="Minimalist">
                                 <span class="checkmark" name="check_quiz1"></span>
                               </label>
                               <p>Minimalist</p>
@@ -113,9 +113,9 @@
                           </div>
                           <div class="col-md-4 col-sm-6">
                             <div class="check_style">
-                              <img src="images/decore6.jpeg" alt="picture_style" />
+                              <img src="/images/decore2.jpeg" alt="picture_style" />
                               <label class="checkbox_container">
-                                <input type="radio" class="q1 x" name="check_quiz1" value="q1 6">
+                                <input type="radio" class="q1 x" name="Scandinavian" value="Scandinavian">
                                 <span class="checkmark"></span>
                               </label>
                               <p>Scandinavian</p>
@@ -134,7 +134,7 @@
                       <div class="container-fluid">
                         <div class="row quiz2_content">
                           <div class="col-md-4 col-sm-6">
-                            <img class="w-100 h-100" src="images/map.PNG" alt="">
+                            <img class="w-100 h-100" src="/images/map.PNG" alt="">
                           </div>
                           <div class="col-md-8 col-sm-6">
                             <h2>Lets Know More About Our Work</h2>
@@ -155,7 +155,7 @@
 
                               </div>
                             </div>
-                            <p>yandix ysad kqwey yandix ysad yandix ysad kqwey yandix </p>
+                            <!-- <p>yandix ysad kqwey yandix ysad yandix ysad kqwey yandix </p> -->
                             <div class="input-group text-center">
                               <div class="custom-file">
                                 <input data-browse="Bestand kiezen.PNG" multiple type="file" class="custom-file-input check_quiz3 q2" name="file" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04">
@@ -183,9 +183,9 @@
                           <div class="row">
                             <div class="col-md-3 col-sm-6">
                               <div class="check_style">
-                                <img class="w-100 h-100" src="images/decore1.jpeg" alt="picture_style" />
+                                <img src="/images/decore1.jpeg" alt="picture_style" />
                                 <label class="checkbox_container">
-                                  <input type="checkbox" name="check_quiz3" value="1">
+                                  <input type="checkbox" name="check_quiz3" value="Modern">
                                   <span class="checkmark"></span>
                                 </label>
                                 <p>Modern</p>
@@ -193,9 +193,9 @@
                             </div>
                             <div class="col-md-3 col-sm-6">
                               <div class="check_style">
-                                <img class="w-100 h-100" src="images/decore2.jpeg" alt="picture_style" />
+                                <img c" src="/images/decore2.jpeg" alt="picture_style" />
                                 <label class="checkbox_container">
-                                  <input type="checkbox" name="check_quiz3" value="2">
+                                  <input type="checkbox" name="check_quiz3" value="Scandinavian">
                                   <span class="checkmark"></span>
                                 </label>
                                 <p>Scandinavian</p>
@@ -204,9 +204,9 @@
                             </div>
                             <div class="col-md-3 col-sm-6">
                               <div class="check_style">
-                                <img class="w-100 h-100" src="images/decore3.jpeg" alt="picture_style" />
+                                <img  src="/images/decore3.jpeg" alt="picture_style" />
                                 <label class="checkbox_container">
-                                  <input type="checkbox" name="check_quiz3" value="3">
+                                  <input type="checkbox" name="check_quiz3" value="Southwest">
                                   <span class="checkmark"></span>
                                 </label>
                                 <p>Southwest</p>
@@ -214,9 +214,9 @@
                             </div>
                             <div class="col-md-3 col-sm-6">
                               <div class="check_style">
-                                <img class="w-100 h-100" src="images/decore2.jpeg" alt="picture_style" />
+                                <img  src="/images/decore2.jpeg" alt="picture_style" />
                                 <label class="checkbox_container">
-                                  <input type="checkbox" name="check_quiz3" value="4">
+                                  <input type="checkbox" name="check_quiz3" value="Amereican">
                                   <span class="checkmark"></span>
                                 </label>
                                 <p>Amereican</p>
@@ -224,9 +224,9 @@
                             </div>
                             <div class="col-md-3 col-sm-6">
                               <div class="check_style">
-                                <img class="w-100 h-100" src="images/decore4.jpeg" alt="picture_style" />
+                                <img  src="/images/decore4.jpeg" alt="picture_style" />
                                 <label class="checkbox_container">
-                                  <input type="checkbox" name="check_quiz3" value="5">
+                                  <input type="checkbox" name="check_quiz3" value="Coastal">
                                   <span class="checkmark"></span>
                                 </label>
                                 <p>Coastal</p>
@@ -234,9 +234,9 @@
                             </div>
                             <div class="col-md-3 col-sm-6">
                               <div class="check_style">
-                                <img class="w-100 h-100" src="images/decore6.jpeg" alt="picture_style" />
+                                <img  src="/images/decore6.jpeg" alt="picture_style" />
                                 <label class="checkbox_container">
-                                  <input type="checkbox" name="check_quiz3" value="6">
+                                  <input type="checkbox" name="check_quiz3" value="Scandinavian">
                                   <span class="checkmark"></span>
                                 </label>
                                 <p>Scandinavian</p>
@@ -244,9 +244,9 @@
                             </div>
                             <div class="col-md-3 col-sm-6">
                               <div class="check_style">
-                                <img class="w-100 h-100" src="images/decore6.jpeg" alt="picture_style" />
+                                <img  src="/images/decore3.jpeg" alt="picture_style" />
                                 <label class="checkbox_container">
-                                  <input type="checkbox" name="check_quiz3" value="7">
+                                  <input type="checkbox" name="check_quiz3" value="Classic">
                                   <span class="checkmark"></span>
                                 </label>
                                 <p>Classic</p>
@@ -254,9 +254,9 @@
                             </div>
                             <div class="col-md-3 col-sm-6">
                               <div class="check_style">
-                                <img class="w-100 h-100" src="images/decore2.jpeg" alt="picture_style" />
+                                <img src="/images/decore1.jpeg" alt="picture_style" />
                                 <label class="checkbox_container">
-                                  <input type="checkbox" name="check_quiz3" value="8">
+                                  <input type="checkbox" name="check_quiz3" value="Classic">
                                   <span class="checkmark"></span>
                                 </label>
                                 <p>Classic</p>
@@ -277,35 +277,35 @@
                       <div class="container-fluid">
                         <div class="row quiz2_content">
                           <div class="col-md-4 col-sm-6">
-                            <img class="w-100 h-100" src="images/quiz4.jpg" alt="">
+                            <img class="w-100 h-100" src="/images/quiz4.jpg" alt="">
                           </div>
                           <div class="col-md-8 col-sm-6">
                             <h2>Would you To Participate In Development?</h2>
 
                             <div class="border choose_multi mt-3">
                               <label class="checkbox_container">
-                                <input type="radio" name="check_quiz4" class="q4" value="111">
+                                <input type="radio" name="yescheck_quiz4" class="q4" value="yes">
                                 <span class="checkmark"></span>
                               </label>
                               <p> yes </p>
                             </div>
                             <div class="border choose_multi mt-3">
                               <label class="checkbox_container">
-                                <input type="radio" name="check_quiz4" class="q4" value="222">
+                                <input type="radio" name="Nocheck_quiz4" class="q4" value="No">
                                 <span class="checkmark"></span>
                               </label>
                               <p>No </p>
                             </div>
                             <div class="border choose_multi mt-3">
                               <label class="checkbox_container">
-                                <input type="radio" name="check_quiz4" class="q4" value="333">
+                                <input type="radio" name="maybecheck_quiz4" class="q4" value="maybe">
                                 <span class="checkmark"></span>
                               </label>
                               <p>maybe </p>
                             </div>
                             <div class="border choose_multi mt-3">
                               <label class="checkbox_container">
-                                <input type="radio" name="check_quiz4" class="q4 " value="444">
+                                <input type="radio" name="dcheck_quiz4" class="q4 " value="i dont know">
                                 <span class="checkmark"></span>
                               </label>
                               <p>i dont know </p>
@@ -324,35 +324,35 @@
                       <div class="container-fluid">
                         <div class="row quiz2_content">
                           <div class="col-md-4 col-sm-6">
-                            <img class="w-100 h-100" src="images/quiz5.jpg" alt="">
+                            <img class="w-100 h-100" src="/images/quiz5.jpg" alt="">
                           </div>
                           <div class="col-md-8 col-sm-6">
                             <h2>Are You In Urgent ?</h2>
 
                             <div class="border choose_multi mt-3">
                               <label class="checkbox_container">
-                                <input type="radio" class="q5 " value="1">
+                                <input type="radio" class="q5 " value="Yes My Requesr is Very Urgent " name="contact">
                                 <span class="checkmark "></span>
                               </label>
                               <p> Yes My Requesr is Very Urgent </p>
                             </div>
                             <div class="border choose_multi mt-3">
                               <label class="checkbox_container">
-                                <input type="radio" class="q5 " value="2">
+                                <input type="radio" class="q5 " value="Yes My Requesr is Slightly Urgen" name="contact">
                                 <span class="checkmark"></span>
                               </label>
                               <p> Yes My Requesr is Slightly Urgent</p>
                             </div>
                             <div class="border choose_multi mt-3">
                               <label class="checkbox_container">
-                                <input type="radio" class="q5 " value="3">
+                                <input type="radio" class="q5 " value="Not Mattar ." name="contact">
                                 <span class="checkmark"></span>
                               </label>
                               <p> Not Mattar . </p>
                             </div>
                             <div class="border choose_multi mt-3">
                               <label class="checkbox_container">
-                                <input type="radio" class="q5 " value="4">
+                                <input type="radio" class="q5 " value="No My Requesr is Not Important Instant. " name="contact">
                                 <span class="checkmark"></span>
                               </label>
                               <p> No My Requesr is Not Important Instant. </p>
@@ -373,7 +373,7 @@
                         <div class="row quiz6_content">
 
                           <div class="col-md-5 col-sm-6">
-                            <img class="w-100 h-75" src="images/quiz6.PNG" alt="image contact">
+                            <img class="w-100 h-75" src="/images/quiz6.PNG" alt="image contact">
                           </div>
                           <div class="col-md-7 col-sm-6">
 
@@ -382,9 +382,9 @@
                               <div class="row">
                                 <div class="col-md-6 mt-3">
                                   <div class="calls_container">
-                                    <span>Viber</span><img class="viber_image" src="images/viber.png" alt="">
+                                    <span>Viber</span><img class="viber_image" src="/images/viber.png" alt="">
                                     <label class="checkbox_container">
-                                      <input type="radio" class="q6" value="viber" name="viber">
+                                      <input type="radio" class="q6" value="viber" name="contact">
                                       <span class="checkmark"></span>
                                     </label>
                                   </div>
@@ -393,25 +393,25 @@
                                   <div class="calls_container">
                                     <span>Telegram</span><i class="fab fa-telegram-plane"></i>
                                     <label class="checkbox_container">
-                                      <input type="radio" class="q6" value="telegram" name="telegram">
+                                      <input type="radio" class="q6" value="telegram" name="contact">
                                       <span class="checkmark"></span>
                                     </label>
                                   </div>
                                 </div>
                                 <div class="col-md-6 mt-3">
                                   <div class="calls_container">
-                                    <span>Whatsapp</span><img class="viber_image" src="images/whatsapp1.png" alt="">
+                                    <span>Whatsapp</span><img class="viber_image" src="/images/whatsapp1.png" alt="">
                                     <label class="checkbox_container">
-                                      <input type="radio" class="q6" value="whatsapp" name="whatsapp">
+                                      <input type="radio" class="q6" value="whatsapp" name="contact">
                                       <span class="checkmark"></span>
                                     </label>
                                   </div>
                                 </div>
                                 <div class="col-md-6 mt-3">
                                   <div class="calls_container">
-                                    <span>Normal</span><img class="viber_image" src="images/viber.png" alt="">
+                                    <span>Normal</span><img class="viber_image" src="/images/viber.png" alt="">
                                     <label class="checkbox_container">
-                                      <input type="radio" class="q6" value="normal" name="normal">
+                                      <input type="radio" class="q6" value="normal" name="contact">
                                       <span class="checkmark"></span>
                                     </label>
                                   </div>
@@ -449,25 +449,26 @@
             <div class="col-md-3 static_column text-center">
               <div class="container">
                 <div>
-                  <img src="images/Alexadra_static.jpg" alt="image alexandra" />
+                  <img src="/images/Alexadra_static.jpg" alt="image alexandra" />
                 </div>
                 <p class="mt-4">
                   Shop Target's home furniture collections and find furniture and accessories for every room in your home. Free shipping on orders $35+ & free returns </p>
                 <p class="mt-3 mb-4">
                   ovable objects intended to support various human activities </p>
-                <h3 class="mb-3">B Koue tecta Bbi nonyuta:</h3>
+                <!-- <h3 class="mb-3">B Koue tecta Bbi nonyuta:</h3> -->
+                <br><br>
                 <div class="row other_info">
                   <div class="col-sm-4 ">
-                    <img class="h-75" src="images/quiz1.1.PNG" alt="image quiz">
+                    <img  src="/images/quiz1.1.PNG" alt="image quiz">
                   </div>
                   <div class="text-left col-sm-8">
-                    <p>ipsum dolor sit ametLorem ipsum dolor</p>
+                    <p>designa8</p>
                   </div>
                   <div class="col-sm-4 mt-2">
-                    <img class="handle" src="images/quiz1.2.PNG" alt="image quiz">
+                    <img class="handle" src="/images/quiz1.2.PNG" alt="image quiz">
                   </div>
                   <div class="text-left col-sm-8 mt-2">
-                    <p>ipsum dolor sit ametLorem ipsum dolor</p>
+                    <p>we choose the best for you</p>
                   </div>
 
                 </div>
@@ -476,16 +477,7 @@
           </div>
         </div>
       </div>
-      <!-- <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-dismiss="modal"
-            >
-              Close
-            </button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div> -->
+
     </div>
   </div>
 </div>
@@ -507,7 +499,6 @@
       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
         <span aria-hidden="true">&times;</span>
       </button>
-      <!-- contact icon -->
       <div class="modal-body">
         <div class="pop_up">
           <div class="container calls_container">
@@ -516,25 +507,25 @@
                 <div class="decoration_content">
                   <div class="decoration1"></div>
                   <div class="decoration2"></div>
-                  <img src="images/alexandra2_quiz.PNG.jpg" alt="image alexandra" />
+                  <img src="/images/alexandra2_quiz.PNG.jpg" alt="image alexandra" />
                 </div>
-                <p>Designa8 Contacts</p>
+                <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p> -->
               </div>
               <div class="right text-center col-md-7">
-                <h2>Aabeante o6cynm Aetanm bawero npoetkta?</h2>
+                <h2>Designa8 Contacts</h2>
                 <div class="custom_border"></div>
-                <p>MoxHo cpa3y B YAo6Hom ANr Bac Yate:</p>
+                <p>Happy to help you, call us :)</p>
                 <div class="row">
                   <div class="col-md-4">
                     <div class="callme">
                       <span>viber</span>
-                      <img class="viber_image" src="images/viber.png" alt="" />
+                      <img class="viber_image" src="/images/viber.png" alt="" />
                     </div>
                   </div>
                   <div class="col-md-4">
                     <div class="callme whatsapp">
                       <span>Whatsapp</span>
-                      <img class="whatsapp_image" src="images/whatsapp1.png" alt="" />
+                      <img class="whatsapp_image" src="/images/whatsapp1.png" alt="" />
                     </div>
                   </div>
                   <div class="col-md-4">
@@ -543,38 +534,33 @@
                     </div>
                   </div>
                 </div>
-                <h2>
+                <!-- <h2>
                   Bbi Mokete Octabnb Homep N Mbi nepe3BoHNM Bam Te4ehne 5 MnhyT
-                </h2>
+                </h2> -->
+                <br><br><br><br>
                 <div class="row hello">
                   <div class="col-md-6 mt-2">
-                    <p>+375-(91)-114-80-24</p>
+                    <p> 01157580654 </p>
                   </div>
                   <div class="col-md-6 mt-2">
-                    <p class="next_step">Bbi6Patb Aaty NBpemR</p>
+                    <p class="next_step">Avalible 24/7</p>
                   </div>
-                  <div class="check_it">
-                    <label class="checkbox_container">
-                      <input type="checkbox" />
-                      <span class="checkmark"></span>
-                    </label>
-                    Bbi contawerecb c
-                    <a href="#">nonmtmnkon Kohqnma9hoctnmAohqnma9hoctnmA</a>
-                  </div>
+
                 </div>
               </div>
+
               <div class="right2 text-center col-md-7">
-                <h2>Aabeante o6cynm Aetanm bawero npoetkta?</h2>
+                <h2>The following quiz will help us to know you order</h2>
                 <div class="custom_border"></div>
                 <div class="row mt-4 custom_design">
                   <div class="col-md-6">
                     <p>Kak Bac 3oByT?</p>
-                    <p class="text-left">Bawe NMR</p>
+                    <!-- <p class="text-left">Bawe NMR</p> -->
                   </div>
                   <div class="col-md-6">
-                    <p>Kak Bac 3oByT?</p>
+                    <!-- <p>Kak Bac 3oByT?</p> -->
                     <div class="text-left">
-                      <span>AA.MM.rrrr</span>
+                      <!-- <span>AA.MM.rrrr</span> -->
                       <select name="time">
                         <option>
                           1:00
@@ -620,22 +606,21 @@
                   </div>
                 </div>
                 <button class="btn_next open_quiz">
-                  no3bohNTe MHe
+                  Apply quiz now!
                 </button>
-                <div class="check_it">
+                <!-- <div class="check_it">
                   <label class="checkbox_container">
                     <input type="checkbox" />
                     <span class="checkmark"></span>
                   </label>
                   Bbi contawerecb c
                   <a href="#">nonmtmnkon Kohqnma9hoctnmAohqnma9hoctnmA</a>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- end contact icon -->
     </div>
   </div>
 </div>

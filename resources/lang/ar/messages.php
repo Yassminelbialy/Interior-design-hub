@@ -58,7 +58,16 @@ return [
     'manager_project_index_timetocall'=> 'وقت الاتصال' ,
 
     "CompanyName"=>"اسم الشركه",
-    "NumberOfClients"     => "عدد العملاء"
+    "NumberOfClients"     => "عدد العملاء",
+    'Area'	=>'المساحه',
+    'timeOfRsponse'=>'وقت الاستجابه',
+    'participateState'=>'امكانيه المشاركه',
+    'contactTybe'	=>'طريقه التواصل',
+    'customerName'=>'اسم العميل',
+    'customerPhoneNo'=>'رقم تليفون ',
+    'design'=>'التصميم',
+    'styles'=>'الالطابع',
+    'Actions'=>'اوامر',
 
 
 ];

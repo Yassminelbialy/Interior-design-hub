@@ -3,10 +3,12 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Notifications\Notifiable;
+
 
 class Company extends Model
 {
-
+use Notifiable;
     public function projects()
     {
         return $this->hasMany('App\Project');
@@ -49,10 +51,18 @@ class Company extends Model
     {
         return $this->hasMany('App\Review');
     }
+    public function sliderImages()
+    {
+        return $this->hasMany('App\Sliderimages');
+    }
 
     public function info()
     {
         return $this->hasOne('App\Alexandrainfo');
+    }
+    public function contact()
+    {
+        return $this->hasOne('App\Contact');
     }
 
     protected $guarded = [];

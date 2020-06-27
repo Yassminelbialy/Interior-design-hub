@@ -6,5 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Fbpost extends Model
 {
+
     //
+    protected $guarded = [];
+
 }

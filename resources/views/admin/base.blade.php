@@ -33,7 +33,7 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 <body class="sb-nav-fixed">
 
     <nav id="admin_nav" class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.html"> {{trans('messages.admin_controll')}} </a><button class="btn btn-link btn-sm order-1 order-lg-0 " id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button><!-- Navbar Search-->
+        <a class="navbar-brand" href="/manager"> {{trans('messages.admin_controll')}} </a><button class="btn btn-link btn-sm order-1 order-lg-0 " id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button><!-- Navbar Search-->
         <ul class="languages">
             @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
             <li <?php if  ($localeCode == LaravelLocalization::setLocale())  {echo "class=active" ;}  ?> >
@@ -52,6 +52,23 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
         </form>
         <!-- Navbar-->
         <ul class="navbar-nav ml-auto ml-md-0">
+            <li class="nav-item dropdown">
+
+            <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-bell text-primary fa-fw"></i><span class="text-danger">{{count(\App\User::with('unreadNotifications')->where('adminRole','=',null)->get())}}</span></a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                    <div class="dropdown-divider"></div>
+                    <ul class="navbar-nav">
+                        <li class="nav-link">
+                            @forelse(\App\User::with('unreadNotifications')->where('adminRole','=',null)->get()  as $notify)
+                                <a href="{{url('manager/read')}}" style="display: block">{{$notify->name}} Add New Company</a>
+                            @empty
+                                <span class="text-dark">No Notifications</span>
+                            @endforelse
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
@@ -132,6 +149,25 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
         </div>
         <div id="layoutSidenav_content">
             <main>
+                                        @foreach ($errors->all() as $error)
+                                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                        <strong>Holy guacamole!</strong> You should check in on some of those fields below. for {{$error}}
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                @endforeach
+
+
+                                @if (\Session::has('success'))
+                                    <div class="alert alert-success">
+                                        <ul>
+                                            <li>{!! \Session::get('success') !!}</li>
+                                        </ul>
+                                    </div>
+                                @endif
+
+
                 @yield('adminbase')
 
 

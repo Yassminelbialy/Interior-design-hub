@@ -9,6 +9,7 @@ var consform ={
     phone:'',
     name:'',
     time:'',
+    comment:''
 
 }
 console.log('ssssssssssaaaaaaaaa')
@@ -27,8 +28,12 @@ $(document).on('change','#username',(event)=>
             consform.phone  = q1.prop('value'); //get value
 
         });//question 1 answer
-
-        $(document).on('change','#calldate',(event)=>
+    $('#consmodal').on('change','#comment',(event)=>
+    {
+            q1=$(event.target);
+            consform.comment  = q1.prop('value');
+    });//question 1 answer
+        $(document).on('change','#date',(event)=>
            {
             console.log(event.target)
             q1=$(event.target);// get element
@@ -36,26 +41,40 @@ $(document).on('change','#username',(event)=>
 
         });//question 1 answer
 
-$(document).on('click','#jobsubmit',(event)=>
+$(document).on('click','#conssubmit',(event)=>
 {
+    console.log('jhjhjhjh')
     var myform =new FormData ();
 
 
     myform.append('username',consform.name);
     myform.append('phone',consform.phone);
-    myform.append('date',consform.time);
+    myform.append('comment',consform.comment);
+    myform.append('timeToCall',consform.time);
     $('.alerts ul').html('');
+    if (typeof quiz_id === 'undefined')
+    {
+       var mycomp ='';
+
+   }else{
+       var mycomp =quiz_id?quiz_id:'';
+       myform.append('company',mycomp);
+
+   }
     $.ajax({
                 url: "http://localhost:8000/contact",
                 dataType: 'script',
-                cache: false,
+
                 contentType: false,
                 processData: false,
                 data: myform,                         // Setting the data attribute of ajax with file_data
                 type: 'POST',
                 success:function(data)
                 {
+
+                    console.log(data)
                     x=JSON.parse(data);
+
                     if(x.erors)
                     {
                         x.erors.forEach(element => {
@@ -72,7 +91,8 @@ $(document).on('click','#jobsubmit',(event)=>
                         console.log(x.message,'sssss');
                     }
 
-                }
+                },
+                erors:(e)=>{console.log(e)},
        })///ajax
 
     });

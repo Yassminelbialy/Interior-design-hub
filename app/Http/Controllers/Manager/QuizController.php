@@ -1,13 +1,14 @@
 <?php
 
 namespace App\Http\Controllers\Manager;
+
 use App\Http\Controllers\Controller;
 use App\Quiz;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\SendQuizMail;
 use Uuid;
-use App\Company ;
+use App\Company;
 
 class QuizController extends Controller
 {
@@ -16,15 +17,22 @@ class QuizController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    // protected function validator(array $data)
+    // {
+    //     return Validator::make($data, [
+    //         'phone' => ['phone:EG', 'unique:users'],
 
+    //     ]);
+    // }
 
     public function index()
     {
 
-        return view('manager.quizzes',['data'=>Quiz::all()]);
+        return view('manager.quizzes', ['data' => Quiz::all()]);
     }
 
-        /**
+
+    /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
@@ -33,7 +41,6 @@ class QuizController extends Controller
     {
 
         return response()->json(['message' => 'User status updated successfully.']);
-
     }
 
 
@@ -44,55 +51,50 @@ class QuizController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function store(Request $request,$id=null)
+    public function store(Request $request, $id = null)
     {
 
-        $company =Company::find($id);
+        $company = Company::find($id);
 
 
 
-           $quiz =  new Quiz ;
+        $quiz =  new Quiz;
 
-           $quiz->area = $request->area;
+        $quiz->area = $request->area;
 
-           $quiz->timeOfRsponse = $request->timeOfRsponse;
+        $quiz->timeOfRsponse = $request->timeOfRsponse;
 
-           $quiz->customerPhoneNo = $request->customerPhoneNo;
-
-
-           $quiz->customerName = $request->customerName;
-
-           $quiz->contactTybe = $request->contactTybe;
-
-           $quiz->participateState = $request->participateState;
+        $quiz->customerPhoneNo = $request->customerPhoneNo;
 
 
-           $quiz->styles =implode(" \n ", $request->styles);
-           $quiz->design = $request->design ;
+        $quiz->customerName = $request->customerName;
 
-            $quiz->company_id = $id ;
-                $response1='';
-              if ($files = $request->file('file'))
-              {
+        $quiz->contactTybe = $request->contactTybe;
 
-                foreach($request->file('file') as $file)
-                {
-                             $uuid =Uuid::generate()->string;
-                              $path=$uuid.".".$file->getClientOriginalExtension();
-                              $desti='quizimages/';
-                              $file->move($desti,$path);
-                              $response1 =   $quiz->images()->create(['image'=>$path]);
-                }
+        $quiz->participateState = $request->participateState;
 
 
-              }
-              $response=$quiz->save();
-            //   Mail::to('yassminelbialy@gmail.com')
-            //   ->send(new SendQuizMail ($quiz));
+        $quiz->styles = implode(" \n ", $request->styles);
+        $quiz->design = $request->design;
 
-         return response()->json( ['mydata'=> $request->all(),'myresponse'=> $response,'opject'=>$quiz,'images'=>$id] );
+        $quiz->company_id = $id;
+        $response1 = '';
+        if ($files = $request->file('file')) {
 
+            foreach ($request->file('file') as $file) {
+                $uuid = Uuid::generate()->string;
+                $path = $uuid . "." . $file->getClientOriginalExtension();
+                $desti = 'quizimages/';
+                $file->move($desti, $path);
+                $response1 =   $quiz->images()->create(['image' => $path]);
+            }
         }
+        $response = $quiz->save();
+          Mail::to('yassminelbialy@gmail.com')
+          ->send(new SendQuizMail ($quiz));
+
+        return response()->json(['mydata' => $request->all(), 'myresponse' => $response, 'opject' => $quiz, 'images' => $id]);
+    }
 
     /**
      * Display the specified resource.

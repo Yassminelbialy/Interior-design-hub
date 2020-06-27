@@ -52,15 +52,16 @@
                             <input id='phoneno' type="text" name="phone" class="form-control validate">
                             <label data-error="wrong" data-success="right" for="defaultForm-pass">Your Phone</label>
                         </div>
-                        <div class="form-group">
-                            <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
-                                <input id='calldate'type="text" class="form-control datetimepicker-input" name="date" data-target="#datetimepicker1" />
-                                <div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
-                                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-                                </div>
-                            </div>
+                        <div class="md-form mb-2">
+                            <i class="fa fa-comments"></i>
+                            <textarea id='comment' type="text" name="comment" class="form-control validate"></textarea>
+                            <label data-error="wrong" data-success="right" for="defaultForm-pass">Your Comment</label>
                         </div>
-
+                        <div class="md-form mb-2">
+                            <i class="fa fa-clock-o"></i>
+                            <input id='date' type="date" name="timeToCall" class="form-control validate">
+                            <label data-error="wrong" data-success="right" for="defaultForm-pass">Your date</label>
+                        </div>
                     </div>
                     <div class="modal-footer d-flex justify-content-center">
                         <button id='conssubmit' class="btn btn-success btn-block">Submit</button>
