@@ -6,7 +6,7 @@
         <div class="cube nav-cube">
 
             <ul>
-                <li> <a data-scroll="home" class="nav-link active">Home</a></li>
+                <li> <a href="{{url('/')}}" class="nav-link active" rel="nofollow">Home</a></li>
                 <li> <a data-scroll="about_us" class="nav-link">About Us</a></li>
                 <li> <a data-scroll="steps_working" class="nav-link">How to Work</a></li>
                 <li> <a data-scroll="services" class="nav-link">Services</a></li>
@@ -40,8 +40,16 @@
                 <a href="{{$cont->wLink}}" ><i class="fa fa-vk ml-2"></i></a>
             </div>
             @endforeach
-            <a class="btn btn-success login" href="{{ route('login') }}">login</a>
-
+            @guest
+                <a class="btn btn-success login" href="{{ route('login') }}">login</a>
+            @else
+                <a class="btn btn-success login" href="{{ url('/profile') }}">View Profile</a>
+                <a href="{{ route('logout') }}"  class="btn btn-success login" onclick="event.preventDefault();
+                    document.getElementById('logout-form').submit();">Logout</a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                </form>      
+            @endguest
             <a href="#" class="nav-toggle closed" data-cube="close-switch">
                 <i class="fas fa-bars"></i>
             </a>

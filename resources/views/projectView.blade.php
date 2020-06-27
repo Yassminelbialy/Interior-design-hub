@@ -6,7 +6,7 @@
         <div class="cube nav-cube">
 
             <ul>
-                <li> <a data-scroll="home" class="nav-link active" rel="nofollow">Home</a></li>
+            <li> <a href="{{url('/')}}" class="nav-link active" rel="nofollow">Home</a></li>
                 <li> <a data-scroll="about_us" class="nav-link" rel="nofollow">About Us</a></li>
                 <li> <a data-scroll="steps_working" class="nav-link" rel="nofollow">How to Work</a></li>
                 <li> <a data-scroll="services" class="nav-link" rel="nofollow">Services</a></li>
@@ -23,14 +23,23 @@
 
 
     <div class="main-content">
-        <div class="menu text-center d-flex justify-content-around">
+        <div class="menu text-center d-flex justify-content-around align-items-center">
             <a class="navbar-brand" href="#" rel="nofollow"><img data-src="/images/company_logo.PNG" alt="logo image"> </a>
 
-            <a href="#" class="nav-toggle closed" rel="nofollow" data-cube="close-switch">
-                <span>+</span>
-            </a>
 
-
+          @guest
+            <a class="btn btn-success login" href="{{ route('login') }}">login</a>
+          @else
+            <a class="btn btn-success login" href="{{ url('/profile') }}">View Profile</a>
+            <a href="{{ route('logout') }}"  class="btn btn-success login" onclick="event.preventDefault();
+                document.getElementById('logout-form').submit();">Logout</a>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                @csrf
+            </form>      
+          @endguest
+        <a href="#" class="nav-toggle closed" rel="nofollow" data-cube="close-switch">
+          <span>+</span>
+      </a>
         </div>
     </div>
 
