@@ -59,7 +59,7 @@
                         </div>
                         <div class="md-form mb-2">
                             <i class="fa fa-clock-o"></i>
-                            <input id='date' type="date" name="date" class="form-control validate">
+                            <input id='date' type="date" name="timeToCall" class="form-control validate">
                             <label data-error="wrong" data-success="right" for="defaultForm-pass">Your date</label>
                         </div>
                     </div>

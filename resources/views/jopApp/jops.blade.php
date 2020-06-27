@@ -1,3 +1,42 @@
+@extends('layouts.app')
+<div class="page" id="home">
+
+    <div class="cube-container">
+
+        <div class="cube nav-cube">
+
+            <ul>
+                <li> <a href="{{url('/')}}" class="nav-link active" rel="nofollow">Home</a></li>
+            </ul>
+
+        </div>
+    </div>
+
+
+    <div class="main-content">
+        <div class="menu text-center d-flex justify-content-around align-items-center">
+            <a class="navbar-brand" href="#" rel="nofollow"><img data-src="/images/company_logo.PNG" alt="logo image"> </a>
+
+
+          @guest
+            <a class="btn btn-success login" href="{{ route('login') }}">login</a>
+          @else
+            <a class="btn login" href="{{ url('/profile') }}">View Profile</a>
+            <a href="{{ route('logout') }}"  class="btn login" onclick="event.preventDefault();
+                document.getElementById('logout-form').submit();">Logout</a>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                @csrf
+            </form>      
+          @endguest
+        <a href="#" class="nav-toggle closed" rel="nofollow" data-cube="close-switch">
+          <span>+</span>
+      </a>
+        </div>
+    </div>
+
+
+</div>
+@section('content')
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -72,3 +111,4 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <script src="{{URL::asset('/js/jobformscript copy.js')}}"></script>
+@endsection
