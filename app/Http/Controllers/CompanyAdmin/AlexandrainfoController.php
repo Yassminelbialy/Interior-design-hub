@@ -66,7 +66,7 @@ class AlexandrainfoController extends Controller
     // dd($request->all());
     $z=  Auth::user()->company->info()->create($request->except(['cimage', 'cvideo']));
 
-        return redirect(route('company.alexandra.index'));
+        return redirect(route('company.alexandra.index'))->with('success','Done');
     }
 
     /**

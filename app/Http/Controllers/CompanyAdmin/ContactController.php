@@ -4,9 +4,10 @@ namespace App\Http\Controllers\CompanyAdmin;
 use App\Http\Controllers\Controller;
 use App\Contact;
 use Illuminate\Http\Request;
-
+use Auth;
 class ContactController extends Controller
 {
+    // User::find(2)->company->contact()->create(['email'=>'ahmdd hazem','company_id'=>1])
     /**
      * Display a listing of the resource.
      *
@@ -14,8 +15,13 @@ class ContactController extends Controller
      */
     public function index()
     {
-        $contacts= Contact::all();
-        return view('CompanyAdmin/contactindex',["contacts"=>$contacts]);
+        $contact =Auth::user()->company->contact;
+        if($contact)
+        {
+            return view('CompanyAdmin/contactindex',["contacts"=>[$contact] ]);
+        }else{
+            return view('CompanyAdmin.contactadd');
+        }
     }
 
     /**
@@ -25,7 +31,7 @@ class ContactController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -36,7 +42,12 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $company=Auth::user()->company;
+        if ($company)
+        {
+            $company->contact()->create($request->all());
+            return redirect(route('company.contacts.index'))->with('success','Done');
+        }
     }
 
     /**
