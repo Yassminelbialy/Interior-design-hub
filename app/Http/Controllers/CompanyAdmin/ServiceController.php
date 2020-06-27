@@ -15,6 +15,14 @@ class ServiceController extends Controller
      */
     public function index()
     {
+
+        $services= Auth::user()->company->services;
+        if($services->count()>0)
+        {
+            return view('CompanyAdmin/serviceIndex',["services"=>$services]);
+        }else{
+            return view ('CompanyAdmin.serviceCreate');
+        }
         $services= Auth::user()->company->services;
         return view('CompanyAdmin/serviceIndex',["services"=>$services]);
     }
@@ -36,8 +44,8 @@ class ServiceController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {      
-        $req=$request->all(); 
+    {
+        $req=$request->all();
         $review = Auth::user()->company->services()->create($req);
         return redirect('/companypanel/service');
     }
@@ -74,7 +82,7 @@ class ServiceController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $service= Auth::user()->company->services()->find($id);      
+        $service= Auth::user()->company->services()->find($id);
         $req=$request->all();
         $service = $service->update($req);
         return redirect(route('company.service.index'));
