@@ -2,7 +2,7 @@
 
 @section('content')
 
-
+<a href="{{url('/')}}" class="btn" style="color:#247fa3 !important;margin:10px;padding:10px;font-size:20px;border-radius:10px"  rel="nofollow"><<-Back To Home</a>
 
 <a href="{{ route('logout') }}" class="btn btn-danger" rel="nofollow" style="color:white !important;margin:10px;padding:10px;font-size:20px;float:right;border-radius:10px" onclick="event.preventDefault();
                 document.getElementById('logout-form').submit();">Logout</a>
@@ -170,68 +170,6 @@
     </div>
 
 </div>
-<!-- Chat modal -->
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" style="position: absolute;left:50%;">
-    Chat with Admin
-</button>
-<!-- Modal -->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <!-- Yassmin chat -->
-                <div id="frame">
-                    <div class="content">
-                        <div class="contact-profile">
-                            <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="chat" />
-                            <p>Admin</p>
-                        </div>
-                        <div class="messages">
-                            <ul>
-                                <li class="replies">
-                                    <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="chat" />
-                                    <p>Hello, Iam the admin .. You can talk to me ; i will reply soon</p>
-                                </li>
-                                @forelse ($chatData as $item)
-                                @if ($item->img)
-                                <li class="sent">
-                                    <img src="/chatfiles/{{$item->img}}" alt="" />
-
-                                    <p style="font-size:22; ">
-                                        <img src="/chatfiles/{{$item->img}}" style="width: 200px;height:200px;" alt="chat" srcset="">
-                                        <br>
-                                        {{$item->body}}</br>
-                                </li>
-                                @else
-                                <li class="sent">
-                                    <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="chat" />
-                                    <p>{{$item->body}}</p>
-                                </li>
-                                @endif
-
-                                @empty
-                                <!-- <div class="danger bg-primary">No Data</div> -->
-                                @endforelse
-                            </ul>
-                        </div>
-                        <div class="message-input">
-                            <div class="wrap">
-                                <input type="text" placeholder="Write your message..." />
-                                <input type="file" id="file1" style="display:none">
-                                <i id='attachment' class="fa fa-paperclip attachment" aria-hidden="true"> </i>
-
-                                <button class="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End chat -->
             </div>
         </div>
     </div>

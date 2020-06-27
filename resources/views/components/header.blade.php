@@ -16,6 +16,7 @@
                 <li> <a data-scroll="our_team" class="nav-link">the Team</a></li>
                 <li> <a data-scroll="" class="nav-link">clients</a></li>
                 <li> <a data-scroll="" class="nav-link">Services</a></li>
+                <li><a class="nav-link" href="{{ route('jops') }}" >Jops</a></li>
             </ul>
 
         </div>
