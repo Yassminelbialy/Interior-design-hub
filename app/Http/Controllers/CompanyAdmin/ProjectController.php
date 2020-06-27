@@ -100,7 +100,7 @@ class ProjectController extends Controller
      * @param  \App\Project  $project
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Project $project)
+    public function update(ProjectPost $request, Project $project)
     {
 
         $company =Auth::user()->company ;

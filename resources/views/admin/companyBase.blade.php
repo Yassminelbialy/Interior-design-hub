@@ -77,6 +77,7 @@
                                 <a class="nav-link" href="/companypanel/review">Reviews</a>
                                 <a class="nav-link" href="/companypanel/alexandra">Company info</a>
                                 <a class="nav-link" href="/companypanel/consultations">Consultations</a>
+                                <a class="nav-link" href="/companypanel/service">All Service</a>
                                 <a class="nav-link" href="/companypanel/sliderImage">Slider</a>
                                 <a class="nav-link" href="/companypanel/contacts">Contacts</a>
                                 <a class="nav-link" href="/companypanel/AdminOrder">Users Orders</a>
@@ -144,10 +145,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script src="/admin/dist/js/scripts.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
-    {{-- <script src="/admin/dist/assets/demo/chart-area-demo.js"></script>
-        <script src="/admin/dist/assets/demo/chart-bar-demo.js"></script>
-        <script src="/admin/dist/assets/demo/chart-pie-demo.js"></script> --}}
-    {{-- {{$data}} --}}
+
 
 </body>
 

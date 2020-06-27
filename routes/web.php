@@ -59,6 +59,10 @@ Route::middleware('manager')->prefix('manager')->name('manager.')->group(functio
     Route::resource('sliderImage' , 'Manager\SliderImageController');
     Route::resource('company' , 'CompanyController');
     Route::get('users/{users}/company', 'CompanyController@ConfirmCompany')->name('company');
+    Route::get('/read',function(){
+        \App\User::where('adminRole','=',null)->first()->unreadNotifications->markAsRead();
+        return redirect()->back();
+    });
 });
 }); //manager routes
 
@@ -97,9 +101,14 @@ Route::get('jops', 'Manager\JopApplicantController@index')->name('jops');
 
     Route::middleware('company')->prefix('companypanel')->name('company.')->group(function () {
         Route::any('/', function () {
-            return view('admin.companyBase');
+            // return view('admin.companyBase');
+
+            // return view('CompanyAdmin.profilelogin');
+            return redirect(route('company.companyprofile'));
+
         });
 
+        Route::get('companyprofile', 'CompanyAdmin\ContactController@login')->name('companyprofile');
 
         Route::resource('project', 'CompanyAdmin\ProjectController');
         Route::resource('project.images', 'CompanyAdmin\ProjectImageController');
@@ -123,7 +132,7 @@ Route::get('jops', 'Manager\JopApplicantController@index')->name('jops');
         Route::get('/{id?}', 'UserController@indexCompany');
 
 
-}); 
+});
 
 
 Route::get('dddd', function () {

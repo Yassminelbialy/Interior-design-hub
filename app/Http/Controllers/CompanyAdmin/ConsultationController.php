@@ -25,11 +25,11 @@ class ConsultationController extends Controller
             'username'   =>     'required',
             'phone'      =>     'required',
             'comment' => 'required',
-            'date' => 'date ',
+            'timeToCall' => 'date ',
         ]);
         $consultation = new Consultation();
         $consultation->name = $request->username;
-        $consultation->timeToCall = $request->date;
+        $consultation->timeToCall = $request->timeToCall;
         $consultation->comment = $request->comment;
         $consultation->phone = $request->phone;
         $consultation->save();
@@ -38,7 +38,7 @@ class ConsultationController extends Controller
             'username'  =>  $request->username,
             'phone'     =>  $request->phone,
             'comment' => $request->comment,
-            'date'      =>  $request->date
+            'timeToCall'      =>  $request->timeToCall
         );
 
         Mail::to('yassminelbialy@gmail.com')

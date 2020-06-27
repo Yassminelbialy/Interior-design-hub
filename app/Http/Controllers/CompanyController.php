@@ -6,6 +6,7 @@ use App\Company;
 use Auth;
 use App\User;
 use Illuminate\Http\Request;
+use App\Notifications\Replied;
 use Illuminate\Support\Facades\Auth as FacadesAuth;
 use App\Quiz;
 
@@ -42,6 +43,7 @@ class CompanyController extends Controller
         $user = Auth::user();
         $user->company_id = $company->id;
         $user->save();
+        Auth::user()->notify(new Replied($company));
         return back()->with('success', 'Please wait untill admin accept your confirm :)');
     }
 

@@ -53,7 +53,7 @@ class ProjectController extends Controller
         return view('manager.projectformedit', ['data' => $project, 'category' => Category::all()->pluck('name', 'id')->toArray()]);
     }
 
-    public function update(Request $request, Project $project)
+    public function update(ProjectPost $request, Project $project)
     {
         // $categories = Category::all()->pluck('name','id')->toArray();
 

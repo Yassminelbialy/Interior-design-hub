@@ -53,6 +53,23 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
         <!-- Navbar-->
         <ul class="navbar-nav ml-auto ml-md-0">
             <li class="nav-item dropdown">
+            
+            <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-bell text-primary fa-fw"></i><span class="text-danger">{{count(\App\User::with('unreadNotifications')->where('adminRole','=',null)->get())}}</span></a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                    <div class="dropdown-divider"></div>
+                    <ul class="navbar-nav">
+                        <li class="nav-link">
+                            @forelse(\App\User::with('unreadNotifications')->where('adminRole','=',null)->get()  as $notify)
+                                <a href="{{url('manager/read')}}" style="display: block">{{$notify->name}} Add New Company</a>
+                            @empty
+                                <span class="text-dark">No Notifications</span>
+                            @endforelse
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
                     <div class="dropdown-divider"></div>

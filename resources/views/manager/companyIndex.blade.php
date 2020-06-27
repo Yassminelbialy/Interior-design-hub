@@ -10,7 +10,7 @@
       <th class="text-light h6" style="font-weight:700">Location</th>
       <th class="text-light h6" style="font-weight:700">Phone </th>
       <th class="text-light h6" style="font-weight:700">Confirm</th>
-      <th class="text-danger h6" style="font-weight:700"> Action </th> <th class="text-danger h6" style="font-weight:700"> user </th>
+      <th class="text-danger h6" style="font-weight:700"> Action </th>
     </tr>
     @foreach( $companies as $company)
     <tr>
@@ -18,11 +18,9 @@
       <td>{{$company->user->name}}</td>
       <td >{{$company->location }}</td>
       <td >{{$company->phoneNum }}</td>
-      <td >{{$company->name }}</td>
       <td> 
         @if($company->user->adminRole === 2)
             <a class="btn text-info" rel="nofollow"><i class="fas fa-check-square fa-2x"></i></a>
-
         @else
             <a href="{{ route('manager.company' , $company->user_id) }}" rel="nofollow" class="btn text-danger"><i class="far fa-check-square fa-2x"></i></a>
         @endif
