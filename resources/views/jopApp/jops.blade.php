@@ -26,7 +26,7 @@
                 document.getElementById('logout-form').submit();">Logout</a>
             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                 @csrf
-            </form>      
+            </form>
           @endguest
         <a href="#" class="nav-toggle closed" rel="nofollow" data-cube="close-switch">
           <span>+</span>
@@ -69,8 +69,7 @@
                             <hr>
                             <h6 style="display: inline-block">Jop Type</h6>
                             <p style="display: inline-block" class="font-italic text-muted mb-0 small">{{$item->jopType}}
-                                <h6 style="display: inline-block"> Location:</h6>{{$item->location}}
-                            </p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <h6 style="display: inline-block"> Location:</h6>                            <p style="display: inline-block" class="font-italic text-muted mb-0 small">{{$item->jopType}}</p>
 
                             <div class="d-flex align-items-center justify-content-between mt-1">
                                 <h6 class="font-weight-bold my-2">{{$item->created_at}}</h6>
