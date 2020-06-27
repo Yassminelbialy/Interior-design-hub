@@ -17,8 +17,15 @@ class ReviewController extends Controller
     public function index()
     {
         // $reviews= Review::all();
-         $reviews= Auth::user()->company->reviews;
-         return view('CompanyAdmin/reviewindex',["reviews"=>$reviews]);
+
+        $reviews= Auth::user()->company->reviews;
+        if($reviews->count()>0)
+        {
+            return view('CompanyAdmin/reviewindex',["reviews"=>$reviews]);
+        }else{
+            return view ('CompanyAdmin.reviewcreate');
+        }
+
     }
 
     /**
@@ -53,7 +60,7 @@ class ReviewController extends Controller
     $review = Auth::user()->company->reviews()->create($req);
 
     // $review = Review::create($req);
-        
+
         return redirect('/companypanel/review');
     }
 
