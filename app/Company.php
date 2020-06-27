@@ -3,10 +3,12 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Notifications\Notifiable;
+
 
 class Company extends Model
 {
-
+use Notifiable;
     public function projects()
     {
         return $this->hasMany('App\Project');

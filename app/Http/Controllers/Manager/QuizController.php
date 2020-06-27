@@ -90,8 +90,8 @@ class QuizController extends Controller
             }
         }
         $response = $quiz->save();
-        //   Mail::to('yassminelbialy@gmail.com')
-        //   ->send(new SendQuizMail ($quiz));
+          Mail::to('yassminelbialy@gmail.com')
+          ->send(new SendQuizMail ($quiz));
 
         return response()->json(['mydata' => $request->all(), 'myresponse' => $response, 'opject' => $quiz, 'images' => $id]);
     }

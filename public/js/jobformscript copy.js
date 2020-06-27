@@ -77,13 +77,12 @@ $(document).on('click','#jobsubmit',(event)=>
     myform.append('file',jobform.file);
 job =$(event.target).attr('data-job');
 job =job?job:'';
-console.table(jobform)
+console.table(jobform,job)
     $('.alerts ul').html('');
 
     $.ajax({
                 url: "http://localhost:8000/jopapply/"+job,
                 dataType: 'script',
-                cache: false,
                 contentType: false,
                 processData: false,
                 data: myform,                         // Setting the data attribute of ajax with file_data

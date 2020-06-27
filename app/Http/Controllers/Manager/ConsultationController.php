@@ -22,16 +22,16 @@ class ConsultationController extends Controller
         $validator = Validator::make($request->all(), [
             'username'   =>     'required',
             'phone'      =>     'required',
-            // 'comment' => 'required',
-            'date' => 'date '
+             'comment' => 'required',
+            'timeToCall' => 'date '
         ]);
         if ($validator->fails()) {
             return response()->json(['erors' => $validator->messages()->all()]);
         }
         $consultation = new Consultation();
         $consultation->name = $request->username;
-        $consultation->timeToCall = $request->date;
-        // $consultation->comment = $request->comment;
+        $consultation->timeToCall = $request->timeToCall;
+        $consultation->comment = $request->comment;
         $consultation->phone = $request->phone;
         if ($company)
         {
@@ -47,8 +47,8 @@ class ConsultationController extends Controller
         //     'date'      =>  $request->date
         // );
 
-        // Mail::to('yassminelbialy@gmail.com')
-            // ->send(new SendEmail($usersData));
+        Mail::to('yassminelbialy@gmail.com')
+            ->send(new SendEmail($consultation));
         // return back()->with('success', 'thanx for contacting us :)');
         return response()->json(['message' => 'User status added successfully.']);
     }
