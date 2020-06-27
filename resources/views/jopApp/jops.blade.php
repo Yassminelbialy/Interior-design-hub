@@ -43,9 +43,8 @@
                                     <li class="list-inline-item m-0"><i class="fa fa-star-o text-gray"></i></li>
                                 </ul>
                             </div>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal{{$item->id}}" data-whatever="@mdo">Open modal for @mdo</button>
+                        <button type="button" class="btn btn--radius-2 btn--blue btn-danger" data-toggle="modal" data-target="#exampleModal{{$item->id}}" data-whatever="@mdo">Apply</button>
 
-                            <a href="{{route('applyjopform',$item->id)}}" class="btn btn--radius-2 btn--blue btn-danger">APPLY</a>
                         </div>
                     </div> <!-- End -->
                     @component('components.modalconsultation',['id'=>$item->id])
