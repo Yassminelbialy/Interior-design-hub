@@ -61,7 +61,7 @@ Route::middleware('manager')->prefix('manager')->name('manager.')->group(functio
     Route::get('users/{users}/company', 'CompanyController@ConfirmCompany')->name('company');
     Route::get('/read',function(){
         \App\User::where('adminRole','=',null)->first()->unreadNotifications->markAsRead();
-        return view('admin.base');
+        return redirect()->back();
     });
 });
 }); //manager routes
