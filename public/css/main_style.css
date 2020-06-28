@@ -1329,6 +1329,7 @@ nav .contact_us i {
     background-color: var(--secondColor);
     color: white;
     position: relative;
+    overflow: hidden;
 }
 
 .who_us .bg {
@@ -1348,7 +1349,7 @@ nav .contact_us i {
 .who_us .container_image {
     position: relative;
     left: -14%;
-    top: -10%;
+    top: -16%;
 }
 
 .who_us .container_image img:first-of-type {
@@ -1444,6 +1445,16 @@ nav .contact_us i {
     right: -15px;
     box-shadow: 3px 3px 10px var(--secondColor), -3px -3px 10px var(--secondColor);
 }
+
+.description1,.description3,.description5{
+    left: 150%;
+    position: relative;
+  }
+
+  .description2,.description4{
+    left: -150%;
+    position: relative;
+  }
 
 /* start statitics */
 
@@ -1690,6 +1701,7 @@ nav .contact_us i {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    overflow: hidden;
 }
 
 .services_content {
@@ -1698,6 +1710,11 @@ nav .contact_us i {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    transition: all 3s;
+    position: relative;
+    top:-600px;
+    opacity: 0;
+    /* transform: scale(0) rotateY(0); */
 }
 
 .services h2 {
@@ -1746,20 +1763,20 @@ nav .contact_us i {
     transition: 1s;
 }
 
-.service_box .box:nth-child(1) {
+.service_box .box {
     box-shadow: 10px 10px 10px  black, -10px -10px 10px 0 black;
 }
 
-.service_box .box:nth-child(1) .icon {
+.service_box .box .icon {
     box-shadow: 0 0 0 0 var(--secondColor);
     background: var(--secondColor);
 }
 
-.service_box .box:nth-child(1):hover .icon {
+.service_box .box:hover .icon {
     box-shadow: 0 0 0 400px   var(--secondColor);
     background:  var(--secondColor);
 }
-
+/*
 .service_box .box:nth-child(2) {
     box-shadow: 10px 10px 10px 0 #23e629, -10px -10px 10px 0 #23e629;
 }
@@ -1784,7 +1801,7 @@ nav .contact_us i {
 
 .service_box .box:nth-child(3):hover .icon {
     box-shadow: 0 0 0 400px #2196f3;
-}
+} */
 
 /* .service_box .box:nth-child(4) {
     box-shadow: 10px 10px 10px 0 #ff3f34, -10px -10px 10px 0 #ff3f34;

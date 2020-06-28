@@ -10,7 +10,7 @@
                     <div class="col-md-6 text-left " >
 
 
-                        <div class="description">
+                        <div class="description description1">
                         <p class="number_step text-center d-block d-md-none my-1 ">1</p>
                             <p>
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis ab pariatur laboriosam quasi iure dolores illum, maiores mollitia sunt qui beatae hic veritatis quaerat at in nulla delectus. Eius, nulla!
@@ -19,7 +19,7 @@
                     </div>
 
                     <div class="col-md-6 ">
-                        <div class="description">
+                        <div class="description description2">
                              <p class="number_step text-center d-block d-md-none my-1 ">2</p>
                             <p>
                                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis ab pariatur laboriosam quasi iure dolores illum, maiores mollitia sunt qui beatae hic veritatis quaerat at in nulla delectus. Eius, nulla!
@@ -36,7 +36,7 @@
                         <p class="number_step text-right">3</p>
                     </div>
                     <div class="col-md-6 text-left">
-                        <div class="description">
+                        <div class="description description3">
                         <p class="number_step text-center d-block d-md-none my-1 ">3</p>
                             <p>
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis ab pariatur laboriosam quasi iure dolores illum, maiores mollitia sunt qui beatae hic veritatis quaerat at in nulla delectus. Eius, nulla!
@@ -45,7 +45,7 @@
                     </div>
 
                     <div class="col-md-6  ">
-                        <div class="description">
+                        <div class="description description4">
                         <p class="number_step text-center d-block d-md-none my-1 ">4</p>
                             <p>
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis ab pariatur laboriosam quasi iure dolores illum, maiores mollitia sunt qui beatae hic veritatis quaerat at in nulla delectus. Eius, nulla!
@@ -63,7 +63,7 @@
                     </div>
                     <div class="col-md-6 text-left">
 
-                        <div class="description">
+                        <div class="description description5">
                         <p class="number_step text-center d-block d-md-none my-1 ">5</p>
                             <p>
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis ab pariatur laboriosam quasi iure dolores illum, maiores mollitia sunt qui beatae hic veritatis quaerat at in nulla delectus. Eius, nulla!
