@@ -16,7 +16,7 @@
                 <li> <a data-scroll="our_team" class="nav-link">the Team</a></li>
                 <li> <a data-scroll="" class="nav-link">clients</a></li>
                 <li> <a data-scroll="" class="nav-link">Services</a></li>
-                <li><a class="nav-link" href="{{ route('jops') }}" >Jobs</a></li>
+                <li><a class="nav-link" href="{{ route('jops') }}">Jobs</a></li>
             </ul>
 
         </div>
@@ -26,7 +26,7 @@
     <div class="main-content">
         <div class="menu text-center d-flex justify-content-around align-items-center">
             <a class="navbar-brand" href="#"><img data-src="/images/company_logo.PNG" alt="logo image"> </a>
-      @foreach ($contact as $cont )
+            @foreach ($contact as $cont )
             <div class="contact_us">
 
                 <i class="fas ml-3 fa-mobile-alt"></i>
@@ -38,18 +38,18 @@
                 <a href="{{$cont->instaLink}}"><i class="fab fa-instagram ml-2"></i></a>
                 <a href="{{$cont->facebookLink}}"><i class="fab fa-facebook-f ml-2"></i></a>
                 <a href="{{$cont->pinterestLink}}"><i class="fab fa-pinterest ml-2"></i></a>
-                <a href="{{$cont->wLink}}" ><i class="fa fa-vk ml-2"></i></a>
+                <a href="{{$cont->wLink}}"><i class="fa fa-vk ml-2"></i></a>
             </div>
             @endforeach
             @guest
-                <a class="btn btn-success login" href="{{ route('login') }}">login</a>
+            <a class="btn btn-success login" href="{{ route('login') }}">login</a>
             @else
-                <a class="btn btn-success login" href="{{ url('/profile') }}">View Profile</a>
-                <a href="{{ route('logout') }}"  class="btn btn-success login" onclick="event.preventDefault();
+            <a class="btn btn-success login" href="{{ url('/profile') }}">View Profile</a>
+            <a href="{{ route('logout') }}" class="btn btn-success login" onclick="event.preventDefault();
                     document.getElementById('logout-form').submit();">Logout</a>
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                    @csrf
-                </form>      
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                @csrf
+            </form>
             @endguest
             <a href="#" class="nav-toggle closed" data-cube="close-switch">
                 <i class="fas fa-bars"></i>
@@ -69,12 +69,8 @@
     <div class="slider">
 
 
-    @forelse($slide_img as $slide_imgg)
-        <div  class="slide slide-0 active">
-
-
-
-
+        @forelse($slide_img as $slide_imgg)
+        <div class="slide slide-0 active">
             <div style="background:url({{ asset('images/projectsSlider/'. $slide_imgg->img)}}); no-repeat  " class="slide__bg"></div>
             <div class="slide__content">
                 <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
@@ -83,37 +79,51 @@
                 <div class="slide__text">
                     <h1 class="slide__text-heading">{{ $slide_imgg->title }}</h1>
                     <p class="slide__text-desc">{{ $slide_imgg->description  }}</p>
-                    <a class="slide__text-link" href="{{ url('view/'.$slide_imgg->project_id)}}">Project link</a>
+                    <a class="slide__text-link" href="{{ url('view/'.$slide_imgg->project_id)}}">Details</a>
                 </div>
             </div>
         </div>
-    @empty
+        @empty
 
-    <div  class="slide slide-0 active">
-        <div style="background:url({{ asset('images/projectsSlider/0000.jpg')}}); no-repeat  " class="slide__bg"></div>
-        <div class="slide__content">
-            <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
-                <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
-            </svg>
+        <div class="slide slide-0 active">
+            <div style="background:url({{ asset('images/projectsSlider/0000.jpg')}}); no-repeat  " class="slide__bg"></div>
+            <div class="slide__content">
+                <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+                    <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+                </svg>
+            </div>
+            <div class="slide__text">
+                <h1 class="slide__text-heading">project 1</h1>
+                <p class="slide__text-desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur facere beatae incidunt ea necessitatibus? Impedit dolores, nesciunt eligendi inventore, repellendus nulla excepturi eius modi facilis quod consequuntur recusandae porro animi?</p>
+                <a class="slide__text-link" href="#">Details</a>
+            </div>
         </div>
-    </div>
-    <div  class="slide slide-0 active">
-        <div style="background:url({{ asset('images/projectsSlider/1.jpg')}}); no-repeat  " class="slide__bg"></div>
-        <div class="slide__content">
-            <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
-                <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
-            </svg>
+        <div class="slide slide-1 ">
+            <div style="background:url({{ asset('images/projectsSlider/1.jpg')}}); no-repeat  " class="slide__bg"></div>
+            <div class="slide__content">
+                <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+                    <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+                </svg>
+            </div>
+            <div class="slide__text">
+                <h1 class="slide__text-heading">project 2</h1> <p class="slide__text-desc"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita praesentium voluptas consectetur est rerum corporis illum aliquam mollitia nisi at perspiciatis alias, molestias velit eius vel porro! Aperiam, consectetur ipsam.</p>
+                        <a class="slide__text-link" href="#">Details</a>
+            </div>
         </div>
-    </div>
-    <div  class="slide slide-0 active">
-        <div style="background:url({{ asset('images/projectsSlider/12.jpg')}}); no-repeat  " class="slide__bg"></div>
-        <div class="slide__content">
-            <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
-                <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
-            </svg>
+        <div class="slide slide-2 ">
+            <div style="background:url({{ asset('images/projectsSlider/12.jpg')}}); no-repeat  " class="slide__bg"></div>
+            <div class="slide__content">
+                <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+                    <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+                </svg>
+            </div>
+            <div class="slide__text">
+                <h1 class="slide__text-heading">project3</h1>
+                <p class="slide__text-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat ab nemo vero, tempore sunt aliquam labore vel, deserunt nobis impedit veritatis rem. Consectetur modi, quos repudiandae magnam laboriosam optio saepe?</p>
+                <a class="slide__text-link" href="#">Details</a>
+            </div>
         </div>
-    </div>
-    @endforelse
+        @endforelse
     </div>
 
 
