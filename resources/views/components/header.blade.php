@@ -70,7 +70,7 @@
 
 
         @forelse($slide_img as $slide_imgg)
-        <div class="slide ">
+        <div class="slide slide-0 active  ">
             <div style="background:url({{ asset('images/projectsSlider/'. $slide_imgg->img)}}); no-repeat  " class="slide__bg"></div>
             <div class="slide__content">
                 <svg class="slide__overlay" viewBox="0 0 720 405">
@@ -85,7 +85,7 @@
         </div>
         @empty
 
-        <div class="slide ">
+        <div class="slide slide-0 active  ">
             <div style="background:url({{ asset('images/projectsSlider/0000.jpg')}}); no-repeat  " class="slide__bg"></div>
             <div class="slide__content">
                 <svg class="slide__overlay" viewBox="0 0 720 405">
@@ -98,7 +98,7 @@
                 <a class="slide__text-link" href="#">Details</a>
             </div>
         </div>
-        <div class="slide ">
+        <div class="slide  slide-1 ">
             <div style="background:url({{ asset('images/projectsSlider/1.jpg')}}); no-repeat  " class="slide__bg"></div>
             <div class="slide__content">
                 <svg class="slide__overlay" viewBox="0 0 720 405">
@@ -110,7 +110,7 @@
                         <a class="slide__text-link" href="#">Details</a>
             </div>
         </div>
-        <div class="slide  ">
+        <div class="slide  slide-2 ">
             <div style="background:url({{ asset('images/projectsSlider/12.jpg')}}); no-repeat  " class="slide__bg"></div>
             <div class="slide__content">
                 <svg class="slide__overlay" viewBox="0 0 720 405">

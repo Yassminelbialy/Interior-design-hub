@@ -155,12 +155,15 @@
     /* background: linear-gradient(
 rgba(34, 27, 25, 0.8) url(../images/1.jpg) no-repeat center center; */
     height: 400px;
-    background:var(--secondColor);
+    background: linear-gradient(45deg , #c19e70 50% , #141414 50%);
+    border-bottom: 40px  solid #141414  ;
 }
 .details .btn_info {
     padding: 10px 20px ;
     background:var(--mainColor);
-    color:  var(--secondColor);
+    color: white;
+    box-shadow: 3px 3px 10px  #c19e70  , -3px -3px 10px  #141414 ;
+    transition: all 1s;
 }
 /* @media (max-width: 991px) {
     .details .btn_info {
@@ -168,7 +171,9 @@ rgba(34, 27, 25, 0.8) url(../images/1.jpg) no-repeat center center; */
     }
 } */
 .details .btn_info:hover {
-    background-color:var(--mainColor) ;
+    background-color:white ;
+    color:var(--mainColor);
+    transform: scale(.9);
 }
 .world_video {
     background: linear-gradient(rgba(34, 27, 25, 0.8), rgba(34, 27, 25, 0.8)),
