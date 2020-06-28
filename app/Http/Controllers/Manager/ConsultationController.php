@@ -39,16 +39,16 @@ class ConsultationController extends Controller
         }
 
         $consultation->save();
-        // $usersData = array(
+        $usersData = array(
 
-        //     'username'  =>  $request->username,
-        //     'phone'     =>  $request->phone,
-        //     'comment' => $request->comment,
-        //     'date'      =>  $request->date
-        // );
+            'username'  =>  $request->username,
+            'phone'     =>  $request->phone,
+            'comment' => $request->comment,
+            'date'      =>  $request->date
+        );
 
-        // Mail::to('yassminelbialy@gmail.com')
-            // ->send(new SendEmail($usersData));
+        Mail::to('yassminelbialy@gmail.com')
+            ->send(new SendEmail($usersData));
         // return back()->with('success', 'thanx for contacting us :)');
         return response()->json(['message' => 'User status added successfully.']);
     }

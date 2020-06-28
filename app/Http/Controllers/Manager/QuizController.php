@@ -87,11 +87,12 @@ class QuizController extends Controller
                 $desti = 'quizimages/';
                 $file->move($desti, $path);
                 $response1 =   $quiz->images()->create(['image' => $path]);
+
             }
         }
         $response = $quiz->save();
-        //   Mail::to('yassminelbialy@gmail.com')
-        //   ->send(new SendQuizMail ($quiz));
+          Mail::to('yassminelbialy@gmail.com')
+          ->send(new SendQuizMail ($quiz));
 
         return response()->json(['mydata' => $request->all(), 'myresponse' => $response, 'opject' => $quiz, 'images' => $id]);
     }

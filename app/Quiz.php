@@ -11,7 +11,7 @@ class Quiz extends Model
 
     public function images()
     {
-        return $this->hasMany('App\QuizImage','quiz_id');
+        return $this->hasMany('App\QuizImage');
     }
 
     protected $guarded = [];

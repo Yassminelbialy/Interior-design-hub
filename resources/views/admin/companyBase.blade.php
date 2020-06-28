@@ -56,14 +56,14 @@
                             <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                             Dashboard
                         </a>
-                        <!-- <a class="nav-link" href="/companypanel/quizzes">
+                        <a class="nav-link" href="/companypanel/quizzes">
                             <div class="sb-nav-link-icon"><i class="fas fa-file-contract"></i></div>
                             QuiZZes Requests
-                        </a> -->
-                        <a class="nav-link" href="/manager/chatList">
+                        </a>
+                        {{-- <a class="nav-link" href="/manager/chatList">
                             <div class="sb-nav-link-icon"><i class="fas fa-file-contract"></i></div>
                             Chat List
-                        </a>
+                        </a> --}}
                         <div class="sb-sidenav-menu-heading">Interface</div>
                         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                             <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>

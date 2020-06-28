@@ -88,6 +88,7 @@ class AlexandrainfoController extends Controller
      */
     public function edit($id)
     {
+
         $ceoInfo=Alexandrainfo::findOrFail($id);
         return view('CompanyAdmin.alexandrainfoedit',["ceoInfo"=>$ceoInfo]);
     }
@@ -112,6 +113,7 @@ class AlexandrainfoController extends Controller
             $files->move($destinationPath, $Image);
             $ceo->image=$Image;
         }
+
 
 
         if ($files = $request->file('video')) {

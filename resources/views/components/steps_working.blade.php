@@ -22,7 +22,7 @@
                         <div class="description">
                              <p class="number_step text-center d-block d-md-none my-1 ">2</p>
                             <p>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis ab pariatur laboriosam quasi iure dolores illum, maiores mollitia sunt qui beatae hic veritatis quaerat at in nulla delectus. Eius, nulla!
+                                if you are a client you can leave your consultation or request to geting designs offers from company by applying the Quiz below
                             </p>
                         </div>
                     </div>
@@ -39,8 +39,7 @@
                         <div class="description">
                         <p class="number_step text-center d-block d-md-none my-1 ">3</p>
                             <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis ab pariatur laboriosam quasi iure dolores illum, maiores mollitia sunt qui beatae hic veritatis quaerat at in nulla delectus. Eius, nulla!
-                            </p>
+if u want to track your order please rejester with same phone number and you will getting all information when login and see your all requests to track it                             </p>
                         </div>
                     </div>
 
@@ -48,8 +47,7 @@
                         <div class="description">
                         <p class="number_step text-center d-block d-md-none my-1 ">4</p>
                             <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis ab pariatur laboriosam quasi iure dolores illum, maiores mollitia sunt qui beatae hic veritatis quaerat at in nulla delectus. Eius, nulla!
-                            </p>
+if you are company and want to sell with us rejester and you will found the buton sell with us just click on it and apply all data and wait confirmation                            </p>
                         </div>
                     </div>
                     <div class="col-md-6 d-none d-md-block  text-left">
@@ -66,8 +64,8 @@
                         <div class="description">
                         <p class="number_step text-center d-block d-md-none my-1 ">5</p>
                             <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis ab pariatur laboriosam quasi iure dolores illum, maiores mollitia sunt qui beatae hic veritatis quaerat at in nulla delectus. Eius, nulla!
-                            </p>
+
+if you are guest you could make consultation with out rejester                             </p>
                         </div>
                     </div>
                     <!-- <div class="steps_design">
