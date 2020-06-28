@@ -74,8 +74,7 @@
 @component('components.details')
 @endcomponent
 
-<!-- @component('components.worldWide')
-@endcomponent -->
+
 
 
 @component('components.testimonial',['reviews' => $reviews])

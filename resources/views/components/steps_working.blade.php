@@ -10,7 +10,7 @@
                     <div class="col-md-6 text-left " >
 
 
-                        <div class="description">
+                        <div class="description description1">
                         <p class="number_step text-center d-block d-md-none my-1 ">1</p>
                             <p>
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis ab pariatur laboriosam quasi iure dolores illum, maiores mollitia sunt qui beatae hic veritatis quaerat at in nulla delectus. Eius, nulla!
@@ -19,7 +19,7 @@
                     </div>
 
                     <div class="col-md-6 ">
-                        <div class="description">
+                        <div class="description description2">
                              <p class="number_step text-center d-block d-md-none my-1 ">2</p>
                             <p>
                                 if you are a client you can leave your consultation or request to geting designs offers from company by applying the Quiz below
@@ -36,7 +36,7 @@
                         <p class="number_step text-right">3</p>
                     </div>
                     <div class="col-md-6 text-left">
-                        <div class="description">
+                        <div class="description description3">
                         <p class="number_step text-center d-block d-md-none my-1 ">3</p>
                             <p>
 if u want to track your order please rejester with same phone number and you will getting all information when login and see your all requests to track it                             </p>
@@ -44,7 +44,7 @@ if u want to track your order please rejester with same phone number and you wil
                     </div>
 
                     <div class="col-md-6  ">
-                        <div class="description">
+                        <div class="description description4">
                         <p class="number_step text-center d-block d-md-none my-1 ">4</p>
                             <p>
 if you are company and want to sell with us rejester and you will found the buton sell with us just click on it and apply all data and wait confirmation                            </p>
@@ -61,7 +61,7 @@ if you are company and want to sell with us rejester and you will found the buto
                     </div>
                     <div class="col-md-6 text-left">
 
-                        <div class="description">
+                        <div class="description description5">
                         <p class="number_step text-center d-block d-md-none my-1 ">5</p>
                             <p>
 
