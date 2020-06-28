@@ -1,6 +1,12 @@
 
 $(function () {
 
+    $('.slide').each(function(index){
+        $(this).addClass('slide-'+index)
+        if(index==0){
+            $(this).addClass('slide-'+index).addClass('active')
+        }
+    })
 
 
     let win = $(window);
@@ -584,3 +590,4 @@ $(function () {
         },
         nav: true,
     });
+

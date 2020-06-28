@@ -13,7 +13,7 @@
                         <div class="description description1">
                         <p class="number_step text-center d-block d-md-none my-1 ">1</p>
                             <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis ab pariatur laboriosam quasi iure dolores illum, maiores mollitia sunt qui beatae hic veritatis quaerat at in nulla delectus. Eius, nulla!
+                                if you are company and want to sell with us rejester and you will found the buton sell with us just click on it and apply all data and wait confirmation                            </p>
                             </p>
                         </div>
                     </div>
