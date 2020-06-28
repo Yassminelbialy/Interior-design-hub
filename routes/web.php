@@ -25,7 +25,6 @@ Route::get('/', function () {
 
 Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']], function () {
 
-
 // ->middleware('can:manage-users')
 Route::middleware('manager')->prefix('manager')->name('manager.')->group(function () {
     Route::any('/', function () {

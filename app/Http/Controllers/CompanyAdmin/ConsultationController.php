@@ -42,7 +42,7 @@ class ConsultationController extends Controller
         );
 
         Mail::to('yassminelbialy@gmail.com')
-            ->send(new SendEmail($usersData));
+            ->send(new SendEmail($consultation));
         return back()->with('success', 'thanx for contacting us :)');
     }
     // ************ Yassmin Part *************************

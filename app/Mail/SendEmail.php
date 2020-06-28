@@ -18,7 +18,7 @@ class SendEmail extends Mailable
      * @return void
      */
 
-    
+
 
     public function __construct($data)
     {
@@ -32,8 +32,7 @@ class SendEmail extends Mailable
      */
     public function build()
     {
-        return $this->from('nelshohat@gmail.com')
-        ->subject('New User Request')
+        return $this->from('ahmed_hazem_refaie@hotmail.com')->subject('New User Request')
         ->view('dynamic-email')
         ->with('usersData' , $this->data);
     }
