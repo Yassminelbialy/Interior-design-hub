@@ -5,7 +5,7 @@
          <div class="owl-carousel owl-theme">
              @foreach ($reviews as $review )
              <div class="items">
-                 <img class="slider_image" data-src="/images/1.jpg" alt="reviews" />
+                 <img class="slider_image" data-src="/images/review/{{$review->image}}" alt="reviews" />
              </div>
              @endforeach
 
