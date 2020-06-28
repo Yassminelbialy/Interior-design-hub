@@ -70,10 +70,10 @@
 
 
         @forelse($slide_img as $slide_imgg)
-        <div class="slide slide-0 active">
+        <div class="slide ">
             <div style="background:url({{ asset('images/projectsSlider/'. $slide_imgg->img)}}); no-repeat  " class="slide__bg"></div>
             <div class="slide__content">
-                <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+                <svg class="slide__overlay" viewBox="0 0 720 405">
                     <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
                 </svg>
                 <div class="slide__text">
@@ -85,10 +85,10 @@
         </div>
         @empty
 
-        <div class="slide slide-0 active">
+        <div class="slide ">
             <div style="background:url({{ asset('images/projectsSlider/0000.jpg')}}); no-repeat  " class="slide__bg"></div>
             <div class="slide__content">
-                <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+                <svg class="slide__overlay" viewBox="0 0 720 405">
                     <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
                 </svg>
             </div>
@@ -98,10 +98,10 @@
                 <a class="slide__text-link" href="#">Details</a>
             </div>
         </div>
-        <div class="slide slide-1 ">
+        <div class="slide ">
             <div style="background:url({{ asset('images/projectsSlider/1.jpg')}}); no-repeat  " class="slide__bg"></div>
             <div class="slide__content">
-                <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+                <svg class="slide__overlay" viewBox="0 0 720 405">
                     <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
                 </svg>
             </div>
@@ -110,10 +110,10 @@
                         <a class="slide__text-link" href="#">Details</a>
             </div>
         </div>
-        <div class="slide slide-2 ">
+        <div class="slide  ">
             <div style="background:url({{ asset('images/projectsSlider/12.jpg')}}); no-repeat  " class="slide__bg"></div>
             <div class="slide__content">
-                <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+                <svg class="slide__overlay" viewBox="0 0 720 405">
                     <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
                 </svg>
             </div>

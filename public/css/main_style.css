@@ -96,7 +96,7 @@ body {
     min-height: 100vh;
     z-index: 9999;
     background-color: var(--mainColor);
-    display: none;
+
 }
 
 @-webkit-keyframes rotate {
@@ -769,7 +769,8 @@ body {
 }
 
 a:visited {
-    color: #464646;
+    color: black;
+
 }
 
 a:active {
@@ -1712,7 +1713,7 @@ nav .contact_us i {
     min-height: 100vh;
     transition: all 3s;
     position: relative;
-    top:-600px;
+    top:600px;
     opacity: 0;
     /* transform: scale(0) rotateY(0); */
 }

@@ -2,61 +2,6 @@
 $(function () {
 
 
-      // start animate elements
-
-      $(window).on("scroll", function () {
-
-
-
-        if ($(window).scrollTop() + 500 >= $(".services_content").offset().top) {
-          $(".services_content").css({
-            opacity:1,
-            top:"-130px"
-          })
-          }
-
-        if ($(window).scrollTop() + 500 >= $(".description1").offset().top) {
-          $(".description1").animate(
-            {
-              left: 0,
-            },
-            1000
-          );
-        }
-
-        if ($(window).scrollTop() + 500 >= $(".description2").offset().top) {
-          $(".description2").animate(
-            {
-              left: 0,
-            },
-            1000
-          );
-        }
-
-        if ($(window).scrollTop() + 500 >= $(".description3").offset().top) {
-          $(".description3").animate(
-            {
-              left: 0,
-            },
-            1000
-          );
-        }
-
-        if ($(window).scrollTop() + 500 >= $(".description4").offset().top) {
-          $(".description4").animate(
-            {
-              left: 0,
-            },
-            1000
-          );
-        }
-        if ($(window).scrollTop() + 500 >= $(".description5").offset().top) {
-          $(".description5").animate({
-            left:0
-          },1000)
-        }
-
-      });
 
     let win = $(window);
     win.on("resize", function () {
@@ -239,6 +184,8 @@ $(function () {
     });
 
     //   start slider
+
+
 
     var $slider = $(".slider"),
         $slideBGs = $(".slide__bg"),
@@ -563,6 +510,65 @@ $(function () {
             $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0"
         );
     });
+
+
+
+      // start animate elements
+
+      $(window).on("scroll", function () {
+
+
+
+        if ($(window).scrollTop() + 600 >= $(".services").offset().top) {
+          $(".services_content").css({
+            opacity:1,
+            top:"-130px"
+          })
+          }
+
+        if ($(window).scrollTop() + 500 >= $(".description1").offset().top) {
+          $(".description1").animate(
+            {
+              left: 0,
+            },
+            1000
+          );
+        }
+
+        if ($(window).scrollTop() + 500 >= $(".description2").offset().top) {
+          $(".description2").animate(
+            {
+              left: 0,
+            },
+            1000
+          );
+        }
+
+        if ($(window).scrollTop() + 500 >= $(".description3").offset().top) {
+          $(".description3").animate(
+            {
+              left: 0,
+            },
+            1000
+          );
+        }
+
+        if ($(window).scrollTop() + 500 >= $(".description4").offset().top) {
+          $(".description4").animate(
+            {
+              left: 0,
+            },
+            1000
+          );
+        }
+        if ($(window).scrollTop() + 500 >= $(".description5").offset().top) {
+          $(".description5").animate({
+            left:0
+          },1000)
+        }
+
+      });
+
 });
 
 
