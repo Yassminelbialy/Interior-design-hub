@@ -26,7 +26,6 @@
                 <img src="/images/team/nora.jfif" alt="nora image" />
                 <div class="card_team_head">Nora Elshahat</div>
             </div>
-
         </div>
     </div>
 </section>
